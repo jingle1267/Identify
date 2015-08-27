@@ -3,7 +3,9 @@ package com.ihongqiqu.Identify;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
 import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.*;
@@ -57,6 +59,28 @@ public class PhoneActivity extends BaseActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_phone);
+
+        etPhone.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if (s.length() > 0) {
+                    ivPhoneClear.setVisibility(View.VISIBLE);
+                    tvPhoneInvalid.setVisibility(View.INVISIBLE);
+                } else {
+                    ivPhoneClear.setVisibility(View.INVISIBLE);
+                }
+            }
+        });
     }
 
     public void onClick(View view) {
@@ -64,10 +88,18 @@ public class PhoneActivity extends BaseActivity {
             case R.id.btn_query:
                 requestPhoneInfo(etPhone.getText().toString().trim());
                 break;
+            case R.id.iv_phone_clear:
+                etPhone.setText("");
+                break;
         }
     }
 
     private void requestPhoneInfo(final String tel) {
+        if (TextUtils.isEmpty(tel) || !tel.startsWith("1") || tel.length() != 11) {
+            tvPhoneInvalid.setVisibility(View.VISIBLE);
+            return;
+        }
+
         RequestQueue mQueue = Volley.newRequestQueue(this);
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET,

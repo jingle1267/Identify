@@ -16,9 +16,9 @@
                 android:background="@color/divider_color"/>
 
         <RelativeLayout
-                        android:background="#ffffff"
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp">
+                android:background="#ffffff"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
 
             <EditText
                     android:layout_width="match_parent"
@@ -50,7 +50,7 @@
                     android:id="@+id/tv_phone_invalid"
                     android:visibility="invisible"
                     android:layout_alignParentBottom="true"
-                    android:layout_alignParentLeft="true" />
+                    android:layout_alignParentLeft="true"/>
 
             <ImageView
                     android:id="@+id/iv_phone_clear"
@@ -80,7 +80,7 @@
                 android:layout_height="50dp"
                 android:layout_margin="15dp"
                 android:id="@+id/btn_query"
-                android:background="@drawable/btn_login"
+                android:background="@drawable/btn_query"
                 android:textSize="14sp"
                 android:layout_centerInParent="true"
                 android:textColor="#ffffff"
@@ -146,6 +146,11 @@
                 android:onClick="onClick"
                 android:textColor="#666666"
                 android:text="省  份："/>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/divider_color"/>
 
     </LinearLayout>
 
