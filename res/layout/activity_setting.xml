@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@color/bg_color"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="15dp"
+            android:background="@color/divider_color"/>
+
+    <TextView
+            android:id="@+id/tv_developer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:background="#ffffff"
+            android:textSize="14sp"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:textColor="#666666"
+            android:text="开发者： jingle1267@163.com"/>
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/divider_color"/>
+
+    <TextView
+            android:id="@+id/tv_contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:background="#ffffff"
+            android:textSize="14sp"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:textColor="#666666"
+            android:text="Github： https://github.com/jingle1267"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/divider_color"/>
+
+    <TextView
+            android:id="@+id/tv_share"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:background="#ffffff"
+            android:textSize="14sp"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:textColor="#666666"
+            android:text="分享"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/divider_color"/>
+
+</LinearLayout>

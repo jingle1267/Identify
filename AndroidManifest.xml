@@ -21,5 +21,6 @@
         <activity android:name=".PhoneActivity"/>
         <activity android:name=".IdActivity"/>
         <activity android:name=".BaseActivity"/>
+        <activity android:name=".SettingActivity"/>
     </application>
 </manifest>
