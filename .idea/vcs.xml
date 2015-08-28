@@ -2,5 +2,6 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="" />
+    <mapping directory="$PROJECT_DIR$/../../android-sdk-macosx/extras/android/support/v7/appcompat" vcs="svn" />
   </component>
 </project>

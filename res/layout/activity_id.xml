@@ -1,176 +1,185 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+   <!-- <include layout="@layout/layout_toolbar"/>-->
+
+    <ScrollView
             android:background="@color/bg_color"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-    <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
 
-        <View
-                android:layout_width="match_parent"
-                android:layout_height="1px"
-                android:layout_marginTop="15dp"
-                android:background="@color/divider_color"/>
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/divider_color"/>
 
-        <RelativeLayout
-                android:background="#ffffff"
-                android:layout_width="match_parent"
-                android:layout_height="50dp">
+            <RelativeLayout
+                    android:background="#ffffff"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
 
-            <EditText
-                    android:id="@+id/et_id"
+                <EditText
+                        android:id="@+id/et_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:paddingLeft="12dp"
+                        android:background="@null"
+                        android:textColorHint="#bbbbbb"
+                        android:textColor="#000000"
+                        android:hint="请输入身份证号码"
+                        android:inputType="text"
+                        android:textSize="14sp"
+                        android:focusable="true"
+                        android:windowSoftInputMode="stateVisible"
+                        android:imeOptions="actionNext"
+                        android:layout_centerInParent="true"
+                        />
+                <TextView
+                        android:id="@+id/tv_id_invalid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="请输入正确格式的身份证号码"
+                        android:textSize="10sp"
+                        android:layout_marginLeft="12dp"
+                        android:textColor="#e0612c"
+                        android:drawableLeft="@drawable/ic_error"
+                        android:drawablePadding="3dp"
+                        android:layout_marginBottom="4dp"
+                        android:visibility="invisible"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"/>
+
+                <ImageView
+                        android:id="@+id/iv_id_clear"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/btn_close"
+                        android:visibility="invisible"
+                        android:paddingRight="9dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="10dp"
+                        android:clickable="true"
+                        android:onClick="onClick"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        />
+
+            </RelativeLayout>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/divider_color"/>
+
+            <Button
+                    android:id="@+id/btn_query"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/btn_query"
+                    android:textSize="14sp"
+                    android:layout_centerInParent="true"
+                    android:textColor="#ffffff"
+                    android:text="快速查询"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:layout_gravity="center_horizontal"/>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/divider_color"/>
+
+            <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="12dp"
-                    android:paddingLeft="12dp"
-                    android:background="@null"
-                    android:textColorHint="#bbbbbb"
-                    android:textColor="#000000"
-                    android:hint="请输入身份证号码"
-                    android:inputType="text"
-                    android:textSize="14sp"
-                    android:focusable="true"
-                    android:windowSoftInputMode="stateVisible"
-                    android:imeOptions="actionNext"
-                    android:layout_centerInParent="true"
-                    />
-            <TextView
-                    android:id="@+id/tv_id_invalid"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="请输入正确格式的身份证号码"
-                    android:textSize="10sp"
-                    android:layout_marginLeft="12dp"
-                    android:textColor="#e0612c"
-                    android:drawableLeft="@drawable/icon_error"
-                    android:drawablePadding="3dp"
-                    android:layout_marginBottom="4dp"
-                    android:visibility="invisible"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentLeft="true" />
-
-            <ImageView
-                    android:id="@+id/iv_id_clear"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:src="@drawable/btn_close"
-                    android:visibility="invisible"
-                    android:paddingRight="9dp"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
-                    android:paddingLeft="10dp"
-                    android:clickable="true"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:background="#ffffff"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
                     android:onClick="onClick"
-                    android:layout_centerVertical="true"
-                    android:layout_alignParentRight="true"
-                    />
+                    android:textColor="#666666"
+                    android:text="查询结果"/>
 
-        </RelativeLayout>
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/divider_color"/>
 
-        <View
-                android:layout_width="match_parent"
-                android:layout_height="1px"
-                android:background="@color/divider_color"/>
+            <TextView
+                    android:id="@+id/tv_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:background="#ffffff"
+                    android:textSize="14sp"
+                    android:onClick="onClick"
+                    android:textColor="#666666"
+                    android:text="地址："/>
 
-        <Button
-                android:id="@+id/btn_query"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_margin="15dp"
-                android:background="@drawable/btn_query"
-                android:textSize="14sp"
-                android:layout_centerInParent="true"
-                android:textColor="#ffffff"
-                android:text="快速查询"
-                android:gravity="center"
-                android:onClick="onClick"
-                android:layout_gravity="center_horizontal"/>
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/divider_color"/>
 
-        <View
-                android:layout_width="match_parent"
-                android:layout_height="1px"
-                android:layout_marginTop="20dp"
-                android:background="@color/divider_color"/>
+            <TextView
+                    android:id="@+id/tv_sex"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:background="#ffffff"
+                    android:textSize="14sp"
+                    android:onClick="onClick"
+                    android:textColor="#666666"
+                    android:text="性别："/>
 
-        <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="20dp"
-                android:paddingBottom="20dp"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp"
-                android:background="#ffffff"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:onClick="onClick"
-                android:textColor="#666666"
-                android:text="查询结果"/>
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/divider_color"/>
 
-        <View
-                android:layout_width="match_parent"
-                android:layout_height="1px"
-                android:background="@color/divider_color"/>
+            <TextView
+                    android:id="@+id/tv_birthday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:background="#ffffff"
+                    android:textSize="14sp"
+                    android:onClick="onClick"
+                    android:textColor="#666666"
+                    android:text="生日："/>
 
-        <TextView
-                android:id="@+id/tv_address"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="20dp"
-                android:paddingBottom="20dp"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp"
-                android:background="#ffffff"
-                android:textSize="14sp"
-                android:onClick="onClick"
-                android:textColor="#666666"
-                android:text="地址："/>
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/divider_color"/>
 
-        <View
-                android:layout_width="match_parent"
-                android:layout_height="1px"
-                android:background="@color/divider_color"/>
+        </LinearLayout>
 
-        <TextView
-                android:id="@+id/tv_sex"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="20dp"
-                android:paddingBottom="20dp"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp"
-                android:background="#ffffff"
-                android:textSize="14sp"
-                android:onClick="onClick"
-                android:textColor="#666666"
-                android:text="性别："/>
-
-        <View
-                android:layout_width="match_parent"
-                android:layout_height="1px"
-                android:background="@color/divider_color"/>
-
-        <TextView
-                android:id="@+id/tv_birthday"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="20dp"
-                android:paddingBottom="20dp"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp"
-                android:background="#ffffff"
-                android:textSize="14sp"
-                android:onClick="onClick"
-                android:textColor="#666666"
-                android:text="生日："/>
-
-        <View
-                android:layout_width="match_parent"
-                android:layout_height="1px"
-                android:background="@color/divider_color"/>
-
-    </LinearLayout>
-
-</ScrollView>
+    </ScrollView>
+</LinearLayout>

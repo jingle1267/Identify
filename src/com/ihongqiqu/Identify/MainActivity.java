@@ -12,6 +12,10 @@ public class MainActivity extends BaseActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setTitle("查询工具列表");
+        }
+        toolbar.setNavigationIcon(R.drawable.ic_launcher);
     }
 
     public void onClick(View view) {
