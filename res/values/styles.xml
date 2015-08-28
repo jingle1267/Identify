@@ -9,11 +9,13 @@
         <!-- 状态栏颜色 -->
         <item name="colorPrimaryDark">@color/app_color</item>
         <!-- 窗口的背景颜色 -->
-        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
         <!-- SearchView -->
         <item name="searchViewStyle">@style/MySearchViewStyle</item>
         <!-- 标题栏字体颜色 -->
         <item name="android:textColor">@android:color/white</item>
+        <!-- 透明窗体 -->
+        <item name="android:windowIsTranslucent">true</item>
 
     </style>
 

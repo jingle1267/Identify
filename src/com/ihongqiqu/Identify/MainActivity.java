@@ -16,6 +16,8 @@ public class MainActivity extends BaseActivity {
             getSupportActionBar().setTitle("查询工具列表");
         }
         toolbar.setNavigationIcon(R.drawable.ic_launcher);
+
+        slidingPaneLayout.removeViewAt(0);
     }
 
     public void onClick(View view) {
