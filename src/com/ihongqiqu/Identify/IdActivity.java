@@ -106,6 +106,8 @@ public class IdActivity extends BaseActivity {
             tvIdInvalid.setVisibility(View.VISIBLE);
             return;
         }
+        showProgressDialog();
+
         RequestQueue requestQueue = Volley.newRequestQueue(IdActivity.this);
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET,
@@ -139,11 +141,13 @@ public class IdActivity extends BaseActivity {
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
+
+                hideProgressDialog();
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError volleyError) {
-
+                hideProgressDialog();
             }
         }) {
             @Override

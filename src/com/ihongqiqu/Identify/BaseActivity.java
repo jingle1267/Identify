@@ -1,5 +1,7 @@
 package com.ihongqiqu.Identify;
 
+import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -21,6 +23,8 @@ public class BaseActivity extends AppCompatActivity {
     LinearLayout layoutRoot;
     @Bind(R.id.toolbar)
     Toolbar toolbar;
+
+    ProgressDialog progressDialog;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -56,5 +60,30 @@ public class BaseActivity extends AppCompatActivity {
             return;
         }
         layoutRoot.addView(view, params);
+    }
+
+    public void showProgressDialog() {
+        if (progressDialog == null) {
+            progressDialog = new ProgressDialog(this);
+            progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+            progressDialog.setMessage("正在加载，请稍等...");
+            progressDialog.setCancelable(false);
+        }
+        progressDialog.show();
+    }
+
+    public void hideProgressDialog() {
+        if (progressDialog != null && progressDialog.isShowing()) {
+            progressDialog.hide();
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (progressDialog != null) {
+            progressDialog.dismiss();
+            progressDialog = null;
+        }
     }
 }

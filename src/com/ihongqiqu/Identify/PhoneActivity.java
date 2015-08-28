@@ -112,6 +112,7 @@ public class PhoneActivity extends BaseActivity {
             tvPhoneInvalid.setVisibility(View.VISIBLE);
             return;
         }
+        showProgressDialog();
 
         RequestQueue mQueue = Volley.newRequestQueue(this);
 
@@ -145,11 +146,14 @@ public class PhoneActivity extends BaseActivity {
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
+
+                hideProgressDialog();
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
                 Log.e("PhoneActivity", "Volley : " + error.getMessage(), error);
+                hideProgressDialog();
             }
 
         }) {
