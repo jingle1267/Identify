@@ -20,17 +20,6 @@ public class MainActivity extends BaseActivity {
             getSupportActionBar().setTitle("查询工具列表");
         }
         toolbar.setNavigationIcon(R.drawable.ic_launcher);
-        /*Button button = new Button(this);
-        button.setText("setting");
-        toolbar.addView(button);
-        toolbar.inflateMenu(R.menu.menu_main);
-        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
-            @Override
-            public boolean onMenuItemClick(MenuItem menuItem) {
-                SettingActivity.launch(MainActivity.this);
-                return true;
-            }
-        });*/
 
         slidingPaneLayout.removeViewAt(0);
     }

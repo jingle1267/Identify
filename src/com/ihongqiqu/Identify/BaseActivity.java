@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.LinearLayout;
+import com.umeng.analytics.MobclickAgent;
 
 import java.lang.reflect.Field;
 
@@ -146,6 +147,18 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     @Override
+    protected void onResume() {
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
+    }
+
+    @Override
     protected void onDestroy() {
         super.onDestroy();
         if (progressDialog != null) {
@@ -154,4 +167,9 @@ public class BaseActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(0, R.anim.sliding_out_right);
+    }
 }

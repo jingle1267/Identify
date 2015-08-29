@@ -18,3 +18,45 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+
+
+######## Volley ########
+-keep class com.android.volley.** {*;}
+-keep class com.android.volley.toolbox.** {*;}
+-keep class com.android.volley.Response$* { *; }
+-keep class com.android.volley.Request$* { *; }
+-keep class com.android.volley.RequestQueue$* { *; }
+-keep class com.android.volley.toolbox.HurlStack$* { *; }
+-keep class com.android.volley.toolbox.ImageLoader$* { *; }
+
+######## Gson ########
+-keep class sun.misc.Unsafe { *; }
+-keep class com.google.gson.stream.** { *; }
+-keep class com.google.gson.examples.android.model.** { *; }
+-keep class com.google.gson.** { *;}
+
+######## ButterKnife ########
+-keep class butterknife.** { *; }
+-dontwarn butterknife.internal.**
+-keep class **$$ViewInjector { *; }
+-keepclasseswithmembernames class * {
+    @butterknife.* <fields>;
+}
+-keepclasseswithmembernames class * {
+    @butterknife.* <methods>;
+}
+
+######## Umeng ########
+-keepclassmembers class * {
+   public <init>(org.json.JSONObject);
+}
+-keep public class com.ihongqiqu.Identify.R$*{
+    public static final int *;
+}
+-keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+
+
+-keep public class * extends com.ihongqiqu.Identify.BaseEntity { *; }

@@ -83,6 +83,7 @@ public class IdActivity extends BaseActivity {
             public void afterTextChanged(Editable s) {
                 if (s.length() > 0) {
                     ivIdClear.setVisibility(View.VISIBLE);
+                    tvIdInvalid.setVisibility(View.INVISIBLE);
                 } else {
                     ivIdClear.setVisibility(View.INVISIBLE);
                 }
@@ -105,6 +106,8 @@ public class IdActivity extends BaseActivity {
         if (TextUtils.isEmpty(id) || id.length() != 18) {
             tvIdInvalid.setVisibility(View.VISIBLE);
             return;
+        } else {
+            tvIdInvalid.setVisibility(View.INVISIBLE);
         }
         showProgressDialog();
 

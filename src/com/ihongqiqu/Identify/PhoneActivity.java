@@ -111,6 +111,8 @@ public class PhoneActivity extends BaseActivity {
         if (TextUtils.isEmpty(tel) || !tel.startsWith("1") || tel.length() != 11) {
             tvPhoneInvalid.setVisibility(View.VISIBLE);
             return;
+        } else {
+            tvPhoneInvalid.setVisibility(View.INVISIBLE);
         }
         showProgressDialog();
 

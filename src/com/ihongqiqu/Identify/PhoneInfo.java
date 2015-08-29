@@ -5,7 +5,7 @@ package com.ihongqiqu.Identify;
  * <p/>
  * Created by zhenguo on 8/25/15.
  */
-public class PhoneInfo {
+public class PhoneInfo extends BaseEntity{
 
     /**
      * telString : 15846530170 province : 黑龙江 carrier : 黑龙江移动
