@@ -1,6 +1,8 @@
 package com.ihongqiqu.Identify.activity;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -61,4 +63,22 @@ public class MainActivity extends BaseActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public void onBackPressed() {
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+        builder.setTitle("温馨提示");
+        // builder.setCustomTitle(title);
+        builder.setMessage("您确定要退出ID查询吗？");
+        builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                finish();
+                overridePendingTransition(0, R.anim.sliding_out_right);
+                // MobclickAgent.onKillProcess(context)
+            }
+        });
+        builder.setNegativeButton("取消", null);
+        builder.create().show();
+    }
 }

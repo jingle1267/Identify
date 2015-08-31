@@ -13,7 +13,7 @@
         <!-- SearchView -->
         <item name="searchViewStyle">@style/MySearchViewStyle</item>
         <!-- 标题栏字体颜色 -->
-        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColor">@android:color/black</item>
         <!-- 透明窗体 -->
         <item name="android:windowIsTranslucent">true</item>
 
