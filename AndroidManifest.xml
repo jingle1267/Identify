@@ -26,6 +26,7 @@
         <activity android:name=".IdActivity"/>
         <activity android:name=".BaseActivity"/>
         <activity android:name=".SettingActivity"/>
+        <activity android:name=".IpActivity"/>
 
     </application>
 </manifest>
