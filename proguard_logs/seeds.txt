@@ -1,23 +1,55 @@
+android.support.v4.app.ActionBarDrawerToggle
+android.support.v4.app.ActivityCompat
 android.support.v4.app.BackStackState
 android.support.v4.app.BackStackState: android.os.Parcelable$Creator CREATOR
+android.support.v4.app.DialogFragment
 android.support.v4.app.Fragment$SavedState
 android.support.v4.app.Fragment$SavedState: android.os.Parcelable$Creator CREATOR
+android.support.v4.app.FragmentActivity
 android.support.v4.app.FragmentActivity: FragmentActivity()
 android.support.v4.app.FragmentManagerState
 android.support.v4.app.FragmentManagerState: android.os.Parcelable$Creator CREATOR
+android.support.v4.app.FragmentPagerAdapter
 android.support.v4.app.FragmentState
 android.support.v4.app.FragmentState: android.os.Parcelable$Creator CREATOR
+android.support.v4.app.FragmentStatePagerAdapter
 android.support.v4.app.FragmentTabHost: void setOnTabChangedListener(android.widget.TabHost$OnTabChangeListener)
 android.support.v4.app.FragmentTabHost$SavedState
 android.support.v4.app.FragmentTabHost$SavedState: android.os.Parcelable$Creator CREATOR
+android.support.v4.app.INotificationSideChannel$Stub
+android.support.v4.app.ListFragment
+android.support.v4.app.NotificationCompat$Action
+android.support.v4.app.NotificationCompat$Action$WearableExtender
+android.support.v4.app.NotificationCompat$BigPictureStyle
+android.support.v4.app.NotificationCompat$BigTextStyle
+android.support.v4.app.NotificationCompat$CarExtender
+android.support.v4.app.NotificationCompat$CarExtender$UnreadConversation
+android.support.v4.app.NotificationCompat$InboxStyle
+android.support.v4.app.NotificationCompat$WearableExtender
+android.support.v4.app.NotificationCompatApi20$Builder
+android.support.v4.app.NotificationCompatApi21$Builder
+android.support.v4.app.NotificationCompatIceCreamSandwich$Builder
+android.support.v4.app.NotificationCompatJellybean$Builder
+android.support.v4.app.NotificationCompatKitKat$Builder
+android.support.v4.app.NotificationCompatSideChannelService
+android.support.v4.app.RemoteInput
+android.support.v4.content.AsyncTaskLoader
+android.support.v4.content.CursorLoader
+android.support.v4.content.FileProvider
 android.support.v4.content.ModernAsyncTask$Status: android.support.v4.content.ModernAsyncTask$Status[] values()
 android.support.v4.content.ModernAsyncTask$Status: android.support.v4.content.ModernAsyncTask$Status valueOf(java.lang.String)
+android.support.v4.content.WakefulBroadcastReceiver
+android.support.v4.internal.view.SupportSubMenu
 android.support.v4.media.MediaDescriptionCompat
 android.support.v4.media.MediaDescriptionCompat: android.os.Parcelable$Creator CREATOR
 android.support.v4.media.MediaMetadataCompat
 android.support.v4.media.MediaMetadataCompat: android.os.Parcelable$Creator CREATOR
 android.support.v4.media.RatingCompat
 android.support.v4.media.RatingCompat: android.os.Parcelable$Creator CREATOR
+android.support.v4.media.TransportMediator
+android.support.v4.media.routing.MediaRouterJellybeanMr1$Callback
+android.support.v4.media.session.IMediaControllerCallback$Stub
+android.support.v4.media.session.IMediaSession$Stub
 android.support.v4.media.session.MediaSessionCompat$QueueItem
 android.support.v4.media.session.MediaSessionCompat$QueueItem: android.os.Parcelable$Creator CREATOR
 android.support.v4.media.session.MediaSessionCompat$ResultReceiverWrapper
@@ -30,6 +62,10 @@ android.support.v4.media.session.PlaybackStateCompat
 android.support.v4.media.session.PlaybackStateCompat: android.os.Parcelable$Creator CREATOR
 android.support.v4.media.session.PlaybackStateCompat$CustomAction
 android.support.v4.media.session.PlaybackStateCompat$CustomAction: android.os.Parcelable$Creator CREATOR
+android.support.v4.util.ArrayMap
+android.support.v4.util.Pools$SimplePool
+android.support.v4.util.Pools$SynchronizedPool
+android.support.v4.view.PagerTabStrip
 android.support.v4.view.PagerTabStrip: void setTabIndicatorColor(int)
 android.support.v4.view.PagerTabStrip: void setTabIndicatorColorResource(int)
 android.support.v4.view.PagerTabStrip: int getTabIndicatorColor()
@@ -42,6 +78,7 @@ android.support.v4.view.PagerTabStrip: boolean getDrawFullUnderline()
 android.support.v4.view.PagerTabStrip: int getMinHeight()
 android.support.v4.view.PagerTabStrip$1: void onClick(android.view.View)
 android.support.v4.view.PagerTabStrip$2: void onClick(android.view.View)
+android.support.v4.view.PagerTitleStrip
 android.support.v4.view.PagerTitleStrip: void setSingleLineAllCaps(android.widget.TextView)
 android.support.v4.view.PagerTitleStrip: void setTextSpacing(int)
 android.support.v4.view.PagerTitleStrip: int getTextSpacing()
@@ -67,6 +104,13 @@ android.support.v4.view.ViewPager: void setPageMarginDrawable(int)
 android.support.v4.view.ViewPager: void setScrollingCacheEnabled(boolean)
 android.support.v4.view.ViewPager$SavedState
 android.support.v4.view.ViewPager$SavedState: android.os.Parcelable$Creator CREATOR
+android.support.v4.view.ViewPager$SimpleOnPageChangeListener
+android.support.v4.view.ViewPropertyAnimatorListenerAdapter
+android.support.v4.view.animation.FastOutLinearInInterpolator
+android.support.v4.view.animation.FastOutSlowInInterpolator
+android.support.v4.view.animation.LinearOutSlowInInterpolator
+android.support.v4.widget.CursorAdapter
+android.support.v4.widget.DrawerLayout
 android.support.v4.widget.DrawerLayout: void setScrimColor(int)
 android.support.v4.widget.DrawerLayout: void setDrawerListener(android.support.v4.widget.DrawerLayout$DrawerListener)
 android.support.v4.widget.DrawerLayout: void setDrawerLockMode(int)
@@ -76,6 +120,10 @@ android.support.v4.widget.DrawerLayout: void setStatusBarBackground(int)
 android.support.v4.widget.DrawerLayout: void setStatusBarBackgroundColor(int)
 android.support.v4.widget.DrawerLayout$SavedState
 android.support.v4.widget.DrawerLayout$SavedState: android.os.Parcelable$Creator CREATOR
+android.support.v4.widget.DrawerLayout$SimpleDrawerListener
+android.support.v4.widget.ExploreByTouchHelper
+android.support.v4.widget.ListViewAutoScrollHelper
+android.support.v4.widget.NestedScrollView
 android.support.v4.widget.NestedScrollView: void setNestedScrollingEnabled(boolean)
 android.support.v4.widget.NestedScrollView: int getNestedScrollAxes()
 android.support.v4.widget.NestedScrollView: float getTopFadingEdgeStrength()
@@ -87,6 +135,8 @@ android.support.v4.widget.NestedScrollView: float getVerticalScrollFactorCompat(
 android.support.v4.widget.NestedScrollView: int getScrollRange()
 android.support.v4.widget.NestedScrollView$SavedState
 android.support.v4.widget.NestedScrollView$SavedState: android.os.Parcelable$Creator CREATOR
+android.support.v4.widget.ResourceCursorAdapter
+android.support.v4.widget.SimpleCursorAdapter
 android.support.v4.widget.SlidingPaneLayout
 android.support.v4.widget.SlidingPaneLayout: SlidingPaneLayout(android.content.Context)
 android.support.v4.widget.SlidingPaneLayout: SlidingPaneLayout(android.content.Context,android.util.AttributeSet)
@@ -106,6 +156,7 @@ android.support.v4.widget.SlidingPaneLayout: void setShadowResourceLeft(int)
 android.support.v4.widget.SlidingPaneLayout: void setShadowResourceRight(int)
 android.support.v4.widget.SlidingPaneLayout$SavedState
 android.support.v4.widget.SlidingPaneLayout$SavedState: android.os.Parcelable$Creator CREATOR
+android.support.v4.widget.SlidingPaneLayout$SimplePanelSlideListener
 android.support.v4.widget.Space
 android.support.v4.widget.Space: Space(android.content.Context,android.util.AttributeSet,int)
 android.support.v4.widget.Space: Space(android.content.Context,android.util.AttributeSet)
@@ -123,12 +174,19 @@ android.support.v4.widget.SwipeRefreshLayout: void setColorSchemeResources(int[]
 android.support.v4.widget.SwipeRefreshLayout: void setColorSchemeColors(int[])
 android.support.v4.widget.SwipeRefreshLayout: void setDistanceToTriggerSync(int)
 android.support.v4.widget.SwipeRefreshLayout: int getProgressCircleDiameter()
+android.support.v7.app.ActionBarActivity
+android.support.v7.app.ActionBarDrawerToggle
 android.support.v7.app.ActionBarDrawerToggle$1: void onClick(android.view.View)
 android.support.v7.app.AlertController$1: void onClick(android.view.View)
+android.support.v7.app.AppCompatActivity
 android.support.v7.app.AppCompatActivity: AppCompatActivity()
 android.support.v7.app.AppCompatActivity: void setContentView(android.view.View)
 android.support.v7.app.AppCompatDelegateImplV7$PanelFeatureState$SavedState
 android.support.v7.app.AppCompatDelegateImplV7$PanelFeatureState$SavedState: android.os.Parcelable$Creator CREATOR
+android.support.v7.app.NotificationCompat
+android.support.v7.app.NotificationCompat$Builder
+android.support.v7.app.NotificationCompat$MediaStyle
+android.support.v7.appcompat.R$anim
 android.support.v7.appcompat.R$anim: int abc_fade_in
 android.support.v7.appcompat.R$anim: int abc_fade_out
 android.support.v7.appcompat.R$anim: int abc_grow_fade_in_from_bottom
@@ -139,6 +197,7 @@ android.support.v7.appcompat.R$anim: int abc_slide_in_bottom
 android.support.v7.appcompat.R$anim: int abc_slide_in_top
 android.support.v7.appcompat.R$anim: int abc_slide_out_bottom
 android.support.v7.appcompat.R$anim: int abc_slide_out_top
+android.support.v7.appcompat.R$attr
 android.support.v7.appcompat.R$attr: int actionBarDivider
 android.support.v7.appcompat.R$attr: int actionBarItemBackground
 android.support.v7.appcompat.R$attr: int actionBarPopupTheme
@@ -340,6 +399,7 @@ android.support.v7.appcompat.R$attr: int windowFixedWidthMinor
 android.support.v7.appcompat.R$attr: int windowMinWidthMajor
 android.support.v7.appcompat.R$attr: int windowMinWidthMinor
 android.support.v7.appcompat.R$attr: int windowNoTitle
+android.support.v7.appcompat.R$bool
 android.support.v7.appcompat.R$bool: int abc_action_bar_embed_tabs
 android.support.v7.appcompat.R$bool: int abc_action_bar_embed_tabs_pre_jb
 android.support.v7.appcompat.R$bool: int abc_action_bar_expanded_action_views_exclusive
@@ -347,6 +407,7 @@ android.support.v7.appcompat.R$bool: int abc_config_actionMenuItemAllCaps
 android.support.v7.appcompat.R$bool: int abc_config_allowActionMenuItemTextWithIcon
 android.support.v7.appcompat.R$bool: int abc_config_closeDialogWhenTouchOutside
 android.support.v7.appcompat.R$bool: int abc_config_showMenuShortcutsWhenKeyboardPresent
+android.support.v7.appcompat.R$color
 android.support.v7.appcompat.R$color: int abc_background_cache_hint_selector_material_dark
 android.support.v7.appcompat.R$color: int abc_background_cache_hint_selector_material_light
 android.support.v7.appcompat.R$color: int abc_input_method_navigation_guard
@@ -409,6 +470,7 @@ android.support.v7.appcompat.R$color: int switch_thumb_material_dark
 android.support.v7.appcompat.R$color: int switch_thumb_material_light
 android.support.v7.appcompat.R$color: int switch_thumb_normal_material_dark
 android.support.v7.appcompat.R$color: int switch_thumb_normal_material_light
+android.support.v7.appcompat.R$dimen
 android.support.v7.appcompat.R$dimen: int abc_action_bar_content_inset_material
 android.support.v7.appcompat.R$dimen: int abc_action_bar_default_height_material
 android.support.v7.appcompat.R$dimen: int abc_action_bar_default_padding_material
@@ -478,6 +540,7 @@ android.support.v7.appcompat.R$dimen: int disabled_alpha_material_light
 android.support.v7.appcompat.R$dimen: int notification_large_icon_height
 android.support.v7.appcompat.R$dimen: int notification_large_icon_width
 android.support.v7.appcompat.R$dimen: int notification_subtext_size
+android.support.v7.appcompat.R$drawable
 android.support.v7.appcompat.R$drawable: int abc_ab_share_pack_mtrl_alpha
 android.support.v7.appcompat.R$drawable: int abc_btn_borderless_material
 android.support.v7.appcompat.R$drawable: int abc_btn_check_material
@@ -538,6 +601,7 @@ android.support.v7.appcompat.R$drawable: int abc_textfield_search_activated_mtrl
 android.support.v7.appcompat.R$drawable: int abc_textfield_search_default_mtrl_alpha
 android.support.v7.appcompat.R$drawable: int abc_textfield_search_material
 android.support.v7.appcompat.R$drawable: int notification_template_icon_bg
+android.support.v7.appcompat.R$id
 android.support.v7.appcompat.R$id: int action0
 android.support.v7.appcompat.R$id: int action_bar
 android.support.v7.appcompat.R$id: int action_bar_activity_content
@@ -630,11 +694,13 @@ android.support.v7.appcompat.R$id: int up
 android.support.v7.appcompat.R$id: int useLogo
 android.support.v7.appcompat.R$id: int withText
 android.support.v7.appcompat.R$id: int wrap_content
+android.support.v7.appcompat.R$integer
 android.support.v7.appcompat.R$integer: int abc_config_activityDefaultDur
 android.support.v7.appcompat.R$integer: int abc_config_activityShortDur
 android.support.v7.appcompat.R$integer: int abc_max_action_buttons
 android.support.v7.appcompat.R$integer: int cancel_button_image_alpha
 android.support.v7.appcompat.R$integer: int status_bar_notification_info_maxnum
+android.support.v7.appcompat.R$layout
 android.support.v7.appcompat.R$layout: int abc_action_bar_title_item
 android.support.v7.appcompat.R$layout: int abc_action_bar_up_container
 android.support.v7.appcompat.R$layout: int abc_action_bar_view_list_nav_layout
@@ -672,6 +738,7 @@ android.support.v7.appcompat.R$layout: int select_dialog_item_material
 android.support.v7.appcompat.R$layout: int select_dialog_multichoice_material
 android.support.v7.appcompat.R$layout: int select_dialog_singlechoice_material
 android.support.v7.appcompat.R$layout: int support_simple_spinner_dropdown_item
+android.support.v7.appcompat.R$string
 android.support.v7.appcompat.R$string: int abc_action_bar_home_description
 android.support.v7.appcompat.R$string: int abc_action_bar_home_description_format
 android.support.v7.appcompat.R$string: int abc_action_bar_home_subtitle_description_format
@@ -690,6 +757,7 @@ android.support.v7.appcompat.R$string: int abc_shareactionprovider_share_with
 android.support.v7.appcompat.R$string: int abc_shareactionprovider_share_with_application
 android.support.v7.appcompat.R$string: int abc_toolbar_collapse_description
 android.support.v7.appcompat.R$string: int status_bar_notification_info_overflow
+android.support.v7.appcompat.R$style
 android.support.v7.appcompat.R$style: int AlertDialog_AppCompat
 android.support.v7.appcompat.R$style: int AlertDialog_AppCompat_Light
 android.support.v7.appcompat.R$style: int Animation_AppCompat_Dialog
@@ -982,6 +1050,7 @@ android.support.v7.appcompat.R$style: int Widget_AppCompat_Spinner_Underlined
 android.support.v7.appcompat.R$style: int Widget_AppCompat_TextView_SpinnerItem
 android.support.v7.appcompat.R$style: int Widget_AppCompat_Toolbar
 android.support.v7.appcompat.R$style: int Widget_AppCompat_Toolbar_Button_Navigation
+android.support.v7.appcompat.R$styleable
 android.support.v7.appcompat.R$styleable: int[] ActionBar
 android.support.v7.appcompat.R$styleable: int[] ActionBarLayout
 android.support.v7.appcompat.R$styleable: int ActionBarLayout_android_layout_gravity
@@ -1290,6 +1359,7 @@ android.support.v7.appcompat.R$styleable: int View_backgroundTintMode
 android.support.v7.appcompat.R$styleable: int View_paddingEnd
 android.support.v7.appcompat.R$styleable: int View_paddingStart
 android.support.v7.appcompat.R$styleable: int View_theme
+android.support.v7.internal.view.menu.ActionMenuItem
 android.support.v7.internal.view.menu.ActionMenuItemView
 android.support.v7.internal.view.menu.ActionMenuItemView: ActionMenuItemView(android.content.Context)
 android.support.v7.internal.view.menu.ActionMenuItemView: ActionMenuItemView(android.content.Context,android.util.AttributeSet)
@@ -1317,7 +1387,10 @@ android.support.v7.internal.view.menu.ListMenuItemView: void setCheckable(boolea
 android.support.v7.internal.view.menu.ListMenuItemView: void setChecked(boolean)
 android.support.v7.internal.view.menu.ListMenuItemView: void setIcon(android.graphics.drawable.Drawable)
 android.support.v7.internal.view.menu.ListMenuItemView: android.view.LayoutInflater getInflater()
+android.support.v7.internal.view.menu.MenuBuilder
 android.support.v7.internal.view.menu.MenuDialogHelper: void onClick(android.content.DialogInterface,int)
+android.support.v7.internal.view.menu.MenuItemImpl
+android.support.v7.internal.view.menu.SubMenuBuilder
 android.support.v7.internal.widget.AbsActionBarView: AbsActionBarView(android.content.Context)
 android.support.v7.internal.widget.AbsActionBarView: AbsActionBarView(android.content.Context,android.util.AttributeSet)
 android.support.v7.internal.widget.AbsActionBarView: AbsActionBarView(android.content.Context,android.util.AttributeSet,int)
@@ -1327,6 +1400,7 @@ android.support.v7.internal.widget.AbsActionBarView: void setContentHeight(int)
 android.support.v7.internal.widget.AbsActionBarView: int getContentHeight()
 android.support.v7.internal.widget.AbsActionBarView: void setSplitView(android.view.ViewGroup)
 android.support.v7.internal.widget.AbsActionBarView: int getAnimatedVisibility()
+android.support.v7.internal.widget.AbsActionBarView$VisibilityAnimListener
 android.support.v7.internal.widget.AbsSpinnerCompat$SavedState
 android.support.v7.internal.widget.AbsSpinnerCompat$SavedState: android.os.Parcelable$Creator CREATOR
 android.support.v7.internal.widget.ActionBarContainer
@@ -1437,6 +1511,7 @@ android.support.v7.internal.widget.ScrollingTabContainerView: void setAllowColla
 android.support.v7.internal.widget.ScrollingTabContainerView: void setTabSelected(int)
 android.support.v7.internal.widget.ScrollingTabContainerView: void setContentHeight(int)
 android.support.v7.internal.widget.ScrollingTabContainerView$TabClickListener: void onClick(android.view.View)
+android.support.v7.internal.widget.ScrollingTabContainerView$VisibilityAnimListener
 android.support.v7.internal.widget.SpinnerCompat: void onClick(android.content.DialogInterface,int)
 android.support.v7.internal.widget.SpinnerCompat$DialogPopup: void onClick(android.content.DialogInterface,int)
 android.support.v7.internal.widget.SpinnerCompat$SavedState
@@ -1458,6 +1533,7 @@ android.support.v7.internal.widget.ViewStubCompat: void setLayoutInflater(androi
 android.support.v7.internal.widget.ViewStubCompat: android.view.LayoutInflater getLayoutInflater()
 android.support.v7.internal.widget.ViewStubCompat: void setVisibility(int)
 android.support.v7.internal.widget.ViewStubCompat: void setOnInflateListener(android.support.v7.internal.widget.ViewStubCompat$OnInflateListener)
+android.support.v7.widget.ActionMenuPresenter
 android.support.v7.widget.ActionMenuPresenter$SavedState
 android.support.v7.widget.ActionMenuPresenter$SavedState: android.os.Parcelable$Creator CREATOR
 android.support.v7.widget.ActionMenuView
@@ -1471,6 +1547,7 @@ android.support.v7.widget.ActionMenuView: void setOverflowReserved(boolean)
 android.support.v7.widget.ActionMenuView: int getWindowAnimations()
 android.support.v7.widget.ActionMenuView: android.view.Menu getMenu()
 android.support.v7.widget.ActionMenuView: void setExpandedActionViewsExclusive(boolean)
+android.support.v7.widget.AppCompatAutoCompleteTextView
 android.support.v7.widget.AppCompatAutoCompleteTextView: AppCompatAutoCompleteTextView(android.content.Context)
 android.support.v7.widget.AppCompatAutoCompleteTextView: AppCompatAutoCompleteTextView(android.content.Context,android.util.AttributeSet)
 android.support.v7.widget.AppCompatAutoCompleteTextView: AppCompatAutoCompleteTextView(android.content.Context,android.util.AttributeSet,int)
@@ -1482,6 +1559,7 @@ android.support.v7.widget.AppCompatAutoCompleteTextView: android.content.res.Col
 android.support.v7.widget.AppCompatAutoCompleteTextView: void setSupportBackgroundTintMode(android.graphics.PorterDuff$Mode)
 android.support.v7.widget.AppCompatAutoCompleteTextView: android.graphics.PorterDuff$Mode getSupportBackgroundTintMode()
 android.support.v7.widget.AppCompatAutoCompleteTextView: void setInternalBackgroundTint(android.content.res.ColorStateList)
+android.support.v7.widget.AppCompatButton
 android.support.v7.widget.AppCompatButton: void setBackgroundResource(int)
 android.support.v7.widget.AppCompatButton: void setBackgroundDrawable(android.graphics.drawable.Drawable)
 android.support.v7.widget.AppCompatButton: void setSupportBackgroundTintList(android.content.res.ColorStateList)
@@ -1494,6 +1572,7 @@ android.support.v7.widget.AppCompatCheckBox: void setButtonDrawable(android.grap
 android.support.v7.widget.AppCompatCheckBox: void setButtonDrawable(int)
 android.support.v7.widget.AppCompatCheckBox: int getCompoundPaddingLeft()
 android.support.v7.widget.AppCompatCheckedTextView: void setCheckMarkDrawable(int)
+android.support.v7.widget.AppCompatEditText
 android.support.v7.widget.AppCompatEditText: void setBackgroundResource(int)
 android.support.v7.widget.AppCompatEditText: void setBackgroundDrawable(android.graphics.drawable.Drawable)
 android.support.v7.widget.AppCompatEditText: void setSupportBackgroundTintList(android.content.res.ColorStateList)
@@ -1501,6 +1580,7 @@ android.support.v7.widget.AppCompatEditText: android.content.res.ColorStateList 
 android.support.v7.widget.AppCompatEditText: void setSupportBackgroundTintMode(android.graphics.PorterDuff$Mode)
 android.support.v7.widget.AppCompatEditText: android.graphics.PorterDuff$Mode getSupportBackgroundTintMode()
 android.support.v7.widget.AppCompatEditText: void setInternalBackgroundTint(android.content.res.ColorStateList)
+android.support.v7.widget.AppCompatMultiAutoCompleteTextView
 android.support.v7.widget.AppCompatMultiAutoCompleteTextView: void setBackgroundResource(int)
 android.support.v7.widget.AppCompatMultiAutoCompleteTextView: void setBackgroundDrawable(android.graphics.drawable.Drawable)
 android.support.v7.widget.AppCompatMultiAutoCompleteTextView: void setDropDownBackgroundResource(int)
@@ -1513,6 +1593,7 @@ android.support.v7.widget.AppCompatRadioButton: void setButtonDrawable(android.g
 android.support.v7.widget.AppCompatRadioButton: void setButtonDrawable(int)
 android.support.v7.widget.AppCompatRadioButton: int getCompoundPaddingLeft()
 android.support.v7.widget.AppCompatRatingBar: android.graphics.drawable.shapes.Shape getDrawableShape()
+android.support.v7.widget.AppCompatSpinner
 android.support.v7.widget.AppCompatSpinner: void setBackgroundResource(int)
 android.support.v7.widget.AppCompatSpinner: void setBackgroundDrawable(android.graphics.drawable.Drawable)
 android.support.v7.widget.AppCompatSpinner: void setSupportBackgroundTintList(android.content.res.ColorStateList)
@@ -1581,6 +1662,7 @@ android.support.v7.widget.SearchView$SearchAutoComplete: SearchView$SearchAutoCo
 android.support.v7.widget.SearchView$SearchAutoComplete: SearchView$SearchAutoComplete(android.content.Context,android.util.AttributeSet,int)
 android.support.v7.widget.SearchView$SearchAutoComplete: void setSearchView(android.support.v7.widget.SearchView)
 android.support.v7.widget.SearchView$SearchAutoComplete: void setThreshold(int)
+android.support.v7.widget.ShareActionProvider
 android.support.v7.widget.SuggestionsAdapter: void onClick(android.view.View)
 android.support.v7.widget.SwitchCompat: void setSwitchTypeface(android.graphics.Typeface)
 android.support.v7.widget.SwitchCompat: void setSwitchPadding(int)
@@ -4120,35 +4202,6 @@ com.google.gson.stream.MalformedJsonException: long serialVersionUID
 com.google.gson.stream.MalformedJsonException: MalformedJsonException(java.lang.String)
 com.google.gson.stream.MalformedJsonException: MalformedJsonException(java.lang.String,java.lang.Throwable)
 com.google.gson.stream.MalformedJsonException: MalformedJsonException(java.lang.Throwable)
-com.ihongqiqu.Identify.BaseActivity
-com.ihongqiqu.Identify.BaseActivity: BaseActivity()
-com.ihongqiqu.Identify.BaseActivity: void setContentView(android.view.View)
-com.ihongqiqu.Identify.IdActivity
-com.ihongqiqu.Identify.IdActivity: android.widget.EditText etId
-com.ihongqiqu.Identify.IdActivity: android.widget.TextView tvIdInvalid
-com.ihongqiqu.Identify.IdActivity: android.widget.ImageView ivIdClear
-com.ihongqiqu.Identify.IdActivity: android.widget.Button btnQuery
-com.ihongqiqu.Identify.IdActivity: android.widget.TextView tvAddress
-com.ihongqiqu.Identify.IdActivity: android.widget.TextView tvSex
-com.ihongqiqu.Identify.IdActivity: android.widget.TextView tvBirthday
-com.ihongqiqu.Identify.IdActivity: IdActivity()
-com.ihongqiqu.Identify.IdActivity: void onClick(android.view.View)
-com.ihongqiqu.Identify.IdActivity$1: void onClick(android.view.View)
-com.ihongqiqu.Identify.IdentifyApplication
-com.ihongqiqu.Identify.IdentifyApplication: IdentifyApplication()
-com.ihongqiqu.Identify.MainActivity
-com.ihongqiqu.Identify.MainActivity: MainActivity()
-com.ihongqiqu.Identify.MainActivity: void onClick(android.view.View)
-com.ihongqiqu.Identify.PhoneActivity
-com.ihongqiqu.Identify.PhoneActivity: android.widget.EditText etPhone
-com.ihongqiqu.Identify.PhoneActivity: android.widget.TextView tvPhoneInvalid
-com.ihongqiqu.Identify.PhoneActivity: android.widget.ImageView ivPhoneClear
-com.ihongqiqu.Identify.PhoneActivity: android.widget.Button btnQuery
-com.ihongqiqu.Identify.PhoneActivity: android.widget.TextView tvCarrier
-com.ihongqiqu.Identify.PhoneActivity: android.widget.TextView tvProvince
-com.ihongqiqu.Identify.PhoneActivity: PhoneActivity()
-com.ihongqiqu.Identify.PhoneActivity: void onClick(android.view.View)
-com.ihongqiqu.Identify.PhoneActivity$1: void onClick(android.view.View)
 com.ihongqiqu.Identify.R$anim
 com.ihongqiqu.Identify.R$anim: int abc_fade_in
 com.ihongqiqu.Identify.R$anim: int abc_fade_out
@@ -4620,6 +4673,7 @@ com.ihongqiqu.Identify.R$id: int edit_query
 com.ihongqiqu.Identify.R$id: int end
 com.ihongqiqu.Identify.R$id: int end_padder
 com.ihongqiqu.Identify.R$id: int et_id
+com.ihongqiqu.Identify.R$id: int et_ip
 com.ihongqiqu.Identify.R$id: int et_phone
 com.ihongqiqu.Identify.R$id: int expand_activities_button
 com.ihongqiqu.Identify.R$id: int expanded_menu
@@ -4630,6 +4684,7 @@ com.ihongqiqu.Identify.R$id: int ifRoom
 com.ihongqiqu.Identify.R$id: int image
 com.ihongqiqu.Identify.R$id: int info
 com.ihongqiqu.Identify.R$id: int iv_id_clear
+com.ihongqiqu.Identify.R$id: int iv_ip_clear
 com.ihongqiqu.Identify.R$id: int iv_phone_clear
 com.ihongqiqu.Identify.R$id: int layout_root
 com.ihongqiqu.Identify.R$id: int line1
@@ -4686,8 +4741,11 @@ com.ihongqiqu.Identify.R$id: int tv_contact
 com.ihongqiqu.Identify.R$id: int tv_developer
 com.ihongqiqu.Identify.R$id: int tv_id
 com.ihongqiqu.Identify.R$id: int tv_id_invalid
+com.ihongqiqu.Identify.R$id: int tv_ip
+com.ihongqiqu.Identify.R$id: int tv_ip_invalid
 com.ihongqiqu.Identify.R$id: int tv_phone
 com.ihongqiqu.Identify.R$id: int tv_phone_invalid
+com.ihongqiqu.Identify.R$id: int tv_postcode
 com.ihongqiqu.Identify.R$id: int tv_province
 com.ihongqiqu.Identify.R$id: int tv_sex
 com.ihongqiqu.Identify.R$id: int tv_share
@@ -4729,6 +4787,7 @@ com.ihongqiqu.Identify.R$layout: int abc_select_dialog_material
 com.ihongqiqu.Identify.R$layout: int abc_simple_dropdown_hint
 com.ihongqiqu.Identify.R$layout: int activity_base
 com.ihongqiqu.Identify.R$layout: int activity_id
+com.ihongqiqu.Identify.R$layout: int activity_ip
 com.ihongqiqu.Identify.R$layout: int activity_main
 com.ihongqiqu.Identify.R$layout: int activity_phone
 com.ihongqiqu.Identify.R$layout: int activity_setting
@@ -5371,10 +5430,101 @@ com.ihongqiqu.Identify.R$styleable: int[] ViewStubCompat
 com.ihongqiqu.Identify.R$styleable: int ViewStubCompat_android_id
 com.ihongqiqu.Identify.R$styleable: int ViewStubCompat_android_inflatedId
 com.ihongqiqu.Identify.R$styleable: int ViewStubCompat_android_layout
-com.ihongqiqu.Identify.SettingActivity
-com.ihongqiqu.Identify.SettingActivity: SettingActivity()
-com.ihongqiqu.Identify.SettingActivity: void onClick(android.view.View)
-com.ihongqiqu.Identify.SettingActivity$1: void onClick(android.view.View)
+com.ihongqiqu.Identify.activity.BaseActivity
+com.ihongqiqu.Identify.activity.BaseActivity: BaseActivity()
+com.ihongqiqu.Identify.activity.BaseActivity: void setContentView(android.view.View)
+com.ihongqiqu.Identify.activity.IdActivity
+com.ihongqiqu.Identify.activity.IdActivity: android.widget.EditText etId
+com.ihongqiqu.Identify.activity.IdActivity: android.widget.TextView tvIdInvalid
+com.ihongqiqu.Identify.activity.IdActivity: android.widget.ImageView ivIdClear
+com.ihongqiqu.Identify.activity.IdActivity: android.widget.Button btnQuery
+com.ihongqiqu.Identify.activity.IdActivity: android.widget.TextView tvAddress
+com.ihongqiqu.Identify.activity.IdActivity: android.widget.TextView tvSex
+com.ihongqiqu.Identify.activity.IdActivity: android.widget.TextView tvBirthday
+com.ihongqiqu.Identify.activity.IdActivity: IdActivity()
+com.ihongqiqu.Identify.activity.IdActivity: void onClick(android.view.View)
+com.ihongqiqu.Identify.activity.IdActivity$1: void onClick(android.view.View)
+com.ihongqiqu.Identify.activity.IpActivity
+com.ihongqiqu.Identify.activity.IpActivity: android.widget.EditText etIp
+com.ihongqiqu.Identify.activity.IpActivity: android.widget.TextView tvIpInvalid
+com.ihongqiqu.Identify.activity.IpActivity: android.widget.ImageView ivIpClear
+com.ihongqiqu.Identify.activity.IpActivity: android.widget.TextView tvIp
+com.ihongqiqu.Identify.activity.IpActivity: android.widget.TextView tvAddress
+com.ihongqiqu.Identify.activity.IpActivity: android.widget.TextView tvPostcode
+com.ihongqiqu.Identify.activity.IpActivity: IpActivity()
+com.ihongqiqu.Identify.activity.IpActivity: void onClick(android.view.View)
+com.ihongqiqu.Identify.activity.IpActivity$1: void onClick(android.view.View)
+com.ihongqiqu.Identify.activity.MainActivity
+com.ihongqiqu.Identify.activity.MainActivity: MainActivity()
+com.ihongqiqu.Identify.activity.MainActivity: void onClick(android.view.View)
+com.ihongqiqu.Identify.activity.PhoneActivity
+com.ihongqiqu.Identify.activity.PhoneActivity: android.widget.EditText etPhone
+com.ihongqiqu.Identify.activity.PhoneActivity: android.widget.TextView tvPhoneInvalid
+com.ihongqiqu.Identify.activity.PhoneActivity: android.widget.ImageView ivPhoneClear
+com.ihongqiqu.Identify.activity.PhoneActivity: android.widget.Button btnQuery
+com.ihongqiqu.Identify.activity.PhoneActivity: android.widget.TextView tvCarrier
+com.ihongqiqu.Identify.activity.PhoneActivity: android.widget.TextView tvProvince
+com.ihongqiqu.Identify.activity.PhoneActivity: PhoneActivity()
+com.ihongqiqu.Identify.activity.PhoneActivity: void onClick(android.view.View)
+com.ihongqiqu.Identify.activity.PhoneActivity$1: void onClick(android.view.View)
+com.ihongqiqu.Identify.activity.SettingActivity
+com.ihongqiqu.Identify.activity.SettingActivity: SettingActivity()
+com.ihongqiqu.Identify.activity.SettingActivity: void onClick(android.view.View)
+com.ihongqiqu.Identify.activity.SettingActivity$1: void onClick(android.view.View)
+com.ihongqiqu.Identify.base.IdentifyApplication
+com.ihongqiqu.Identify.base.IdentifyApplication: IdentifyApplication()
+com.ihongqiqu.Identify.entity.BaseEntity: BaseEntity()
+com.ihongqiqu.Identify.entity.IdInfo
+com.ihongqiqu.Identify.entity.IdInfo: java.lang.String birthday
+com.ihongqiqu.Identify.entity.IdInfo: java.lang.String sex
+com.ihongqiqu.Identify.entity.IdInfo: java.lang.String address
+com.ihongqiqu.Identify.entity.IdInfo: IdInfo()
+com.ihongqiqu.Identify.entity.IdInfo: void setBirthday(java.lang.String)
+com.ihongqiqu.Identify.entity.IdInfo: void setSex(java.lang.String)
+com.ihongqiqu.Identify.entity.IdInfo: void setAddress(java.lang.String)
+com.ihongqiqu.Identify.entity.IdInfo: java.lang.String getBirthday()
+com.ihongqiqu.Identify.entity.IdInfo: java.lang.String getSex()
+com.ihongqiqu.Identify.entity.IdInfo: java.lang.String getAddress()
+com.ihongqiqu.Identify.entity.IpInfo
+com.ihongqiqu.Identify.entity.IpInfo: java.lang.String region
+com.ihongqiqu.Identify.entity.IpInfo: java.lang.String regionCode
+com.ihongqiqu.Identify.entity.IpInfo: java.lang.String cityCode
+com.ihongqiqu.Identify.entity.IpInfo: java.lang.String proCode
+com.ihongqiqu.Identify.entity.IpInfo: java.lang.String pro
+com.ihongqiqu.Identify.entity.IpInfo: java.lang.String addr
+com.ihongqiqu.Identify.entity.IpInfo: java.lang.String regionNames
+com.ihongqiqu.Identify.entity.IpInfo: java.lang.String city
+com.ihongqiqu.Identify.entity.IpInfo: java.lang.String ip
+com.ihongqiqu.Identify.entity.IpInfo: IpInfo()
+com.ihongqiqu.Identify.entity.IpInfo: void setRegion(java.lang.String)
+com.ihongqiqu.Identify.entity.IpInfo: void setRegionCode(java.lang.String)
+com.ihongqiqu.Identify.entity.IpInfo: void setCityCode(java.lang.String)
+com.ihongqiqu.Identify.entity.IpInfo: void setProCode(java.lang.String)
+com.ihongqiqu.Identify.entity.IpInfo: void setPro(java.lang.String)
+com.ihongqiqu.Identify.entity.IpInfo: void setAddr(java.lang.String)
+com.ihongqiqu.Identify.entity.IpInfo: void setRegionNames(java.lang.String)
+com.ihongqiqu.Identify.entity.IpInfo: void setCity(java.lang.String)
+com.ihongqiqu.Identify.entity.IpInfo: void setIp(java.lang.String)
+com.ihongqiqu.Identify.entity.IpInfo: java.lang.String getRegion()
+com.ihongqiqu.Identify.entity.IpInfo: java.lang.String getRegionCode()
+com.ihongqiqu.Identify.entity.IpInfo: java.lang.String getCityCode()
+com.ihongqiqu.Identify.entity.IpInfo: java.lang.String getProCode()
+com.ihongqiqu.Identify.entity.IpInfo: java.lang.String getPro()
+com.ihongqiqu.Identify.entity.IpInfo: java.lang.String getAddr()
+com.ihongqiqu.Identify.entity.IpInfo: java.lang.String getRegionNames()
+com.ihongqiqu.Identify.entity.IpInfo: java.lang.String getCity()
+com.ihongqiqu.Identify.entity.IpInfo: java.lang.String getIp()
+com.ihongqiqu.Identify.entity.PhoneInfo
+com.ihongqiqu.Identify.entity.PhoneInfo: java.lang.String telString
+com.ihongqiqu.Identify.entity.PhoneInfo: java.lang.String province
+com.ihongqiqu.Identify.entity.PhoneInfo: java.lang.String carrier
+com.ihongqiqu.Identify.entity.PhoneInfo: PhoneInfo()
+com.ihongqiqu.Identify.entity.PhoneInfo: void setTelString(java.lang.String)
+com.ihongqiqu.Identify.entity.PhoneInfo: void setProvince(java.lang.String)
+com.ihongqiqu.Identify.entity.PhoneInfo: void setCarrier(java.lang.String)
+com.ihongqiqu.Identify.entity.PhoneInfo: java.lang.String getTelString()
+com.ihongqiqu.Identify.entity.PhoneInfo: java.lang.String getProvince()
+com.ihongqiqu.Identify.entity.PhoneInfo: java.lang.String getCarrier()
 com.umeng.analytics.Gender: com.umeng.analytics.Gender[] values()
 com.umeng.analytics.Gender: com.umeng.analytics.Gender valueOf(java.lang.String)
 com.umeng.analytics.onlineconfig.a$d: a$d(org.json.JSONObject)

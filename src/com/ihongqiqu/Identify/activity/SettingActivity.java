@@ -1,10 +1,11 @@
-package com.ihongqiqu.Identify;
+package com.ihongqiqu.Identify.activity;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import com.ihongqiqu.Identify.R;
 
 /**
  * 设置

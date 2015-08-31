@@ -1,4 +1,4 @@
-package com.ihongqiqu.Identify;
+package com.ihongqiqu.Identify.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;

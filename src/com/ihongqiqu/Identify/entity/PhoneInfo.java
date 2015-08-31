@@ -1,11 +1,11 @@
-package com.ihongqiqu.Identify;
+package com.ihongqiqu.Identify.entity;
 
 /**
  * 手机归属地信息
  * <p/>
  * Created by zhenguo on 8/25/15.
  */
-public class PhoneInfo extends BaseEntity{
+public class PhoneInfo extends BaseEntity {
 
     /**
      * telString : 15846530170 province : 黑龙江 carrier : 黑龙江移动

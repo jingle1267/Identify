@@ -1,4 +1,4 @@
-package com.ihongqiqu.Identify;
+package com.ihongqiqu.Identify.activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -18,11 +18,9 @@ import com.android.volley.*;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.util.HashMap;
-import java.util.Map;
+import com.ihongqiqu.Identify.BuildConfig;
+import com.ihongqiqu.Identify.R;
+import com.ihongqiqu.Identify.entity.IpInfo;
 
 /**
  * IP地址信息查询

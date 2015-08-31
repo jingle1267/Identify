@@ -1,11 +1,10 @@
-package com.ihongqiqu.Identify;
+package com.ihongqiqu.Identify.activity;
 
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
+import com.ihongqiqu.Identify.R;
 
 /**
  * 主界面

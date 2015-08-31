@@ -1,4 +1,4 @@
-package com.ihongqiqu.Identify;
+package com.ihongqiqu.Identify.entity;
 
 /**
  * Created by zhenguo on 8/29/15.

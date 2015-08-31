@@ -14,19 +14,19 @@
     <application android:label="@string/app_name"
                   android:theme="@style/AppTheme"
                  android:icon="@drawable/ic_launcher"
-                 android:name=".IdentifyApplication">
-        <activity android:name="MainActivity"
+                 android:name=".base.IdentifyApplication">
+        <activity android:name=".activity.MainActivity"
                   android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".PhoneActivity"/>
-        <activity android:name=".IdActivity"/>
-        <activity android:name=".BaseActivity"/>
-        <activity android:name=".SettingActivity"/>
-        <activity android:name=".IpActivity"/>
+        <activity android:name=".activity.PhoneActivity"/>
+        <activity android:name=".activity.IdActivity"/>
+        <activity android:name=".activity.BaseActivity"/>
+        <activity android:name=".activity.SettingActivity"/>
+        <activity android:name=".activity.IpActivity"/>
 
     </application>
 </manifest>

@@ -1,7 +1,9 @@
-package com.ihongqiqu.Identify;
+package com.ihongqiqu.Identify.base;
 
 import android.app.Application;
 import android.util.Log;
+import com.ihongqiqu.Identify.BuildConfig;
+import com.ihongqiqu.Identify.utils.ChannelUtil;
 import com.umeng.analytics.AnalyticsConfig;
 
 /**

@@ -1,4 +1,4 @@
-package com.ihongqiqu.Identify;
+package com.ihongqiqu.Identify.activity;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -14,6 +14,8 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.LinearLayout;
+import com.ihongqiqu.Identify.BuildConfig;
+import com.ihongqiqu.Identify.R;
 import com.umeng.analytics.MobclickAgent;
 
 import java.lang.reflect.Field;

@@ -1,9 +1,8 @@
-package com.ihongqiqu.Identify;
+package com.ihongqiqu.Identify.activity;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -16,6 +15,9 @@ import com.android.volley.*;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
+import com.ihongqiqu.Identify.BuildConfig;
+import com.ihongqiqu.Identify.R;
+import com.ihongqiqu.Identify.entity.IdInfo;
 import org.json.JSONException;
 import org.json.JSONObject;
 

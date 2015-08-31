@@ -1,4 +1,4 @@
-package com.ihongqiqu.Identify;
+package com.ihongqiqu.Identify.entity;
 
 /**
  * IP地址信息实体

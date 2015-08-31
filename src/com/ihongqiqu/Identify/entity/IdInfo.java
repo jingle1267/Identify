@@ -1,11 +1,11 @@
-package com.ihongqiqu.Identify;
+package com.ihongqiqu.Identify.entity;
 
 /**
  * 身份证信息
  *
  * Created by zhenguo on 8/27/15.
  */
-public class IdInfo extends BaseEntity{
+public class IdInfo extends BaseEntity {
 
     /**
      * birthday : 1987-04-20
