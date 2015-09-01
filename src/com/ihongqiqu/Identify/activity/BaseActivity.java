@@ -3,6 +3,7 @@ package com.ihongqiqu.Identify.activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.widget.SlidingPaneLayout;
@@ -64,7 +65,6 @@ public class BaseActivity extends AppCompatActivity {
                 public void onPanelOpened(View view) {
                     if (BuildConfig.DEBUG)
                         Log.d("BaseActivity", "onPanelOpened");
-
                     //菜单打开后，我们结束掉这个Activity
                     finish();
                     BaseActivity.this.overridePendingTransition(0, R.anim.sliding_out_right);
@@ -76,7 +76,9 @@ public class BaseActivity extends AppCompatActivity {
                         Log.d("BaseActivity", "onPanelClosed");
                 }
             });
-            slidingPaneLayout.setSliderFadeColor(getResources().getColor(android.R.color.transparent));
+            slidingPaneLayout.setSliderFadeColor(Color.TRANSPARENT);
+            // slidingPaneLayout.setCoveredFadeColor(getResources().getColor(R.color.divider_color));
+            slidingPaneLayout.setShadowResourceLeft(R.drawable.drawer_shadow);
         } catch (Exception e) {
             e.printStackTrace();
             if (BuildConfig.DEBUG)
