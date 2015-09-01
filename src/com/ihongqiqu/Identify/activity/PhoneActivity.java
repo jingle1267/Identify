@@ -3,6 +3,7 @@ package com.ihongqiqu.Identify.activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.widget.AppCompatButton;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -41,7 +42,7 @@ public class PhoneActivity extends BaseActivity {
     @Bind(R.id.iv_phone_clear)
     ImageView ivPhoneClear;
     @Bind(R.id.btn_query)
-    Button btnQuery;
+    AppCompatButton btnQuery;
     @Bind(R.id.tv_carrier)
     TextView tvCarrier;
     @Bind(R.id.tv_province)

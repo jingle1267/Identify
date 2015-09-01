@@ -541,10 +541,15 @@ android.support.v4.content.Loader:
 android.support.v4.content.Loader$ForceLoadContentObserver
 android.support.v4.content.Loader$OnLoadCompleteListener:
     public abstract void onLoadComplete(android.support.v4.content.Loader,java.lang.Object)
-android.support.v4.content.LocalBroadcastManager
-android.support.v4.content.LocalBroadcastManager$1
-android.support.v4.content.LocalBroadcastManager$BroadcastRecord
-android.support.v4.content.LocalBroadcastManager$ReceiverRecord
+android.support.v4.content.LocalBroadcastManager:
+    private static final java.lang.String TAG
+    private static final boolean DEBUG
+    static final int MSG_EXEC_PENDING_BROADCASTS
+    134:152:public void registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)
+    164:188:public void unregisterReceiver(android.content.BroadcastReceiver)
+    277:280:public void sendBroadcastSync(android.content.Intent)
+android.support.v4.content.LocalBroadcastManager$ReceiverRecord:
+    52:55:LocalBroadcastManager$ReceiverRecord(android.content.IntentFilter,android.content.BroadcastReceiver)
 android.support.v4.content.ModernAsyncTask
 android.support.v4.content.ModernAsyncTask$1
 android.support.v4.content.ModernAsyncTask$2
@@ -3711,11 +3716,170 @@ android.support.v7.widget.Toolbar$LayoutParams:
     static final int EXPANDED
     1810:1812:public Toolbar$LayoutParams(int,int,int)
     1815:1816:public Toolbar$LayoutParams(int)
+com.alimama.mobile.MMAdView:
+    39:40:public MMAdView(android.content.Context,android.util.AttributeSet)
+    43:44:public MMAdView(android.content.Context,android.util.AttributeSet,int)
+com.alimama.mobile.a$a:
+    public static final int h
+    public static final int i
+    public static final int j
+com.alimama.mobile.csdk.umupdate.a
+com.alimama.mobile.csdk.umupdate.a.a:
+    public abstract boolean a(java.lang.String)
+    public abstract boolean a(java.lang.Class)
+    public abstract boolean b(java.lang.String)
+    public abstract boolean a(android.content.Intent)
+    public abstract boolean b(java.lang.Class)
+    public abstract android.content.pm.ActivityInfo c(java.lang.Class)
+    public abstract boolean d(java.lang.Class)
+    public abstract boolean a()
+    public abstract boolean b()
+    public abstract boolean c()
+    public abstract boolean d()
+    public abstract boolean e()
+    public abstract java.lang.String d(java.lang.String)
+    public abstract java.lang.String j()
+    public abstract void k()
+    public abstract boolean e(java.lang.String)
+    public abstract java.lang.String q()
+    public abstract java.lang.String s()
+    public abstract float u()
+    public abstract int v()
+    public abstract int w()
+    public abstract int x()
+    public abstract int y()
+    public abstract int z()
+    public abstract int A()
+    public abstract java.lang.String B()
+    public abstract float a(float)
+com.alimama.mobile.csdk.umupdate.a.b:
+    private static final java.lang.String e
+    private static final int f
+    private static final int g
+    private static final int h
+    private static final int k
+    private static final int l
+    300:301:public static void a()
+    307:308:public static void a(java.util.concurrent.Executor)
+    362:362:public final com.alimama.mobile.csdk.umupdate.a.b$d b()
+    491:492:public final boolean a(boolean)
+    506:506:public final java.lang.Object f()
+    524:524:public final java.lang.Object a(long,java.util.concurrent.TimeUnit)
+    553:553:public final varargs com.alimama.mobile.csdk.umupdate.a.b c(java.lang.Object[])
+    619:620:public static void a(java.lang.Runnable)
+    636:640:protected final varargs void d(java.lang.Object[])
+com.alimama.mobile.csdk.umupdate.a.c:
+    private java.lang.String d
+    74:75:public void a(android.content.Context)
+    191:194:public java.lang.String d(java.lang.String)
+    200:205:public boolean a(java.lang.String)
+    210:211:public boolean a(java.lang.Class)
+    216:217:public boolean b(java.lang.String)
+    222:223:public boolean a(android.content.Intent)
+    228:230:public boolean b(java.lang.Class)
+    236:244:public android.content.pm.ActivityInfo c(java.lang.Class)
+    249:251:public boolean d(java.lang.Class)
+    260:260:public boolean a()
+    265:265:public boolean b()
+    292:292:public void k()
+    295:304:protected varargs void a(android.content.Context,java.lang.Class[])
+    323:332:public boolean c()
+    337:341:public boolean d()
+    362:367:public boolean e()
+    371:376:public static boolean a(android.app.Activity)
+    380:395:public static android.content.Intent b(android.content.Context)
+    405:406:public int c(android.content.Context)
+    418:418:public java.lang.String j()
+    464:464:public java.lang.String q()
+    480:480:public java.lang.String s()
+    490:490:public float u()
+    495:505:public int v()
+    510:552:public int w()
+    557:567:public int x()
+    572:572:public int y()
+    577:577:public int z()
+    582:591:public int A()
+    626:626:public java.lang.String B()
+    695:696:public float a(float)
+    708:709:void a(boolean)
+com.alimama.mobile.csdk.umupdate.a.d:
+    20:20:public d()
+com.alimama.mobile.csdk.umupdate.a.e:
+    4:4:public e()
+com.alimama.mobile.csdk.umupdate.a.f
+com.alimama.mobile.csdk.umupdate.a.g:
+    45:50:public static void a(java.lang.String)
+    53:56:public static varargs void a(java.lang.String,java.lang.Object[])
+    83:84:public static varargs void b(java.lang.Throwable,java.lang.String,java.lang.Object[])
+    87:88:public static varargs void f(java.lang.String,java.lang.Object[])
+    91:92:public static varargs void c(java.lang.Throwable,java.lang.String,java.lang.Object[])
+com.alimama.mobile.csdk.umupdate.a.g$a
+com.alimama.mobile.csdk.umupdate.a.g$a$a
+com.alimama.mobile.csdk.umupdate.a.j:
+    17:17:public j()
+    19:22:public static java.lang.String a(java.lang.String)
+com.alimama.mobile.csdk.umupdate.a.k:
+    static final java.lang.String a
+com.alimama.mobile.csdk.umupdate.b
+com.alimama.mobile.csdk.umupdate.b$a
+com.alimama.mobile.csdk.umupdate.b$b
+com.alimama.mobile.csdk.umupdate.b$c
+com.alimama.mobile.csdk.umupdate.b$d
+com.alimama.mobile.csdk.umupdate.b$e
+com.alimama.mobile.csdk.umupdate.b$f
+com.alimama.mobile.csdk.umupdate.b.a:
+    public static final java.lang.String a
+    public static final java.lang.String b
+com.alimama.mobile.csdk.umupdate.b.d:
+    public static java.lang.String[] b
+    76:82:public static com.alimama.mobile.csdk.umupdate.b.d a(org.json.JSONObject)
+com.alimama.mobile.csdk.umupdate.b.d$a:
+    private static final int l
+    151:152:public com.alimama.mobile.csdk.umupdate.b.d$a a(java.lang.String)
+    156:157:public com.alimama.mobile.csdk.umupdate.b.d$a b(java.lang.String)
+    177:178:public com.alimama.mobile.csdk.umupdate.b.d$a d(int)
+    182:183:public com.alimama.mobile.csdk.umupdate.b.d$a e(int)
+    235:270:private boolean a(java.util.Map)
+com.alimama.mobile.csdk.umupdate.models.MMEntity:
+    226:229:public void extendFields(com.alimama.mobile.csdk.umupdate.models.MMEntity)
+com.alimama.mobile.csdk.umupdate.models.Promoter:
+    public static final int LANDING_TYPE_BROWSER
+    public static final int LANDING_TYPE_DIRECT_DOWNLOAD
+    public static final int LANDING_TYPE_POPUP
+    public static final int LANDING_TYPE_WAP_WEBVIEW
+    public static final int LANDING_TYPE_WEBVIEW
+    public static final int LANDING_TYPE_ALIP4P
+    public static final int LANDING_TYPE_UMENGAPP
+    public static final int REPORT_CLICK_TO_LAUNCH_DETAIL_PAGE
+    public static final int REPORT_CLICK_TO_LAUNCH
+    public static final int REPORT_CLICK_TO_PROMOTE
+    public static final int REPORT_DOWNLOAD
+    public static final int REPORT_DOWNLOAD_FAILED
+    public static final int REPORT_DOWNLOAD_CLICK
+    public static final int REPORT_DOWNLOAD_CLICK_DIRECT
+    public static final int REPORT_IMPRESSION
+    public static final int REPORT_ENTRANCE_CLICK
+    public static final int REPORT_ENTRANCE_IMPRESSION
+    public static final int REPORT_FILTERED
+    public static final int REPORT_FEED_UNIMPRESSION
+    public static final int REPORT_FEED_NOMATCH
+    504:556:public org.json.JSONObject toJson()
+    560:560:public static com.alimama.mobile.csdk.umupdate.models.Promoter buildMockPromoter()
+    565:574:public static java.lang.Class getAdapterPromoterClz(com.alimama.mobile.csdk.umupdate.models.f,com.alimama.mobile.csdk.umupdate.models.e)
+    579:586:private static java.lang.Class a(java.lang.String)
+com.alimama.mobile.csdk.umupdate.models.Promoter$a
+com.alimama.mobile.csdk.umupdate.models.Promoter$b
+com.alimama.mobile.csdk.umupdate.models.Promoter$b$1
+com.alimama.mobile.csdk.umupdate.models.Promoter$b$2
+com.alimama.mobile.csdk.umupdate.models.c:
+    public static final int a
+    public static final int b
+    private static final java.lang.String j
 com.ihongqiqu.Identify.BuildConfig
 com.ihongqiqu.Identify.R:
-    10:2648:public R()
+    10:2733:public R()
 com.ihongqiqu.Identify.activity.IpActivity:
-    194:208:public static boolean isTopURL(java.lang.String)
+    196:210:public static boolean isTopURL(java.lang.String)
 com.ihongqiqu.Identify.utils.ChannelUtil:
     private static final java.lang.String CHANNEL_KEY
     private static final java.lang.String CHANNEL_VERSION_KEY
@@ -3907,6 +4071,126 @@ com.umeng.analytics.social.c
 com.umeng.analytics.social.d
 com.umeng.analytics.social.e
 com.umeng.analytics.social.f
+com.umeng.update.UmengUpdateAgent:
+    41:51:public static void setDefault()
+    75:76:public static void setUpdateCheckConfig(boolean)
+    95:96:public static void setUpdateAutoPopup(boolean)
+    107:108:public static void setUpdateUIStyle(int)
+    117:118:public static void setDeltaUpdate(boolean)
+    127:128:public static void setAppkey(java.lang.String)
+    136:137:public static void setSlotId(java.lang.String)
+    146:147:public static void setChannel(java.lang.String)
+    155:156:public static void setRichNotification(boolean)
+    165:166:public static void setUpdateListener(com.umeng.update.UmengUpdateListener)
+    176:177:public static void setDialogListener(com.umeng.update.UmengDialogButtonListener)
+    187:188:public static void setDownloadListener(com.umeng.update.UmengDownloadListener)
+    205:208:public static void silentUpdate(android.content.Context)
+    217:220:public static void forceUpdate(android.content.Context)
+    246:250:public static void update(android.content.Context,java.lang.String,java.lang.String)
+    370:371:public static void showUpdateDialog(android.content.Context,com.umeng.update.UpdateResponse)
+    383:384:public static void showUpdateNotification(android.content.Context,com.umeng.update.UpdateResponse)
+com.umeng.update.UpdateConfig:
+    public static final java.lang.String a
+    public static final java.lang.String b
+    public static final java.lang.String c
+    public static final java.lang.String d
+    public static final java.lang.String e
+    public static final java.lang.String f
+    public static final java.lang.String g
+    public static final java.lang.String h
+    public static final java.lang.String i
+    private static final java.lang.String j
+    private static final java.lang.String k
+    12:12:public UpdateConfig()
+    43:44:public static void setAppkey(java.lang.String)
+    47:48:public static void setChannel(java.lang.String)
+    51:52:public static void setDebug(boolean)
+    98:99:public static void setUpdateAutoPopup(boolean)
+    114:115:public static void setDeltaUpdate(boolean)
+    130:131:public static void setStyle(int)
+    138:139:public static void setUpdateCheck(boolean)
+    146:147:public static void setRichNotification(boolean)
+    154:155:public static void setSlotId(java.lang.String)
+com.umeng.update.UpdateResponse:
+    private static final long a
+    public java.lang.String proto_ver
+com.umeng.update.UpdateStatus
+com.umeng.update.a
+com.umeng.update.net.DownloadingService:
+    static final int a
+    static final int b
+    static final int c
+    static final int d
+    static final int e
+    static final int f
+    public static final int g
+    public static final int h
+    public static final int i
+    public static final int j
+    public static final int k
+    public static final int l
+    public static final int m
+    public static final int n
+    private static final long w
+    private static final long x
+    private static final long y
+    static final int o
+    static final java.lang.String p
+    private static final int z
+    private static final long C
+    private static final long D
+com.umeng.update.net.b:
+    private static final java.lang.String b
+    private static final java.lang.String c
+    private static final java.lang.String d
+    private static final java.lang.String e
+    private static final java.lang.String f
+    private static final java.lang.String g
+    private static final java.lang.String h
+    private static final java.lang.String j
+    126:135:public void a(java.lang.String,java.lang.String,java.lang.String)
+    138:149:public int b(java.lang.String,java.lang.String)
+    153:164:public java.lang.String c(java.lang.String,java.lang.String)
+    168:187:public java.util.Date d(java.lang.String,java.lang.String)
+    199:212:public java.util.List a(java.lang.String)
+com.umeng.update.net.b$a:
+    private static final int b
+    private static final java.lang.String c
+com.umeng.update.net.b$b:
+    67:67:private b$b()
+com.umeng.update.net.c:
+    static final int a
+    static final int b
+    static final int c
+    static final int d
+com.umeng.update.net.e:
+    private static final java.lang.String a
+com.umeng.update.net.f:
+    public static final java.lang.String a
+    public static final java.lang.String b
+    public static final java.lang.String c
+    public static final java.lang.String d
+    public static final java.lang.String e
+    15:15:public f()
+    55:59:public static int a(com.umeng.update.net.a$a)
+    63:69:public static android.app.PendingIntent a(android.content.Context,java.lang.String)
+com.umeng.update.net.g
+com.umeng.update.net.g$a
+com.umeng.update.net.g$b
+com.umeng.update.net.h
+com.umeng.update.net.i
+com.umeng.update.net.i$a
+com.umeng.update.net.j:
+    private static final long c
+    private static final long d
+    private static final long e
+    374:375:public static void a(android.content.Context,android.widget.ImageView,java.lang.String,boolean,com.umeng.update.net.j$a)
+    393:394:public static void a(android.content.Context,android.widget.ImageView,java.lang.String,boolean,com.umeng.update.net.j$a,android.view.animation.Animation)
+com.umeng.update.util.DeltaUpdate:
+    private static final java.lang.String b
+    10:10:public DeltaUpdate()
+com.umeng.update.util.a
+com.umeng.update.util.c
 u.aly.a:
     80:81:public void a(u.aly.ay)
 u.aly.aa:
@@ -4949,3 +5233,64 @@ u.aly.z:
     private static final java.lang.String f
     202:229:public boolean e(android.content.Context)
     233:250:public void f(android.content.Context)
+u.upd.a:
+    public static final java.lang.String b
+    public static final java.lang.String c
+    public static final java.lang.String d
+    public static final int e
+    57:65:public static boolean a(java.lang.String,android.content.Context)
+    76:77:public static boolean a(android.content.Context)
+    87:90:public static boolean b(android.content.Context)
+    119:123:public static java.lang.String d(android.content.Context)
+    151:160:public static java.lang.String e(android.content.Context)
+    172:180:public static java.lang.String[] a(javax.microedition.khronos.opengles.GL10)
+    190:218:public static java.lang.String a()
+    267:267:public static java.lang.String g(android.content.Context)
+    278:287:public static java.lang.String h(android.content.Context)
+    299:312:public static java.lang.String i(android.content.Context)
+    411:420:public static int m(android.content.Context)
+    431:451:public static java.lang.String[] n(android.content.Context)
+    462:479:private static java.util.Locale x(android.content.Context)
+    544:555:public static java.lang.String q(android.content.Context)
+    565:597:public static int[] r(android.content.Context)
+    602:608:private static int a(java.lang.Object,java.lang.String)
+    620:626:public static java.lang.String s(android.content.Context)
+    636:638:public static java.lang.String a(java.util.Date)
+    647:650:public static java.lang.String c()
+    662:666:public static java.util.Date a(java.lang.String)
+    680:688:public static int a(java.util.Date,java.util.Date)
+    753:755:public static boolean w(android.content.Context)
+u.upd.b:
+    8:8:public b()
+    56:59:public static void d(java.lang.String,java.lang.String)
+    62:65:public static void d(java.lang.String,java.lang.String,java.lang.Exception)
+u.upd.c:
+    47:47:public int a(java.lang.String)
+    91:91:public int e(java.lang.String)
+    113:113:public int g(java.lang.String)
+u.upd.h:
+    75:75:public java.lang.String getBaseUrl()
+u.upd.j:
+    8:8:public j()
+    31:31:public static int f(android.content.Context)
+u.upd.k:
+    8:8:public k()
+u.upd.l:
+    7:7:public l()
+u.upd.m:
+    15:15:public m()
+    75:81:public static java.lang.String a(byte[],java.lang.String)
+    85:102:public static byte[] b(byte[])
+u.upd.n:
+    private static final java.lang.String b
+    34:34:public n()
+    146:158:public static java.lang.String a(android.content.Context,long)
+    192:195:public static void a(android.content.Context,java.lang.String)
+    207:213:public static boolean b(android.content.Context,java.lang.String)
+    237:241:public static boolean e(java.lang.String)
+    276:287:public static java.lang.String a(java.io.InputStream)
+    297:306:public static byte[] b(java.io.InputStream)
+    316:324:public static void a(java.io.File,byte[])
+    333:334:public static void a(java.io.File,java.lang.String)
+    341:346:public static void c(java.io.InputStream)
+    352:357:public static void a(java.io.OutputStream)

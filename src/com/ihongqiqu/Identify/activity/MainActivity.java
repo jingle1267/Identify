@@ -1,12 +1,22 @@
 package com.ihongqiqu.Identify.activity;
 
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import com.ihongqiqu.Identify.BuildConfig;
 import com.ihongqiqu.Identify.R;
+import com.umeng.update.UmengDownloadListener;
+import com.umeng.update.UmengUpdateAgent;
+import com.umeng.update.UmengUpdateListener;
+import com.umeng.update.UpdateResponse;
+
+import java.io.File;
 
 /**
  * 主界面
@@ -23,6 +33,72 @@ public class MainActivity extends BaseActivity {
         toolbar.setNavigationIcon(R.drawable.ic_launcher);
 
         slidingPaneLayout.removeViewAt(0);
+
+        checkVersion();
+    }
+
+    private void checkVersion() {
+        UmengUpdateAgent.setUpdateOnlyWifi(false);
+        UmengUpdateAgent.setUpdateAutoPopup(false);
+        UmengUpdateAgent.setUpdateListener(new UmengUpdateListener() {
+            @Override
+            public void onUpdateReturned(int updateStatus, UpdateResponse updateInfo) {
+                if (updateStatus == 0 && updateInfo != null) {
+                    showUpdateDialog(updateInfo);
+                }
+                // case 0: // has update
+                // case 1: // has no update
+                // case 2: // none wifi
+                // case 3: // time out
+            }
+        });
+        UmengUpdateAgent.update(this);
+    }
+
+    private void showUpdateDialog(final UpdateResponse updateInfo) {
+        AlertDialog.Builder updateAlertDialog = new AlertDialog.Builder(this);
+        updateAlertDialog.setIcon(R.drawable.ic_launcher);
+        updateAlertDialog.setTitle("发现新版本");
+        updateAlertDialog.setMessage(updateInfo.updateLog);
+        updateAlertDialog.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+                try {
+                    if (BuildConfig.DEBUG)
+                        Log.d("MainActivity", "onClick");
+                        /*startActivity(new Intent(Intent.ACTION_VIEW, Uri
+                            .parse(updateInfo.path)));*/
+                    UmengUpdateAgent.setDownloadListener(new UmengDownloadListener() {
+                        @Override
+                        public void OnDownloadStart() {
+                            if (BuildConfig.DEBUG)
+                                Log.d("MainActivity", "OnDownloadStart");
+                        }
+
+                        @Override
+                        public void OnDownloadUpdate(int i) {
+                            if (BuildConfig.DEBUG)
+                                Log.d("MainActivity", "");
+                        }
+
+                        @Override
+                        public void OnDownloadEnd(int i, String s) {
+                            if (BuildConfig.DEBUG)
+                                Log.d("MainActivity", "OnDownloadEnd");
+
+                            UmengUpdateAgent.startInstall(MainActivity.this, new File(s));
+                        }
+                    });
+                    UmengUpdateAgent.startDownload(MainActivity.this, updateInfo);
+                } catch (Exception ex) {
+
+                }
+            }
+        }).setNegativeButton("取消", null);
+
+        if (!isFinishing())
+            updateAlertDialog.show();
     }
 
     public void onClick(View view) {

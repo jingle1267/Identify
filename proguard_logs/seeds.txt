@@ -1972,6 +1972,23 @@ butterknife.internal.ViewBindings: boolean hasMethodBinding(butterknife.internal
 butterknife.internal.ViewBindings: void addMethodBinding(butterknife.internal.ListenerClass,butterknife.internal.ListenerMethod,butterknife.internal.MethodViewBinding)
 butterknife.internal.ViewBindings: void addFieldBinding(butterknife.internal.FieldViewBinding)
 butterknife.internal.ViewBindings: java.util.List getRequiredBindings()
+com.alimama.mobile.MMAdView: void onClick(android.view.View)
+com.alimama.mobile.csdk.umupdate.a.b$d: com.alimama.mobile.csdk.umupdate.a.b$d[] values()
+com.alimama.mobile.csdk.umupdate.a.b$d: com.alimama.mobile.csdk.umupdate.a.b$d valueOf(java.lang.String)
+com.alimama.mobile.csdk.umupdate.b.f: f(org.json.JSONObject)
+com.alimama.mobile.csdk.umupdate.models.MMEntity
+com.alimama.mobile.csdk.umupdate.models.Promoter
+com.alimama.mobile.csdk.umupdate.models.Promoter: android.os.Parcelable$Creator CREATOR
+com.alimama.mobile.csdk.umupdate.models.Promoter: Promoter(org.json.JSONObject)
+com.alimama.mobile.csdk.umupdate.models.Promoter$b: com.alimama.mobile.csdk.umupdate.models.Promoter$b[] values()
+com.alimama.mobile.csdk.umupdate.models.Promoter$b: com.alimama.mobile.csdk.umupdate.models.Promoter$b valueOf(java.lang.String)
+com.alimama.mobile.csdk.umupdate.models.a
+com.alimama.mobile.csdk.umupdate.models.d: com.alimama.mobile.csdk.umupdate.models.d[] values()
+com.alimama.mobile.csdk.umupdate.models.d: com.alimama.mobile.csdk.umupdate.models.d valueOf(java.lang.String)
+com.alimama.mobile.csdk.umupdate.models.e: com.alimama.mobile.csdk.umupdate.models.e[] values()
+com.alimama.mobile.csdk.umupdate.models.e: com.alimama.mobile.csdk.umupdate.models.e valueOf(java.lang.String)
+com.alimama.mobile.csdk.umupdate.models.f: com.alimama.mobile.csdk.umupdate.models.f[] values()
+com.alimama.mobile.csdk.umupdate.models.f: com.alimama.mobile.csdk.umupdate.models.f valueOf(java.lang.String)
 com.android.volley.AuthFailureError
 com.android.volley.AuthFailureError: android.content.Intent mResolutionIntent
 com.android.volley.AuthFailureError: AuthFailureError()
@@ -4383,6 +4400,8 @@ com.ihongqiqu.Identify.R$color: int bright_foreground_inverse_material_dark
 com.ihongqiqu.Identify.R$color: int bright_foreground_inverse_material_light
 com.ihongqiqu.Identify.R$color: int bright_foreground_material_dark
 com.ihongqiqu.Identify.R$color: int bright_foreground_material_light
+com.ihongqiqu.Identify.R$color: int btn_normal_color
+com.ihongqiqu.Identify.R$color: int btn_press_color
 com.ihongqiqu.Identify.R$color: int button_material_dark
 com.ihongqiqu.Identify.R$color: int button_material_light
 com.ihongqiqu.Identify.R$color: int dim_foreground_disabled_material_dark
@@ -4421,6 +4440,7 @@ com.ihongqiqu.Identify.R$color: int switch_thumb_material_dark
 com.ihongqiqu.Identify.R$color: int switch_thumb_material_light
 com.ihongqiqu.Identify.R$color: int switch_thumb_normal_material_dark
 com.ihongqiqu.Identify.R$color: int switch_thumb_normal_material_light
+com.ihongqiqu.Identify.R$color: int tb_munion_item_force
 com.ihongqiqu.Identify.R$dimen
 com.ihongqiqu.Identify.R$dimen: int abc_action_bar_content_inset_material
 com.ihongqiqu.Identify.R$dimen: int abc_action_bar_default_height_material
@@ -4566,6 +4586,32 @@ com.ihongqiqu.Identify.R$drawable: int ic_error
 com.ihongqiqu.Identify.R$drawable: int ic_launcher
 com.ihongqiqu.Identify.R$drawable: int ic_setting
 com.ihongqiqu.Identify.R$drawable: int notification_template_icon_bg
+com.ihongqiqu.Identify.R$drawable: int tb_munion_icon
+com.ihongqiqu.Identify.R$drawable: int tb_munion_item_selector
+com.ihongqiqu.Identify.R$drawable: int umeng_common_gradient_green
+com.ihongqiqu.Identify.R$drawable: int umeng_common_gradient_orange
+com.ihongqiqu.Identify.R$drawable: int umeng_common_gradient_red
+com.ihongqiqu.Identify.R$drawable: int umeng_update_btn_check_off_focused_holo_light
+com.ihongqiqu.Identify.R$drawable: int umeng_update_btn_check_off_holo_light
+com.ihongqiqu.Identify.R$drawable: int umeng_update_btn_check_off_pressed_holo_light
+com.ihongqiqu.Identify.R$drawable: int umeng_update_btn_check_on_focused_holo_light
+com.ihongqiqu.Identify.R$drawable: int umeng_update_btn_check_on_holo_light
+com.ihongqiqu.Identify.R$drawable: int umeng_update_btn_check_on_pressed_holo_light
+com.ihongqiqu.Identify.R$drawable: int umeng_update_button_cancel_bg_focused
+com.ihongqiqu.Identify.R$drawable: int umeng_update_button_cancel_bg_normal
+com.ihongqiqu.Identify.R$drawable: int umeng_update_button_cancel_bg_selector
+com.ihongqiqu.Identify.R$drawable: int umeng_update_button_cancel_bg_tap
+com.ihongqiqu.Identify.R$drawable: int umeng_update_button_check_selector
+com.ihongqiqu.Identify.R$drawable: int umeng_update_button_close_bg_selector
+com.ihongqiqu.Identify.R$drawable: int umeng_update_button_ok_bg_focused
+com.ihongqiqu.Identify.R$drawable: int umeng_update_button_ok_bg_normal
+com.ihongqiqu.Identify.R$drawable: int umeng_update_button_ok_bg_selector
+com.ihongqiqu.Identify.R$drawable: int umeng_update_button_ok_bg_tap
+com.ihongqiqu.Identify.R$drawable: int umeng_update_close_bg_normal
+com.ihongqiqu.Identify.R$drawable: int umeng_update_close_bg_tap
+com.ihongqiqu.Identify.R$drawable: int umeng_update_dialog_bg
+com.ihongqiqu.Identify.R$drawable: int umeng_update_title_bg
+com.ihongqiqu.Identify.R$drawable: int umeng_update_wifi_disable
 com.ihongqiqu.Identify.R$id
 com.ihongqiqu.Identify.R$id: int action0
 com.ihongqiqu.Identify.R$id: int action_bar
@@ -4584,6 +4630,7 @@ com.ihongqiqu.Identify.R$id: int action_mode_bar_stub
 com.ihongqiqu.Identify.R$id: int action_mode_close_button
 com.ihongqiqu.Identify.R$id: int action_settings
 com.ihongqiqu.Identify.R$id: int activity_chooser_view_content
+com.ihongqiqu.Identify.R$id: int ad_image
 com.ihongqiqu.Identify.R$id: int alertTitle
 com.ihongqiqu.Identify.R$id: int always
 com.ihongqiqu.Identify.R$id: int beginning
@@ -4623,6 +4670,7 @@ com.ihongqiqu.Identify.R$id: int line1
 com.ihongqiqu.Identify.R$id: int line3
 com.ihongqiqu.Identify.R$id: int listMode
 com.ihongqiqu.Identify.R$id: int list_item
+com.ihongqiqu.Identify.R$id: int loading
 com.ihongqiqu.Identify.R$id: int media_actions
 com.ihongqiqu.Identify.R$id: int middle
 com.ihongqiqu.Identify.R$id: int multiply
@@ -4631,7 +4679,9 @@ com.ihongqiqu.Identify.R$id: int none
 com.ihongqiqu.Identify.R$id: int normal
 com.ihongqiqu.Identify.R$id: int parentPanel
 com.ihongqiqu.Identify.R$id: int progress_circular
+com.ihongqiqu.Identify.R$id: int progress_frame
 com.ihongqiqu.Identify.R$id: int progress_horizontal
+com.ihongqiqu.Identify.R$id: int promoter_frame
 com.ihongqiqu.Identify.R$id: int radio
 com.ihongqiqu.Identify.R$id: int screen
 com.ihongqiqu.Identify.R$id: int scrollView
@@ -4656,6 +4706,7 @@ com.ihongqiqu.Identify.R$id: int src_atop
 com.ihongqiqu.Identify.R$id: int src_in
 com.ihongqiqu.Identify.R$id: int src_over
 com.ihongqiqu.Identify.R$id: int status_bar_latest_event_content
+com.ihongqiqu.Identify.R$id: int status_msg
 com.ihongqiqu.Identify.R$id: int submit_area
 com.ihongqiqu.Identify.R$id: int tabMode
 com.ihongqiqu.Identify.R$id: int text
@@ -4681,6 +4732,22 @@ com.ihongqiqu.Identify.R$id: int tv_postcode
 com.ihongqiqu.Identify.R$id: int tv_province
 com.ihongqiqu.Identify.R$id: int tv_sex
 com.ihongqiqu.Identify.R$id: int tv_share
+com.ihongqiqu.Identify.R$id: int umeng_common_icon_view
+com.ihongqiqu.Identify.R$id: int umeng_common_notification
+com.ihongqiqu.Identify.R$id: int umeng_common_notification_controller
+com.ihongqiqu.Identify.R$id: int umeng_common_progress_bar
+com.ihongqiqu.Identify.R$id: int umeng_common_progress_text
+com.ihongqiqu.Identify.R$id: int umeng_common_rich_notification_cancel
+com.ihongqiqu.Identify.R$id: int umeng_common_rich_notification_continue
+com.ihongqiqu.Identify.R$id: int umeng_common_title
+com.ihongqiqu.Identify.R$id: int umeng_update_content
+com.ihongqiqu.Identify.R$id: int umeng_update_frame
+com.ihongqiqu.Identify.R$id: int umeng_update_id_cancel
+com.ihongqiqu.Identify.R$id: int umeng_update_id_check
+com.ihongqiqu.Identify.R$id: int umeng_update_id_close
+com.ihongqiqu.Identify.R$id: int umeng_update_id_ignore
+com.ihongqiqu.Identify.R$id: int umeng_update_id_ok
+com.ihongqiqu.Identify.R$id: int umeng_update_wifi_indicator
 com.ihongqiqu.Identify.R$id: int up
 com.ihongqiqu.Identify.R$id: int useLogo
 com.ihongqiqu.Identify.R$id: int withText
@@ -4735,9 +4802,27 @@ com.ihongqiqu.Identify.R$layout: int select_dialog_item_material
 com.ihongqiqu.Identify.R$layout: int select_dialog_multichoice_material
 com.ihongqiqu.Identify.R$layout: int select_dialog_singlechoice_material
 com.ihongqiqu.Identify.R$layout: int support_simple_spinner_dropdown_item
+com.ihongqiqu.Identify.R$layout: int tb_munion_aditem
+com.ihongqiqu.Identify.R$layout: int tb_munion_adview
+com.ihongqiqu.Identify.R$layout: int umeng_common_download_notification
+com.ihongqiqu.Identify.R$layout: int umeng_update_dialog
 com.ihongqiqu.Identify.R$menu
 com.ihongqiqu.Identify.R$menu: int menu_main
 com.ihongqiqu.Identify.R$string
+com.ihongqiqu.Identify.R$string: int UMAppUpdate
+com.ihongqiqu.Identify.R$string: int UMBreak_Network
+com.ihongqiqu.Identify.R$string: int UMDialog_InstallAPK
+com.ihongqiqu.Identify.R$string: int UMGprsCondition
+com.ihongqiqu.Identify.R$string: int UMIgnore
+com.ihongqiqu.Identify.R$string: int UMNewVersion
+com.ihongqiqu.Identify.R$string: int UMNotNow
+com.ihongqiqu.Identify.R$string: int UMTargetSize
+com.ihongqiqu.Identify.R$string: int UMToast_IsUpdating
+com.ihongqiqu.Identify.R$string: int UMUpdateCheck
+com.ihongqiqu.Identify.R$string: int UMUpdateContent
+com.ihongqiqu.Identify.R$string: int UMUpdateNow
+com.ihongqiqu.Identify.R$string: int UMUpdateSize
+com.ihongqiqu.Identify.R$string: int UMUpdateTitle
 com.ihongqiqu.Identify.R$string: int abc_action_bar_home_description
 com.ihongqiqu.Identify.R$string: int abc_action_bar_home_description_format
 com.ihongqiqu.Identify.R$string: int abc_action_bar_home_subtitle_description_format
@@ -4757,6 +4842,22 @@ com.ihongqiqu.Identify.R$string: int abc_shareactionprovider_share_with_applicat
 com.ihongqiqu.Identify.R$string: int abc_toolbar_collapse_description
 com.ihongqiqu.Identify.R$string: int app_name
 com.ihongqiqu.Identify.R$string: int status_bar_notification_info_overflow
+com.ihongqiqu.Identify.R$string: int tb_munion_tip_download_prefix
+com.ihongqiqu.Identify.R$string: int umeng_common_action_cancel
+com.ihongqiqu.Identify.R$string: int umeng_common_action_continue
+com.ihongqiqu.Identify.R$string: int umeng_common_action_info_exist
+com.ihongqiqu.Identify.R$string: int umeng_common_action_pause
+com.ihongqiqu.Identify.R$string: int umeng_common_download_failed
+com.ihongqiqu.Identify.R$string: int umeng_common_download_finish
+com.ihongqiqu.Identify.R$string: int umeng_common_download_notification_prefix
+com.ihongqiqu.Identify.R$string: int umeng_common_icon
+com.ihongqiqu.Identify.R$string: int umeng_common_info_interrupt
+com.ihongqiqu.Identify.R$string: int umeng_common_network_break_alert
+com.ihongqiqu.Identify.R$string: int umeng_common_patch_finish
+com.ihongqiqu.Identify.R$string: int umeng_common_pause_notification_prefix
+com.ihongqiqu.Identify.R$string: int umeng_common_silent_download_finish
+com.ihongqiqu.Identify.R$string: int umeng_common_start_download_notification
+com.ihongqiqu.Identify.R$string: int umeng_common_start_patch_notification
 com.ihongqiqu.Identify.R$style
 com.ihongqiqu.Identify.R$style: int AlertDialog_AppCompat
 com.ihongqiqu.Identify.R$style: int AlertDialog_AppCompat_Light
@@ -4896,6 +4997,7 @@ com.ihongqiqu.Identify.R$style: int Base_Widget_AppCompat_Spinner_Underlined
 com.ihongqiqu.Identify.R$style: int Base_Widget_AppCompat_TextView_SpinnerItem
 com.ihongqiqu.Identify.R$style: int Base_Widget_AppCompat_Toolbar
 com.ihongqiqu.Identify.R$style: int Base_Widget_AppCompat_Toolbar_Button_Navigation
+com.ihongqiqu.Identify.R$style: int ButtonStyle
 com.ihongqiqu.Identify.R$style: int MySearchViewStyle
 com.ihongqiqu.Identify.R$style: int Platform_AppCompat
 com.ihongqiqu.Identify.R$style: int Platform_AppCompat_Light
@@ -5406,7 +5508,7 @@ com.ihongqiqu.Identify.activity.PhoneActivity
 com.ihongqiqu.Identify.activity.PhoneActivity: android.widget.EditText etPhone
 com.ihongqiqu.Identify.activity.PhoneActivity: android.widget.TextView tvPhoneInvalid
 com.ihongqiqu.Identify.activity.PhoneActivity: android.widget.ImageView ivPhoneClear
-com.ihongqiqu.Identify.activity.PhoneActivity: android.widget.Button btnQuery
+com.ihongqiqu.Identify.activity.PhoneActivity: android.support.v7.widget.AppCompatButton btnQuery
 com.ihongqiqu.Identify.activity.PhoneActivity: android.widget.TextView tvCarrier
 com.ihongqiqu.Identify.activity.PhoneActivity: android.widget.TextView tvProvince
 com.ihongqiqu.Identify.activity.PhoneActivity: PhoneActivity()
@@ -5484,6 +5586,20 @@ com.umeng.analytics.social.UMPlatformData$GENDER: com.umeng.analytics.social.UMP
 com.umeng.analytics.social.UMPlatformData$GENDER: com.umeng.analytics.social.UMPlatformData$GENDER valueOf(java.lang.String)
 com.umeng.analytics.social.UMPlatformData$UMedia: com.umeng.analytics.social.UMPlatformData$UMedia[] values()
 com.umeng.analytics.social.UMPlatformData$UMedia: com.umeng.analytics.social.UMPlatformData$UMedia valueOf(java.lang.String)
+com.umeng.update.UmengDialogButtonListener: void onClick(int)
+com.umeng.update.UpdateDialogActivity
+com.umeng.update.UpdateDialogActivity: UpdateDialogActivity()
+com.umeng.update.UpdateDialogActivity$1: void onClick(android.view.View)
+com.umeng.update.UpdateResponse: UpdateResponse(org.json.JSONObject)
+com.umeng.update.net.DownloadingService
+com.umeng.update.net.DownloadingService: DownloadingService()
+com.umeng.update.net.i: i(org.json.JSONObject)
+com.umeng.update.net.i$a: com.umeng.update.net.i$a[] values()
+com.umeng.update.net.i$a: com.umeng.update.net.i$a valueOf(java.lang.String)
+com.umeng.update.net.j$b: com.umeng.update.net.j$b[] values()
+com.umeng.update.net.j$b: com.umeng.update.net.j$b valueOf(java.lang.String)
+com.umeng.update.util.DeltaUpdate
+com.umeng.update.util.DeltaUpdate: int bspatch(java.lang.String,java.lang.String,java.lang.String)
 u.aly.al: u.aly.al[] values()
 u.aly.al: u.aly.al valueOf(java.lang.String)
 u.aly.am$e: u.aly.am$e[] values()
@@ -5550,3 +5666,7 @@ u.aly.bv: bv(org.json.JSONObject)
 u.aly.bv$a: u.aly.bv$a[] values()
 u.aly.bv$a: u.aly.bv$a valueOf(java.lang.String)
 u.aly.by: by(org.json.JSONObject)
+u.upd.f: f(org.json.JSONObject)
+u.upd.f$a: u.upd.f$a[] values()
+u.upd.f$a: u.upd.f$a valueOf(java.lang.String)
+u.upd.i: i(org.json.JSONObject)

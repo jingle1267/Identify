@@ -1,11 +1,22 @@
 package com.ihongqiqu.Identify.activity;
 
 import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
+import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
+import com.ihongqiqu.Identify.BuildConfig;
 import com.ihongqiqu.Identify.R;
+import com.umeng.update.UmengDownloadListener;
+import com.umeng.update.UmengUpdateAgent;
+import com.umeng.update.UmengUpdateListener;
+import com.umeng.update.UpdateResponse;
+
+import java.io.File;
 
 /**
  * 设置
@@ -48,7 +59,88 @@ public class SettingActivity extends BaseActivity {
             case R.id.tv_share:
                 share();
                 break;
+            case R.id.tv_update:
+                checkVersion();
+                break;
         }
+    }
+
+    private void checkVersion() {
+        UmengUpdateAgent.setUpdateOnlyWifi(false);
+        UmengUpdateAgent.setUpdateAutoPopup(false);
+        UmengUpdateAgent.setUpdateListener(new UmengUpdateListener() {
+            @Override
+            public void onUpdateReturned(int updateStatus, UpdateResponse updateInfo) {
+                switch (updateStatus) {
+                    case 0: // has update
+                        if (updateInfo != null) {
+                            showUpdateDialog(updateInfo);
+                        } else {
+                            Toast.makeText(SettingActivity.this, "服务器出小差", Toast.LENGTH_SHORT).show();
+                        }
+                        break;
+                    case 1: // has no update
+                        Toast.makeText(SettingActivity.this, "当前已是最新版本", Toast.LENGTH_SHORT).show();
+                        break;
+                    case 2: // none wifi
+                        Toast.makeText(SettingActivity.this, "网络连接出现问题", Toast.LENGTH_SHORT).show();
+                        break;
+                    case 3: // time out
+                        Toast.makeText(SettingActivity.this, "请求超时", Toast.LENGTH_SHORT).show();
+                        break;
+                    default:
+
+                        break;
+                }
+            }
+        });
+        UmengUpdateAgent.update(this);
+    }
+
+    private void showUpdateDialog(final UpdateResponse updateInfo) {
+        AlertDialog.Builder updateAlertDialog = new AlertDialog.Builder(this);
+        updateAlertDialog.setIcon(R.drawable.ic_launcher);
+        updateAlertDialog.setTitle("发现新版本");
+        updateAlertDialog.setMessage(updateInfo.updateLog);
+        updateAlertDialog.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+                try {
+                    if (BuildConfig.DEBUG)
+                        Log.d("MainActivity", "onClick");
+                        /*startActivity(new Intent(Intent.ACTION_VIEW, Uri
+                            .parse(updateInfo.path)));*/
+                    UmengUpdateAgent.setDownloadListener(new UmengDownloadListener() {
+                        @Override
+                        public void OnDownloadStart() {
+                            if (BuildConfig.DEBUG)
+                                Log.d("MainActivity", "OnDownloadStart");
+                        }
+
+                        @Override
+                        public void OnDownloadUpdate(int i) {
+                            if (BuildConfig.DEBUG)
+                                Log.d("MainActivity", "");
+                        }
+
+                        @Override
+                        public void OnDownloadEnd(int i, String s) {
+                            if (BuildConfig.DEBUG)
+                                Log.d("MainActivity", "OnDownloadEnd");
+
+                            UmengUpdateAgent.startInstall(SettingActivity.this, new File(s));
+                        }
+                    });
+                    UmengUpdateAgent.startDownload(SettingActivity.this, updateInfo);
+                } catch (Exception ex) {
+
+                }
+            }
+        }).setNegativeButton("取消", null);
+
+        if (!isFinishing())
+            updateAlertDialog.show();
     }
 
     private void share() {

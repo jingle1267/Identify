@@ -719,6 +719,29 @@ android.support.v4.content.Loader -> android.support.v4.a.k:
     java.lang.String toString() -> toString
     void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
 android.support.v4.content.Loader$OnLoadCompleteListener -> android.support.v4.a.l:
+android.support.v4.content.LocalBroadcastManager -> android.support.v4.a.m:
+    android.content.Context mAppContext -> a
+    java.util.HashMap mReceivers -> b
+    java.util.HashMap mActions -> c
+    java.util.ArrayList mPendingBroadcasts -> d
+    android.os.Handler mHandler -> e
+    java.lang.Object mLock -> f
+    android.support.v4.content.LocalBroadcastManager mInstance -> g
+    android.support.v4.content.LocalBroadcastManager getInstance(android.content.Context) -> a
+    boolean sendBroadcast(android.content.Intent) -> a
+    void executePendingBroadcasts() -> a
+    void access$000(android.support.v4.content.LocalBroadcastManager) -> a
+android.support.v4.content.LocalBroadcastManager$1 -> android.support.v4.a.n:
+    android.support.v4.content.LocalBroadcastManager this$0 -> a
+    void handleMessage(android.os.Message) -> handleMessage
+android.support.v4.content.LocalBroadcastManager$BroadcastRecord -> android.support.v4.a.o:
+    android.content.Intent intent -> a
+    java.util.ArrayList receivers -> b
+android.support.v4.content.LocalBroadcastManager$ReceiverRecord -> android.support.v4.a.p:
+    android.content.IntentFilter filter -> a
+    android.content.BroadcastReceiver receiver -> b
+    boolean broadcasting -> c
+    java.lang.String toString() -> toString
 android.support.v4.graphics.ColorUtils -> android.support.v4.b.a:
     int compositeColors(int,int) -> a
     int compositeAlpha(int,int) -> c
@@ -8184,6 +8207,478 @@ butterknife.internal.ViewBindings -> butterknife.internal.ViewBindings:
     void addMethodBinding(butterknife.internal.ListenerClass,butterknife.internal.ListenerMethod,butterknife.internal.MethodViewBinding) -> addMethodBinding
     void addFieldBinding(butterknife.internal.FieldViewBinding) -> addFieldBinding
     java.util.List getRequiredBindings() -> getRequiredBindings
+com.alimama.mobile.MMAdView -> com.alimama.mobile.a:
+    com.alimama.mobile.a a -> a
+    com.alimama.mobile.csdk.umupdate.models.MMEntity b -> b
+    android.view.View c -> c
+    android.view.View d -> d
+    android.widget.TextView e -> e
+    android.widget.LinearLayout f -> f
+    boolean g -> g
+    boolean init(java.lang.String) -> a
+    void dataReceived(int,java.util.List) -> a
+    void destroy() -> a
+    void onClick(android.view.View) -> onClick
+com.alimama.mobile.a -> com.alimama.mobile.b:
+    com.alimama.mobile.a a -> a
+    com.alimama.mobile.csdk.umupdate.a.a b -> b
+    android.content.Context c -> c
+    com.alimama.mobile.csdk.umupdate.a.h d -> d
+    boolean e -> e
+    void a(android.content.Context) -> a
+    com.alimama.mobile.a a() -> a
+    com.alimama.mobile.csdk.umupdate.a.a b() -> b
+    android.content.Context c() -> c
+    com.alimama.mobile.csdk.umupdate.a.h d() -> d
+    boolean e() -> e
+    void a(com.alimama.mobile.csdk.umupdate.models.MMEntity,com.alimama.mobile.csdk.umupdate.models.Promoter) -> a
+    void a(com.alimama.mobile.csdk.umupdate.models.MMEntity,com.alimama.mobile.a$a) -> a
+    void a(com.alimama.mobile.csdk.umupdate.models.MMEntity,com.alimama.mobile.csdk.umupdate.models.Promoter[]) -> a
+    void b(com.alimama.mobile.csdk.umupdate.models.MMEntity,com.alimama.mobile.a$a) -> b
+    void a(com.alimama.mobile.csdk.umupdate.models.b,com.alimama.mobile.a$a,int) -> a
+    void a(com.alimama.mobile.csdk.umupdate.models.b,com.alimama.mobile.a$a) -> a
+    android.content.Context a(com.alimama.mobile.a) -> a
+com.alimama.mobile.a$1 -> com.alimama.mobile.c:
+    com.alimama.mobile.a$a a -> a
+    boolean b -> b
+    com.alimama.mobile.csdk.umupdate.models.b c -> c
+    com.alimama.mobile.a d -> d
+    void dataReceived(int,java.util.List) -> a
+    void a(boolean) -> a
+    void a(com.alimama.mobile.a$1,boolean) -> a
+com.alimama.mobile.a$1$1 -> com.alimama.mobile.d:
+    com.alimama.mobile.a$1 a -> a
+    void dataReceived(int,java.util.List) -> a
+com.alimama.mobile.a$a -> com.alimama.mobile.e:
+    void dataReceived(int,java.util.List) -> a
+com.alimama.mobile.csdk.umupdate.a.a -> com.alimama.mobile.csdk.umupdate.a.a:
+    boolean c(java.lang.String) -> a
+    java.lang.String f() -> a
+    java.lang.String g() -> b
+    java.lang.String h() -> c
+    java.lang.String i() -> d
+    boolean l() -> e
+    java.lang.String m() -> f
+    java.lang.String n() -> g
+    java.lang.String o() -> h
+    java.lang.String p() -> i
+    java.lang.String r() -> j
+    java.lang.String t() -> k
+    java.lang.String[] C() -> l
+    android.location.Location D() -> m
+    java.lang.String E() -> n
+    java.lang.String f(java.lang.String) -> b
+    java.lang.String F() -> o
+com.alimama.mobile.csdk.umupdate.a.b -> com.alimama.mobile.csdk.umupdate.a.b:
+    java.util.concurrent.ThreadFactory i -> e
+    java.util.concurrent.BlockingQueue j -> f
+    java.util.concurrent.Executor a -> a
+    java.util.concurrent.Executor b -> b
+    java.util.concurrent.Executor c -> c
+    java.util.concurrent.Executor d -> d
+    com.alimama.mobile.csdk.umupdate.a.b$b m -> g
+    java.util.concurrent.Executor n -> h
+    com.alimama.mobile.csdk.umupdate.a.b$e o -> i
+    java.util.concurrent.FutureTask p -> j
+    com.alimama.mobile.csdk.umupdate.a.b$d q -> k
+    java.util.concurrent.atomic.AtomicBoolean r -> l
+    java.util.concurrent.atomic.AtomicBoolean s -> m
+    void c(java.lang.Object) -> c
+    java.lang.Object d(java.lang.Object) -> d
+    java.lang.Object a(java.lang.Object[]) -> a
+    void c() -> a
+    void a(java.lang.Object) -> a
+    void b(java.lang.Object[]) -> b
+    void b(java.lang.Object) -> b
+    void d() -> b
+    boolean e() -> c
+    com.alimama.mobile.csdk.umupdate.a.b a(java.util.concurrent.Executor,java.lang.Object[]) -> a
+    void e(java.lang.Object) -> e
+    boolean g() -> d
+    java.util.concurrent.atomic.AtomicBoolean a(com.alimama.mobile.csdk.umupdate.a.b) -> a
+    java.lang.Object a(com.alimama.mobile.csdk.umupdate.a.b,java.lang.Object) -> a
+    void b(com.alimama.mobile.csdk.umupdate.a.b,java.lang.Object) -> b
+    void c(com.alimama.mobile.csdk.umupdate.a.b,java.lang.Object) -> c
+com.alimama.mobile.csdk.umupdate.a.b$1 -> com.alimama.mobile.csdk.umupdate.a.c:
+    java.util.concurrent.atomic.AtomicInteger a -> a
+    java.lang.Thread newThread(java.lang.Runnable) -> newThread
+com.alimama.mobile.csdk.umupdate.a.b$2 -> com.alimama.mobile.csdk.umupdate.a.d:
+    com.alimama.mobile.csdk.umupdate.a.b a -> a
+    java.lang.Object call() -> call
+com.alimama.mobile.csdk.umupdate.a.b$3 -> com.alimama.mobile.csdk.umupdate.a.e:
+    com.alimama.mobile.csdk.umupdate.a.b a -> a
+    void done() -> done
+com.alimama.mobile.csdk.umupdate.a.b$4 -> com.alimama.mobile.csdk.umupdate.a.f:
+    int[] a -> a
+com.alimama.mobile.csdk.umupdate.a.b$a -> com.alimama.mobile.csdk.umupdate.a.g:
+    com.alimama.mobile.csdk.umupdate.a.b a -> a
+    java.lang.Object[] b -> b
+com.alimama.mobile.csdk.umupdate.a.b$b -> com.alimama.mobile.csdk.umupdate.a.h:
+    void handleMessage(android.os.Message) -> handleMessage
+com.alimama.mobile.csdk.umupdate.a.b$c -> com.alimama.mobile.csdk.umupdate.a.i:
+    java.util.ArrayDeque a -> a
+    java.lang.Runnable b -> b
+    void execute(java.lang.Runnable) -> execute
+    void a() -> a
+com.alimama.mobile.csdk.umupdate.a.b$c$1 -> com.alimama.mobile.csdk.umupdate.a.j:
+    java.lang.Runnable a -> a
+    com.alimama.mobile.csdk.umupdate.a.b$c b -> b
+    void run() -> run
+com.alimama.mobile.csdk.umupdate.a.b$d -> com.alimama.mobile.csdk.umupdate.a.k:
+    com.alimama.mobile.csdk.umupdate.a.b$d a -> a
+    com.alimama.mobile.csdk.umupdate.a.b$d b -> b
+    com.alimama.mobile.csdk.umupdate.a.b$d c -> c
+    com.alimama.mobile.csdk.umupdate.a.b$d[] d -> d
+    com.alimama.mobile.csdk.umupdate.a.b$d[] values() -> values
+    com.alimama.mobile.csdk.umupdate.a.b$d valueOf(java.lang.String) -> valueOf
+com.alimama.mobile.csdk.umupdate.a.b$e -> com.alimama.mobile.csdk.umupdate.a.l:
+    java.lang.Object[] b -> b
+com.alimama.mobile.csdk.umupdate.a.c -> com.alimama.mobile.csdk.umupdate.a.m:
+    com.alimama.mobile.csdk.umupdate.a.c$a a -> a
+    java.lang.String b -> b
+    java.lang.String c -> c
+    java.lang.String e -> d
+    java.lang.String f -> e
+    java.lang.String g -> f
+    java.lang.String h -> g
+    java.lang.String i -> h
+    java.lang.String j -> i
+    java.lang.String k -> j
+    java.lang.String l -> k
+    java.lang.String m -> l
+    java.lang.String n -> m
+    float o -> n
+    int p -> o
+    int q -> p
+    java.lang.String r -> q
+    java.lang.String s -> r
+    android.content.Context t -> s
+    boolean u -> t
+    boolean v -> u
+    boolean w -> v
+    boolean x -> w
+    java.lang.String y -> x
+    void a(android.content.Context,com.alimama.mobile.csdk.umupdate.a.c$a) -> a
+    boolean e(java.lang.String) -> c
+    boolean l() -> e
+    boolean c(java.lang.String) -> a
+    java.lang.String f() -> a
+    java.lang.String g() -> b
+    java.lang.String h() -> c
+    java.lang.String i() -> d
+    java.lang.String m() -> f
+    java.lang.String n() -> g
+    java.lang.String o() -> h
+    java.lang.String p() -> i
+    java.lang.String r() -> j
+    java.lang.String t() -> k
+    java.lang.String[] C() -> l
+    android.location.Location D() -> m
+    java.lang.String E() -> n
+    java.lang.String f(java.lang.String) -> b
+    java.lang.String F() -> o
+    java.lang.String g(java.lang.String) -> d
+com.alimama.mobile.csdk.umupdate.a.c$a -> com.alimama.mobile.csdk.umupdate.a.n:
+    java.lang.String a -> a
+    java.lang.String b -> b
+    java.lang.String c -> c
+    java.lang.String d -> d
+com.alimama.mobile.csdk.umupdate.a.d -> com.alimama.mobile.csdk.umupdate.a.o:
+    void a(com.alimama.mobile.csdk.umupdate.models.Promoter,com.alimama.mobile.csdk.umupdate.models.MMEntity,boolean,int) -> a
+    void a(com.alimama.mobile.csdk.umupdate.models.MMEntity,com.alimama.mobile.csdk.umupdate.models.Promoter,int) -> a
+    void b(com.alimama.mobile.csdk.umupdate.models.MMEntity,com.alimama.mobile.csdk.umupdate.models.Promoter,int) -> b
+    void c(com.alimama.mobile.csdk.umupdate.models.MMEntity,com.alimama.mobile.csdk.umupdate.models.Promoter,int) -> c
+com.alimama.mobile.csdk.umupdate.a.e -> com.alimama.mobile.csdk.umupdate.a.p:
+    java.lang.String a -> a
+    java.lang.String b -> b
+    java.lang.String c -> c
+    java.lang.String d -> d
+    java.lang.String e -> e
+    boolean f -> f
+    boolean g -> g
+com.alimama.mobile.csdk.umupdate.a.g -> com.alimama.mobile.csdk.umupdate.a.q:
+    java.lang.String a -> a
+    boolean b -> b
+    void b(java.lang.String,java.lang.Object[]) -> a
+    void c(java.lang.String,java.lang.Object[]) -> b
+    void d(java.lang.String,java.lang.Object[]) -> c
+    void a(java.lang.Throwable,java.lang.String,java.lang.Object[]) -> a
+    void e(java.lang.String,java.lang.Object[]) -> d
+    java.lang.String g(java.lang.String,java.lang.Object[]) -> e
+com.alimama.mobile.csdk.umupdate.a.h -> com.alimama.mobile.csdk.umupdate.a.r:
+    java.lang.String a -> a
+    android.content.res.Resources b -> b
+    int a() -> a
+    int b() -> b
+    java.lang.String c() -> c
+    int d() -> d
+    int e() -> e
+    int f() -> f
+    int g() -> g
+    int h() -> h
+com.alimama.mobile.csdk.umupdate.a.i -> com.alimama.mobile.csdk.umupdate.a.s:
+    java.lang.String e -> e
+    com.alimama.mobile.a$a g -> g
+    int h -> h
+    boolean i -> i
+    com.alimama.mobile.csdk.umupdate.models.b f -> f
+    void c() -> a
+    android.os.Message a(java.lang.Void[]) -> a
+    void a(android.os.Message) -> a
+    java.util.List a(int[]) -> a
+    java.util.List a(org.json.JSONObject) -> a
+    java.util.List a(boolean,boolean) -> a
+    java.util.Map a(com.alimama.mobile.csdk.umupdate.models.MMEntity) -> a
+    void a(java.util.Collection,java.lang.Class,org.json.JSONObject,java.lang.String) -> a
+    int a(java.util.List) -> a
+    void a(java.lang.Object) -> a
+    java.lang.Object a(java.lang.Object[]) -> a
+com.alimama.mobile.csdk.umupdate.a.j -> com.alimama.mobile.csdk.umupdate.a.t:
+    java.util.Map a -> a
+    java.lang.String b(java.lang.String) -> a
+    java.lang.String c(java.lang.String) -> b
+    void a(android.content.Context,java.lang.String) -> a
+    boolean b(android.content.Context,java.lang.String) -> b
+    java.lang.String a(java.lang.String,java.util.Map) -> a
+    java.util.Map a() -> a
+com.alimama.mobile.csdk.umupdate.a.k -> com.alimama.mobile.csdk.umupdate.a.u:
+    java.lang.String b -> a
+    android.content.Context c -> b
+    com.umeng.update.net.a d -> c
+    com.alimama.mobile.csdk.umupdate.b.d e -> d
+    com.alimama.mobile.csdk.umupdate.models.Promoter f -> e
+    void a() -> a
+    com.alimama.mobile.csdk.umupdate.models.Promoter a(com.alimama.mobile.csdk.umupdate.a.k) -> a
+    android.content.Context b(com.alimama.mobile.csdk.umupdate.a.k) -> b
+    java.lang.String b() -> b
+    com.alimama.mobile.csdk.umupdate.b.d c(com.alimama.mobile.csdk.umupdate.a.k) -> c
+com.alimama.mobile.csdk.umupdate.a.k$a -> com.alimama.mobile.csdk.umupdate.a.v:
+    java.lang.String b -> b
+    com.umeng.update.net.b c -> c
+    com.alimama.mobile.csdk.umupdate.a.k a -> a
+    void onStart() -> a
+    void onProgressUpdate(int) -> a
+    void onEnd(int,int,java.lang.String) -> a
+    void onStatus(int) -> b
+com.alimama.mobile.csdk.umupdate.b.a -> com.alimama.mobile.csdk.umupdate.b.a:
+    java.lang.String[] c -> a
+    java.lang.String[] d -> b
+com.alimama.mobile.csdk.umupdate.b.b -> com.alimama.mobile.csdk.umupdate.b.b:
+    com.alimama.mobile.csdk.umupdate.b.f a(com.alimama.mobile.csdk.umupdate.b.e) -> a
+com.alimama.mobile.csdk.umupdate.b.c -> com.alimama.mobile.csdk.umupdate.b.c:
+    void sendAsync(u.upd.e,u.upd.d$a) -> a
+com.alimama.mobile.csdk.umupdate.b.d -> com.alimama.mobile.csdk.umupdate.b.d:
+    java.lang.String c -> e
+    java.util.Map a -> a
+    void a() -> a
+    java.lang.String getHttpMethod() -> b
+    org.json.JSONObject toJson() -> c
+    java.lang.String toGetUrl() -> d
+    java.lang.String b() -> e
+com.alimama.mobile.csdk.umupdate.b.d$a -> com.alimama.mobile.csdk.umupdate.b.e:
+    com.alimama.mobile.csdk.umupdate.models.MMEntity b -> b
+    java.lang.String c -> c
+    java.lang.String d -> d
+    java.lang.String e -> e
+    int f -> f
+    int g -> g
+    int h -> h
+    java.lang.String i -> i
+    java.lang.String j -> j
+    java.util.Random k -> k
+    int m -> l
+    java.lang.String n -> m
+    int o -> n
+    java.util.List a -> a
+    com.alimama.mobile.csdk.umupdate.b.d$a a(int) -> a
+    com.alimama.mobile.csdk.umupdate.b.d$a b(int) -> b
+    com.alimama.mobile.csdk.umupdate.b.d$a c(int) -> c
+    com.alimama.mobile.csdk.umupdate.b.d$a a(com.alimama.mobile.csdk.umupdate.models.Promoter[]) -> a
+    com.alimama.mobile.csdk.umupdate.b.d a() -> a
+    java.util.Map b() -> b
+    java.util.Map c() -> c
+com.alimama.mobile.csdk.umupdate.b.e -> com.alimama.mobile.csdk.umupdate.b.f:
+    java.util.Map a -> a
+    org.json.JSONObject toJson() -> c
+    java.lang.String getHttpMethod() -> b
+    java.lang.String toGetUrl() -> d
+    void setBaseUrl(java.lang.String) -> a
+com.alimama.mobile.csdk.umupdate.b.f -> com.alimama.mobile.csdk.umupdate.b.g:
+    int a -> a
+    org.json.JSONObject b -> b
+    void a(org.json.JSONObject) -> a
+com.alimama.mobile.csdk.umupdate.models.MMEntity -> com.alimama.mobile.csdk.umupdate.models.MMEntity:
+    android.os.Parcelable$Creator CREATOR -> a
+    com.alimama.mobile.csdk.umupdate.models.d module -> b
+    java.lang.String opensize -> c
+    java.lang.String landing_image -> d
+    java.lang.String landingUrl -> e
+    java.lang.String new_image -> f
+    int image_type -> g
+    int displayStyle -> h
+    java.lang.String displayType -> i
+    int newTips -> j
+    int cache -> k
+    java.lang.String landing_size -> l
+    boolean filterInstalledApp -> m
+    boolean wallSwitch -> n
+    long expire -> o
+    int sid_expired -> p
+    java.lang.String entryStr -> q
+    long[] timeline -> r
+    java.util.HashMap ecomparms -> s
+    int a -> t
+    long b -> u
+    boolean c -> v
+    java.lang.String ispreload -> w
+    int preload -> x
+    java.lang.String iscache -> y
+    java.lang.String getTimeConsuming() -> a
+    void warp(org.json.JSONObject) -> a
+    java.lang.Object clone() -> clone
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+com.alimama.mobile.csdk.umupdate.models.MMEntity$1 -> com.alimama.mobile.csdk.umupdate.models.b:
+    com.alimama.mobile.csdk.umupdate.models.MMEntity a(android.os.Parcel) -> a
+    com.alimama.mobile.csdk.umupdate.models.MMEntity[] a(int) -> a
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+com.alimama.mobile.csdk.umupdate.models.Promoter -> com.alimama.mobile.csdk.umupdate.models.Promoter:
+    java.lang.String a -> G
+    java.lang.String promoter -> a
+    int category -> b
+    int content_type -> c
+    int display_type -> d
+    java.lang.String img -> e
+    int image_type -> f
+    int anim_in -> g
+    int landing_type -> h
+    java.lang.String text_font -> i
+    java.lang.String text_size -> j
+    java.lang.String text_color -> k
+    java.lang.String title -> l
+    java.lang.String provider -> m
+    java.lang.String ad_words -> n
+    java.lang.String description -> o
+    java.lang.String icon -> p
+    java.lang.String url -> q
+    int app_version_code -> r
+    java.lang.String url_in_app -> s
+    long size -> t
+    java.lang.String app_package_name -> u
+    java.lang.String app_version_name -> v
+    int new_tip -> w
+    java.lang.String prom_act_pams -> x
+    java.lang.String slot_act_pams -> y
+    java.lang.String price -> z
+    java.lang.String promoterPrice -> A
+    int sell -> B
+    java.lang.String landing_size -> C
+    boolean filterInstalledApp -> D
+    java.lang.String[] imgs -> E
+    android.os.Parcelable$Creator CREATOR -> CREATOR
+    double bid -> F
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+    void a(org.json.JSONObject) -> a
+    com.alimama.mobile.csdk.umupdate.models.Promoter getPromoterFromJson(org.json.JSONObject,java.lang.Class) -> a
+com.alimama.mobile.csdk.umupdate.models.Promoter$1 -> com.alimama.mobile.csdk.umupdate.models.c:
+    com.alimama.mobile.csdk.umupdate.models.Promoter a(android.os.Parcel) -> a
+    com.alimama.mobile.csdk.umupdate.models.Promoter[] a(int) -> a
+    java.lang.Object[] newArray(int) -> newArray
+    java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
+com.alimama.mobile.csdk.umupdate.models.a -> com.alimama.mobile.csdk.umupdate.models.a:
+    java.lang.String slotId -> z
+    java.lang.String appkey -> A
+    int autofill -> B
+    int layoutType -> C
+    java.lang.String keywords -> D
+    java.lang.String tabId -> E
+    java.lang.String filterPromoter -> F
+    java.lang.String tag -> G
+    int landing_type -> H
+    java.lang.String sid -> I
+    java.lang.String psid -> J
+    com.alimama.mobile.csdk.umupdate.models.e resType -> K
+    com.alimama.mobile.csdk.umupdate.models.f template -> L
+    java.lang.String templateAttrs -> M
+    java.lang.String urlParams -> N
+    java.lang.String slot_act_params -> O
+    int page_index -> P
+    void clear() -> b
+    void warp(org.json.JSONObject) -> a
+    int describeContents() -> describeContents
+    void writeToParcel(android.os.Parcel,int) -> writeToParcel
+com.alimama.mobile.csdk.umupdate.models.b -> com.alimama.mobile.csdk.umupdate.models.d:
+    com.alimama.mobile.csdk.umupdate.models.c a -> a
+    com.alimama.mobile.csdk.umupdate.models.MMEntity b -> b
+    com.alimama.mobile.csdk.umupdate.models.c a() -> a
+    com.alimama.mobile.csdk.umupdate.models.MMEntity b() -> b
+com.alimama.mobile.csdk.umupdate.models.c -> com.alimama.mobile.csdk.umupdate.models.e:
+    java.lang.String c -> a
+    java.lang.String f -> d
+    java.lang.String g -> e
+    java.lang.String h -> f
+    java.lang.String i -> g
+    java.lang.String d -> b
+    java.lang.String e -> c
+    void a(com.alimama.mobile.csdk.umupdate.models.MMEntity) -> a
+    void a() -> a
+    int b() -> b
+    void a(int) -> a
+    org.json.JSONObject a(boolean,long,boolean) -> a
+    java.lang.String c() -> c
+    java.lang.String d() -> d
+    java.lang.String e() -> e
+    boolean a(boolean,org.json.JSONObject) -> a
+com.alimama.mobile.csdk.umupdate.models.d -> com.alimama.mobile.csdk.umupdate.models.f:
+    com.alimama.mobile.csdk.umupdate.models.d a -> a
+    com.alimama.mobile.csdk.umupdate.models.d b -> b
+    com.alimama.mobile.csdk.umupdate.models.d c -> c
+    com.alimama.mobile.csdk.umupdate.models.d[] d -> d
+    com.alimama.mobile.csdk.umupdate.models.d[] values() -> values
+    com.alimama.mobile.csdk.umupdate.models.d valueOf(java.lang.String) -> valueOf
+    com.alimama.mobile.csdk.umupdate.models.d a(java.lang.String) -> a
+com.alimama.mobile.csdk.umupdate.models.d$1 -> com.alimama.mobile.csdk.umupdate.models.g:
+    java.lang.String toString() -> toString
+com.alimama.mobile.csdk.umupdate.models.d$2 -> com.alimama.mobile.csdk.umupdate.models.h:
+    java.lang.String toString() -> toString
+com.alimama.mobile.csdk.umupdate.models.d$3 -> com.alimama.mobile.csdk.umupdate.models.i:
+    java.lang.String toString() -> toString
+com.alimama.mobile.csdk.umupdate.models.e -> com.alimama.mobile.csdk.umupdate.models.j:
+    com.alimama.mobile.csdk.umupdate.models.e a -> a
+    com.alimama.mobile.csdk.umupdate.models.e b -> b
+    com.alimama.mobile.csdk.umupdate.models.e c -> c
+    com.alimama.mobile.csdk.umupdate.models.e d -> d
+    com.alimama.mobile.csdk.umupdate.models.e[] e -> e
+    com.alimama.mobile.csdk.umupdate.models.e[] values() -> values
+    com.alimama.mobile.csdk.umupdate.models.e valueOf(java.lang.String) -> valueOf
+    com.alimama.mobile.csdk.umupdate.models.e a(java.lang.String) -> a
+com.alimama.mobile.csdk.umupdate.models.e$1 -> com.alimama.mobile.csdk.umupdate.models.k:
+    java.lang.String toString() -> toString
+com.alimama.mobile.csdk.umupdate.models.e$2 -> com.alimama.mobile.csdk.umupdate.models.l:
+    java.lang.String toString() -> toString
+com.alimama.mobile.csdk.umupdate.models.e$3 -> com.alimama.mobile.csdk.umupdate.models.m:
+    java.lang.String toString() -> toString
+com.alimama.mobile.csdk.umupdate.models.e$4 -> com.alimama.mobile.csdk.umupdate.models.n:
+    java.lang.String toString() -> toString
+com.alimama.mobile.csdk.umupdate.models.f -> com.alimama.mobile.csdk.umupdate.models.o:
+    com.alimama.mobile.csdk.umupdate.models.f a -> a
+    com.alimama.mobile.csdk.umupdate.models.f b -> b
+    com.alimama.mobile.csdk.umupdate.models.f c -> c
+    com.alimama.mobile.csdk.umupdate.models.f d -> d
+    com.alimama.mobile.csdk.umupdate.models.f[] e -> e
+    com.alimama.mobile.csdk.umupdate.models.f[] values() -> values
+    com.alimama.mobile.csdk.umupdate.models.f valueOf(java.lang.String) -> valueOf
+    com.alimama.mobile.csdk.umupdate.models.f a(java.lang.String) -> a
+com.alimama.mobile.csdk.umupdate.models.f$1 -> com.alimama.mobile.csdk.umupdate.models.p:
+    java.lang.String toString() -> toString
+com.alimama.mobile.csdk.umupdate.models.f$2 -> com.alimama.mobile.csdk.umupdate.models.q:
+    java.lang.String toString() -> toString
+com.alimama.mobile.csdk.umupdate.models.f$3 -> com.alimama.mobile.csdk.umupdate.models.r:
+    java.lang.String toString() -> toString
+com.alimama.mobile.csdk.umupdate.models.f$4 -> com.alimama.mobile.csdk.umupdate.models.s:
+    java.lang.String toString() -> toString
 com.android.volley.AuthFailureError -> com.android.volley.AuthFailureError:
     android.content.Intent mResolutionIntent -> mResolutionIntent
     android.content.Intent getResolutionIntent() -> getResolutionIntent
@@ -10277,6 +10772,8 @@ com.ihongqiqu.Identify.R$color -> com.ihongqiqu.Identify.R$color:
     int bright_foreground_inverse_material_light -> bright_foreground_inverse_material_light
     int bright_foreground_material_dark -> bright_foreground_material_dark
     int bright_foreground_material_light -> bright_foreground_material_light
+    int btn_normal_color -> btn_normal_color
+    int btn_press_color -> btn_press_color
     int button_material_dark -> button_material_dark
     int button_material_light -> button_material_light
     int dim_foreground_disabled_material_dark -> dim_foreground_disabled_material_dark
@@ -10315,6 +10812,7 @@ com.ihongqiqu.Identify.R$color -> com.ihongqiqu.Identify.R$color:
     int switch_thumb_material_light -> switch_thumb_material_light
     int switch_thumb_normal_material_dark -> switch_thumb_normal_material_dark
     int switch_thumb_normal_material_light -> switch_thumb_normal_material_light
+    int tb_munion_item_force -> tb_munion_item_force
 com.ihongqiqu.Identify.R$dimen -> com.ihongqiqu.Identify.R$dimen:
     int abc_action_bar_content_inset_material -> abc_action_bar_content_inset_material
     int abc_action_bar_default_height_material -> abc_action_bar_default_height_material
@@ -10460,6 +10958,32 @@ com.ihongqiqu.Identify.R$drawable -> com.ihongqiqu.Identify.R$drawable:
     int ic_launcher -> ic_launcher
     int ic_setting -> ic_setting
     int notification_template_icon_bg -> notification_template_icon_bg
+    int tb_munion_icon -> tb_munion_icon
+    int tb_munion_item_selector -> tb_munion_item_selector
+    int umeng_common_gradient_green -> umeng_common_gradient_green
+    int umeng_common_gradient_orange -> umeng_common_gradient_orange
+    int umeng_common_gradient_red -> umeng_common_gradient_red
+    int umeng_update_btn_check_off_focused_holo_light -> umeng_update_btn_check_off_focused_holo_light
+    int umeng_update_btn_check_off_holo_light -> umeng_update_btn_check_off_holo_light
+    int umeng_update_btn_check_off_pressed_holo_light -> umeng_update_btn_check_off_pressed_holo_light
+    int umeng_update_btn_check_on_focused_holo_light -> umeng_update_btn_check_on_focused_holo_light
+    int umeng_update_btn_check_on_holo_light -> umeng_update_btn_check_on_holo_light
+    int umeng_update_btn_check_on_pressed_holo_light -> umeng_update_btn_check_on_pressed_holo_light
+    int umeng_update_button_cancel_bg_focused -> umeng_update_button_cancel_bg_focused
+    int umeng_update_button_cancel_bg_normal -> umeng_update_button_cancel_bg_normal
+    int umeng_update_button_cancel_bg_selector -> umeng_update_button_cancel_bg_selector
+    int umeng_update_button_cancel_bg_tap -> umeng_update_button_cancel_bg_tap
+    int umeng_update_button_check_selector -> umeng_update_button_check_selector
+    int umeng_update_button_close_bg_selector -> umeng_update_button_close_bg_selector
+    int umeng_update_button_ok_bg_focused -> umeng_update_button_ok_bg_focused
+    int umeng_update_button_ok_bg_normal -> umeng_update_button_ok_bg_normal
+    int umeng_update_button_ok_bg_selector -> umeng_update_button_ok_bg_selector
+    int umeng_update_button_ok_bg_tap -> umeng_update_button_ok_bg_tap
+    int umeng_update_close_bg_normal -> umeng_update_close_bg_normal
+    int umeng_update_close_bg_tap -> umeng_update_close_bg_tap
+    int umeng_update_dialog_bg -> umeng_update_dialog_bg
+    int umeng_update_title_bg -> umeng_update_title_bg
+    int umeng_update_wifi_disable -> umeng_update_wifi_disable
 com.ihongqiqu.Identify.R$id -> com.ihongqiqu.Identify.R$id:
     int action0 -> action0
     int action_bar -> action_bar
@@ -10478,6 +11002,7 @@ com.ihongqiqu.Identify.R$id -> com.ihongqiqu.Identify.R$id:
     int action_mode_close_button -> action_mode_close_button
     int action_settings -> action_settings
     int activity_chooser_view_content -> activity_chooser_view_content
+    int ad_image -> ad_image
     int alertTitle -> alertTitle
     int always -> always
     int beginning -> beginning
@@ -10517,6 +11042,7 @@ com.ihongqiqu.Identify.R$id -> com.ihongqiqu.Identify.R$id:
     int line3 -> line3
     int listMode -> listMode
     int list_item -> list_item
+    int loading -> loading
     int media_actions -> media_actions
     int middle -> middle
     int multiply -> multiply
@@ -10525,7 +11051,9 @@ com.ihongqiqu.Identify.R$id -> com.ihongqiqu.Identify.R$id:
     int normal -> normal
     int parentPanel -> parentPanel
     int progress_circular -> progress_circular
+    int progress_frame -> progress_frame
     int progress_horizontal -> progress_horizontal
+    int promoter_frame -> promoter_frame
     int radio -> radio
     int screen -> screen
     int scrollView -> scrollView
@@ -10550,6 +11078,7 @@ com.ihongqiqu.Identify.R$id -> com.ihongqiqu.Identify.R$id:
     int src_in -> src_in
     int src_over -> src_over
     int status_bar_latest_event_content -> status_bar_latest_event_content
+    int status_msg -> status_msg
     int submit_area -> submit_area
     int tabMode -> tabMode
     int text -> text
@@ -10575,6 +11104,22 @@ com.ihongqiqu.Identify.R$id -> com.ihongqiqu.Identify.R$id:
     int tv_province -> tv_province
     int tv_sex -> tv_sex
     int tv_share -> tv_share
+    int umeng_common_icon_view -> umeng_common_icon_view
+    int umeng_common_notification -> umeng_common_notification
+    int umeng_common_notification_controller -> umeng_common_notification_controller
+    int umeng_common_progress_bar -> umeng_common_progress_bar
+    int umeng_common_progress_text -> umeng_common_progress_text
+    int umeng_common_rich_notification_cancel -> umeng_common_rich_notification_cancel
+    int umeng_common_rich_notification_continue -> umeng_common_rich_notification_continue
+    int umeng_common_title -> umeng_common_title
+    int umeng_update_content -> umeng_update_content
+    int umeng_update_frame -> umeng_update_frame
+    int umeng_update_id_cancel -> umeng_update_id_cancel
+    int umeng_update_id_check -> umeng_update_id_check
+    int umeng_update_id_close -> umeng_update_id_close
+    int umeng_update_id_ignore -> umeng_update_id_ignore
+    int umeng_update_id_ok -> umeng_update_id_ok
+    int umeng_update_wifi_indicator -> umeng_update_wifi_indicator
     int up -> up
     int useLogo -> useLogo
     int withText -> withText
@@ -10629,9 +11174,27 @@ com.ihongqiqu.Identify.R$layout -> com.ihongqiqu.Identify.R$layout:
     int select_dialog_multichoice_material -> select_dialog_multichoice_material
     int select_dialog_singlechoice_material -> select_dialog_singlechoice_material
     int support_simple_spinner_dropdown_item -> support_simple_spinner_dropdown_item
+    int tb_munion_aditem -> tb_munion_aditem
+    int tb_munion_adview -> tb_munion_adview
+    int umeng_common_download_notification -> umeng_common_download_notification
+    int umeng_update_dialog -> umeng_update_dialog
 com.ihongqiqu.Identify.R$menu -> com.ihongqiqu.Identify.R$menu:
     int menu_main -> menu_main
 com.ihongqiqu.Identify.R$string -> com.ihongqiqu.Identify.R$string:
+    int UMAppUpdate -> UMAppUpdate
+    int UMBreak_Network -> UMBreak_Network
+    int UMDialog_InstallAPK -> UMDialog_InstallAPK
+    int UMGprsCondition -> UMGprsCondition
+    int UMIgnore -> UMIgnore
+    int UMNewVersion -> UMNewVersion
+    int UMNotNow -> UMNotNow
+    int UMTargetSize -> UMTargetSize
+    int UMToast_IsUpdating -> UMToast_IsUpdating
+    int UMUpdateCheck -> UMUpdateCheck
+    int UMUpdateContent -> UMUpdateContent
+    int UMUpdateNow -> UMUpdateNow
+    int UMUpdateSize -> UMUpdateSize
+    int UMUpdateTitle -> UMUpdateTitle
     int abc_action_bar_home_description -> abc_action_bar_home_description
     int abc_action_bar_home_description_format -> abc_action_bar_home_description_format
     int abc_action_bar_home_subtitle_description_format -> abc_action_bar_home_subtitle_description_format
@@ -10651,6 +11214,22 @@ com.ihongqiqu.Identify.R$string -> com.ihongqiqu.Identify.R$string:
     int abc_toolbar_collapse_description -> abc_toolbar_collapse_description
     int app_name -> app_name
     int status_bar_notification_info_overflow -> status_bar_notification_info_overflow
+    int tb_munion_tip_download_prefix -> tb_munion_tip_download_prefix
+    int umeng_common_action_cancel -> umeng_common_action_cancel
+    int umeng_common_action_continue -> umeng_common_action_continue
+    int umeng_common_action_info_exist -> umeng_common_action_info_exist
+    int umeng_common_action_pause -> umeng_common_action_pause
+    int umeng_common_download_failed -> umeng_common_download_failed
+    int umeng_common_download_finish -> umeng_common_download_finish
+    int umeng_common_download_notification_prefix -> umeng_common_download_notification_prefix
+    int umeng_common_icon -> umeng_common_icon
+    int umeng_common_info_interrupt -> umeng_common_info_interrupt
+    int umeng_common_network_break_alert -> umeng_common_network_break_alert
+    int umeng_common_patch_finish -> umeng_common_patch_finish
+    int umeng_common_pause_notification_prefix -> umeng_common_pause_notification_prefix
+    int umeng_common_silent_download_finish -> umeng_common_silent_download_finish
+    int umeng_common_start_download_notification -> umeng_common_start_download_notification
+    int umeng_common_start_patch_notification -> umeng_common_start_patch_notification
 com.ihongqiqu.Identify.R$style -> com.ihongqiqu.Identify.R$style:
     int AlertDialog_AppCompat -> AlertDialog_AppCompat
     int AlertDialog_AppCompat_Light -> AlertDialog_AppCompat_Light
@@ -10790,6 +11369,7 @@ com.ihongqiqu.Identify.R$style -> com.ihongqiqu.Identify.R$style:
     int Base_Widget_AppCompat_TextView_SpinnerItem -> Base_Widget_AppCompat_TextView_SpinnerItem
     int Base_Widget_AppCompat_Toolbar -> Base_Widget_AppCompat_Toolbar
     int Base_Widget_AppCompat_Toolbar_Button_Navigation -> Base_Widget_AppCompat_Toolbar_Button_Navigation
+    int ButtonStyle -> ButtonStyle
     int MySearchViewStyle -> MySearchViewStyle
     int Platform_AppCompat -> Platform_AppCompat
     int Platform_AppCompat_Light -> Platform_AppCompat_Light
@@ -11362,7 +11942,7 @@ com.ihongqiqu.Identify.activity.PhoneActivity -> com.ihongqiqu.Identify.activity
     android.widget.EditText etPhone -> etPhone
     android.widget.TextView tvPhoneInvalid -> tvPhoneInvalid
     android.widget.ImageView ivPhoneClear -> ivPhoneClear
-    android.widget.Button btnQuery -> btnQuery
+    android.support.v7.widget.AppCompatButton btnQuery -> btnQuery
     android.widget.TextView tvCarrier -> tvCarrier
     android.widget.TextView tvProvince -> tvProvince
     void launch(android.app.Activity) -> a
@@ -11461,7 +12041,7 @@ com.ihongqiqu.Identify.utils.ChannelUtil -> com.ihongqiqu.Identify.a.a:
     void saveChannelBySharedPreferences(android.content.Context,java.lang.String) -> c
     java.lang.String getChannelBySharedPreferences(android.content.Context) -> b
     int getVersionCode(android.content.Context) -> c
-com.umeng.analytics.AnalyticsConfig -> com.a.a.a:
+com.umeng.analytics.AnalyticsConfig -> com.umeng.a.a:
     java.lang.String a -> m
     java.lang.String b -> n
     java.lang.String mWrapperType -> a
@@ -11483,52 +12063,52 @@ com.umeng.analytics.AnalyticsConfig -> com.a.a.a:
     java.lang.String getChannel(android.content.Context) -> b
     java.lang.String getSDKVersion() -> a
     double[] getLocation() -> b
-com.umeng.analytics.MobclickAgent -> com.a.a.b:
+com.umeng.analytics.MobclickAgent -> com.umeng.a.b:
     com.umeng.analytics.d b -> a
     void onPause(android.content.Context) -> a
     void onResume(android.content.Context) -> b
-com.umeng.analytics.ReportPolicy -> com.a.a.c:
-com.umeng.analytics.ReportPolicy$a -> com.a.a.d:
+com.umeng.analytics.ReportPolicy -> com.umeng.a.c:
+com.umeng.analytics.ReportPolicy$a -> com.umeng.a.d:
     u.aly.ak a -> a
     u.aly.aa b -> b
     boolean a(boolean) -> a
     boolean a() -> a
-com.umeng.analytics.ReportPolicy$b -> com.a.a.e:
+com.umeng.analytics.ReportPolicy$b -> com.umeng.a.e:
     long a -> a
     long b -> b
     boolean a(boolean) -> a
     boolean a() -> a
-com.umeng.analytics.ReportPolicy$c -> com.a.a.f:
+com.umeng.analytics.ReportPolicy$c -> com.umeng.a.f:
     boolean a(boolean) -> a
-com.umeng.analytics.ReportPolicy$d -> com.a.a.g:
+com.umeng.analytics.ReportPolicy$d -> com.umeng.a.g:
     long a -> a
     long b -> b
     u.aly.aa c -> c
     boolean a(boolean) -> a
-com.umeng.analytics.ReportPolicy$f -> com.a.a.h:
+com.umeng.analytics.ReportPolicy$f -> com.umeng.a.h:
     long a -> a
     u.aly.aa b -> b
     boolean a(boolean) -> a
-com.umeng.analytics.ReportPolicy$g -> com.a.a.i:
+com.umeng.analytics.ReportPolicy$g -> com.umeng.a.i:
     boolean a(boolean) -> a
     boolean a() -> a
-com.umeng.analytics.ReportPolicy$h -> com.a.a.j:
+com.umeng.analytics.ReportPolicy$h -> com.umeng.a.j:
     android.content.Context a -> a
     boolean a(boolean) -> a
-com.umeng.analytics.a -> com.a.a.k:
+com.umeng.analytics.a -> com.umeng.a.k:
     java.lang.String[] f -> a
     java.lang.String[] g -> b
-com.umeng.analytics.b -> com.a.a.l:
+com.umeng.analytics.b -> com.umeng.a.l:
     byte[] a -> a
     byte[] a(java.lang.String) -> a
     java.lang.String a(byte[]) -> a
     byte[] b(byte[]) -> b
     byte[] a(byte[],byte[]) -> a
     int a(int,java.lang.String) -> a
-com.umeng.analytics.c -> com.a.a.m:
+com.umeng.analytics.c -> com.umeng.a.m:
     void a() -> a
     void b() -> b
-com.umeng.analytics.d -> com.a.a.n:
+com.umeng.analytics.d -> com.umeng.a.n:
     com.umeng.analytics.onlineconfig.a a -> a
     android.content.Context b -> b
     com.umeng.analytics.c c -> c
@@ -11546,18 +12126,18 @@ com.umeng.analytics.d -> com.a.a.n:
     void a(java.lang.Throwable) -> a
     void a(com.umeng.analytics.d,android.content.Context) -> a
     void b(com.umeng.analytics.d,android.content.Context) -> b
-com.umeng.analytics.d$1 -> com.a.a.o:
+com.umeng.analytics.d$1 -> com.umeng.a.o:
     android.content.Context a -> a
     com.umeng.analytics.d b -> b
     void a() -> a
-com.umeng.analytics.d$2 -> com.a.a.p:
+com.umeng.analytics.d$2 -> com.umeng.a.p:
     android.content.Context a -> a
     com.umeng.analytics.d b -> b
     void a() -> a
-com.umeng.analytics.e -> com.a.a.q:
+com.umeng.analytics.e -> com.umeng.a.q:
     java.lang.String[] a -> a
     java.lang.String[] a(android.content.Context) -> a
-com.umeng.analytics.f -> com.a.a.r:
+com.umeng.analytics.f -> com.umeng.a.r:
     java.util.List a -> a
     java.util.concurrent.ExecutorService b -> b
     long c -> c
@@ -11566,10 +12146,10 @@ com.umeng.analytics.f -> com.a.a.r:
     void a() -> a
     void b(java.lang.Runnable) -> b
     void a(java.lang.Runnable,long) -> a
-com.umeng.analytics.g -> com.a.a.s:
+com.umeng.analytics.g -> com.umeng.a.s:
     void run() -> run
     void a() -> a
-com.umeng.analytics.h -> com.a.a.t:
+com.umeng.analytics.h -> com.umeng.a.t:
     com.umeng.analytics.h a -> a
     android.content.Context b -> b
     java.lang.String c -> c
@@ -11596,28 +12176,497 @@ com.umeng.analytics.h -> com.a.a.t:
     android.content.SharedPreferences j() -> i
     java.lang.String o() -> k
     java.lang.String p() -> l
-com.umeng.analytics.h$a -> com.a.a.u:
+com.umeng.analytics.h$a -> com.umeng.a.u:
     int a -> a
     java.io.File b -> b
     java.io.FilenameFilter c -> c
     boolean a() -> a
     void a(com.umeng.analytics.h$b) -> a
     void a(byte[]) -> a
-com.umeng.analytics.h$a$1 -> com.a.a.v:
+com.umeng.analytics.h$a$1 -> com.umeng.a.v:
     com.umeng.analytics.h$a a -> a
     boolean accept(java.io.File,java.lang.String) -> accept
-com.umeng.analytics.h$b -> com.a.a.w:
+com.umeng.analytics.h$b -> com.umeng.a.w:
     void a(java.io.File) -> a
     boolean b(java.io.File) -> b
     void c(java.io.File) -> c
-com.umeng.analytics.onlineconfig.UmengOnlineConfigureListener -> com.a.a.a.a:
-com.umeng.analytics.onlineconfig.a -> com.a.a.a.b:
+com.umeng.analytics.onlineconfig.UmengOnlineConfigureListener -> com.umeng.a.a.a:
+com.umeng.analytics.onlineconfig.a -> com.umeng.a.a.b:
     java.lang.String h -> a
     java.lang.String i -> b
     java.lang.String j -> c
     com.umeng.analytics.onlineconfig.UmengOnlineConfigureListener l -> d
     com.umeng.analytics.onlineconfig.c m -> e
-com.umeng.analytics.onlineconfig.c -> com.a.a.a.c:
+com.umeng.analytics.onlineconfig.c -> com.umeng.a.a.c:
+com.umeng.update.UmengDialogButtonListener -> com.umeng.update.a:
+    void onClick(int) -> onClick
+com.umeng.update.UmengDownloadListener -> com.umeng.update.b:
+    void OnDownloadStart() -> a
+    void OnDownloadUpdate(int) -> a
+    void OnDownloadEnd(int,java.lang.String) -> a
+com.umeng.update.UmengUpdateAgent -> com.umeng.update.c:
+    com.umeng.update.UmengUpdateListener a -> a
+    com.umeng.update.UmengDialogButtonListener b -> b
+    com.umeng.update.UmengDownloadListener c -> c
+    android.content.Context d -> d
+    com.umeng.update.c e -> e
+    android.os.Handler f -> f
+    boolean g -> g
+    java.lang.String h -> h
+    boolean c() -> d
+    void setUpdateFromPushMessage(boolean) -> a
+    boolean getUpdateFromPushMessage() -> a
+    void setUpdateOnlyWifi(boolean) -> b
+    void b(int,com.umeng.update.UpdateResponse) -> b
+    void update(android.content.Context) -> a
+    void b(android.content.Context) -> c
+    void b(android.content.Context,com.umeng.update.UpdateResponse,int) -> b
+    java.io.File downloadedFile(android.content.Context,com.umeng.update.UpdateResponse) -> a
+    boolean isIgnore(android.content.Context,com.umeng.update.UpdateResponse) -> b
+    void ignoreUpdate(android.content.Context,com.umeng.update.UpdateResponse) -> c
+    void a(int,android.content.Context,com.umeng.update.UpdateResponse,java.io.File) -> a
+    void a(android.content.Context,com.umeng.update.UpdateResponse,java.io.File) -> a
+    void startInstall(android.content.Context,java.io.File) -> a
+    void startDownload(android.content.Context,com.umeng.update.UpdateResponse) -> d
+    boolean c(android.content.Context) -> d
+    void b(android.content.Context,android.os.Message) -> b
+    android.content.Context a() -> b
+    void a(android.content.Context,com.umeng.update.UpdateResponse,int) -> a
+    void a(android.content.Context,android.os.Message) -> a
+    android.content.Context a(android.content.Context) -> b
+    com.umeng.update.UmengUpdateListener b() -> c
+    void a(int,com.umeng.update.UpdateResponse) -> a
+com.umeng.update.UmengUpdateAgent$1 -> com.umeng.update.d:
+    android.content.Context a -> a
+    void handleMessage(android.os.Message) -> handleMessage
+com.umeng.update.UmengUpdateAgent$2 -> com.umeng.update.e:
+    android.content.Context a -> a
+    void run() -> run
+com.umeng.update.UmengUpdateAgent$3 -> com.umeng.update.f:
+    android.content.Context a -> a
+    void run() -> run
+com.umeng.update.UmengUpdateAgent$4 -> com.umeng.update.g:
+    android.content.Context a -> a
+    void run() -> run
+com.umeng.update.UmengUpdateAgent$5 -> com.umeng.update.h:
+    android.content.Context a -> a
+    void run() -> run
+com.umeng.update.UmengUpdateAgent$6 -> com.umeng.update.i:
+    android.content.Context a -> a
+    void run() -> run
+com.umeng.update.UmengUpdateAgent$7 -> com.umeng.update.j:
+    android.content.Context a -> a
+    void run() -> run
+com.umeng.update.UmengUpdateAgent$a -> com.umeng.update.k:
+    android.content.Context a -> a
+    void run() -> run
+com.umeng.update.UmengUpdateListener -> com.umeng.update.l:
+    void onUpdateReturned(int,com.umeng.update.UpdateResponse) -> a
+com.umeng.update.UpdateConfig -> com.umeng.update.m:
+    java.lang.String l -> a
+    java.lang.String m -> b
+    java.lang.String n -> c
+    boolean o -> d
+    boolean p -> e
+    boolean q -> f
+    boolean r -> g
+    boolean s -> h
+    boolean t -> i
+    boolean u -> j
+    int v -> k
+    java.lang.String getAppkey(android.content.Context) -> a
+    java.lang.String getChannel(android.content.Context) -> b
+    void saveIgnoreMd5(android.content.Context,java.lang.String) -> a
+    java.lang.String getIgnoreMd5(android.content.Context) -> c
+    boolean isUpdateOnlyWifi() -> a
+    void setUpdateOnlyWifi(boolean) -> a
+    boolean isUpdateAutoPopup() -> b
+    boolean isUpdateForce() -> c
+    void setUpdateForce(boolean) -> b
+    boolean isDeltaUpdate() -> d
+    boolean isSilentDownload() -> e
+    void setSilentDownload(boolean) -> c
+    int getStyle() -> f
+    boolean isUpdateCheck() -> g
+    boolean isRichNotification() -> h
+    java.lang.String getSlotId() -> i
+com.umeng.update.UpdateDialogActivity -> com.umeng.update.UpdateDialogActivity:
+    int a -> a
+    com.umeng.update.UpdateResponse b -> b
+    boolean c -> c
+    java.io.File d -> d
+    android.view.ViewGroup e -> e
+    com.alimama.mobile.MMAdView f -> f
+    void onCreate(android.os.Bundle) -> onCreate
+    void onDestroy() -> onDestroy
+com.umeng.update.UpdateDialogActivity$1 -> com.umeng.update.n:
+    int a -> a
+    int b -> b
+    com.umeng.update.UpdateDialogActivity c -> c
+    void onClick(android.view.View) -> onClick
+com.umeng.update.UpdateDialogActivity$2 -> com.umeng.update.o:
+    com.umeng.update.UpdateDialogActivity a -> a
+    void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
+com.umeng.update.UpdateResponse -> com.umeng.update.p:
+    boolean hasUpdate -> a
+    java.lang.String updateLog -> b
+    java.lang.String version -> c
+    java.lang.String path -> d
+    java.lang.String origin -> e
+    java.lang.String new_md5 -> f
+    java.lang.String size -> g
+    java.lang.String target_size -> h
+    boolean delta -> i
+    java.lang.String patch_md5 -> j
+    boolean display_ads -> k
+    void a(org.json.JSONObject) -> a
+    java.lang.String a(android.content.Context,boolean) -> a
+com.umeng.update.b -> com.umeng.update.q:
+    android.content.Context a -> a
+    java.lang.String[] b -> b
+    java.lang.String c -> c
+    boolean shouldCompressData() -> a
+    com.umeng.update.UpdateResponse a() -> b
+com.umeng.update.c -> com.umeng.update.r:
+    java.lang.String a -> a
+    java.lang.String b -> b
+    com.umeng.update.UmengDownloadListener c -> c
+    java.lang.String d -> d
+    java.lang.String e -> e
+    java.lang.String f -> f
+    java.lang.String g -> g
+    android.content.Context h -> h
+    java.lang.String i -> i
+    com.umeng.update.net.a j -> j
+    boolean k -> k
+    void a(android.content.Context,java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.umeng.update.UmengDownloadListener) -> a
+    boolean a() -> b
+    void b() -> c
+    void c() -> d
+    void a(com.umeng.update.net.a) -> a
+    void onStart() -> a
+    void onProgressUpdate(int) -> a
+    void onEnd(int,int,java.lang.String) -> a
+    void onStatus(int) -> b
+    void a(android.content.Context,com.umeng.update.UpdateResponse,boolean,java.io.File) -> a
+    com.umeng.update.c$a b(android.content.Context,com.umeng.update.UpdateResponse,boolean,java.io.File) -> b
+com.umeng.update.c$a -> com.umeng.update.s:
+    java.lang.String e -> e
+    java.lang.String f -> f
+    com.umeng.update.c a -> a
+    com.umeng.update.c$a a(java.lang.CharSequence) -> a
+    com.umeng.update.c$a b(java.lang.CharSequence) -> b
+    com.umeng.update.c$a c(java.lang.CharSequence) -> c
+    android.app.Notification a() -> a
+com.umeng.update.d -> com.umeng.update.t:
+    java.lang.String a -> a
+    java.lang.String b -> e
+    org.json.JSONObject c -> f
+    org.json.JSONObject a(android.content.Context) -> a
+    org.json.JSONObject toJson() -> c
+    java.lang.String toGetUrl() -> d
+com.umeng.update.net.DownloadingService -> com.umeng.update.net.DownloadingService:
+    java.lang.String t -> d
+    android.app.NotificationManager u -> e
+    com.umeng.update.net.c v -> f
+    android.content.Context A -> g
+    android.os.Handler B -> h
+    com.umeng.update.net.DownloadingService$a q -> a
+    boolean r -> b
+    java.util.Map E -> i
+    android.util.SparseArray F -> j
+    android.os.Messenger s -> c
+    com.umeng.update.net.e G -> k
+    boolean H -> l
+    java.lang.Boolean I -> m
+    android.os.IBinder onBind(android.content.Intent) -> onBind
+    int onStartCommand(android.content.Intent,int,int) -> onStartCommand
+    void onCreate() -> onCreate
+    void d() -> d
+    void a(com.umeng.update.net.a$a) -> a
+    void a(java.lang.String) -> a
+    void onDestroy() -> onDestroy
+    void e() -> e
+    java.lang.String a() -> a
+    com.umeng.update.net.c a(com.umeng.update.net.DownloadingService) -> a
+    android.util.SparseArray b() -> b
+    android.content.Context b(com.umeng.update.net.DownloadingService) -> b
+    java.util.Map c() -> c
+    void a(com.umeng.update.net.DownloadingService,com.umeng.update.net.a$a) -> a
+    android.app.NotificationManager a(com.umeng.update.net.DownloadingService,android.app.NotificationManager) -> a
+    android.app.NotificationManager c(com.umeng.update.net.DownloadingService) -> c
+    android.os.Handler d(com.umeng.update.net.DownloadingService) -> d
+    void a(com.umeng.update.net.DownloadingService,java.lang.String) -> a
+    java.lang.Boolean a(java.lang.Boolean) -> a
+com.umeng.update.net.DownloadingService$1 -> com.umeng.update.net.a:
+    com.umeng.update.net.DownloadingService a -> a
+    void handleMessage(android.os.Message) -> handleMessage
+com.umeng.update.net.DownloadingService$2 -> com.umeng.update.net.b:
+    android.util.SparseArray a -> a
+    com.umeng.update.net.DownloadingService b -> b
+    void a(int) -> a
+    void a(int,int) -> a
+    void a(int,java.lang.String) -> a
+    void a(int,java.lang.Exception) -> a
+com.umeng.update.net.DownloadingService$3 -> com.umeng.update.net.c:
+    java.lang.String a -> a
+    com.umeng.update.net.DownloadingService b -> b
+    void run() -> run
+com.umeng.update.net.DownloadingService$4 -> com.umeng.update.net.d:
+    com.umeng.update.net.DownloadingService a -> a
+    void run() -> run
+com.umeng.update.net.DownloadingService$a -> com.umeng.update.net.e:
+    void a(int) -> a
+    void a(int,int) -> a
+    void a(int,java.lang.String) -> a
+    void a(int,java.lang.Exception) -> a
+com.umeng.update.net.DownloadingService$b -> com.umeng.update.net.f:
+    android.content.Context b -> b
+    boolean c -> c
+    java.io.File d -> d
+    int e -> e
+    long f -> f
+    long g -> g
+    int h -> h
+    int i -> i
+    com.umeng.update.net.DownloadingService$a j -> j
+    com.umeng.update.net.a$a k -> k
+    com.umeng.update.net.DownloadingService a -> a
+    void run() -> run
+    void a(int) -> a
+    void a(boolean) -> a
+    void a() -> a
+    void b(int) -> b
+    java.net.HttpURLConnection a(java.net.URL,java.io.File) -> a
+    java.lang.String a(com.umeng.update.net.a$a) -> a
+    void b() -> b
+    void a(java.io.File,java.lang.String) -> a
+    void a(java.lang.Exception) -> a
+    android.content.Context a(com.umeng.update.net.DownloadingService$b) -> a
+com.umeng.update.net.DownloadingService$b$1 -> com.umeng.update.net.g:
+    com.umeng.update.net.DownloadingService$b a -> a
+    void run() -> run
+com.umeng.update.net.DownloadingService$c -> com.umeng.update.net.h:
+    com.umeng.update.net.DownloadingService a -> a
+    void handleMessage(android.os.Message) -> handleMessage
+com.umeng.update.net.a -> com.umeng.update.net.i:
+    java.lang.String b -> b
+    android.content.Context c -> c
+    com.umeng.update.net.d d -> d
+    android.os.Messenger e -> e
+    java.lang.String f -> f
+    java.lang.String g -> g
+    java.lang.String h -> h
+    java.lang.String i -> i
+    java.lang.String j -> j
+    java.lang.String[] k -> k
+    boolean l -> l
+    boolean m -> m
+    boolean n -> n
+    android.os.Messenger a -> a
+    android.content.ServiceConnection o -> o
+    void a(java.lang.String) -> a
+    void b(java.lang.String) -> b
+    void a(java.lang.String[]) -> a
+    void a(boolean) -> a
+    void b(boolean) -> b
+    void c(boolean) -> c
+    void a() -> a
+    java.lang.String b() -> b
+    com.umeng.update.net.d a(com.umeng.update.net.a) -> a
+    android.content.ServiceConnection b(com.umeng.update.net.a) -> b
+    android.content.Context c(com.umeng.update.net.a) -> c
+    android.os.Messenger a(com.umeng.update.net.a,android.os.Messenger) -> a
+    java.lang.String d(com.umeng.update.net.a) -> d
+    java.lang.String e(com.umeng.update.net.a) -> e
+    java.lang.String f(com.umeng.update.net.a) -> f
+    java.lang.String g(com.umeng.update.net.a) -> g
+    java.lang.String h(com.umeng.update.net.a) -> h
+    java.lang.String[] i(com.umeng.update.net.a) -> i
+    boolean j(com.umeng.update.net.a) -> j
+    boolean k(com.umeng.update.net.a) -> k
+    boolean l(com.umeng.update.net.a) -> l
+    android.os.Messenger m(com.umeng.update.net.a) -> m
+com.umeng.update.net.a$1 -> com.umeng.update.net.j:
+    com.umeng.update.net.a a -> a
+    void onServiceConnected(android.content.ComponentName,android.os.IBinder) -> onServiceConnected
+    void onServiceDisconnected(android.content.ComponentName) -> onServiceDisconnected
+com.umeng.update.net.a$a -> com.umeng.update.net.k:
+    java.lang.String a -> a
+    java.lang.String b -> b
+    java.lang.String c -> c
+    java.lang.String d -> d
+    java.lang.String e -> e
+    java.lang.String[] f -> f
+    boolean g -> g
+    boolean h -> h
+    boolean i -> i
+    android.os.Bundle a() -> a
+    com.umeng.update.net.a$a a(android.os.Bundle) -> a
+com.umeng.update.net.a$b -> com.umeng.update.net.l:
+    com.umeng.update.net.a a -> a
+    void handleMessage(android.os.Message) -> handleMessage
+com.umeng.update.net.b -> com.umeng.update.net.m:
+    java.lang.String a -> a
+    android.content.Context i -> b
+    com.umeng.update.net.b$a k -> c
+    com.umeng.update.net.b a(android.content.Context) -> a
+    boolean a(java.lang.String,java.lang.String) -> a
+    void a(java.lang.String,java.lang.String,int) -> a
+    void e(java.lang.String,java.lang.String) -> b
+    void a(int) -> a
+    void finalize() -> finalize
+    java.lang.String a() -> a
+com.umeng.update.net.b$1 -> com.umeng.update.net.n:
+com.umeng.update.net.b$a -> com.umeng.update.net.o:
+    com.umeng.update.net.b a -> a
+    void onCreate(android.database.sqlite.SQLiteDatabase) -> onCreate
+    void onUpgrade(android.database.sqlite.SQLiteDatabase,int,int) -> onUpgrade
+com.umeng.update.net.b$b -> com.umeng.update.net.p:
+    com.umeng.update.net.b a -> a
+com.umeng.update.net.c -> com.umeng.update.net.q:
+    java.lang.String e -> a
+    android.util.SparseArray f -> b
+    java.util.Map g -> c
+    com.umeng.update.net.e h -> d
+    int a(com.umeng.update.net.a$a) -> a
+    com.umeng.update.net.c$a a(android.content.Context,com.umeng.update.net.a$a,int,int) -> a
+    void a(android.content.Context,com.umeng.update.net.c$a,int,int) -> a
+    boolean a(android.content.Context) -> a
+    boolean a(com.umeng.update.net.a$a,boolean,android.os.Messenger) -> a
+    int b(com.umeng.update.net.a$a) -> b
+    void a(android.content.Context,int) -> a
+    void b(android.content.Context,int) -> b
+    void a(com.umeng.update.net.a$a,long,long,long) -> a
+    void a(java.util.Map,boolean,java.lang.String[]) -> a
+    boolean a(com.umeng.update.net.DownloadingService,android.content.Intent) -> a
+    java.lang.String a() -> a
+    java.util.Map a(com.umeng.update.net.c) -> a
+com.umeng.update.net.c$1 -> com.umeng.update.net.r:
+    java.lang.String[] a -> a
+    boolean b -> b
+    java.util.Map c -> c
+    com.umeng.update.net.c d -> d
+    void run() -> run
+com.umeng.update.net.c$a -> com.umeng.update.net.s:
+    com.umeng.update.net.c$a a(android.widget.RemoteViews) -> a
+    com.umeng.update.net.c$a a(java.lang.CharSequence) -> a
+    com.umeng.update.net.c$a b(java.lang.CharSequence) -> b
+    com.umeng.update.net.c$a a(int,int,boolean) -> a
+    com.umeng.update.net.c$a a() -> a
+    com.umeng.update.net.c$a a(android.app.PendingIntent,android.app.PendingIntent) -> a
+    com.umeng.update.net.c$a b() -> b
+    com.umeng.update.net.c$a c() -> c
+    android.app.Notification d() -> d
+    void a(int,java.lang.String,android.app.PendingIntent) -> a
+com.umeng.update.net.c$b -> com.umeng.update.net.t:
+    com.umeng.update.net.DownloadingService$b a -> a
+    com.umeng.update.net.c$a b -> b
+    int c -> c
+    int d -> d
+    com.umeng.update.net.a$a e -> e
+    long[] f -> f
+    void a(android.util.SparseArray) -> a
+    void b(android.util.SparseArray) -> b
+com.umeng.update.net.c$c -> com.umeng.update.net.u:
+    int a -> a
+    java.lang.String b -> b
+    com.umeng.update.net.a$a d -> d
+    android.content.Context e -> e
+    android.app.NotificationManager f -> f
+    com.umeng.update.net.c c -> c
+    void onPreExecute() -> onPreExecute
+    java.lang.Integer a(java.lang.String[]) -> a
+    void a(java.lang.Integer) -> a
+    void onPostExecute(java.lang.Object) -> onPostExecute
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+com.umeng.update.net.d -> com.umeng.update.net.v:
+    void onStart() -> a
+    void onProgressUpdate(int) -> a
+    void onEnd(int,int,java.lang.String) -> a
+    void onStatus(int) -> b
+com.umeng.update.net.e -> com.umeng.update.net.w:
+    java.lang.String b -> a
+    android.content.Context c -> b
+    void a(int) -> a
+    java.util.List a() -> a
+    boolean b() -> b
+    void b(int) -> b
+com.umeng.update.net.f -> com.umeng.update.net.x:
+    java.lang.String a(int,java.lang.String) -> a
+    android.app.PendingIntent b(android.content.Context,java.lang.String) -> a
+com.umeng.update.net.j -> com.umeng.update.net.y:
+    java.lang.String b -> b
+    boolean a -> a
+    java.util.Map f -> c
+    java.lang.Thread g -> d
+    java.lang.String b(java.lang.String) -> b
+    java.lang.String a(android.content.Context,java.lang.String) -> a
+    java.io.File a(java.lang.String,android.content.Context,boolean[]) -> a
+    boolean a(java.lang.String,int,int,int) -> a
+    boolean a(java.lang.String,int) -> a
+    void a(java.io.File,long,long) -> a
+    long a(java.io.File) -> a
+    void b(java.io.File,long) -> b
+    java.io.File b(android.content.Context,java.lang.String) -> b
+    void a(android.content.Context,android.widget.ImageView,java.lang.String,boolean) -> a
+    void a(android.content.Context,android.widget.ImageView,java.lang.String,boolean,com.umeng.update.net.j$a,android.view.animation.Animation,boolean) -> a
+    boolean a(android.widget.ImageView,java.lang.String) -> a
+    void b(android.content.Context,android.widget.ImageView,android.graphics.drawable.Drawable,boolean,com.umeng.update.net.j$a,android.view.animation.Animation,boolean,java.lang.String) -> b
+    android.graphics.drawable.Drawable c(java.lang.String) -> c
+    android.graphics.Bitmap a(android.graphics.Bitmap) -> a
+    void a(java.io.File,long) -> a
+    java.lang.Thread a(java.lang.Thread) -> a
+    void a(android.content.Context,android.widget.ImageView,android.graphics.drawable.Drawable,boolean,com.umeng.update.net.j$a,android.view.animation.Animation,boolean,java.lang.String) -> a
+    android.graphics.drawable.Drawable a(java.lang.String) -> a
+    java.lang.String a() -> a
+com.umeng.update.net.j$1 -> com.umeng.update.net.z:
+    java.io.File a -> a
+    long b -> b
+    void run() -> run
+com.umeng.update.net.j$a -> com.umeng.update.net.aa:
+    void a(com.umeng.update.net.j$b) -> a
+    void a(u.upd.f$a) -> a
+com.umeng.update.net.j$b -> com.umeng.update.net.ab:
+    com.umeng.update.net.j$b a -> a
+    com.umeng.update.net.j$b b -> b
+    com.umeng.update.net.j$b[] c -> c
+    com.umeng.update.net.j$b[] values() -> values
+    com.umeng.update.net.j$b valueOf(java.lang.String) -> valueOf
+com.umeng.update.net.j$c -> com.umeng.update.net.ac:
+    android.content.Context a -> a
+    java.lang.String b -> b
+    android.widget.ImageView c -> c
+    com.umeng.update.net.j$b d -> d
+    boolean e -> e
+    com.umeng.update.net.j$a f -> f
+    android.view.animation.Animation g -> g
+    boolean h -> h
+    java.io.File i -> i
+    void onPreExecute() -> onPreExecute
+    void a(android.graphics.drawable.Drawable) -> a
+    android.graphics.drawable.Drawable a(java.lang.Object[]) -> a
+    void onPostExecute(java.lang.Object) -> onPostExecute
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+com.umeng.update.util.DeltaUpdate -> com.umeng.update.util.DeltaUpdate:
+    boolean a -> a
+    boolean a() -> a
+    int a(java.lang.String,java.lang.String,java.lang.String) -> a
+    java.lang.String a(android.content.Context) -> a
+    java.lang.String b(android.content.Context) -> b
+    int bspatch(java.lang.String,java.lang.String,java.lang.String) -> bspatch
+com.umeng.update.util.b -> com.umeng.update.util.a:
+    android.content.Context b -> b
+    android.app.Notification c -> c
+    android.app.Notification$Builder d -> d
+    void e() -> e
+    com.umeng.update.util.b b(android.widget.RemoteViews) -> b
+    com.umeng.update.util.b a(android.app.PendingIntent) -> a
+    com.umeng.update.util.b a(boolean) -> a
+    com.umeng.update.util.b b(boolean) -> b
+    com.umeng.update.util.b a(int) -> a
+    com.umeng.update.util.b d(java.lang.CharSequence) -> d
+    com.umeng.update.util.b a(long) -> a
 u.aly.a -> a.a.a:
     int a -> a
     int b -> b
@@ -14034,3 +15083,127 @@ u.aly.z -> a.a.ja:
     boolean b(android.content.SharedPreferences) -> b
     java.lang.String a(android.content.Context,android.content.SharedPreferences) -> a
     java.lang.String g(android.content.Context) -> e
+u.upd.a -> a.b.a:
+    java.lang.String a -> a
+    java.lang.String c(android.content.Context) -> a
+    boolean a(android.content.Context,java.lang.String) -> a
+    java.lang.String f(android.content.Context) -> b
+    java.lang.String[] j(android.content.Context) -> c
+    boolean k(android.content.Context) -> d
+    boolean l(android.content.Context) -> e
+    boolean b() -> a
+    java.lang.String o(android.content.Context) -> f
+    java.lang.String p(android.content.Context) -> g
+    java.lang.String t(android.content.Context) -> h
+    java.lang.String u(android.content.Context) -> i
+    java.lang.String v(android.content.Context) -> j
+u.upd.b -> a.b.b:
+    boolean a -> a
+    void a(java.lang.String,java.lang.String) -> a
+    void a(java.lang.String,java.lang.String,java.lang.Exception) -> a
+    void b(java.lang.String,java.lang.String) -> b
+    void b(java.lang.String,java.lang.String,java.lang.Exception) -> b
+    void c(java.lang.String,java.lang.String) -> c
+    void c(java.lang.String,java.lang.String,java.lang.Exception) -> c
+    void e(java.lang.String,java.lang.String) -> d
+    void e(java.lang.String,java.lang.String,java.lang.Exception) -> d
+u.upd.c -> a.b.c:
+    java.lang.String a -> a
+    u.upd.c b -> b
+    android.content.res.Resources c -> c
+    java.lang.String d -> d
+    java.lang.String e -> e
+    java.lang.String f -> f
+    java.lang.String g -> g
+    java.lang.String h -> h
+    java.lang.String i -> i
+    java.lang.String j -> j
+    java.lang.String k -> k
+    u.upd.c a(android.content.Context) -> a
+    int b(java.lang.String) -> a
+    int c(java.lang.String) -> b
+    int d(java.lang.String) -> c
+    int f(java.lang.String) -> d
+    int a(java.lang.String,java.lang.String) -> a
+u.upd.d -> a.b.d:
+    java.lang.String TAG -> a
+    u.upd.f$a send(u.upd.e) -> a
+    void sendAsync(u.upd.e,u.upd.d$a) -> a
+u.upd.d$a -> a.b.e:
+    void a() -> a
+    void a(u.upd.f$a) -> a
+u.upd.d$b -> a.b.f:
+    u.upd.e b -> b
+    u.upd.d$a c -> c
+    u.upd.d a -> a
+    void onPreExecute() -> onPreExecute
+    void a(u.upd.f$a) -> a
+    u.upd.f$a a(java.lang.Integer[]) -> a
+    void onPostExecute(java.lang.Object) -> onPostExecute
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+u.upd.e -> a.b.g:
+u.upd.f -> a.b.h:
+    u.upd.f$a a -> a
+u.upd.f$a -> a.b.i:
+    u.upd.f$a a -> a
+    u.upd.f$a b -> b
+    u.upd.f$a[] c -> c
+    u.upd.f$a[] values() -> values
+    u.upd.f$a valueOf(java.lang.String) -> valueOf
+u.upd.g -> a.b.j:
+    java.lang.String TAG -> a
+    java.util.Map headers -> b
+    u.upd.i execute(u.upd.h,java.lang.Class) -> a
+    org.json.JSONObject HttpRequestPost(java.lang.String,org.json.JSONObject) -> a
+    boolean shouldCompressData() -> a
+    java.lang.String convertStreamToString(java.io.InputStream) -> a
+    org.json.JSONObject HttpRequestGet(java.lang.String) -> a
+    org.apache.http.params.HttpParams getHttpParams() -> b
+    u.upd.g setHeader(java.util.Map) -> a
+    void verifyMethod(java.lang.String) -> b
+u.upd.h -> a.b.k:
+    java.lang.String POST -> b
+    java.lang.String GET -> c
+    java.lang.String baseUrl -> d
+    org.json.JSONObject toJson() -> c
+    java.lang.String toGetUrl() -> d
+    java.lang.String getHttpMethod() -> b
+    void setBaseUrl(java.lang.String) -> a
+u.upd.i -> a.b.l:
+u.upd.j -> a.b.m:
+    int a(android.content.Context) -> a
+    int b(android.content.Context) -> b
+    int c(android.content.Context) -> c
+    int d(android.content.Context) -> d
+    int e(android.content.Context) -> e
+    int g(android.content.Context) -> f
+u.upd.k -> a.b.n:
+    int a(android.content.Context) -> a
+u.upd.l -> a.b.o:
+    int a(android.content.Context) -> a
+    int b(android.content.Context) -> b
+    int c(android.content.Context) -> c
+    int d(android.content.Context) -> d
+    int e(android.content.Context) -> e
+    int f(android.content.Context) -> f
+    int g(android.content.Context) -> g
+    int h(android.content.Context) -> h
+    int i(android.content.Context) -> i
+    int j(android.content.Context) -> j
+    int k(android.content.Context) -> k
+    int l(android.content.Context) -> l
+    int m(android.content.Context) -> m
+    int n(android.content.Context) -> n
+u.upd.m -> a.b.p:
+    int a -> a
+    byte[] a(java.lang.String,java.lang.String) -> a
+    byte[] a(byte[]) -> a
+u.upd.n -> a.b.q:
+    java.lang.String a -> a
+    java.lang.String a(java.lang.String) -> a
+    java.lang.String b(java.lang.String) -> b
+    java.lang.String a(java.io.File) -> a
+    java.lang.String c(java.lang.String) -> c
+    boolean d(java.lang.String) -> d
+    java.lang.String a() -> a
+    java.lang.String a(java.util.Date) -> a
