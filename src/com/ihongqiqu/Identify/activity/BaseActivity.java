@@ -176,4 +176,5 @@ public class BaseActivity extends AppCompatActivity {
         super.finish();
         overridePendingTransition(0, R.anim.sliding_out_right);
     }
+
 }

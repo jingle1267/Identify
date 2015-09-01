@@ -69,6 +69,12 @@ public class PhoneActivity extends BaseActivity {
             }
         });
 
+        if (etPhone == null) {
+            Log.e("PhoneActivity", "etPhone is null");
+        } else {
+            Log.e("PhoneActivity", "etPhone is not null");
+        }
+
         etPhone.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -110,6 +116,8 @@ public class PhoneActivity extends BaseActivity {
         } else {
             tvPhoneInvalid.setVisibility(View.INVISIBLE);
         }
+
+        hideKeyboard();
         showProgressDialog();
 
         RequestQueue mQueue = Volley.newRequestQueue(this);

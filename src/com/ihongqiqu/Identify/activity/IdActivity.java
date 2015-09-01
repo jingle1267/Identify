@@ -111,6 +111,7 @@ public class IdActivity extends BaseActivity {
         } else {
             tvIdInvalid.setVisibility(View.INVISIBLE);
         }
+        hideKeyboard();
         showProgressDialog();
 
         RequestQueue requestQueue = Volley.newRequestQueue(IdActivity.this);

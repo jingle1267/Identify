@@ -99,7 +99,7 @@ public class IpActivity extends BaseActivity {
             case R.id.btn_query:
                 requestIpInfo(etIp.getText().toString());
                 break;
-            case R.id.iv_id_clear:
+            case R.id.iv_ip_clear:
                 etIp.setText("");
                 break;
         }
@@ -116,6 +116,8 @@ public class IpActivity extends BaseActivity {
         } else {
             tvIpInvalid.setVisibility(View.INVISIBLE);
         }
+
+        hideKeyboard();
         showProgressDialog();
 
         String url = URL_IP_INFO;

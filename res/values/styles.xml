@@ -22,6 +22,7 @@
     <style name="AppTheme" parent="@style/AppBaseTheme"></style>
 
     <style name="MySearchViewStyle" parent="Widget.AppCompat.SearchView">
+
         <!--
     Background for the search query section (e.g. EditText)
     <item name="queryBackground">...</item>
@@ -40,6 +41,19 @@
     Layout for query suggestion rows
     <item name="suggestionRowLayout">...</item>
         -->
+
+    </style>
+
+    <style name="ButtonStyle">
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_margin">15dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:background">@drawable/btn_query</item>
 
     </style>
 

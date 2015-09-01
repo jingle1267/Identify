@@ -23,6 +23,7 @@
     <style name="AppTheme" parent="@style/AppBaseTheme"></style>
 
     <style name="MySearchViewStyle" parent="Widget.AppCompat.SearchView">
+
         <!--
     Background for the search query section (e.g. EditText)
     <item name="queryBackground">...</item>

@@ -82,18 +82,10 @@
                     android:background="@color/divider_color"/>
 
             <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_margin="15dp"
                     android:id="@+id/btn_query"
-                    android:background="@drawable/btn_query"
-                    android:textSize="14sp"
-                    android:layout_centerInParent="true"
-                    android:textColor="#ffffff"
                     android:text="快速查询"
-                    android:gravity="center"
                     android:onClick="onClick"
-                    android:layout_gravity="center_horizontal"/>
+                    style="@style/ButtonStyle" />
 
             <View
                     android:layout_width="match_parent"
