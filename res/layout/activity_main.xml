@@ -22,63 +22,81 @@
                     android:layout_marginTop="15dp"
                     android:background="@color/divider_color"/>
 
-            <TextView
-                    android:id="@+id/tv_phone"
+            <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:drawableRight="@drawable/ic_arrow"
-                    android:paddingTop="20dp"
-                    android:paddingBottom="20dp"
-                    android:paddingLeft="15dp"
-                    android:paddingRight="15dp"
                     android:background="#ffffff"
-                    android:textSize="14sp"
-                    android:clickable="true"
-                    android:onClick="onClick"
-                    android:textColor="#666666"
-                    android:text="查询手机号归属地"/>
+                    >
+
+                <TextView
+                        android:id="@+id/tv_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/ic_arrow"
+                        android:paddingTop="20dp"
+                        android:paddingBottom="20dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:textSize="14sp"
+                        android:clickable="true"
+                        android:onClick="onClick"
+                        android:textColor="#666666"
+                        android:text="查询手机号归属地"/>
+            </LinearLayout>
             <View
                     android:layout_width="match_parent"
                     android:layout_height="1px"
                     android:background="@color/divider_color"/>
 
-            <TextView
-                    android:id="@+id/tv_id"
+            <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:drawableRight="@drawable/ic_arrow"
-                    android:paddingTop="20dp"
-                    android:paddingBottom="20dp"
-                    android:paddingLeft="15dp"
-                    android:paddingRight="15dp"
                     android:background="#ffffff"
-                    android:textSize="14sp"
-                    android:clickable="true"
-                    android:onClick="onClick"
-                    android:textColor="#666666"
-                    android:text="查询身份证信息"/>
+                    >
+                <TextView
+                        android:id="@+id/tv_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/ic_arrow"
+                        android:paddingTop="20dp"
+                        android:paddingBottom="20dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:textSize="14sp"
+                        android:clickable="true"
+                        android:onClick="onClick"
+                        android:textColor="#666666"
+                        android:text="查询身份证信息"/>
 
+            </LinearLayout>
             <View
                     android:layout_width="match_parent"
                     android:layout_height="1px"
                     android:background="@color/divider_color"/>
 
-            <TextView
-                    android:id="@+id/tv_ip"
+            <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:drawableRight="@drawable/ic_arrow"
-                    android:paddingTop="20dp"
-                    android:paddingBottom="20dp"
-                    android:paddingLeft="15dp"
-                    android:paddingRight="15dp"
                     android:background="#ffffff"
-                    android:textSize="14sp"
-                    android:clickable="true"
-                    android:onClick="onClick"
-                    android:textColor="#666666"
-                    android:text="查询IP信息"/>
-
+                    >
+                <TextView
+                        android:id="@+id/tv_ip"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/ic_arrow"
+                        android:paddingTop="20dp"
+                        android:paddingBottom="20dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:textSize="14sp"
+                        android:clickable="true"
+                        android:onClick="onClick"
+                        android:textColor="#666666"
+                        android:text="查询IP信息"/>
+            </LinearLayout>
             <View
                     android:layout_width="match_parent"
                     android:layout_height="1px"

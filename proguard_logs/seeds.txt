@@ -4404,6 +4404,8 @@ com.ihongqiqu.Identify.R$color: int btn_normal_color
 com.ihongqiqu.Identify.R$color: int btn_press_color
 com.ihongqiqu.Identify.R$color: int button_material_dark
 com.ihongqiqu.Identify.R$color: int button_material_light
+com.ihongqiqu.Identify.R$color: int card_background
+com.ihongqiqu.Identify.R$color: int card_shadow
 com.ihongqiqu.Identify.R$color: int dim_foreground_disabled_material_dark
 com.ihongqiqu.Identify.R$color: int dim_foreground_disabled_material_light
 com.ihongqiqu.Identify.R$color: int dim_foreground_material_dark
@@ -4415,6 +4417,7 @@ com.ihongqiqu.Identify.R$color: int hint_foreground_material_dark
 com.ihongqiqu.Identify.R$color: int hint_foreground_material_light
 com.ihongqiqu.Identify.R$color: int link_text_material_dark
 com.ihongqiqu.Identify.R$color: int link_text_material_light
+com.ihongqiqu.Identify.R$color: int lite_blue
 com.ihongqiqu.Identify.R$color: int material_blue_grey_800
 com.ihongqiqu.Identify.R$color: int material_blue_grey_900
 com.ihongqiqu.Identify.R$color: int material_blue_grey_950
@@ -4441,6 +4444,7 @@ com.ihongqiqu.Identify.R$color: int switch_thumb_material_light
 com.ihongqiqu.Identify.R$color: int switch_thumb_normal_material_dark
 com.ihongqiqu.Identify.R$color: int switch_thumb_normal_material_light
 com.ihongqiqu.Identify.R$color: int tb_munion_item_force
+com.ihongqiqu.Identify.R$color: int window_background
 com.ihongqiqu.Identify.R$dimen
 com.ihongqiqu.Identify.R$dimen: int abc_action_bar_content_inset_material
 com.ihongqiqu.Identify.R$dimen: int abc_action_bar_default_height_material
@@ -4575,6 +4579,7 @@ com.ihongqiqu.Identify.R$drawable: int abc_textfield_search_material
 com.ihongqiqu.Identify.R$drawable: int btn_close
 com.ihongqiqu.Identify.R$drawable: int btn_close_normal
 com.ihongqiqu.Identify.R$drawable: int btn_close_selected
+com.ihongqiqu.Identify.R$drawable: int btn_dialog
 com.ihongqiqu.Identify.R$drawable: int btn_query
 com.ihongqiqu.Identify.R$drawable: int btn_query_normal
 com.ihongqiqu.Identify.R$drawable: int btn_query_pressed
@@ -4585,6 +4590,9 @@ com.ihongqiqu.Identify.R$drawable: int ic_back
 com.ihongqiqu.Identify.R$drawable: int ic_error
 com.ihongqiqu.Identify.R$drawable: int ic_launcher
 com.ihongqiqu.Identify.R$drawable: int ic_setting
+com.ihongqiqu.Identify.R$drawable: int material_card
+com.ihongqiqu.Identify.R$drawable: int material_card_nos
+com.ihongqiqu.Identify.R$drawable: int material_card_nos_pressed
 com.ihongqiqu.Identify.R$drawable: int notification_template_icon_bg
 com.ihongqiqu.Identify.R$drawable: int tb_munion_icon
 com.ihongqiqu.Identify.R$drawable: int tb_munion_item_selector
@@ -4732,6 +4740,7 @@ com.ihongqiqu.Identify.R$id: int tv_postcode
 com.ihongqiqu.Identify.R$id: int tv_province
 com.ihongqiqu.Identify.R$id: int tv_sex
 com.ihongqiqu.Identify.R$id: int tv_share
+com.ihongqiqu.Identify.R$id: int tv_update
 com.ihongqiqu.Identify.R$id: int umeng_common_icon_view
 com.ihongqiqu.Identify.R$id: int umeng_common_notification
 com.ihongqiqu.Identify.R$id: int umeng_common_notification_controller
@@ -5503,7 +5512,8 @@ com.ihongqiqu.Identify.activity.IpActivity$1: void onClick(android.view.View)
 com.ihongqiqu.Identify.activity.MainActivity
 com.ihongqiqu.Identify.activity.MainActivity: MainActivity()
 com.ihongqiqu.Identify.activity.MainActivity: void onClick(android.view.View)
-com.ihongqiqu.Identify.activity.MainActivity$1: void onClick(android.content.DialogInterface,int)
+com.ihongqiqu.Identify.activity.MainActivity$2: void onClick(android.content.DialogInterface,int)
+com.ihongqiqu.Identify.activity.MainActivity$3: void onClick(android.content.DialogInterface,int)
 com.ihongqiqu.Identify.activity.PhoneActivity
 com.ihongqiqu.Identify.activity.PhoneActivity: android.widget.EditText etPhone
 com.ihongqiqu.Identify.activity.PhoneActivity: android.widget.TextView tvPhoneInvalid
@@ -5524,6 +5534,7 @@ com.ihongqiqu.Identify.activity.SettingActivity
 com.ihongqiqu.Identify.activity.SettingActivity: SettingActivity()
 com.ihongqiqu.Identify.activity.SettingActivity: void onClick(android.view.View)
 com.ihongqiqu.Identify.activity.SettingActivity$1: void onClick(android.view.View)
+com.ihongqiqu.Identify.activity.SettingActivity$3: void onClick(android.content.DialogInterface,int)
 com.ihongqiqu.Identify.base.IdentifyApplication
 com.ihongqiqu.Identify.base.IdentifyApplication: IdentifyApplication()
 com.ihongqiqu.Identify.entity.BaseEntity: BaseEntity()

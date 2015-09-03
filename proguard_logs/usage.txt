@@ -2893,7 +2893,6 @@ android.support.v7.app.AlertDialog:
 android.support.v7.app.AlertDialog$Builder:
     304:305:public android.support.v7.app.AlertDialog$Builder setTitle(int)
     339:340:public android.support.v7.app.AlertDialog$Builder setMessage(int)
-    361:362:public android.support.v7.app.AlertDialog$Builder setIcon(int)
     385:388:public android.support.v7.app.AlertDialog$Builder setIconAttribute(int)
     399:401:public android.support.v7.app.AlertDialog$Builder setPositiveButton(int,android.content.DialogInterface$OnClickListener)
     425:427:public android.support.v7.app.AlertDialog$Builder setNegativeButton(int,android.content.DialogInterface$OnClickListener)
@@ -2918,7 +2917,6 @@ android.support.v7.app.AlertDialog$Builder:
     844:851:public android.support.v7.app.AlertDialog$Builder setView(android.view.View,int,int,int,int)
     862:863:public android.support.v7.app.AlertDialog$Builder setInverseBackgroundForced(boolean)
     870:871:public android.support.v7.app.AlertDialog$Builder setRecycleOnMeasureEnabled(boolean)
-    901:903:public android.support.v7.app.AlertDialog show()
 android.support.v7.app.AppCompatActivity:
     183:183:public boolean supportRequestWindowFeature(int)
     232:232:public android.support.v7.view.ActionMode startSupportActionMode(android.support.v7.view.ActionMode$Callback)
@@ -3877,7 +3875,7 @@ com.alimama.mobile.csdk.umupdate.models.c:
     private static final java.lang.String j
 com.ihongqiqu.Identify.BuildConfig
 com.ihongqiqu.Identify.R:
-    10:2733:public R()
+    10:2742:public R()
 com.ihongqiqu.Identify.activity.IpActivity:
     196:210:public static boolean isTopURL(java.lang.String)
 com.ihongqiqu.Identify.utils.ChannelUtil:
@@ -4074,16 +4072,13 @@ com.umeng.analytics.social.f
 com.umeng.update.UmengUpdateAgent:
     41:51:public static void setDefault()
     75:76:public static void setUpdateCheckConfig(boolean)
-    95:96:public static void setUpdateAutoPopup(boolean)
     107:108:public static void setUpdateUIStyle(int)
     117:118:public static void setDeltaUpdate(boolean)
     127:128:public static void setAppkey(java.lang.String)
     136:137:public static void setSlotId(java.lang.String)
     146:147:public static void setChannel(java.lang.String)
     155:156:public static void setRichNotification(boolean)
-    165:166:public static void setUpdateListener(com.umeng.update.UmengUpdateListener)
     176:177:public static void setDialogListener(com.umeng.update.UmengDialogButtonListener)
-    187:188:public static void setDownloadListener(com.umeng.update.UmengDownloadListener)
     205:208:public static void silentUpdate(android.content.Context)
     217:220:public static void forceUpdate(android.content.Context)
     246:250:public static void update(android.content.Context,java.lang.String,java.lang.String)
@@ -4105,7 +4100,6 @@ com.umeng.update.UpdateConfig:
     43:44:public static void setAppkey(java.lang.String)
     47:48:public static void setChannel(java.lang.String)
     51:52:public static void setDebug(boolean)
-    98:99:public static void setUpdateAutoPopup(boolean)
     114:115:public static void setDeltaUpdate(boolean)
     130:131:public static void setStyle(int)
     138:139:public static void setUpdateCheck(boolean)

@@ -81,11 +81,20 @@
                     android:layout_height="1px"
                     android:background="@color/divider_color"/>
 
-            <Button
-                    android:id="@+id/btn_query"
-                    android:text="快速查询"
-                    android:onClick="onClick"
-                    style="@style/ButtonStyle" />
+            <LinearLayout
+                    style="@style/ButtonStyle"
+                    >
+
+                <Button
+                        android:id="@+id/btn_query"
+                        android:text="快速查询"
+                        android:onClick="onClick"
+                        style="@style/ButtonStyle"
+                        android:layout_margin="0dp"
+                        android:background="?android:attr/selectableItemBackground"
+                        />
+
+            </LinearLayout>
 
             <View
                     android:layout_width="match_parent"

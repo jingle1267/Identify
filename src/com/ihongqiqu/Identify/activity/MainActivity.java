@@ -1,8 +1,6 @@
 package com.ihongqiqu.Identify.activity;
 
 import android.content.DialogInterface;
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.util.Log;
@@ -30,7 +28,7 @@ public class MainActivity extends BaseActivity {
         if (getSupportActionBar() != null) {
             getSupportActionBar().setTitle("查询工具列表");
         }
-        toolbar.setNavigationIcon(R.drawable.ic_launcher);
+        // toolbar.setNavigationIcon(R.drawable.ic_launcher);
 
         slidingPaneLayout.removeViewAt(0);
 

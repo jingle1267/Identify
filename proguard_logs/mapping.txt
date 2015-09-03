@@ -3560,12 +3560,14 @@ android.support.v7.app.AlertDialog$Builder -> android.support.v7.app.p:
     android.support.v7.app.AlertDialog$Builder setTitle(java.lang.CharSequence) -> a
     android.support.v7.app.AlertDialog$Builder setCustomTitle(android.view.View) -> a
     android.support.v7.app.AlertDialog$Builder setMessage(java.lang.CharSequence) -> b
+    android.support.v7.app.AlertDialog$Builder setIcon(int) -> a
     android.support.v7.app.AlertDialog$Builder setIcon(android.graphics.drawable.Drawable) -> a
     android.support.v7.app.AlertDialog$Builder setPositiveButton(java.lang.CharSequence,android.content.DialogInterface$OnClickListener) -> a
     android.support.v7.app.AlertDialog$Builder setNegativeButton(java.lang.CharSequence,android.content.DialogInterface$OnClickListener) -> b
     android.support.v7.app.AlertDialog$Builder setOnKeyListener(android.content.DialogInterface$OnKeyListener) -> a
     android.support.v7.app.AlertDialog$Builder setAdapter(android.widget.ListAdapter,android.content.DialogInterface$OnClickListener) -> a
     android.support.v7.app.AlertDialog create() -> b
+    android.support.v7.app.AlertDialog show() -> c
 android.support.v7.app.AppCompatActivity -> android.support.v7.app.q:
     android.support.v7.app.AppCompatDelegate mDelegate -> n
     void onCreate(android.os.Bundle) -> onCreate
@@ -10776,6 +10778,8 @@ com.ihongqiqu.Identify.R$color -> com.ihongqiqu.Identify.R$color:
     int btn_press_color -> btn_press_color
     int button_material_dark -> button_material_dark
     int button_material_light -> button_material_light
+    int card_background -> card_background
+    int card_shadow -> card_shadow
     int dim_foreground_disabled_material_dark -> dim_foreground_disabled_material_dark
     int dim_foreground_disabled_material_light -> dim_foreground_disabled_material_light
     int dim_foreground_material_dark -> dim_foreground_material_dark
@@ -10787,6 +10791,7 @@ com.ihongqiqu.Identify.R$color -> com.ihongqiqu.Identify.R$color:
     int hint_foreground_material_light -> hint_foreground_material_light
     int link_text_material_dark -> link_text_material_dark
     int link_text_material_light -> link_text_material_light
+    int lite_blue -> lite_blue
     int material_blue_grey_800 -> material_blue_grey_800
     int material_blue_grey_900 -> material_blue_grey_900
     int material_blue_grey_950 -> material_blue_grey_950
@@ -10813,6 +10818,7 @@ com.ihongqiqu.Identify.R$color -> com.ihongqiqu.Identify.R$color:
     int switch_thumb_normal_material_dark -> switch_thumb_normal_material_dark
     int switch_thumb_normal_material_light -> switch_thumb_normal_material_light
     int tb_munion_item_force -> tb_munion_item_force
+    int window_background -> window_background
 com.ihongqiqu.Identify.R$dimen -> com.ihongqiqu.Identify.R$dimen:
     int abc_action_bar_content_inset_material -> abc_action_bar_content_inset_material
     int abc_action_bar_default_height_material -> abc_action_bar_default_height_material
@@ -10947,6 +10953,7 @@ com.ihongqiqu.Identify.R$drawable -> com.ihongqiqu.Identify.R$drawable:
     int btn_close -> btn_close
     int btn_close_normal -> btn_close_normal
     int btn_close_selected -> btn_close_selected
+    int btn_dialog -> btn_dialog
     int btn_query -> btn_query
     int btn_query_normal -> btn_query_normal
     int btn_query_pressed -> btn_query_pressed
@@ -10957,6 +10964,9 @@ com.ihongqiqu.Identify.R$drawable -> com.ihongqiqu.Identify.R$drawable:
     int ic_error -> ic_error
     int ic_launcher -> ic_launcher
     int ic_setting -> ic_setting
+    int material_card -> material_card
+    int material_card_nos -> material_card_nos
+    int material_card_nos_pressed -> material_card_nos_pressed
     int notification_template_icon_bg -> notification_template_icon_bg
     int tb_munion_icon -> tb_munion_icon
     int tb_munion_item_selector -> tb_munion_item_selector
@@ -11104,6 +11114,7 @@ com.ihongqiqu.Identify.R$id -> com.ihongqiqu.Identify.R$id:
     int tv_province -> tv_province
     int tv_sex -> tv_sex
     int tv_share -> tv_share
+    int tv_update -> tv_update
     int umeng_common_icon_view -> umeng_common_icon_view
     int umeng_common_notification -> umeng_common_notification
     int umeng_common_notification_controller -> umeng_common_notification_controller
@@ -11930,11 +11941,26 @@ com.ihongqiqu.Identify.activity.IpActivity$4 -> com.ihongqiqu.Identify.activity.
     void onErrorResponse(com.android.volley.VolleyError) -> onErrorResponse
 com.ihongqiqu.Identify.activity.MainActivity -> com.ihongqiqu.Identify.activity.MainActivity:
     void onCreate(android.os.Bundle) -> onCreate
+    void checkVersion() -> m
+    void showUpdateDialog(com.umeng.update.UpdateResponse) -> a
     void onClick(android.view.View) -> onClick
     boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
     boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
     void onBackPressed() -> onBackPressed
+    void access$000(com.ihongqiqu.Identify.activity.MainActivity,com.umeng.update.UpdateResponse) -> a
 com.ihongqiqu.Identify.activity.MainActivity$1 -> com.ihongqiqu.Identify.activity.k:
+    com.ihongqiqu.Identify.activity.MainActivity this$0 -> a
+    void onUpdateReturned(int,com.umeng.update.UpdateResponse) -> a
+com.ihongqiqu.Identify.activity.MainActivity$2 -> com.ihongqiqu.Identify.activity.l:
+    com.umeng.update.UpdateResponse val$updateInfo -> a
+    com.ihongqiqu.Identify.activity.MainActivity this$0 -> b
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.ihongqiqu.Identify.activity.MainActivity$2$1 -> com.ihongqiqu.Identify.activity.m:
+    com.ihongqiqu.Identify.activity.MainActivity$2 this$1 -> a
+    void OnDownloadStart() -> a
+    void OnDownloadUpdate(int) -> a
+    void OnDownloadEnd(int,java.lang.String) -> a
+com.ihongqiqu.Identify.activity.MainActivity$3 -> com.ihongqiqu.Identify.activity.n:
     com.ihongqiqu.Identify.activity.MainActivity this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
 com.ihongqiqu.Identify.activity.PhoneActivity -> com.ihongqiqu.Identify.activity.PhoneActivity:
@@ -11954,34 +11980,49 @@ com.ihongqiqu.Identify.activity.PhoneActivity$$ViewBinder -> com.ihongqiqu.Ident
     void unbind(com.ihongqiqu.Identify.activity.PhoneActivity) -> unbind
     void unbind(java.lang.Object) -> unbind
     void bind(butterknife.ButterKnife$Finder,java.lang.Object,java.lang.Object) -> bind
-com.ihongqiqu.Identify.activity.PhoneActivity$1 -> com.ihongqiqu.Identify.activity.l:
+com.ihongqiqu.Identify.activity.PhoneActivity$1 -> com.ihongqiqu.Identify.activity.o:
     com.ihongqiqu.Identify.activity.PhoneActivity this$0 -> a
     void onClick(android.view.View) -> onClick
-com.ihongqiqu.Identify.activity.PhoneActivity$2 -> com.ihongqiqu.Identify.activity.m:
+com.ihongqiqu.Identify.activity.PhoneActivity$2 -> com.ihongqiqu.Identify.activity.p:
     com.ihongqiqu.Identify.activity.PhoneActivity this$0 -> a
     void beforeTextChanged(java.lang.CharSequence,int,int,int) -> beforeTextChanged
     void onTextChanged(java.lang.CharSequence,int,int,int) -> onTextChanged
     void afterTextChanged(android.text.Editable) -> afterTextChanged
-com.ihongqiqu.Identify.activity.PhoneActivity$3 -> com.ihongqiqu.Identify.activity.n:
+com.ihongqiqu.Identify.activity.PhoneActivity$3 -> com.ihongqiqu.Identify.activity.q:
     com.ihongqiqu.Identify.activity.PhoneActivity this$0 -> a
     void onResponse(java.lang.String) -> a
     void onResponse(java.lang.Object) -> onResponse
-com.ihongqiqu.Identify.activity.PhoneActivity$4 -> com.ihongqiqu.Identify.activity.o:
+com.ihongqiqu.Identify.activity.PhoneActivity$4 -> com.ihongqiqu.Identify.activity.r:
     com.ihongqiqu.Identify.activity.PhoneActivity this$0 -> a
     void onErrorResponse(com.android.volley.VolleyError) -> onErrorResponse
-com.ihongqiqu.Identify.activity.PhoneActivity$5 -> com.ihongqiqu.Identify.activity.p:
+com.ihongqiqu.Identify.activity.PhoneActivity$5 -> com.ihongqiqu.Identify.activity.s:
     com.ihongqiqu.Identify.activity.PhoneActivity this$0 -> a
     java.util.Map getHeaders() -> getHeaders
 com.ihongqiqu.Identify.activity.SettingActivity -> com.ihongqiqu.Identify.activity.SettingActivity:
     void launch(android.app.Activity) -> a
     void onCreate(android.os.Bundle) -> onCreate
     void onClick(android.view.View) -> onClick
-    void share() -> m
-    void browserHomePage() -> n
-    void sendMail() -> o
-com.ihongqiqu.Identify.activity.SettingActivity$1 -> com.ihongqiqu.Identify.activity.q:
+    void checkVersion() -> m
+    void showUpdateDialog(com.umeng.update.UpdateResponse) -> a
+    void share() -> n
+    void browserHomePage() -> o
+    void sendMail() -> p
+    void access$000(com.ihongqiqu.Identify.activity.SettingActivity,com.umeng.update.UpdateResponse) -> a
+com.ihongqiqu.Identify.activity.SettingActivity$1 -> com.ihongqiqu.Identify.activity.t:
     com.ihongqiqu.Identify.activity.SettingActivity this$0 -> a
     void onClick(android.view.View) -> onClick
+com.ihongqiqu.Identify.activity.SettingActivity$2 -> com.ihongqiqu.Identify.activity.u:
+    com.ihongqiqu.Identify.activity.SettingActivity this$0 -> a
+    void onUpdateReturned(int,com.umeng.update.UpdateResponse) -> a
+com.ihongqiqu.Identify.activity.SettingActivity$3 -> com.ihongqiqu.Identify.activity.v:
+    com.umeng.update.UpdateResponse val$updateInfo -> a
+    com.ihongqiqu.Identify.activity.SettingActivity this$0 -> b
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.ihongqiqu.Identify.activity.SettingActivity$3$1 -> com.ihongqiqu.Identify.activity.w:
+    com.ihongqiqu.Identify.activity.SettingActivity$3 this$1 -> a
+    void OnDownloadStart() -> a
+    void OnDownloadUpdate(int) -> a
+    void OnDownloadEnd(int,java.lang.String) -> a
 com.ihongqiqu.Identify.base.IdentifyApplication -> com.ihongqiqu.Identify.base.IdentifyApplication:
     void onCreate() -> onCreate
 com.ihongqiqu.Identify.entity.BaseEntity -> com.ihongqiqu.Identify.entity.a:
@@ -12217,6 +12258,9 @@ com.umeng.update.UmengUpdateAgent -> com.umeng.update.c:
     void setUpdateFromPushMessage(boolean) -> a
     boolean getUpdateFromPushMessage() -> a
     void setUpdateOnlyWifi(boolean) -> b
+    void setUpdateAutoPopup(boolean) -> c
+    void setUpdateListener(com.umeng.update.UmengUpdateListener) -> a
+    void setDownloadListener(com.umeng.update.UmengDownloadListener) -> a
     void b(int,com.umeng.update.UpdateResponse) -> b
     void update(android.content.Context) -> a
     void b(android.content.Context) -> c
@@ -12281,11 +12325,12 @@ com.umeng.update.UpdateConfig -> com.umeng.update.m:
     boolean isUpdateOnlyWifi() -> a
     void setUpdateOnlyWifi(boolean) -> a
     boolean isUpdateAutoPopup() -> b
+    void setUpdateAutoPopup(boolean) -> b
     boolean isUpdateForce() -> c
-    void setUpdateForce(boolean) -> b
+    void setUpdateForce(boolean) -> c
     boolean isDeltaUpdate() -> d
     boolean isSilentDownload() -> e
-    void setSilentDownload(boolean) -> c
+    void setSilentDownload(boolean) -> d
     int getStyle() -> f
     boolean isUpdateCheck() -> g
     boolean isRichNotification() -> h

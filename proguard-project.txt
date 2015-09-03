@@ -69,4 +69,8 @@
     public static ** valueOf(java.lang.String);
 }
 
+-keepclassmembers class * {
+   public <init>(org.json.JSONObject);
+}
+
 -keep public class * extends com.ihongqiqu.Identify.entity.BaseEntity { *; }
