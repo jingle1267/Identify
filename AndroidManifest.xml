@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.ihongqiqu.Identify"
-          android:versionCode="101"
-          android:versionName="1.0.1">
+          android:versionCode="102"
+          android:versionName="1.0.2">
     <uses-sdk android:minSdkVersion="11"/>
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -41,5 +41,6 @@
                 android:name="com.umeng.update.UpdateDialogActivity"
                 android:theme="@android:style/Theme.Translucent.NoTitleBar" >
         </activity>
+        <activity android:name=".activity.HtmlActivity"/>
     </application>
 </manifest>

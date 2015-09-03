@@ -70,6 +70,33 @@
             android:layout_height="wrap_content"
             android:background="#ffffff"
             >
+
+        <TextView
+                android:id="@+id/tv_homepage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:textSize="14sp"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:textColor="#666666"
+                android:text="博客： http://ihongqiqu.com/"/>
+
+    </LinearLayout>
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/divider_color"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            >
         <TextView
                 android:id="@+id/tv_share"
                 android:layout_width="match_parent"

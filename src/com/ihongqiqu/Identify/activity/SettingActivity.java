@@ -56,6 +56,9 @@ public class SettingActivity extends BaseActivity {
             case R.id.tv_contact:
                 browserHomePage();
                 break;
+            case R.id.tv_homepage:
+                HtmlActivity.launch(SettingActivity.this, "http://ihongqiqu.com/");
+                break;
             case R.id.tv_share:
                 share();
                 break;
