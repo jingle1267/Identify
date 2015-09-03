@@ -8,3 +8,6 @@ http://apistore.baidu.com/apiworks/servicedetail/117.html
 
 IP地址信息查询
 http://whois.pconline.com.cn/
+
+彩票信息查询
+http://apistore.baidu.com/apiworks/servicedetail/164.html

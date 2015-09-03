@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.View;
@@ -25,7 +26,7 @@ import java.io.File;
  */
 public class SettingActivity extends BaseActivity {
 
-    public static void launch(Activity from) {
+    public static void launch(@NonNull Activity from) {
         Intent intent = new Intent(from, SettingActivity.class);
         from.startActivity(intent);
     }
@@ -54,7 +55,8 @@ public class SettingActivity extends BaseActivity {
                 sendMail();
                 break;
             case R.id.tv_contact:
-                browserHomePage();
+                // browserHomePage();
+                HtmlActivity.launch(SettingActivity.this, "https://github.com/jingle1267");
                 break;
             case R.id.tv_homepage:
                 HtmlActivity.launch(SettingActivity.this, "http://ihongqiqu.com/");

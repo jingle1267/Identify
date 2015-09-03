@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.text.TextUtils;
 import android.view.View;
 import android.webkit.WebChromeClient;
@@ -23,18 +24,18 @@ import com.ihongqiqu.Identify.R;
  */
 public class HtmlActivity extends BaseActivity {
 
-    @Bind(R.id.webView)
-    WebView webView;
-
-    String url;
-    @Bind(R.id.progressBar)
-    ProgressBar progressBar;
-
-    public static void launch(Activity activity, String url) {
+    public static void launch(@NonNull Activity activity, @NonNull String url) {
         Intent intent = new Intent(activity, HtmlActivity.class);
         intent.putExtra("url", url);
         activity.startActivity(intent);
     }
+
+    @Bind(R.id.progressBar)
+    ProgressBar progressBar;
+    @Bind(R.id.webView)
+    WebView webView;
+
+    String url;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

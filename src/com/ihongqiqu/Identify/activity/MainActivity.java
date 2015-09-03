@@ -110,6 +110,9 @@ public class MainActivity extends BaseActivity {
             case R.id.tv_ip:
                 IpActivity.launch(MainActivity.this);
                 break;
+            case R.id.tv_lottery:
+                LotteryActivity.launch(MainActivity.this);
+                break;
         }
     }
 

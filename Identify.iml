@@ -15,6 +15,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="libs" level="project" />
     <orderEntry type="module" module-name="appcompat" />
-    <orderEntry type="library" name="libs1" level="project" />
+    <orderEntry type="module" module-name="recyclerview" />
   </component>
 </module>

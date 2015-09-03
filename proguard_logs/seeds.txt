@@ -110,8 +110,11 @@ android.support.v4.widget.Space
 android.support.v4.widget.Space: Space(android.content.Context,android.util.AttributeSet,int)
 android.support.v4.widget.Space: Space(android.content.Context,android.util.AttributeSet)
 android.support.v4.widget.Space: Space(android.content.Context)
+android.support.v4.widget.SwipeRefreshLayout
 android.support.v4.widget.SwipeRefreshLayout: void setColorViewAlpha(int)
 android.support.v4.widget.SwipeRefreshLayout: void setSize(int)
+android.support.v4.widget.SwipeRefreshLayout: SwipeRefreshLayout(android.content.Context)
+android.support.v4.widget.SwipeRefreshLayout: SwipeRefreshLayout(android.content.Context,android.util.AttributeSet)
 android.support.v4.widget.SwipeRefreshLayout: void setOnRefreshListener(android.support.v4.widget.SwipeRefreshLayout$OnRefreshListener)
 android.support.v4.widget.SwipeRefreshLayout: void setRefreshing(boolean)
 android.support.v4.widget.SwipeRefreshLayout: void setAnimationProgress(float)
@@ -1470,6 +1473,22 @@ android.support.v7.internal.widget.ViewStubCompat: void setLayoutInflater(androi
 android.support.v7.internal.widget.ViewStubCompat: android.view.LayoutInflater getLayoutInflater()
 android.support.v7.internal.widget.ViewStubCompat: void setVisibility(int)
 android.support.v7.internal.widget.ViewStubCompat: void setOnInflateListener(android.support.v7.internal.widget.ViewStubCompat$OnInflateListener)
+android.support.v7.recyclerview.R$attr
+android.support.v7.recyclerview.R$attr: int layoutManager
+android.support.v7.recyclerview.R$attr: int reverseLayout
+android.support.v7.recyclerview.R$attr: int spanCount
+android.support.v7.recyclerview.R$attr: int stackFromEnd
+android.support.v7.recyclerview.R$dimen
+android.support.v7.recyclerview.R$dimen: int item_touch_helper_max_drag_scroll_per_frame
+android.support.v7.recyclerview.R$id
+android.support.v7.recyclerview.R$id: int item_touch_helper_previous_elevation
+android.support.v7.recyclerview.R$styleable
+android.support.v7.recyclerview.R$styleable: int[] RecyclerView
+android.support.v7.recyclerview.R$styleable: int RecyclerView_android_orientation
+android.support.v7.recyclerview.R$styleable: int RecyclerView_layoutManager
+android.support.v7.recyclerview.R$styleable: int RecyclerView_reverseLayout
+android.support.v7.recyclerview.R$styleable: int RecyclerView_spanCount
+android.support.v7.recyclerview.R$styleable: int RecyclerView_stackFromEnd
 android.support.v7.widget.ActionMenuPresenter$SavedState
 android.support.v7.widget.ActionMenuPresenter$SavedState: android.os.Parcelable$Creator CREATOR
 android.support.v7.widget.ActionMenuView
@@ -1559,6 +1578,39 @@ android.support.v7.widget.LinearLayoutCompat: int getOrientation()
 android.support.v7.widget.LinearLayoutCompat: void setGravity(int)
 android.support.v7.widget.LinearLayoutCompat: void setHorizontalGravity(int)
 android.support.v7.widget.LinearLayoutCompat: void setVerticalGravity(int)
+android.support.v7.widget.LinearLayoutManager$SavedState
+android.support.v7.widget.LinearLayoutManager$SavedState: android.os.Parcelable$Creator CREATOR
+android.support.v7.widget.RecyclerView
+android.support.v7.widget.RecyclerView: RecyclerView(android.content.Context)
+android.support.v7.widget.RecyclerView: RecyclerView(android.content.Context,android.util.AttributeSet)
+android.support.v7.widget.RecyclerView: RecyclerView(android.content.Context,android.util.AttributeSet,int)
+android.support.v7.widget.RecyclerView: android.support.v7.widget.RecyclerViewAccessibilityDelegate getCompatAccessibilityDelegate()
+android.support.v7.widget.RecyclerView: void setAccessibilityDelegateCompat(android.support.v7.widget.RecyclerViewAccessibilityDelegate)
+android.support.v7.widget.RecyclerView: void setHasFixedSize(boolean)
+android.support.v7.widget.RecyclerView: void setClipToPadding(boolean)
+android.support.v7.widget.RecyclerView: void setScrollingTouchSlop(int)
+android.support.v7.widget.RecyclerView: void setAdapter(android.support.v7.widget.RecyclerView$Adapter)
+android.support.v7.widget.RecyclerView: android.support.v7.widget.RecyclerView$Adapter getAdapter()
+android.support.v7.widget.RecyclerView: void setRecyclerListener(android.support.v7.widget.RecyclerView$RecyclerListener)
+android.support.v7.widget.RecyclerView: int getBaseline()
+android.support.v7.widget.RecyclerView: void setLayoutManager(android.support.v7.widget.RecyclerView$LayoutManager)
+android.support.v7.widget.RecyclerView: android.support.v7.widget.RecyclerView$LayoutManager getLayoutManager()
+android.support.v7.widget.RecyclerView: android.support.v7.widget.RecyclerView$RecycledViewPool getRecycledViewPool()
+android.support.v7.widget.RecyclerView: void setRecycledViewPool(android.support.v7.widget.RecyclerView$RecycledViewPool)
+android.support.v7.widget.RecyclerView: void setViewCacheExtension(android.support.v7.widget.RecyclerView$ViewCacheExtension)
+android.support.v7.widget.RecyclerView: void setItemViewCacheSize(int)
+android.support.v7.widget.RecyclerView: int getScrollState()
+android.support.v7.widget.RecyclerView: void setScrollState(int)
+android.support.v7.widget.RecyclerView: void setChildDrawingOrderCallback(android.support.v7.widget.RecyclerView$ChildDrawingOrderCallback)
+android.support.v7.widget.RecyclerView: void setOnScrollListener(android.support.v7.widget.RecyclerView$OnScrollListener)
+android.support.v7.widget.RecyclerView: int getMinFlingVelocity()
+android.support.v7.widget.RecyclerView: int getMaxFlingVelocity()
+android.support.v7.widget.RecyclerView: float getScrollFactor()
+android.support.v7.widget.RecyclerView: void setItemAnimator(android.support.v7.widget.RecyclerView$ItemAnimator)
+android.support.v7.widget.RecyclerView: android.support.v7.widget.RecyclerView$ItemAnimator getItemAnimator()
+android.support.v7.widget.RecyclerView: void setNestedScrollingEnabled(boolean)
+android.support.v7.widget.RecyclerView$SavedState
+android.support.v7.widget.RecyclerView$SavedState: android.os.Parcelable$Creator CREATOR
 android.support.v7.widget.SearchView: int getSuggestionRowLayout()
 android.support.v7.widget.SearchView: int getSuggestionCommitIconResId()
 android.support.v7.widget.SearchView: void setSearchableInfo(android.app.SearchableInfo)
@@ -1593,6 +1645,10 @@ android.support.v7.widget.SearchView$SearchAutoComplete: SearchView$SearchAutoCo
 android.support.v7.widget.SearchView$SearchAutoComplete: SearchView$SearchAutoComplete(android.content.Context,android.util.AttributeSet,int)
 android.support.v7.widget.SearchView$SearchAutoComplete: void setSearchView(android.support.v7.widget.SearchView)
 android.support.v7.widget.SearchView$SearchAutoComplete: void setThreshold(int)
+android.support.v7.widget.StaggeredGridLayoutManager$LazySpanLookup$FullSpanItem
+android.support.v7.widget.StaggeredGridLayoutManager$LazySpanLookup$FullSpanItem: android.os.Parcelable$Creator CREATOR
+android.support.v7.widget.StaggeredGridLayoutManager$SavedState
+android.support.v7.widget.StaggeredGridLayoutManager$SavedState: android.os.Parcelable$Creator CREATOR
 android.support.v7.widget.SuggestionsAdapter: void onClick(android.view.View)
 android.support.v7.widget.SwitchCompat: void setSwitchTypeface(android.graphics.Typeface)
 android.support.v7.widget.SwitchCompat: void setSwitchPadding(int)
@@ -4269,6 +4325,7 @@ com.ihongqiqu.Identify.R$attr: int initialActivityCount
 com.ihongqiqu.Identify.R$attr: int isLightTheme
 com.ihongqiqu.Identify.R$attr: int itemPadding
 com.ihongqiqu.Identify.R$attr: int layout
+com.ihongqiqu.Identify.R$attr: int layoutManager
 com.ihongqiqu.Identify.R$attr: int listChoiceBackgroundIndicator
 com.ihongqiqu.Identify.R$attr: int listDividerAlertDialog
 com.ihongqiqu.Identify.R$attr: int listItemLayout
@@ -4305,6 +4362,7 @@ com.ihongqiqu.Identify.R$attr: int queryBackground
 com.ihongqiqu.Identify.R$attr: int queryHint
 com.ihongqiqu.Identify.R$attr: int radioButtonStyle
 com.ihongqiqu.Identify.R$attr: int ratingBarStyle
+com.ihongqiqu.Identify.R$attr: int reverseLayout
 com.ihongqiqu.Identify.R$attr: int searchHintIcon
 com.ihongqiqu.Identify.R$attr: int searchIcon
 com.ihongqiqu.Identify.R$attr: int searchViewStyle
@@ -4314,11 +4372,13 @@ com.ihongqiqu.Identify.R$attr: int showAsAction
 com.ihongqiqu.Identify.R$attr: int showDividers
 com.ihongqiqu.Identify.R$attr: int showText
 com.ihongqiqu.Identify.R$attr: int singleChoiceItemLayout
+com.ihongqiqu.Identify.R$attr: int spanCount
 com.ihongqiqu.Identify.R$attr: int spinBars
 com.ihongqiqu.Identify.R$attr: int spinnerDropDownItemStyle
 com.ihongqiqu.Identify.R$attr: int spinnerMode
 com.ihongqiqu.Identify.R$attr: int spinnerStyle
 com.ihongqiqu.Identify.R$attr: int splitTrack
+com.ihongqiqu.Identify.R$attr: int stackFromEnd
 com.ihongqiqu.Identify.R$attr: int state_above_anchor
 com.ihongqiqu.Identify.R$attr: int submitBackground
 com.ihongqiqu.Identify.R$attr: int subtitle
@@ -4512,6 +4572,7 @@ com.ihongqiqu.Identify.R$dimen: int dialog_fixed_width_major
 com.ihongqiqu.Identify.R$dimen: int dialog_fixed_width_minor
 com.ihongqiqu.Identify.R$dimen: int disabled_alpha_material_dark
 com.ihongqiqu.Identify.R$dimen: int disabled_alpha_material_light
+com.ihongqiqu.Identify.R$dimen: int item_touch_helper_max_drag_scroll_per_frame
 com.ihongqiqu.Identify.R$dimen: int notification_large_icon_height
 com.ihongqiqu.Identify.R$dimen: int notification_large_icon_width
 com.ihongqiqu.Identify.R$dimen: int notification_subtext_size
@@ -4594,6 +4655,7 @@ com.ihongqiqu.Identify.R$drawable: int material_card
 com.ihongqiqu.Identify.R$drawable: int material_card_nos
 com.ihongqiqu.Identify.R$drawable: int material_card_nos_pressed
 com.ihongqiqu.Identify.R$drawable: int notification_template_icon_bg
+com.ihongqiqu.Identify.R$drawable: int progressbar_webview
 com.ihongqiqu.Identify.R$drawable: int tb_munion_icon
 com.ihongqiqu.Identify.R$drawable: int tb_munion_item_selector
 com.ihongqiqu.Identify.R$drawable: int umeng_common_gradient_green
@@ -4670,6 +4732,7 @@ com.ihongqiqu.Identify.R$id: int icon
 com.ihongqiqu.Identify.R$id: int ifRoom
 com.ihongqiqu.Identify.R$id: int image
 com.ihongqiqu.Identify.R$id: int info
+com.ihongqiqu.Identify.R$id: int item_touch_helper_previous_elevation
 com.ihongqiqu.Identify.R$id: int iv_id_clear
 com.ihongqiqu.Identify.R$id: int iv_ip_clear
 com.ihongqiqu.Identify.R$id: int iv_phone_clear
@@ -4686,11 +4749,13 @@ com.ihongqiqu.Identify.R$id: int never
 com.ihongqiqu.Identify.R$id: int none
 com.ihongqiqu.Identify.R$id: int normal
 com.ihongqiqu.Identify.R$id: int parentPanel
+com.ihongqiqu.Identify.R$id: int progressBar
 com.ihongqiqu.Identify.R$id: int progress_circular
 com.ihongqiqu.Identify.R$id: int progress_frame
 com.ihongqiqu.Identify.R$id: int progress_horizontal
 com.ihongqiqu.Identify.R$id: int promoter_frame
 com.ihongqiqu.Identify.R$id: int radio
+com.ihongqiqu.Identify.R$id: int rv_lottery
 com.ihongqiqu.Identify.R$id: int screen
 com.ihongqiqu.Identify.R$id: int scrollView
 com.ihongqiqu.Identify.R$id: int search_badge
@@ -4716,6 +4781,7 @@ com.ihongqiqu.Identify.R$id: int src_over
 com.ihongqiqu.Identify.R$id: int status_bar_latest_event_content
 com.ihongqiqu.Identify.R$id: int status_msg
 com.ihongqiqu.Identify.R$id: int submit_area
+com.ihongqiqu.Identify.R$id: int swipeRefreshLayout
 com.ihongqiqu.Identify.R$id: int tabMode
 com.ihongqiqu.Identify.R$id: int text
 com.ihongqiqu.Identify.R$id: int text2
@@ -4730,10 +4796,16 @@ com.ihongqiqu.Identify.R$id: int tv_birthday
 com.ihongqiqu.Identify.R$id: int tv_carrier
 com.ihongqiqu.Identify.R$id: int tv_contact
 com.ihongqiqu.Identify.R$id: int tv_developer
+com.ihongqiqu.Identify.R$id: int tv_homepage
 com.ihongqiqu.Identify.R$id: int tv_id
 com.ihongqiqu.Identify.R$id: int tv_id_invalid
 com.ihongqiqu.Identify.R$id: int tv_ip
 com.ihongqiqu.Identify.R$id: int tv_ip_invalid
+com.ihongqiqu.Identify.R$id: int tv_lottery
+com.ihongqiqu.Identify.R$id: int tv_lottery_expect
+com.ihongqiqu.Identify.R$id: int tv_lottery_result
+com.ihongqiqu.Identify.R$id: int tv_lottery_time
+com.ihongqiqu.Identify.R$id: int tv_lottery_type
 com.ihongqiqu.Identify.R$id: int tv_phone
 com.ihongqiqu.Identify.R$id: int tv_phone_invalid
 com.ihongqiqu.Identify.R$id: int tv_postcode
@@ -4759,6 +4831,7 @@ com.ihongqiqu.Identify.R$id: int umeng_update_id_ok
 com.ihongqiqu.Identify.R$id: int umeng_update_wifi_indicator
 com.ihongqiqu.Identify.R$id: int up
 com.ihongqiqu.Identify.R$id: int useLogo
+com.ihongqiqu.Identify.R$id: int webView
 com.ihongqiqu.Identify.R$id: int withText
 com.ihongqiqu.Identify.R$id: int wrap_content
 com.ihongqiqu.Identify.R$integer
@@ -4794,11 +4867,16 @@ com.ihongqiqu.Identify.R$layout: int abc_search_view
 com.ihongqiqu.Identify.R$layout: int abc_select_dialog_material
 com.ihongqiqu.Identify.R$layout: int abc_simple_dropdown_hint
 com.ihongqiqu.Identify.R$layout: int activity_base
+com.ihongqiqu.Identify.R$layout: int activity_html
 com.ihongqiqu.Identify.R$layout: int activity_id
 com.ihongqiqu.Identify.R$layout: int activity_ip
+com.ihongqiqu.Identify.R$layout: int activity_lottery
+com.ihongqiqu.Identify.R$layout: int activity_lottery_detail
 com.ihongqiqu.Identify.R$layout: int activity_main
 com.ihongqiqu.Identify.R$layout: int activity_phone
 com.ihongqiqu.Identify.R$layout: int activity_setting
+com.ihongqiqu.Identify.R$layout: int item_lottery
+com.ihongqiqu.Identify.R$layout: int item_lottery_detail
 com.ihongqiqu.Identify.R$layout: int notification_media_action
 com.ihongqiqu.Identify.R$layout: int notification_media_cancel_action
 com.ihongqiqu.Identify.R$layout: int notification_template_big_media
@@ -5284,6 +5362,12 @@ com.ihongqiqu.Identify.R$styleable: int PopupWindow_android_popupBackground
 com.ihongqiqu.Identify.R$styleable: int PopupWindow_overlapAnchor
 com.ihongqiqu.Identify.R$styleable: int[] PopupWindowBackgroundState
 com.ihongqiqu.Identify.R$styleable: int PopupWindowBackgroundState_state_above_anchor
+com.ihongqiqu.Identify.R$styleable: int[] RecyclerView
+com.ihongqiqu.Identify.R$styleable: int RecyclerView_android_orientation
+com.ihongqiqu.Identify.R$styleable: int RecyclerView_layoutManager
+com.ihongqiqu.Identify.R$styleable: int RecyclerView_reverseLayout
+com.ihongqiqu.Identify.R$styleable: int RecyclerView_spanCount
+com.ihongqiqu.Identify.R$styleable: int RecyclerView_stackFromEnd
 com.ihongqiqu.Identify.R$styleable: int[] SearchView
 com.ihongqiqu.Identify.R$styleable: int SearchView_android_focusable
 com.ihongqiqu.Identify.R$styleable: int SearchView_android_imeOptions
@@ -5476,6 +5560,17 @@ com.ihongqiqu.Identify.R$styleable: int ViewStubCompat_android_layout
 com.ihongqiqu.Identify.activity.BaseActivity
 com.ihongqiqu.Identify.activity.BaseActivity: BaseActivity()
 com.ihongqiqu.Identify.activity.BaseActivity: void setContentView(android.view.View)
+com.ihongqiqu.Identify.activity.HtmlActivity
+com.ihongqiqu.Identify.activity.HtmlActivity: android.widget.ProgressBar progressBar
+com.ihongqiqu.Identify.activity.HtmlActivity: android.webkit.WebView webView
+com.ihongqiqu.Identify.activity.HtmlActivity: HtmlActivity()
+com.ihongqiqu.Identify.activity.HtmlActivity$$ViewBinder
+com.ihongqiqu.Identify.activity.HtmlActivity$$ViewBinder: HtmlActivity$$ViewBinder()
+com.ihongqiqu.Identify.activity.HtmlActivity$$ViewBinder: void bind(butterknife.ButterKnife$Finder,com.ihongqiqu.Identify.activity.HtmlActivity,java.lang.Object)
+com.ihongqiqu.Identify.activity.HtmlActivity$$ViewBinder: void unbind(com.ihongqiqu.Identify.activity.HtmlActivity)
+com.ihongqiqu.Identify.activity.HtmlActivity$$ViewBinder: void unbind(java.lang.Object)
+com.ihongqiqu.Identify.activity.HtmlActivity$$ViewBinder: void bind(butterknife.ButterKnife$Finder,java.lang.Object,java.lang.Object)
+com.ihongqiqu.Identify.activity.HtmlActivity$1: void onClick(android.view.View)
 com.ihongqiqu.Identify.activity.IdActivity
 com.ihongqiqu.Identify.activity.IdActivity: android.widget.EditText etId
 com.ihongqiqu.Identify.activity.IdActivity: android.widget.TextView tvIdInvalid
@@ -5509,6 +5604,48 @@ com.ihongqiqu.Identify.activity.IpActivity$$ViewBinder: void unbind(com.ihongqiq
 com.ihongqiqu.Identify.activity.IpActivity$$ViewBinder: void unbind(java.lang.Object)
 com.ihongqiqu.Identify.activity.IpActivity$$ViewBinder: void bind(butterknife.ButterKnife$Finder,java.lang.Object,java.lang.Object)
 com.ihongqiqu.Identify.activity.IpActivity$1: void onClick(android.view.View)
+com.ihongqiqu.Identify.activity.LotteryActivity
+com.ihongqiqu.Identify.activity.LotteryActivity: android.support.v7.widget.RecyclerView rvLottery
+com.ihongqiqu.Identify.activity.LotteryActivity: android.support.v4.widget.SwipeRefreshLayout swipeRefreshLayout
+com.ihongqiqu.Identify.activity.LotteryActivity: LotteryActivity()
+com.ihongqiqu.Identify.activity.LotteryActivity$$ViewBinder
+com.ihongqiqu.Identify.activity.LotteryActivity$$ViewBinder: LotteryActivity$$ViewBinder()
+com.ihongqiqu.Identify.activity.LotteryActivity$$ViewBinder: void bind(butterknife.ButterKnife$Finder,com.ihongqiqu.Identify.activity.LotteryActivity,java.lang.Object)
+com.ihongqiqu.Identify.activity.LotteryActivity$$ViewBinder: void unbind(com.ihongqiqu.Identify.activity.LotteryActivity)
+com.ihongqiqu.Identify.activity.LotteryActivity$$ViewBinder: void unbind(java.lang.Object)
+com.ihongqiqu.Identify.activity.LotteryActivity$$ViewBinder: void bind(butterknife.ButterKnife$Finder,java.lang.Object,java.lang.Object)
+com.ihongqiqu.Identify.activity.LotteryActivity$1: void onClick(android.view.View)
+com.ihongqiqu.Identify.activity.LotteryActivity$LotteryAdapter$1: void onClick(android.view.View)
+com.ihongqiqu.Identify.activity.LotteryActivity$LotteryAdapter$LotteryViewHolder
+com.ihongqiqu.Identify.activity.LotteryActivity$LotteryAdapter$LotteryViewHolder: android.widget.TextView tvLottery
+com.ihongqiqu.Identify.activity.LotteryActivity$LotteryAdapter$LotteryViewHolder$$ViewBinder
+com.ihongqiqu.Identify.activity.LotteryActivity$LotteryAdapter$LotteryViewHolder$$ViewBinder: LotteryActivity$LotteryAdapter$LotteryViewHolder$$ViewBinder()
+com.ihongqiqu.Identify.activity.LotteryActivity$LotteryAdapter$LotteryViewHolder$$ViewBinder: void bind(butterknife.ButterKnife$Finder,com.ihongqiqu.Identify.activity.LotteryActivity$LotteryAdapter$LotteryViewHolder,java.lang.Object)
+com.ihongqiqu.Identify.activity.LotteryActivity$LotteryAdapter$LotteryViewHolder$$ViewBinder: void unbind(com.ihongqiqu.Identify.activity.LotteryActivity$LotteryAdapter$LotteryViewHolder)
+com.ihongqiqu.Identify.activity.LotteryActivity$LotteryAdapter$LotteryViewHolder$$ViewBinder: void unbind(java.lang.Object)
+com.ihongqiqu.Identify.activity.LotteryActivity$LotteryAdapter$LotteryViewHolder$$ViewBinder: void bind(butterknife.ButterKnife$Finder,java.lang.Object,java.lang.Object)
+com.ihongqiqu.Identify.activity.LotteryDetailActivity
+com.ihongqiqu.Identify.activity.LotteryDetailActivity: android.support.v4.widget.SwipeRefreshLayout swipeRefreshLayout
+com.ihongqiqu.Identify.activity.LotteryDetailActivity: android.support.v7.widget.RecyclerView rvLottery
+com.ihongqiqu.Identify.activity.LotteryDetailActivity: LotteryDetailActivity()
+com.ihongqiqu.Identify.activity.LotteryDetailActivity$$ViewBinder
+com.ihongqiqu.Identify.activity.LotteryDetailActivity$$ViewBinder: LotteryDetailActivity$$ViewBinder()
+com.ihongqiqu.Identify.activity.LotteryDetailActivity$$ViewBinder: void bind(butterknife.ButterKnife$Finder,com.ihongqiqu.Identify.activity.LotteryDetailActivity,java.lang.Object)
+com.ihongqiqu.Identify.activity.LotteryDetailActivity$$ViewBinder: void unbind(com.ihongqiqu.Identify.activity.LotteryDetailActivity)
+com.ihongqiqu.Identify.activity.LotteryDetailActivity$$ViewBinder: void unbind(java.lang.Object)
+com.ihongqiqu.Identify.activity.LotteryDetailActivity$$ViewBinder: void bind(butterknife.ButterKnife$Finder,java.lang.Object,java.lang.Object)
+com.ihongqiqu.Identify.activity.LotteryDetailActivity$1: void onClick(android.view.View)
+com.ihongqiqu.Identify.activity.LotteryDetailActivity$LotteryDetailAdapter$LotteryDetailViewHolder
+com.ihongqiqu.Identify.activity.LotteryDetailActivity$LotteryDetailAdapter$LotteryDetailViewHolder: android.widget.TextView tvLotteryType
+com.ihongqiqu.Identify.activity.LotteryDetailActivity$LotteryDetailAdapter$LotteryDetailViewHolder: android.widget.TextView tvLotteryExpect
+com.ihongqiqu.Identify.activity.LotteryDetailActivity$LotteryDetailAdapter$LotteryDetailViewHolder: android.widget.TextView tvLotteryTime
+com.ihongqiqu.Identify.activity.LotteryDetailActivity$LotteryDetailAdapter$LotteryDetailViewHolder: android.widget.TextView tvLotteryResult
+com.ihongqiqu.Identify.activity.LotteryDetailActivity$LotteryDetailAdapter$LotteryDetailViewHolder$$ViewBinder
+com.ihongqiqu.Identify.activity.LotteryDetailActivity$LotteryDetailAdapter$LotteryDetailViewHolder$$ViewBinder: LotteryDetailActivity$LotteryDetailAdapter$LotteryDetailViewHolder$$ViewBinder()
+com.ihongqiqu.Identify.activity.LotteryDetailActivity$LotteryDetailAdapter$LotteryDetailViewHolder$$ViewBinder: void bind(butterknife.ButterKnife$Finder,com.ihongqiqu.Identify.activity.LotteryDetailActivity$LotteryDetailAdapter$LotteryDetailViewHolder,java.lang.Object)
+com.ihongqiqu.Identify.activity.LotteryDetailActivity$LotteryDetailAdapter$LotteryDetailViewHolder$$ViewBinder: void unbind(com.ihongqiqu.Identify.activity.LotteryDetailActivity$LotteryDetailAdapter$LotteryDetailViewHolder)
+com.ihongqiqu.Identify.activity.LotteryDetailActivity$LotteryDetailAdapter$LotteryDetailViewHolder$$ViewBinder: void unbind(java.lang.Object)
+com.ihongqiqu.Identify.activity.LotteryDetailActivity$LotteryDetailAdapter$LotteryDetailViewHolder$$ViewBinder: void bind(butterknife.ButterKnife$Finder,java.lang.Object,java.lang.Object)
 com.ihongqiqu.Identify.activity.MainActivity
 com.ihongqiqu.Identify.activity.MainActivity: MainActivity()
 com.ihongqiqu.Identify.activity.MainActivity: void onClick(android.view.View)
@@ -5578,6 +5715,28 @@ com.ihongqiqu.Identify.entity.IpInfo: java.lang.String getAddr()
 com.ihongqiqu.Identify.entity.IpInfo: java.lang.String getRegionNames()
 com.ihongqiqu.Identify.entity.IpInfo: java.lang.String getCity()
 com.ihongqiqu.Identify.entity.IpInfo: java.lang.String getIp()
+com.ihongqiqu.Identify.entity.LotteryDetailInfo
+com.ihongqiqu.Identify.entity.LotteryDetailInfo: java.lang.String expect
+com.ihongqiqu.Identify.entity.LotteryDetailInfo: java.lang.String openCode
+com.ihongqiqu.Identify.entity.LotteryDetailInfo: java.lang.String openTime
+com.ihongqiqu.Identify.entity.LotteryDetailInfo: java.lang.String openTimeStamp
+com.ihongqiqu.Identify.entity.LotteryDetailInfo: LotteryDetailInfo()
+com.ihongqiqu.Identify.entity.LotteryDetailInfo: void setExpect(java.lang.String)
+com.ihongqiqu.Identify.entity.LotteryDetailInfo: void setOpenCode(java.lang.String)
+com.ihongqiqu.Identify.entity.LotteryDetailInfo: void setOpenTime(java.lang.String)
+com.ihongqiqu.Identify.entity.LotteryDetailInfo: void setOpenTimeStamp(java.lang.String)
+com.ihongqiqu.Identify.entity.LotteryDetailInfo: java.lang.String getExpect()
+com.ihongqiqu.Identify.entity.LotteryDetailInfo: java.lang.String getOpenCode()
+com.ihongqiqu.Identify.entity.LotteryDetailInfo: java.lang.String getOpenTime()
+com.ihongqiqu.Identify.entity.LotteryDetailInfo: java.lang.String getOpenTimeStamp()
+com.ihongqiqu.Identify.entity.LotteryInfo
+com.ihongqiqu.Identify.entity.LotteryInfo: java.lang.String lotteryCode
+com.ihongqiqu.Identify.entity.LotteryInfo: java.lang.String lotteryName
+com.ihongqiqu.Identify.entity.LotteryInfo: LotteryInfo()
+com.ihongqiqu.Identify.entity.LotteryInfo: void setLotteryCode(java.lang.String)
+com.ihongqiqu.Identify.entity.LotteryInfo: void setLotteryName(java.lang.String)
+com.ihongqiqu.Identify.entity.LotteryInfo: java.lang.String getLotteryCode()
+com.ihongqiqu.Identify.entity.LotteryInfo: java.lang.String getLotteryName()
 com.ihongqiqu.Identify.entity.PhoneInfo
 com.ihongqiqu.Identify.entity.PhoneInfo: java.lang.String telString
 com.ihongqiqu.Identify.entity.PhoneInfo: java.lang.String province

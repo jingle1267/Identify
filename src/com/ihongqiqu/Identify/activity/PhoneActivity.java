@@ -3,6 +3,7 @@ package com.ihongqiqu.Identify.activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.widget.AppCompatButton;
 import android.text.Editable;
 import android.text.TextUtils;
@@ -32,6 +33,11 @@ import java.util.Map;
  */
 public class PhoneActivity extends BaseActivity {
 
+    public static void launch(@NonNull Activity from) {
+        Intent intent = new Intent(from, PhoneActivity.class);
+        from.startActivity(intent);
+    }
+
     private final String URL_PHONE_INFO =
         "http://apis.baidu.com/apistore/mobilephoneservice/mobilephone";
 
@@ -47,11 +53,6 @@ public class PhoneActivity extends BaseActivity {
     TextView tvCarrier;
     @Bind(R.id.tv_province)
     TextView tvProvince;
-
-    public static void launch(Activity from) {
-        Intent intent = new Intent(from, PhoneActivity.class);
-        from.startActivity(intent);
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

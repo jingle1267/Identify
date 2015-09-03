@@ -6,6 +6,9 @@
       <root url="jar://$PROJECT_DIR$/libs/umeng-analytics-v5.5.3.jar!/" />
       <root url="jar://$PROJECT_DIR$/libs/volley-1.0.18.jar!/" />
       <root url="jar://$PROJECT_DIR$/libs/umeng-update-v2.6.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/android-support-v4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/android-support-v7-appcompat.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/android-support-v7-recyclerview.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

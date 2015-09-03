@@ -3,5 +3,6 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="" />
     <mapping directory="$PROJECT_DIR$/../../android-sdk-macosx/extras/android/support/v7/appcompat" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/../../android-sdk-macosx/extras/android/support/v7/recyclerview" vcs="svn" />
   </component>
 </project>

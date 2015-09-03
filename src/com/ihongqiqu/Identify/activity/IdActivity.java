@@ -3,6 +3,7 @@ package com.ihongqiqu.Identify.activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -31,6 +32,11 @@ import java.util.Map;
  */
 public class IdActivity extends BaseActivity {
 
+    public static void launch(@NonNull Activity from) {
+        Intent intent = new Intent(from, IdActivity.class);
+        from.startActivity(intent);
+    }
+
     private final String URL_QUERY_ID = "http://apis.baidu.com/apistore/idservice/id";
 
     @Bind(R.id.et_id)
@@ -47,11 +53,6 @@ public class IdActivity extends BaseActivity {
     TextView tvSex;
     @Bind(R.id.tv_birthday)
     TextView tvBirthday;
-
-    public static void launch(Activity from) {
-        Intent intent = new Intent(from, IdActivity.class);
-        from.startActivity(intent);
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

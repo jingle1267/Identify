@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Identify.iml" filepath="$PROJECT_DIR$/Identify.iml" />
       <module fileurl="file://$PROJECT_DIR$/../../android-sdk-macosx/extras/android/support/v7/appcompat/appcompat.iml" filepath="$PROJECT_DIR$/../../android-sdk-macosx/extras/android/support/v7/appcompat/appcompat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../android-sdk-macosx/extras/android/support/v7/recyclerview/recyclerview.iml" filepath="$PROJECT_DIR$/../../android-sdk-macosx/extras/android/support/v7/recyclerview/recyclerview.iml" />
     </modules>
   </component>
 </project>

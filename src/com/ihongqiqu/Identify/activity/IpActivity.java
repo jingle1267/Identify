@@ -3,6 +3,7 @@ package com.ihongqiqu.Identify.activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -34,6 +35,11 @@ import java.util.regex.Pattern;
  */
 public class IpActivity extends BaseActivity {
 
+    public static void launch(@NonNull Activity from) {
+        Intent intent = new Intent(from, IpActivity.class);
+        from.startActivity(intent);
+    }
+
     private final String URL_IP_INFO = "http://whois.pconline.com.cn/ipJson.jsp?json=true";
 
     @Bind(R.id.et_ip)
@@ -48,11 +54,6 @@ public class IpActivity extends BaseActivity {
     TextView tvAddress;
     @Bind(R.id.tv_postcode)
     TextView tvPostcode;
-
-    public static void launch(Activity from) {
-        Intent intent = new Intent(from, IpActivity.class);
-        from.startActivity(intent);
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
