@@ -4504,6 +4504,7 @@ com.ihongqiqu.Identify.R$color: int switch_thumb_material_light
 com.ihongqiqu.Identify.R$color: int switch_thumb_normal_material_dark
 com.ihongqiqu.Identify.R$color: int switch_thumb_normal_material_light
 com.ihongqiqu.Identify.R$color: int tb_munion_item_force
+com.ihongqiqu.Identify.R$color: int txt_color
 com.ihongqiqu.Identify.R$color: int window_background
 com.ihongqiqu.Identify.R$dimen
 com.ihongqiqu.Identify.R$dimen: int abc_action_bar_content_inset_material
@@ -4637,6 +4638,7 @@ com.ihongqiqu.Identify.R$drawable: int abc_textfield_default_mtrl_alpha
 com.ihongqiqu.Identify.R$drawable: int abc_textfield_search_activated_mtrl_alpha
 com.ihongqiqu.Identify.R$drawable: int abc_textfield_search_default_mtrl_alpha
 com.ihongqiqu.Identify.R$drawable: int abc_textfield_search_material
+com.ihongqiqu.Identify.R$drawable: int bg_rectangle
 com.ihongqiqu.Identify.R$drawable: int btn_close
 com.ihongqiqu.Identify.R$drawable: int btn_close_normal
 com.ihongqiqu.Identify.R$drawable: int btn_close_selected
@@ -4705,6 +4707,7 @@ com.ihongqiqu.Identify.R$id: int alertTitle
 com.ihongqiqu.Identify.R$id: int always
 com.ihongqiqu.Identify.R$id: int beginning
 com.ihongqiqu.Identify.R$id: int btn_query
+com.ihongqiqu.Identify.R$id: int btn_translate
 com.ihongqiqu.Identify.R$id: int buttonPanel
 com.ihongqiqu.Identify.R$id: int cancel_action
 com.ihongqiqu.Identify.R$id: int checkbox
@@ -4723,7 +4726,9 @@ com.ihongqiqu.Identify.R$id: int end
 com.ihongqiqu.Identify.R$id: int end_padder
 com.ihongqiqu.Identify.R$id: int et_id
 com.ihongqiqu.Identify.R$id: int et_ip
+com.ihongqiqu.Identify.R$id: int et_key
 com.ihongqiqu.Identify.R$id: int et_phone
+com.ihongqiqu.Identify.R$id: int et_translate_result
 com.ihongqiqu.Identify.R$id: int expand_activities_button
 com.ihongqiqu.Identify.R$id: int expanded_menu
 com.ihongqiqu.Identify.R$id: int home
@@ -4812,6 +4817,7 @@ com.ihongqiqu.Identify.R$id: int tv_postcode
 com.ihongqiqu.Identify.R$id: int tv_province
 com.ihongqiqu.Identify.R$id: int tv_sex
 com.ihongqiqu.Identify.R$id: int tv_share
+com.ihongqiqu.Identify.R$id: int tv_translation
 com.ihongqiqu.Identify.R$id: int tv_update
 com.ihongqiqu.Identify.R$id: int umeng_common_icon_view
 com.ihongqiqu.Identify.R$id: int umeng_common_notification
@@ -4867,6 +4873,7 @@ com.ihongqiqu.Identify.R$layout: int abc_search_view
 com.ihongqiqu.Identify.R$layout: int abc_select_dialog_material
 com.ihongqiqu.Identify.R$layout: int abc_simple_dropdown_hint
 com.ihongqiqu.Identify.R$layout: int activity_base
+com.ihongqiqu.Identify.R$layout: int activity_dictionary
 com.ihongqiqu.Identify.R$layout: int activity_html
 com.ihongqiqu.Identify.R$layout: int activity_id
 com.ihongqiqu.Identify.R$layout: int activity_ip
@@ -5560,6 +5567,19 @@ com.ihongqiqu.Identify.R$styleable: int ViewStubCompat_android_layout
 com.ihongqiqu.Identify.activity.BaseActivity
 com.ihongqiqu.Identify.activity.BaseActivity: BaseActivity()
 com.ihongqiqu.Identify.activity.BaseActivity: void setContentView(android.view.View)
+com.ihongqiqu.Identify.activity.DictionaryActivity
+com.ihongqiqu.Identify.activity.DictionaryActivity: android.widget.EditText etKey
+com.ihongqiqu.Identify.activity.DictionaryActivity: android.widget.Button btnTranslate
+com.ihongqiqu.Identify.activity.DictionaryActivity: android.widget.TextView etTranslateResult
+com.ihongqiqu.Identify.activity.DictionaryActivity: DictionaryActivity()
+com.ihongqiqu.Identify.activity.DictionaryActivity: void onClick(android.view.View)
+com.ihongqiqu.Identify.activity.DictionaryActivity$$ViewBinder
+com.ihongqiqu.Identify.activity.DictionaryActivity$$ViewBinder: DictionaryActivity$$ViewBinder()
+com.ihongqiqu.Identify.activity.DictionaryActivity$$ViewBinder: void bind(butterknife.ButterKnife$Finder,com.ihongqiqu.Identify.activity.DictionaryActivity,java.lang.Object)
+com.ihongqiqu.Identify.activity.DictionaryActivity$$ViewBinder: void unbind(com.ihongqiqu.Identify.activity.DictionaryActivity)
+com.ihongqiqu.Identify.activity.DictionaryActivity$$ViewBinder: void unbind(java.lang.Object)
+com.ihongqiqu.Identify.activity.DictionaryActivity$$ViewBinder: void bind(butterknife.ButterKnife$Finder,java.lang.Object,java.lang.Object)
+com.ihongqiqu.Identify.activity.DictionaryActivity$1: void onClick(android.view.View)
 com.ihongqiqu.Identify.activity.HtmlActivity
 com.ihongqiqu.Identify.activity.HtmlActivity: android.widget.ProgressBar progressBar
 com.ihongqiqu.Identify.activity.HtmlActivity: android.webkit.WebView webView
@@ -5748,6 +5768,39 @@ com.ihongqiqu.Identify.entity.PhoneInfo: void setCarrier(java.lang.String)
 com.ihongqiqu.Identify.entity.PhoneInfo: java.lang.String getTelString()
 com.ihongqiqu.Identify.entity.PhoneInfo: java.lang.String getProvince()
 com.ihongqiqu.Identify.entity.PhoneInfo: java.lang.String getCarrier()
+com.ihongqiqu.Identify.entity.TranslationInfo
+com.ihongqiqu.Identify.entity.TranslationInfo: com.ihongqiqu.Identify.entity.TranslationInfo$BasicEntity basic
+com.ihongqiqu.Identify.entity.TranslationInfo: java.lang.String query
+com.ihongqiqu.Identify.entity.TranslationInfo: int errorCode
+com.ihongqiqu.Identify.entity.TranslationInfo: java.util.List translation
+com.ihongqiqu.Identify.entity.TranslationInfo: java.util.List web
+com.ihongqiqu.Identify.entity.TranslationInfo: TranslationInfo()
+com.ihongqiqu.Identify.entity.TranslationInfo: void setBasic(com.ihongqiqu.Identify.entity.TranslationInfo$BasicEntity)
+com.ihongqiqu.Identify.entity.TranslationInfo: void setQuery(java.lang.String)
+com.ihongqiqu.Identify.entity.TranslationInfo: void setErrorCode(int)
+com.ihongqiqu.Identify.entity.TranslationInfo: void setTranslation(java.util.List)
+com.ihongqiqu.Identify.entity.TranslationInfo: void setWeb(java.util.List)
+com.ihongqiqu.Identify.entity.TranslationInfo: com.ihongqiqu.Identify.entity.TranslationInfo$BasicEntity getBasic()
+com.ihongqiqu.Identify.entity.TranslationInfo: java.lang.String getQuery()
+com.ihongqiqu.Identify.entity.TranslationInfo: int getErrorCode()
+com.ihongqiqu.Identify.entity.TranslationInfo: java.util.List getTranslation()
+com.ihongqiqu.Identify.entity.TranslationInfo: java.util.List getWeb()
+com.ihongqiqu.Identify.entity.TranslationInfo$BasicEntity
+com.ihongqiqu.Identify.entity.TranslationInfo$BasicEntity: java.lang.String phonetic
+com.ihongqiqu.Identify.entity.TranslationInfo$BasicEntity: java.util.List explains
+com.ihongqiqu.Identify.entity.TranslationInfo$BasicEntity: TranslationInfo$BasicEntity()
+com.ihongqiqu.Identify.entity.TranslationInfo$BasicEntity: void setPhonetic(java.lang.String)
+com.ihongqiqu.Identify.entity.TranslationInfo$BasicEntity: void setExplains(java.util.List)
+com.ihongqiqu.Identify.entity.TranslationInfo$BasicEntity: java.lang.String getPhonetic()
+com.ihongqiqu.Identify.entity.TranslationInfo$BasicEntity: java.util.List getExplains()
+com.ihongqiqu.Identify.entity.TranslationInfo$WebEntity
+com.ihongqiqu.Identify.entity.TranslationInfo$WebEntity: java.lang.String key
+com.ihongqiqu.Identify.entity.TranslationInfo$WebEntity: java.util.List value
+com.ihongqiqu.Identify.entity.TranslationInfo$WebEntity: TranslationInfo$WebEntity()
+com.ihongqiqu.Identify.entity.TranslationInfo$WebEntity: void setKey(java.lang.String)
+com.ihongqiqu.Identify.entity.TranslationInfo$WebEntity: void setValue(java.util.List)
+com.ihongqiqu.Identify.entity.TranslationInfo$WebEntity: java.lang.String getKey()
+com.ihongqiqu.Identify.entity.TranslationInfo$WebEntity: java.util.List getValue()
 com.umeng.analytics.Gender: com.umeng.analytics.Gender[] values()
 com.umeng.analytics.Gender: com.umeng.analytics.Gender valueOf(java.lang.String)
 com.umeng.analytics.onlineconfig.a$d: a$d(org.json.JSONObject)

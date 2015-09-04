@@ -3,6 +3,7 @@
 
     <color name="app_color">#42c58c</color>
     <color name="bg_color">#f1f1f1</color>
+    <color name="txt_color">#666666</color>
     <color name="divider_color">#dddddd</color>
     <color name="btn_normal_color">#ffb94f</color>
     <color name="btn_press_color">#ffa928</color>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:weightSum="10"
+              android:padding="15dp"
+              android:background="@color/bg_color"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <EditText
+            android:id="@+id/et_key"
+            android:layout_weight="3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:padding="10dp"
+            android:lines="10"
+            android:textSize="16sp"
+            android:textColor="@color/txt_color"
+            android:gravity="top"
+            android:hint="请输入要翻译的内容"
+            android:background="@drawable/bg_rectangle"
+            android:layout_gravity="center_horizontal"/>
+    <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/btn_query"
+            >
+
+        <Button
+                android:id="@+id/btn_translate"
+                style="@style/ButtonStyle"
+                android:text="翻译"
+                android:layout_margin="0dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:onClick="onClick"
+                />
+    </LinearLayout>
+    <EditText
+            android:id="@+id/et_translate_result"
+            android:padding="10dp"
+            android:textSize="16sp"
+            android:textColor="@color/txt_color"
+            android:gravity="top"
+            android:layout_weight="6"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:textIsSelectable="true"
+            android:hint="这里是翻译结果"
+            android:background="@drawable/bg_rectangle"
+            android:layout_gravity="center_horizontal"/>
+</LinearLayout>

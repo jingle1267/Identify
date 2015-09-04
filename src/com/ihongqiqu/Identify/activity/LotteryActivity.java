@@ -39,7 +39,6 @@ import java.util.Map;
  */
 public class LotteryActivity extends BaseActivity implements SwipeRefreshLayout.OnRefreshListener {
 
-
     public static void launch(@NonNull Activity from) {
         Intent intent = new Intent(from, LotteryActivity.class);
         from.startActivity(intent);

@@ -149,20 +149,22 @@ public class SettingActivity extends BaseActivity {
     }
 
     private void share() {
-        Intent intent=new Intent(Intent.ACTION_SEND);
+        Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("text/*");
         intent.putExtra(Intent.EXTRA_SUBJECT, "强烈推荐");
-        intent.putExtra(Intent.EXTRA_TEXT, "分享一款ID查询工具应用，下载地址 http://fir.im/idtool");
+        intent.putExtra(Intent.EXTRA_TEXT, "分享一款ID查询工具应用，下载地址 http://fir.im/ids");
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(Intent.createChooser(intent, "ID工具箱分享"));
     }
 
-    private void browserHomePage() {Uri uri = Uri.parse("https://github.com/jingle1267");
-        Intent intent = new  Intent(Intent.ACTION_VIEW, uri);
+    private void browserHomePage() {
+        Uri uri = Uri.parse("https://github.com/jingle1267");
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);
     }
 
-    private void sendMail() {Intent data=new Intent(Intent.ACTION_SENDTO);
+    private void sendMail() {
+        Intent data = new Intent(Intent.ACTION_SENDTO);
         data.setData(Uri.parse("mailto:jingle1267@163.com"));
         data.putExtra(Intent.EXTRA_SUBJECT, "ID查询工具箱");
         data.putExtra(Intent.EXTRA_TEXT, "我正在使用ID查询工具箱，我想要...");

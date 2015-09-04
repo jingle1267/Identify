@@ -4200,7 +4200,7 @@ com.alimama.mobile.csdk.umupdate.models.c:
     private static final java.lang.String j
 com.ihongqiqu.Identify.BuildConfig
 com.ihongqiqu.Identify.R:
-    10:2806:public R()
+    10:2813:public R()
 com.ihongqiqu.Identify.activity.IpActivity:
     197:211:public static boolean isTopURL(java.lang.String)
 com.ihongqiqu.Identify.activity.SettingActivity:
