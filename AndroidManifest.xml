@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.ihongqiqu.Identify"
-          android:versionCode="113"
-          android:versionName="1.1.3">
+          android:versionCode="120"
+          android:versionName="1.2.0">
     <uses-sdk android:minSdkVersion="11"/>
 
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -46,5 +46,6 @@
         <activity android:name=".activity.LotteryActivity"/>
         <activity android:name=".activity.LotteryDetailActivity"/>
         <activity android:name=".activity.DictionaryActivity"/>
+        <activity android:name=".activity.SignActivity"/>
     </application>
 </manifest>

@@ -34,12 +34,14 @@ android.support.v4.app.BackStackRecord -> android.support.v4.app.e:
     void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
     void dump(java.lang.String,java.io.PrintWriter,boolean) -> a
     void addOp(android.support.v4.app.BackStackRecord$Op) -> a
+    android.support.v4.app.FragmentTransaction add(android.support.v4.app.Fragment,java.lang.String) -> a
     android.support.v4.app.FragmentTransaction add(int,android.support.v4.app.Fragment,java.lang.String) -> a
     void doAddOp(int,android.support.v4.app.Fragment,java.lang.String,int) -> a
     android.support.v4.app.FragmentTransaction detach(android.support.v4.app.Fragment) -> a
     android.support.v4.app.FragmentTransaction attach(android.support.v4.app.Fragment) -> b
     void bumpBackStackNesting(int) -> a
     int commit() -> a
+    int commitAllowingStateLoss() -> b
     int commitInternal(boolean) -> a
     void run() -> run
     void setFirstOut(android.util.SparseArray,android.support.v4.app.Fragment) -> a
@@ -47,7 +49,7 @@ android.support.v4.app.BackStackRecord -> android.support.v4.app.e:
     void calculateFragments(android.util.SparseArray,android.util.SparseArray) -> b
     void calculateBackFragments(android.util.SparseArray,android.util.SparseArray) -> a
     android.support.v4.app.BackStackRecord$TransitionState popFromBackStack(boolean,android.support.v4.app.BackStackRecord$TransitionState,android.util.SparseArray,android.util.SparseArray) -> a
-    java.lang.String getName() -> b
+    java.lang.String getName() -> c
     android.support.v4.app.BackStackRecord$TransitionState beginTransition(android.util.SparseArray,android.util.SparseArray,boolean) -> a
     java.lang.Object getEnterTransition(android.support.v4.app.Fragment,boolean) -> a
     java.lang.Object getExitTransition(android.support.v4.app.Fragment,boolean) -> b
@@ -316,6 +318,7 @@ android.support.v4.app.FragmentActivity -> android.support.v4.app.o:
     void doReallyStop(boolean) -> a
     void onReallyStop() -> e
     void onAttachFragment(android.support.v4.app.Fragment) -> a
+    android.support.v4.app.FragmentManager getSupportFragmentManager() -> f
     void startActivityForResult(android.content.Intent,int) -> startActivityForResult
     void invalidateSupportFragment(java.lang.String) -> a
     android.support.v4.app.LoaderManagerImpl getLoaderManager(java.lang.String,boolean,boolean) -> a
@@ -516,10 +519,12 @@ android.support.v4.app.FragmentTabHost$TabInfo -> android.support.v4.app.ad:
     java.lang.Class access$300(android.support.v4.app.FragmentTabHost$TabInfo) -> c
     android.os.Bundle access$400(android.support.v4.app.FragmentTabHost$TabInfo) -> d
 android.support.v4.app.FragmentTransaction -> android.support.v4.app.ae:
+    android.support.v4.app.FragmentTransaction add(android.support.v4.app.Fragment,java.lang.String) -> a
     android.support.v4.app.FragmentTransaction add(int,android.support.v4.app.Fragment,java.lang.String) -> a
     android.support.v4.app.FragmentTransaction detach(android.support.v4.app.Fragment) -> a
     android.support.v4.app.FragmentTransaction attach(android.support.v4.app.Fragment) -> b
     int commit() -> a
+    int commitAllowingStateLoss() -> b
 android.support.v4.app.FragmentTransitionCompat21 -> android.support.v4.app.af:
     java.lang.String getTransitionName(android.view.View) -> a
     java.lang.Object cloneTransition(java.lang.Object) -> a
@@ -3959,7 +3964,7 @@ android.support.v7.app.AppCompatActivity -> android.support.v7.app.q:
     android.support.v7.app.AppCompatDelegate mDelegate -> n
     void onCreate(android.os.Bundle) -> onCreate
     void onPostCreate(android.os.Bundle) -> onPostCreate
-    android.support.v7.app.ActionBar getSupportActionBar() -> f
+    android.support.v7.app.ActionBar getSupportActionBar() -> g
     void setSupportActionBar(android.support.v7.widget.Toolbar) -> a
     android.view.MenuInflater getMenuInflater() -> getMenuInflater
     void setContentView(int) -> setContentView
@@ -3979,13 +3984,13 @@ android.support.v7.app.AppCompatActivity -> android.support.v7.app.q:
     android.support.v7.view.ActionMode onWindowStartingSupportActionMode(android.support.v7.view.ActionMode$Callback) -> a
     void onCreateSupportNavigateUpTaskStack(android.support.v4.app.TaskStackBuilder) -> a
     void onPrepareSupportNavigateUpTaskStack(android.support.v4.app.TaskStackBuilder) -> b
-    boolean onSupportNavigateUp() -> g
+    boolean onSupportNavigateUp() -> h
     android.content.Intent getSupportParentActivityIntent() -> a
     boolean supportShouldUpRecreateTask(android.content.Intent) -> a
     void supportNavigateUpTo(android.content.Intent) -> b
     void onContentChanged() -> onContentChanged
-    void onSupportContentChanged() -> h
-    android.support.v7.app.AppCompatDelegate getDelegate() -> i
+    void onSupportContentChanged() -> i
+    android.support.v7.app.AppCompatDelegate getDelegate() -> j
 android.support.v7.app.AppCompatCallback -> android.support.v7.app.r:
     void onSupportActionModeStarted(android.support.v7.view.ActionMode) -> a
     void onSupportActionModeFinished(android.support.v7.view.ActionMode) -> b
@@ -10937,6 +10942,2279 @@ com.android.volley.toolbox.Volley -> com.android.volley.toolbox.Volley:
     com.android.volley.RequestQueue newRequestQueue(android.content.Context,int) -> newRequestQueue
     com.android.volley.RequestQueue newRequestQueue(android.content.Context,com.android.volley.toolbox.HttpStack) -> newRequestQueue
     com.android.volley.RequestQueue newRequestQueue(android.content.Context) -> newRequestQueue
+com.bumptech.glide.DrawableRequestBuilder -> com.bumptech.glide.a:
+    com.bumptech.glide.DrawableRequestBuilder decoder(com.bumptech.glide.load.ResourceDecoder) -> a
+    com.bumptech.glide.DrawableRequestBuilder centerCrop() -> a
+    com.bumptech.glide.DrawableRequestBuilder fitCenter() -> b
+    com.bumptech.glide.DrawableRequestBuilder transform(com.bumptech.glide.load.Transformation[]) -> a
+    com.bumptech.glide.DrawableRequestBuilder crossFade() -> c
+    com.bumptech.glide.DrawableRequestBuilder diskCacheStrategy(com.bumptech.glide.load.engine.DiskCacheStrategy) -> a
+    com.bumptech.glide.DrawableRequestBuilder skipMemoryCache(boolean) -> a
+    com.bumptech.glide.DrawableRequestBuilder override(int,int) -> a
+    com.bumptech.glide.DrawableRequestBuilder sourceEncoder(com.bumptech.glide.load.Encoder) -> a
+    com.bumptech.glide.DrawableRequestBuilder signature(com.bumptech.glide.load.Key) -> a
+    com.bumptech.glide.DrawableRequestBuilder load(java.lang.Object) -> a
+    com.bumptech.glide.DrawableRequestBuilder clone() -> d
+    com.bumptech.glide.request.target.Target into(android.widget.ImageView) -> a
+    void applyFitCenter() -> e
+    void applyCenterCrop() -> f
+    com.bumptech.glide.GenericRequestBuilder clone() -> g
+    com.bumptech.glide.GenericRequestBuilder load(java.lang.Object) -> b
+    com.bumptech.glide.GenericRequestBuilder signature(com.bumptech.glide.load.Key) -> b
+    com.bumptech.glide.GenericRequestBuilder override(int,int) -> b
+    com.bumptech.glide.GenericRequestBuilder skipMemoryCache(boolean) -> b
+    com.bumptech.glide.GenericRequestBuilder transform(com.bumptech.glide.load.Transformation[]) -> b
+    com.bumptech.glide.GenericRequestBuilder diskCacheStrategy(com.bumptech.glide.load.engine.DiskCacheStrategy) -> b
+    com.bumptech.glide.GenericRequestBuilder sourceEncoder(com.bumptech.glide.load.Encoder) -> b
+    com.bumptech.glide.GenericRequestBuilder decoder(com.bumptech.glide.load.ResourceDecoder) -> b
+    java.lang.Object clone() -> clone
+com.bumptech.glide.DrawableTypeRequest -> com.bumptech.glide.b:
+    com.bumptech.glide.load.model.ModelLoader streamModelLoader -> g
+    com.bumptech.glide.load.model.ModelLoader fileDescriptorModelLoader -> h
+    com.bumptech.glide.RequestManager$OptionsApplier optionsApplier -> i
+    com.bumptech.glide.provider.FixedLoadProvider buildProvider(com.bumptech.glide.Glide,com.bumptech.glide.load.model.ModelLoader,com.bumptech.glide.load.model.ModelLoader,java.lang.Class,java.lang.Class,com.bumptech.glide.load.resource.transcode.ResourceTranscoder) -> a
+com.bumptech.glide.GenericRequestBuilder -> com.bumptech.glide.c:
+    java.lang.Class modelClass -> a
+    android.content.Context context -> b
+    com.bumptech.glide.Glide glide -> c
+    java.lang.Class transcodeClass -> d
+    com.bumptech.glide.manager.RequestTracker requestTracker -> e
+    com.bumptech.glide.manager.Lifecycle lifecycle -> f
+    com.bumptech.glide.provider.ChildLoadProvider loadProvider -> g
+    java.lang.Object model -> h
+    com.bumptech.glide.load.Key signature -> i
+    boolean isModelSet -> j
+    int placeholderId -> k
+    int errorId -> l
+    com.bumptech.glide.request.RequestListener requestListener -> m
+    java.lang.Float thumbSizeMultiplier -> n
+    com.bumptech.glide.GenericRequestBuilder thumbnailRequestBuilder -> o
+    java.lang.Float sizeMultiplier -> p
+    android.graphics.drawable.Drawable placeholderDrawable -> q
+    android.graphics.drawable.Drawable errorPlaceholder -> r
+    com.bumptech.glide.Priority priority -> s
+    boolean isCacheable -> t
+    com.bumptech.glide.request.animation.GlideAnimationFactory animationFactory -> u
+    int overrideHeight -> v
+    int overrideWidth -> w
+    com.bumptech.glide.load.engine.DiskCacheStrategy diskCacheStrategy -> x
+    com.bumptech.glide.load.Transformation transformation -> y
+    boolean isTransformationSet -> z
+    boolean isThumbnailBuilt -> A
+    android.graphics.drawable.Drawable fallbackDrawable -> B
+    int fallbackResource -> C
+    com.bumptech.glide.GenericRequestBuilder decoder(com.bumptech.glide.load.ResourceDecoder) -> b
+    com.bumptech.glide.GenericRequestBuilder sourceEncoder(com.bumptech.glide.load.Encoder) -> b
+    com.bumptech.glide.GenericRequestBuilder diskCacheStrategy(com.bumptech.glide.load.engine.DiskCacheStrategy) -> b
+    com.bumptech.glide.GenericRequestBuilder transform(com.bumptech.glide.load.Transformation[]) -> b
+    com.bumptech.glide.GenericRequestBuilder animate(com.bumptech.glide.request.animation.GlideAnimationFactory) -> a
+    com.bumptech.glide.GenericRequestBuilder skipMemoryCache(boolean) -> b
+    com.bumptech.glide.GenericRequestBuilder override(int,int) -> b
+    com.bumptech.glide.GenericRequestBuilder signature(com.bumptech.glide.load.Key) -> b
+    com.bumptech.glide.GenericRequestBuilder load(java.lang.Object) -> b
+    com.bumptech.glide.GenericRequestBuilder clone() -> g
+    com.bumptech.glide.request.target.Target into(com.bumptech.glide.request.target.Target) -> a
+    com.bumptech.glide.request.target.Target into(android.widget.ImageView) -> a
+    void applyCenterCrop() -> f
+    void applyFitCenter() -> e
+    com.bumptech.glide.Priority getThumbnailPriority() -> a
+    com.bumptech.glide.request.Request buildRequest(com.bumptech.glide.request.target.Target) -> b
+    com.bumptech.glide.request.Request buildRequestRecursive(com.bumptech.glide.request.target.Target,com.bumptech.glide.request.ThumbnailRequestCoordinator) -> a
+    com.bumptech.glide.request.Request obtainRequest(com.bumptech.glide.request.target.Target,float,com.bumptech.glide.Priority,com.bumptech.glide.request.RequestCoordinator) -> a
+    java.lang.Object clone() -> clone
+com.bumptech.glide.GenericRequestBuilder$2 -> com.bumptech.glide.d:
+    int[] $SwitchMap$android$widget$ImageView$ScaleType -> a
+com.bumptech.glide.GenericTranscodeRequest -> com.bumptech.glide.e:
+    com.bumptech.glide.load.model.ModelLoader modelLoader -> g
+    java.lang.Class dataClass -> h
+    java.lang.Class resourceClass -> i
+    com.bumptech.glide.RequestManager$OptionsApplier optionsApplier -> j
+    com.bumptech.glide.provider.LoadProvider build(com.bumptech.glide.Glide,com.bumptech.glide.load.model.ModelLoader,java.lang.Class,java.lang.Class,com.bumptech.glide.load.resource.transcode.ResourceTranscoder) -> a
+com.bumptech.glide.Glide -> com.bumptech.glide.f:
+    com.bumptech.glide.Glide glide -> a
+    com.bumptech.glide.load.model.GenericLoaderFactory loaderFactory -> b
+    com.bumptech.glide.load.engine.Engine engine -> c
+    com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool bitmapPool -> d
+    com.bumptech.glide.load.engine.cache.MemoryCache memoryCache -> e
+    com.bumptech.glide.load.DecodeFormat decodeFormat -> f
+    com.bumptech.glide.request.target.ImageViewTargetFactory imageViewTargetFactory -> g
+    com.bumptech.glide.load.resource.transcode.TranscoderRegistry transcoderRegistry -> h
+    com.bumptech.glide.provider.DataLoadProviderRegistry dataLoadProviderRegistry -> i
+    com.bumptech.glide.load.resource.bitmap.CenterCrop bitmapCenterCrop -> j
+    com.bumptech.glide.load.resource.gifbitmap.GifBitmapWrapperTransformation drawableCenterCrop -> k
+    com.bumptech.glide.load.resource.bitmap.FitCenter bitmapFitCenter -> l
+    com.bumptech.glide.load.resource.gifbitmap.GifBitmapWrapperTransformation drawableFitCenter -> m
+    android.os.Handler mainHandler -> n
+    com.bumptech.glide.load.engine.prefill.BitmapPreFiller bitmapPreFiller -> o
+    com.bumptech.glide.Glide get(android.content.Context) -> a
+    com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool getBitmapPool() -> a
+    com.bumptech.glide.load.resource.transcode.ResourceTranscoder buildTranscoder(java.lang.Class,java.lang.Class) -> a
+    com.bumptech.glide.provider.DataLoadProvider buildDataProvider(java.lang.Class,java.lang.Class) -> b
+    com.bumptech.glide.request.target.Target buildImageViewTarget(android.widget.ImageView,java.lang.Class) -> a
+    com.bumptech.glide.load.engine.Engine getEngine() -> b
+    com.bumptech.glide.load.resource.gifbitmap.GifBitmapWrapperTransformation getDrawableCenterCrop() -> c
+    com.bumptech.glide.load.resource.gifbitmap.GifBitmapWrapperTransformation getDrawableFitCenter() -> d
+    com.bumptech.glide.load.model.GenericLoaderFactory getLoaderFactory() -> f
+    void clearMemory() -> e
+    void trimMemory(int) -> a
+    void clear(com.bumptech.glide.request.target.Target) -> a
+    void register(java.lang.Class,java.lang.Class,com.bumptech.glide.load.model.ModelLoaderFactory) -> a
+    com.bumptech.glide.load.model.ModelLoader buildModelLoader(java.lang.Class,java.lang.Class,android.content.Context) -> a
+    com.bumptech.glide.load.model.ModelLoader buildStreamModelLoader(java.lang.Class,android.content.Context) -> a
+    com.bumptech.glide.load.model.ModelLoader buildFileDescriptorModelLoader(java.lang.Class,android.content.Context) -> b
+    com.bumptech.glide.RequestManager with(android.content.Context) -> b
+    com.bumptech.glide.RequestManager with(android.support.v4.app.FragmentActivity) -> a
+com.bumptech.glide.GlideBuilder -> com.bumptech.glide.g:
+    android.content.Context context -> a
+    com.bumptech.glide.load.engine.Engine engine -> b
+    com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool bitmapPool -> c
+    com.bumptech.glide.load.engine.cache.MemoryCache memoryCache -> d
+    java.util.concurrent.ExecutorService sourceService -> e
+    java.util.concurrent.ExecutorService diskCacheService -> f
+    com.bumptech.glide.load.DecodeFormat decodeFormat -> g
+    com.bumptech.glide.load.engine.cache.DiskCache$Factory diskCacheFactory -> h
+    com.bumptech.glide.Glide createGlide() -> a
+com.bumptech.glide.Priority -> com.bumptech.glide.h:
+    com.bumptech.glide.Priority IMMEDIATE -> a
+    com.bumptech.glide.Priority HIGH -> b
+    com.bumptech.glide.Priority NORMAL -> c
+    com.bumptech.glide.Priority LOW -> d
+    com.bumptech.glide.Priority priority -> e
+    com.bumptech.glide.Priority[] $VALUES -> f
+    com.bumptech.glide.Priority[] values() -> values
+    com.bumptech.glide.Priority valueOf(java.lang.String) -> valueOf
+com.bumptech.glide.RequestManager -> com.bumptech.glide.i:
+    android.content.Context context -> a
+    com.bumptech.glide.manager.Lifecycle lifecycle -> b
+    com.bumptech.glide.manager.RequestManagerTreeNode treeNode -> c
+    com.bumptech.glide.manager.RequestTracker requestTracker -> d
+    com.bumptech.glide.Glide glide -> e
+    com.bumptech.glide.RequestManager$OptionsApplier optionsApplier -> f
+    com.bumptech.glide.RequestManager$DefaultOptions options -> g
+    void onTrimMemory(int) -> a
+    void onLowMemory() -> a
+    void pauseRequests() -> b
+    void resumeRequests() -> c
+    void onStart() -> d
+    void onStop() -> e
+    void onDestroy() -> f
+    com.bumptech.glide.RequestManager$GenericModelRequest using(com.bumptech.glide.load.model.ModelLoader,java.lang.Class) -> a
+    com.bumptech.glide.DrawableTypeRequest load(java.lang.String) -> a
+    com.bumptech.glide.DrawableTypeRequest fromString() -> g
+    com.bumptech.glide.DrawableTypeRequest loadGeneric(java.lang.Class) -> a
+    java.lang.Class getSafeClass(java.lang.Object) -> b
+    java.lang.Class access$000(java.lang.Object) -> a
+    android.content.Context access$100(com.bumptech.glide.RequestManager) -> a
+    com.bumptech.glide.Glide access$200(com.bumptech.glide.RequestManager) -> b
+    com.bumptech.glide.manager.RequestTracker access$300(com.bumptech.glide.RequestManager) -> c
+    com.bumptech.glide.manager.Lifecycle access$400(com.bumptech.glide.RequestManager) -> d
+    com.bumptech.glide.RequestManager$OptionsApplier access$500(com.bumptech.glide.RequestManager) -> e
+    com.bumptech.glide.RequestManager$DefaultOptions access$800(com.bumptech.glide.RequestManager) -> f
+com.bumptech.glide.RequestManager$1 -> com.bumptech.glide.j:
+    com.bumptech.glide.manager.Lifecycle val$lifecycle -> a
+    com.bumptech.glide.RequestManager this$0 -> b
+    void run() -> run
+com.bumptech.glide.RequestManager$DefaultOptions -> com.bumptech.glide.k:
+    void apply(com.bumptech.glide.GenericRequestBuilder) -> a
+com.bumptech.glide.RequestManager$GenericModelRequest -> com.bumptech.glide.l:
+    com.bumptech.glide.load.model.ModelLoader modelLoader -> b
+    java.lang.Class dataClass -> c
+    com.bumptech.glide.RequestManager this$0 -> a
+    com.bumptech.glide.RequestManager$GenericModelRequest$GenericTypeRequest load(java.lang.Object) -> a
+    com.bumptech.glide.load.model.ModelLoader access$600(com.bumptech.glide.RequestManager$GenericModelRequest) -> a
+    java.lang.Class access$700(com.bumptech.glide.RequestManager$GenericModelRequest) -> b
+com.bumptech.glide.RequestManager$GenericModelRequest$GenericTypeRequest -> com.bumptech.glide.m:
+    java.lang.Object model -> b
+    java.lang.Class modelClass -> c
+    boolean providedModel -> d
+    com.bumptech.glide.RequestManager$GenericModelRequest this$1 -> a
+    com.bumptech.glide.GenericTranscodeRequest as(java.lang.Class) -> a
+com.bumptech.glide.RequestManager$OptionsApplier -> com.bumptech.glide.n:
+    com.bumptech.glide.RequestManager this$0 -> a
+    com.bumptech.glide.GenericRequestBuilder apply(com.bumptech.glide.GenericRequestBuilder) -> a
+com.bumptech.glide.RequestManager$RequestManagerConnectivityListener -> com.bumptech.glide.o:
+    com.bumptech.glide.manager.RequestTracker requestTracker -> a
+    void onConnectivityChanged(boolean) -> a
+com.bumptech.glide.disklrucache.DiskLruCache -> com.bumptech.glide.a.a:
+    java.io.File directory -> b
+    java.io.File journalFile -> c
+    java.io.File journalFileTmp -> d
+    java.io.File journalFileBackup -> e
+    int appVersion -> f
+    long maxSize -> g
+    int valueCount -> h
+    long size -> i
+    java.io.Writer journalWriter -> j
+    java.util.LinkedHashMap lruEntries -> k
+    int redundantOpCount -> l
+    long nextSequenceNumber -> m
+    java.util.concurrent.ThreadPoolExecutor executorService -> a
+    java.util.concurrent.Callable cleanupCallable -> n
+    com.bumptech.glide.disklrucache.DiskLruCache open(java.io.File,int,int,long) -> a
+    void readJournal() -> b
+    void readJournalLine(java.lang.String) -> d
+    void processJournal() -> c
+    void rebuildJournal() -> d
+    void deleteIfExists(java.io.File) -> a
+    void renameTo(java.io.File,java.io.File,boolean) -> a
+    com.bumptech.glide.disklrucache.DiskLruCache$Value get(java.lang.String) -> a
+    com.bumptech.glide.disklrucache.DiskLruCache$Editor edit(java.lang.String) -> b
+    com.bumptech.glide.disklrucache.DiskLruCache$Editor edit(java.lang.String,long) -> a
+    void completeEdit(com.bumptech.glide.disklrucache.DiskLruCache$Editor,boolean) -> a
+    boolean journalRebuildRequired() -> e
+    boolean remove(java.lang.String) -> c
+    void checkNotClosed() -> f
+    void close() -> close
+    void trimToSize() -> g
+    void delete() -> a
+    java.io.Writer access$000(com.bumptech.glide.disklrucache.DiskLruCache) -> a
+    void access$100(com.bumptech.glide.disklrucache.DiskLruCache) -> b
+    boolean access$200(com.bumptech.glide.disklrucache.DiskLruCache) -> c
+    void access$300(com.bumptech.glide.disklrucache.DiskLruCache) -> d
+    int access$402(com.bumptech.glide.disklrucache.DiskLruCache,int) -> a
+    int access$1800(com.bumptech.glide.disklrucache.DiskLruCache) -> e
+    java.io.File access$1900(com.bumptech.glide.disklrucache.DiskLruCache) -> f
+    void access$2000(com.bumptech.glide.disklrucache.DiskLruCache,com.bumptech.glide.disklrucache.DiskLruCache$Editor,boolean) -> a
+com.bumptech.glide.disklrucache.DiskLruCache$1 -> com.bumptech.glide.a.b:
+    com.bumptech.glide.disklrucache.DiskLruCache this$0 -> a
+    java.lang.Void call() -> a
+    java.lang.Object call() -> call
+com.bumptech.glide.disklrucache.DiskLruCache$Editor -> com.bumptech.glide.a.c:
+    com.bumptech.glide.disklrucache.DiskLruCache$Entry entry -> b
+    boolean[] written -> c
+    boolean committed -> d
+    com.bumptech.glide.disklrucache.DiskLruCache this$0 -> a
+    java.io.File getFile(int) -> a
+    void commit() -> a
+    void abort() -> b
+    void abortUnlessCommitted() -> c
+    com.bumptech.glide.disklrucache.DiskLruCache$Entry access$1400(com.bumptech.glide.disklrucache.DiskLruCache$Editor) -> a
+    boolean[] access$1500(com.bumptech.glide.disklrucache.DiskLruCache$Editor) -> b
+com.bumptech.glide.disklrucache.DiskLruCache$Entry -> com.bumptech.glide.a.d:
+    java.lang.String key -> d
+    long[] lengths -> e
+    java.io.File[] cleanFiles -> a
+    java.io.File[] dirtyFiles -> b
+    boolean readable -> f
+    com.bumptech.glide.disklrucache.DiskLruCache$Editor currentEditor -> g
+    long sequenceNumber -> h
+    com.bumptech.glide.disklrucache.DiskLruCache this$0 -> c
+    java.lang.String getLengths() -> a
+    void setLengths(java.lang.String[]) -> a
+    java.io.IOException invalidLengths(java.lang.String[]) -> b
+    java.io.File getCleanFile(int) -> a
+    java.io.File getDirtyFile(int) -> b
+    boolean access$602(com.bumptech.glide.disklrucache.DiskLruCache$Entry,boolean) -> a
+    com.bumptech.glide.disklrucache.DiskLruCache$Editor access$702(com.bumptech.glide.disklrucache.DiskLruCache$Entry,com.bumptech.glide.disklrucache.DiskLruCache$Editor) -> a
+    void access$800(com.bumptech.glide.disklrucache.DiskLruCache$Entry,java.lang.String[]) -> a
+    com.bumptech.glide.disklrucache.DiskLruCache$Editor access$700(com.bumptech.glide.disklrucache.DiskLruCache$Entry) -> a
+    long[] access$1000(com.bumptech.glide.disklrucache.DiskLruCache$Entry) -> b
+    java.lang.String access$1100(com.bumptech.glide.disklrucache.DiskLruCache$Entry) -> c
+    boolean access$600(com.bumptech.glide.disklrucache.DiskLruCache$Entry) -> d
+    long access$1200(com.bumptech.glide.disklrucache.DiskLruCache$Entry) -> e
+    long access$1202(com.bumptech.glide.disklrucache.DiskLruCache$Entry,long) -> a
+com.bumptech.glide.disklrucache.DiskLruCache$Value -> com.bumptech.glide.a.e:
+    java.lang.String key -> b
+    long sequenceNumber -> c
+    long[] lengths -> d
+    java.io.File[] files -> e
+    com.bumptech.glide.disklrucache.DiskLruCache this$0 -> a
+    java.io.File getFile(int) -> a
+com.bumptech.glide.disklrucache.StrictLineReader -> com.bumptech.glide.a.f:
+    java.io.InputStream in -> a
+    java.nio.charset.Charset charset -> b
+    byte[] buf -> c
+    int pos -> d
+    int end -> e
+    void close() -> close
+    java.lang.String readLine() -> a
+    boolean hasUnterminatedLine() -> b
+    void fillBuf() -> c
+    java.nio.charset.Charset access$000(com.bumptech.glide.disklrucache.StrictLineReader) -> a
+com.bumptech.glide.disklrucache.StrictLineReader$1 -> com.bumptech.glide.a.g:
+    com.bumptech.glide.disklrucache.StrictLineReader this$0 -> a
+    java.lang.String toString() -> toString
+com.bumptech.glide.disklrucache.Util -> com.bumptech.glide.a.h:
+    java.nio.charset.Charset US_ASCII -> a
+    java.nio.charset.Charset UTF_8 -> b
+    void deleteContents(java.io.File) -> a
+    void closeQuietly(java.io.Closeable) -> a
+com.bumptech.glide.gifdecoder.GifDecoder -> com.bumptech.glide.b.a:
+    java.lang.String TAG -> a
+    android.graphics.Bitmap$Config BITMAP_CONFIG -> b
+    int[] act -> c
+    java.nio.ByteBuffer rawData -> d
+    byte[] block -> e
+    short[] prefix -> f
+    byte[] suffix -> g
+    byte[] pixelStack -> h
+    byte[] mainPixels -> i
+    int[] mainScratch -> j
+    int framePointer -> k
+    byte[] data -> l
+    com.bumptech.glide.gifdecoder.GifHeader header -> m
+    com.bumptech.glide.gifdecoder.GifDecoder$BitmapProvider bitmapProvider -> n
+    android.graphics.Bitmap previousImage -> o
+    boolean savePrevious -> p
+    int status -> q
+    void advance() -> a
+    int getDelay(int) -> a
+    int getNextDelay() -> b
+    int getFrameCount() -> c
+    int getCurrentFrameIndex() -> d
+    int getLoopCount() -> e
+    android.graphics.Bitmap getNextFrame() -> f
+    void clear() -> g
+    void setData(com.bumptech.glide.gifdecoder.GifHeader,byte[]) -> a
+    android.graphics.Bitmap setPixels(com.bumptech.glide.gifdecoder.GifFrame,com.bumptech.glide.gifdecoder.GifFrame) -> a
+    void decodeBitmapData(com.bumptech.glide.gifdecoder.GifFrame) -> a
+    int read() -> h
+    int readBlock() -> i
+    android.graphics.Bitmap getNextBitmap() -> j
+    void setAlpha(android.graphics.Bitmap) -> a
+com.bumptech.glide.gifdecoder.GifDecoder$BitmapProvider -> com.bumptech.glide.b.b:
+    android.graphics.Bitmap obtain(int,int,android.graphics.Bitmap$Config) -> a
+    void release(android.graphics.Bitmap) -> a
+com.bumptech.glide.gifdecoder.GifFrame -> com.bumptech.glide.b.c:
+    int ix -> a
+    int iy -> b
+    int iw -> c
+    int ih -> d
+    boolean interlace -> e
+    boolean transparency -> f
+    int dispose -> g
+    int transIndex -> h
+    int delay -> i
+    int bufferFrameStart -> j
+    int[] lct -> k
+com.bumptech.glide.gifdecoder.GifHeader -> com.bumptech.glide.b.d:
+    int[] gct -> a
+    int status -> b
+    int frameCount -> c
+    com.bumptech.glide.gifdecoder.GifFrame currentFrame -> d
+    java.util.List frames -> e
+    int width -> f
+    int height -> g
+    boolean gctFlag -> h
+    int gctSize -> i
+    int bgIndex -> j
+    int pixelAspect -> k
+    int bgColor -> l
+    int loopCount -> m
+    int getNumFrames() -> a
+    int getStatus() -> b
+com.bumptech.glide.gifdecoder.GifHeaderParser -> com.bumptech.glide.b.e:
+    byte[] block -> a
+    java.nio.ByteBuffer rawData -> b
+    com.bumptech.glide.gifdecoder.GifHeader header -> c
+    int blockSize -> d
+    com.bumptech.glide.gifdecoder.GifHeaderParser setData(byte[]) -> a
+    void clear() -> a
+    void reset() -> c
+    com.bumptech.glide.gifdecoder.GifHeader parseHeader() -> b
+    void readContents() -> d
+    void readGraphicControlExt() -> e
+    void readBitmap() -> f
+    void readNetscapeExt() -> g
+    void readHeader() -> h
+    void readLSD() -> i
+    int[] readColorTable(int) -> a
+    void skipImageData() -> j
+    void skip() -> k
+    int readBlock() -> l
+    int read() -> m
+    int readShort() -> n
+    boolean err() -> o
+com.bumptech.glide.gifencoder.AnimatedGifEncoder -> com.bumptech.glide.c.a:
+    int width -> a
+    int height -> b
+    java.lang.Integer transparent -> c
+    int transIndex -> d
+    int repeat -> e
+    int delay -> f
+    boolean started -> g
+    java.io.OutputStream out -> h
+    android.graphics.Bitmap image -> i
+    byte[] pixels -> j
+    byte[] indexedPixels -> k
+    int colorDepth -> l
+    byte[] colorTab -> m
+    boolean[] usedEntry -> n
+    int palSize -> o
+    int dispose -> p
+    boolean closeStream -> q
+    boolean firstFrame -> r
+    boolean sizeSet -> s
+    int sample -> t
+    boolean hasTransparentPixels -> u
+    void setDelay(int) -> a
+    boolean addFrame(android.graphics.Bitmap) -> a
+    boolean finish() -> a
+    void setSize(int,int) -> a
+    boolean start(java.io.OutputStream) -> a
+    void analyzePixels() -> b
+    int findClosest(int) -> b
+    void getImagePixels() -> c
+    void writeGraphicCtrlExt() -> d
+    void writeImageDesc() -> e
+    void writeLSD() -> f
+    void writeNetscapeExt() -> g
+    void writePalette() -> h
+    void writePixels() -> i
+    void writeShort(int) -> c
+    void writeString(java.lang.String) -> a
+com.bumptech.glide.gifencoder.LZWEncoder -> com.bumptech.glide.c.b:
+    int imgW -> r
+    int imgH -> s
+    byte[] pixAry -> t
+    int initCodeSize -> u
+    int remaining -> v
+    int curPixel -> w
+    int n_bits -> a
+    int maxbits -> b
+    int maxcode -> c
+    int maxmaxcode -> d
+    int[] htab -> e
+    int[] codetab -> f
+    int hsize -> g
+    int free_ent -> h
+    boolean clear_flg -> i
+    int g_init_bits -> j
+    int ClearCode -> k
+    int EOFCode -> l
+    int cur_accum -> m
+    int cur_bits -> n
+    int[] masks -> o
+    int a_count -> p
+    byte[] accum -> q
+    void char_out(byte,java.io.OutputStream) -> a
+    void cl_block(java.io.OutputStream) -> a
+    void cl_hash(int) -> a
+    void compress(int,java.io.OutputStream) -> a
+    void encode(java.io.OutputStream) -> b
+    void flush_char(java.io.OutputStream) -> c
+    int MAXCODE(int) -> b
+    int nextPixel() -> a
+    void output(int,java.io.OutputStream) -> b
+com.bumptech.glide.gifencoder.NeuQuant -> com.bumptech.glide.c.c:
+    int alphadec -> a
+    byte[] thepicture -> b
+    int lengthcount -> c
+    int samplefac -> d
+    int[][] network -> e
+    int[] netindex -> f
+    int[] bias -> g
+    int[] freq -> h
+    int[] radpower -> i
+    byte[] colorMap() -> a
+    void inxbuild() -> b
+    void learn() -> c
+    int map(int,int,int) -> a
+    byte[] process() -> d
+    void unbiasnet() -> e
+    void alterneigh(int,int,int,int,int) -> a
+    void altersingle(int,int,int,int,int) -> b
+    int contest(int,int,int) -> b
+com.bumptech.glide.load.DecodeFormat -> com.bumptech.glide.load.a:
+    com.bumptech.glide.load.DecodeFormat ALWAYS_ARGB_8888 -> a
+    com.bumptech.glide.load.DecodeFormat PREFER_ARGB_8888 -> b
+    com.bumptech.glide.load.DecodeFormat PREFER_RGB_565 -> c
+    com.bumptech.glide.load.DecodeFormat DEFAULT -> d
+    com.bumptech.glide.load.DecodeFormat[] $VALUES -> e
+    com.bumptech.glide.load.DecodeFormat[] values() -> values
+    com.bumptech.glide.load.DecodeFormat valueOf(java.lang.String) -> valueOf
+com.bumptech.glide.load.Encoder -> com.bumptech.glide.load.b:
+    boolean encode(java.lang.Object,java.io.OutputStream) -> a
+    java.lang.String getId() -> a
+com.bumptech.glide.load.Key -> com.bumptech.glide.load.c:
+    void updateDiskCacheKey(java.security.MessageDigest) -> a
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+com.bumptech.glide.load.MultiTransformation -> com.bumptech.glide.load.d:
+    java.util.Collection transformations -> a
+    java.lang.String id -> b
+    com.bumptech.glide.load.engine.Resource transform(com.bumptech.glide.load.engine.Resource,int,int) -> a
+    java.lang.String getId() -> a
+com.bumptech.glide.load.ResourceDecoder -> com.bumptech.glide.load.e:
+    com.bumptech.glide.load.engine.Resource decode(java.lang.Object,int,int) -> a
+    java.lang.String getId() -> a
+com.bumptech.glide.load.ResourceEncoder -> com.bumptech.glide.load.f:
+com.bumptech.glide.load.Transformation -> com.bumptech.glide.load.g:
+    com.bumptech.glide.load.engine.Resource transform(com.bumptech.glide.load.engine.Resource,int,int) -> a
+    java.lang.String getId() -> a
+com.bumptech.glide.load.data.AssetPathFetcher -> com.bumptech.glide.load.a.a:
+    java.lang.String assetPath -> a
+    android.content.res.AssetManager assetManager -> b
+    java.lang.Object data -> c
+    java.lang.Object loadData(com.bumptech.glide.Priority) -> a
+    void cleanup() -> a
+    java.lang.String getId() -> b
+    void cancel() -> c
+    java.lang.Object loadResource(android.content.res.AssetManager,java.lang.String) -> a
+    void close(java.lang.Object) -> a
+com.bumptech.glide.load.data.ByteArrayFetcher -> com.bumptech.glide.load.a.b:
+    byte[] bytes -> a
+    java.lang.String id -> b
+    java.io.InputStream loadData(com.bumptech.glide.Priority) -> b
+    void cleanup() -> a
+    java.lang.String getId() -> b
+    void cancel() -> c
+    java.lang.Object loadData(com.bumptech.glide.Priority) -> a
+com.bumptech.glide.load.data.DataFetcher -> com.bumptech.glide.load.a.c:
+    java.lang.Object loadData(com.bumptech.glide.Priority) -> a
+    void cleanup() -> a
+    java.lang.String getId() -> b
+    void cancel() -> c
+com.bumptech.glide.load.data.FileDescriptorAssetPathFetcher -> com.bumptech.glide.load.a.d:
+    android.os.ParcelFileDescriptor loadResource(android.content.res.AssetManager,java.lang.String) -> b
+    void close(android.os.ParcelFileDescriptor) -> a
+    void close(java.lang.Object) -> a
+    java.lang.Object loadResource(android.content.res.AssetManager,java.lang.String) -> a
+com.bumptech.glide.load.data.FileDescriptorLocalUriFetcher -> com.bumptech.glide.load.a.e:
+    android.os.ParcelFileDescriptor loadResource(android.net.Uri,android.content.ContentResolver) -> a
+    void close(android.os.ParcelFileDescriptor) -> a
+    void close(java.lang.Object) -> a
+    java.lang.Object loadResource(android.net.Uri,android.content.ContentResolver) -> b
+com.bumptech.glide.load.data.HttpUrlFetcher -> com.bumptech.glide.load.a.f:
+    com.bumptech.glide.load.data.HttpUrlFetcher$HttpUrlConnectionFactory DEFAULT_CONNECTION_FACTORY -> a
+    com.bumptech.glide.load.model.GlideUrl glideUrl -> b
+    com.bumptech.glide.load.data.HttpUrlFetcher$HttpUrlConnectionFactory connectionFactory -> c
+    java.net.HttpURLConnection urlConnection -> d
+    java.io.InputStream stream -> e
+    boolean isCancelled -> f
+    java.io.InputStream loadData(com.bumptech.glide.Priority) -> b
+    java.io.InputStream loadDataWithRedirects(java.net.URL,int,java.net.URL,java.util.Map) -> a
+    java.io.InputStream getStreamForSuccessfulRequest(java.net.HttpURLConnection) -> a
+    void cleanup() -> a
+    java.lang.String getId() -> b
+    void cancel() -> c
+    java.lang.Object loadData(com.bumptech.glide.Priority) -> a
+com.bumptech.glide.load.data.HttpUrlFetcher$1 -> com.bumptech.glide.load.a.g:
+com.bumptech.glide.load.data.HttpUrlFetcher$DefaultHttpUrlConnectionFactory -> com.bumptech.glide.load.a.h:
+    java.net.HttpURLConnection build(java.net.URL) -> a
+com.bumptech.glide.load.data.HttpUrlFetcher$HttpUrlConnectionFactory -> com.bumptech.glide.load.a.i:
+    java.net.HttpURLConnection build(java.net.URL) -> a
+com.bumptech.glide.load.data.LocalUriFetcher -> com.bumptech.glide.load.a.j:
+    android.net.Uri uri -> a
+    android.content.Context context -> b
+    java.lang.Object data -> c
+    java.lang.Object loadData(com.bumptech.glide.Priority) -> a
+    void cleanup() -> a
+    void cancel() -> c
+    java.lang.String getId() -> b
+    java.lang.Object loadResource(android.net.Uri,android.content.ContentResolver) -> b
+    void close(java.lang.Object) -> a
+com.bumptech.glide.load.data.StreamAssetPathFetcher -> com.bumptech.glide.load.a.k:
+    java.io.InputStream loadResource(android.content.res.AssetManager,java.lang.String) -> b
+    void close(java.io.InputStream) -> a
+    void close(java.lang.Object) -> a
+    java.lang.Object loadResource(android.content.res.AssetManager,java.lang.String) -> a
+com.bumptech.glide.load.data.StreamLocalUriFetcher -> com.bumptech.glide.load.a.l:
+    java.io.InputStream loadResource(android.net.Uri,android.content.ContentResolver) -> a
+    void close(java.io.InputStream) -> a
+    void close(java.lang.Object) -> a
+    java.lang.Object loadResource(android.net.Uri,android.content.ContentResolver) -> b
+com.bumptech.glide.load.engine.DecodeJob -> com.bumptech.glide.load.b.a:
+    com.bumptech.glide.load.engine.DecodeJob$FileOpener DEFAULT_FILE_OPENER -> a
+    com.bumptech.glide.load.engine.EngineKey resultKey -> b
+    int width -> c
+    int height -> d
+    com.bumptech.glide.load.data.DataFetcher fetcher -> e
+    com.bumptech.glide.provider.DataLoadProvider loadProvider -> f
+    com.bumptech.glide.load.Transformation transformation -> g
+    com.bumptech.glide.load.resource.transcode.ResourceTranscoder transcoder -> h
+    com.bumptech.glide.load.engine.DecodeJob$DiskCacheProvider diskCacheProvider -> i
+    com.bumptech.glide.load.engine.DiskCacheStrategy diskCacheStrategy -> j
+    com.bumptech.glide.Priority priority -> k
+    com.bumptech.glide.load.engine.DecodeJob$FileOpener fileOpener -> l
+    boolean isCancelled -> m
+    com.bumptech.glide.load.engine.Resource decodeResultFromCache() -> a
+    com.bumptech.glide.load.engine.Resource decodeSourceFromCache() -> b
+    com.bumptech.glide.load.engine.Resource decodeFromSource() -> c
+    void cancel() -> d
+    com.bumptech.glide.load.engine.Resource transformEncodeAndTranscode(com.bumptech.glide.load.engine.Resource) -> a
+    void writeTransformedToCache(com.bumptech.glide.load.engine.Resource) -> b
+    com.bumptech.glide.load.engine.Resource decodeSource() -> e
+    com.bumptech.glide.load.engine.Resource decodeFromSourceData(java.lang.Object) -> a
+    com.bumptech.glide.load.engine.Resource cacheAndDecodeSourceData(java.lang.Object) -> b
+    com.bumptech.glide.load.engine.Resource loadFromCache(com.bumptech.glide.load.Key) -> a
+    com.bumptech.glide.load.engine.Resource transform(com.bumptech.glide.load.engine.Resource) -> c
+    com.bumptech.glide.load.engine.Resource transcode(com.bumptech.glide.load.engine.Resource) -> d
+    void logWithTimeAndKey(java.lang.String,long) -> a
+    com.bumptech.glide.load.engine.DecodeJob$FileOpener access$000(com.bumptech.glide.load.engine.DecodeJob) -> a
+com.bumptech.glide.load.engine.DecodeJob$DiskCacheProvider -> com.bumptech.glide.load.b.b:
+    com.bumptech.glide.load.engine.cache.DiskCache getDiskCache() -> a
+com.bumptech.glide.load.engine.DecodeJob$FileOpener -> com.bumptech.glide.load.b.c:
+    java.io.OutputStream open(java.io.File) -> a
+com.bumptech.glide.load.engine.DecodeJob$SourceWriter -> com.bumptech.glide.load.b.d:
+    com.bumptech.glide.load.Encoder encoder -> b
+    java.lang.Object data -> c
+    com.bumptech.glide.load.engine.DecodeJob this$0 -> a
+    boolean write(java.io.File) -> a
+com.bumptech.glide.load.engine.DiskCacheStrategy -> com.bumptech.glide.load.b.e:
+    com.bumptech.glide.load.engine.DiskCacheStrategy ALL -> a
+    com.bumptech.glide.load.engine.DiskCacheStrategy NONE -> b
+    com.bumptech.glide.load.engine.DiskCacheStrategy SOURCE -> c
+    com.bumptech.glide.load.engine.DiskCacheStrategy RESULT -> d
+    boolean cacheSource -> e
+    boolean cacheResult -> f
+    com.bumptech.glide.load.engine.DiskCacheStrategy[] $VALUES -> g
+    com.bumptech.glide.load.engine.DiskCacheStrategy[] values() -> values
+    com.bumptech.glide.load.engine.DiskCacheStrategy valueOf(java.lang.String) -> valueOf
+    boolean cacheSource() -> a
+    boolean cacheResult() -> b
+com.bumptech.glide.load.engine.Engine -> com.bumptech.glide.load.b.f:
+    java.util.Map jobs -> a
+    com.bumptech.glide.load.engine.EngineKeyFactory keyFactory -> b
+    com.bumptech.glide.load.engine.cache.MemoryCache cache -> c
+    com.bumptech.glide.load.engine.Engine$EngineJobFactory engineJobFactory -> d
+    java.util.Map activeResources -> e
+    com.bumptech.glide.load.engine.ResourceRecycler resourceRecycler -> f
+    com.bumptech.glide.load.engine.Engine$LazyDiskCacheProvider diskCacheProvider -> g
+    java.lang.ref.ReferenceQueue resourceReferenceQueue -> h
+    com.bumptech.glide.load.engine.Engine$LoadStatus load(com.bumptech.glide.load.Key,int,int,com.bumptech.glide.load.data.DataFetcher,com.bumptech.glide.provider.DataLoadProvider,com.bumptech.glide.load.Transformation,com.bumptech.glide.load.resource.transcode.ResourceTranscoder,com.bumptech.glide.Priority,boolean,com.bumptech.glide.load.engine.DiskCacheStrategy,com.bumptech.glide.request.ResourceCallback) -> a
+    void logWithTimeAndKey(java.lang.String,long,com.bumptech.glide.load.Key) -> a
+    com.bumptech.glide.load.engine.EngineResource loadFromActiveResources(com.bumptech.glide.load.Key,boolean) -> a
+    com.bumptech.glide.load.engine.EngineResource loadFromCache(com.bumptech.glide.load.Key,boolean) -> b
+    com.bumptech.glide.load.engine.EngineResource getEngineResourceFromCache(com.bumptech.glide.load.Key) -> a
+    void release(com.bumptech.glide.load.engine.Resource) -> a
+    void onEngineJobComplete(com.bumptech.glide.load.Key,com.bumptech.glide.load.engine.EngineResource) -> a
+    void onEngineJobCancelled(com.bumptech.glide.load.engine.EngineJob,com.bumptech.glide.load.Key) -> a
+    void onResourceRemoved(com.bumptech.glide.load.engine.Resource) -> b
+    void onResourceReleased(com.bumptech.glide.load.Key,com.bumptech.glide.load.engine.EngineResource) -> b
+    java.lang.ref.ReferenceQueue getReferenceQueue() -> a
+com.bumptech.glide.load.engine.Engine$EngineJobFactory -> com.bumptech.glide.load.b.g:
+    java.util.concurrent.ExecutorService diskCacheService -> a
+    java.util.concurrent.ExecutorService sourceService -> b
+    com.bumptech.glide.load.engine.EngineJobListener listener -> c
+    com.bumptech.glide.load.engine.EngineJob build(com.bumptech.glide.load.Key,boolean) -> a
+com.bumptech.glide.load.engine.Engine$LazyDiskCacheProvider -> com.bumptech.glide.load.b.h:
+    com.bumptech.glide.load.engine.cache.DiskCache$Factory factory -> a
+    com.bumptech.glide.load.engine.cache.DiskCache diskCache -> b
+    com.bumptech.glide.load.engine.cache.DiskCache getDiskCache() -> a
+com.bumptech.glide.load.engine.Engine$LoadStatus -> com.bumptech.glide.load.b.i:
+    com.bumptech.glide.load.engine.EngineJob engineJob -> a
+    com.bumptech.glide.request.ResourceCallback cb -> b
+    void cancel() -> a
+com.bumptech.glide.load.engine.Engine$RefQueueIdleHandler -> com.bumptech.glide.load.b.j:
+    java.util.Map activeResources -> a
+    java.lang.ref.ReferenceQueue queue -> b
+    boolean queueIdle() -> queueIdle
+com.bumptech.glide.load.engine.Engine$ResourceWeakReference -> com.bumptech.glide.load.b.k:
+    com.bumptech.glide.load.Key key -> a
+    com.bumptech.glide.load.Key access$000(com.bumptech.glide.load.engine.Engine$ResourceWeakReference) -> a
+com.bumptech.glide.load.engine.EngineJob -> com.bumptech.glide.load.b.l:
+    com.bumptech.glide.load.engine.EngineJob$EngineResourceFactory DEFAULT_FACTORY -> a
+    android.os.Handler MAIN_THREAD_HANDLER -> b
+    java.util.List cbs -> c
+    com.bumptech.glide.load.engine.EngineJob$EngineResourceFactory engineResourceFactory -> d
+    com.bumptech.glide.load.engine.EngineJobListener listener -> e
+    com.bumptech.glide.load.Key key -> f
+    java.util.concurrent.ExecutorService diskCacheService -> g
+    java.util.concurrent.ExecutorService sourceService -> h
+    boolean isCacheable -> i
+    boolean isCancelled -> j
+    com.bumptech.glide.load.engine.Resource resource -> k
+    boolean hasResource -> l
+    java.lang.Exception exception -> m
+    boolean hasException -> n
+    java.util.Set ignoredCallbacks -> o
+    com.bumptech.glide.load.engine.EngineRunnable engineRunnable -> p
+    com.bumptech.glide.load.engine.EngineResource engineResource -> q
+    java.util.concurrent.Future future -> r
+    void start(com.bumptech.glide.load.engine.EngineRunnable) -> a
+    void submitForSource(com.bumptech.glide.load.engine.EngineRunnable) -> b
+    void addCallback(com.bumptech.glide.request.ResourceCallback) -> a
+    void removeCallback(com.bumptech.glide.request.ResourceCallback) -> b
+    void addIgnoredCallback(com.bumptech.glide.request.ResourceCallback) -> c
+    boolean isInIgnoredCallbacks(com.bumptech.glide.request.ResourceCallback) -> d
+    void cancel() -> a
+    void onResourceReady(com.bumptech.glide.load.engine.Resource) -> a
+    void handleResultOnMainThread() -> b
+    void onException(java.lang.Exception) -> a
+    void handleExceptionOnMainThread() -> c
+    void access$100(com.bumptech.glide.load.engine.EngineJob) -> a
+    void access$200(com.bumptech.glide.load.engine.EngineJob) -> b
+com.bumptech.glide.load.engine.EngineJob$1 -> com.bumptech.glide.load.b.m:
+com.bumptech.glide.load.engine.EngineJob$EngineResourceFactory -> com.bumptech.glide.load.b.n:
+    com.bumptech.glide.load.engine.EngineResource build(com.bumptech.glide.load.engine.Resource,boolean) -> a
+com.bumptech.glide.load.engine.EngineJob$MainThreadCallback -> com.bumptech.glide.load.b.o:
+    boolean handleMessage(android.os.Message) -> handleMessage
+com.bumptech.glide.load.engine.EngineJobListener -> com.bumptech.glide.load.b.p:
+    void onEngineJobComplete(com.bumptech.glide.load.Key,com.bumptech.glide.load.engine.EngineResource) -> a
+    void onEngineJobCancelled(com.bumptech.glide.load.engine.EngineJob,com.bumptech.glide.load.Key) -> a
+com.bumptech.glide.load.engine.EngineKey -> com.bumptech.glide.load.b.q:
+    java.lang.String id -> a
+    int width -> b
+    int height -> c
+    com.bumptech.glide.load.ResourceDecoder cacheDecoder -> d
+    com.bumptech.glide.load.ResourceDecoder decoder -> e
+    com.bumptech.glide.load.Transformation transformation -> f
+    com.bumptech.glide.load.ResourceEncoder encoder -> g
+    com.bumptech.glide.load.resource.transcode.ResourceTranscoder transcoder -> h
+    com.bumptech.glide.load.Encoder sourceEncoder -> i
+    com.bumptech.glide.load.Key signature -> j
+    java.lang.String stringKey -> k
+    int hashCode -> l
+    com.bumptech.glide.load.Key originalKey -> m
+    com.bumptech.glide.load.Key getOriginalKey() -> a
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    java.lang.String toString() -> toString
+    void updateDiskCacheKey(java.security.MessageDigest) -> a
+com.bumptech.glide.load.engine.EngineKeyFactory -> com.bumptech.glide.load.b.r:
+    com.bumptech.glide.load.engine.EngineKey buildKey(java.lang.String,com.bumptech.glide.load.Key,int,int,com.bumptech.glide.load.ResourceDecoder,com.bumptech.glide.load.ResourceDecoder,com.bumptech.glide.load.Transformation,com.bumptech.glide.load.ResourceEncoder,com.bumptech.glide.load.resource.transcode.ResourceTranscoder,com.bumptech.glide.load.Encoder) -> a
+com.bumptech.glide.load.engine.EngineResource -> com.bumptech.glide.load.b.s:
+    com.bumptech.glide.load.engine.Resource resource -> a
+    boolean isCacheable -> b
+    com.bumptech.glide.load.engine.EngineResource$ResourceListener listener -> c
+    com.bumptech.glide.load.Key key -> d
+    int acquired -> e
+    boolean isRecycled -> f
+    void setResourceListener(com.bumptech.glide.load.Key,com.bumptech.glide.load.engine.EngineResource$ResourceListener) -> a
+    boolean isCacheable() -> a
+    java.lang.Object get() -> b
+    int getSize() -> c
+    void recycle() -> d
+    void acquire() -> e
+    void release() -> f
+com.bumptech.glide.load.engine.EngineResource$ResourceListener -> com.bumptech.glide.load.b.t:
+    void onResourceReleased(com.bumptech.glide.load.Key,com.bumptech.glide.load.engine.EngineResource) -> b
+com.bumptech.glide.load.engine.EngineRunnable -> com.bumptech.glide.load.b.u:
+    com.bumptech.glide.Priority priority -> a
+    com.bumptech.glide.load.engine.EngineRunnable$EngineRunnableManager manager -> b
+    com.bumptech.glide.load.engine.DecodeJob decodeJob -> c
+    com.bumptech.glide.load.engine.EngineRunnable$Stage stage -> d
+    boolean isCancelled -> e
+    void cancel() -> a
+    void run() -> run
+    boolean isDecodingFromCache() -> c
+    void onLoadComplete(com.bumptech.glide.load.engine.Resource) -> a
+    void onLoadFailed(java.lang.Exception) -> a
+    com.bumptech.glide.load.engine.Resource decode() -> d
+    com.bumptech.glide.load.engine.Resource decodeFromCache() -> e
+    com.bumptech.glide.load.engine.Resource decodeFromSource() -> f
+    int getPriority() -> b
+com.bumptech.glide.load.engine.EngineRunnable$EngineRunnableManager -> com.bumptech.glide.load.b.v:
+    void submitForSource(com.bumptech.glide.load.engine.EngineRunnable) -> b
+com.bumptech.glide.load.engine.EngineRunnable$Stage -> com.bumptech.glide.load.b.w:
+    com.bumptech.glide.load.engine.EngineRunnable$Stage CACHE -> a
+    com.bumptech.glide.load.engine.EngineRunnable$Stage SOURCE -> b
+    com.bumptech.glide.load.engine.EngineRunnable$Stage[] $VALUES -> c
+    com.bumptech.glide.load.engine.EngineRunnable$Stage[] values() -> values
+    com.bumptech.glide.load.engine.EngineRunnable$Stage valueOf(java.lang.String) -> valueOf
+com.bumptech.glide.load.engine.OriginalKey -> com.bumptech.glide.load.b.x:
+    java.lang.String id -> a
+    com.bumptech.glide.load.Key signature -> b
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    void updateDiskCacheKey(java.security.MessageDigest) -> a
+com.bumptech.glide.load.engine.Resource -> com.bumptech.glide.load.b.y:
+    java.lang.Object get() -> b
+    int getSize() -> c
+    void recycle() -> d
+com.bumptech.glide.load.engine.ResourceRecycler -> com.bumptech.glide.load.b.z:
+    boolean isRecycling -> a
+    android.os.Handler handler -> b
+    void recycle(com.bumptech.glide.load.engine.Resource) -> a
+com.bumptech.glide.load.engine.ResourceRecycler$1 -> com.bumptech.glide.load.b.aa:
+com.bumptech.glide.load.engine.ResourceRecycler$ResourceRecyclerCallback -> com.bumptech.glide.load.b.ab:
+    boolean handleMessage(android.os.Message) -> handleMessage
+com.bumptech.glide.load.engine.bitmap_recycle.AttributeStrategy -> com.bumptech.glide.load.b.a.a:
+    com.bumptech.glide.load.engine.bitmap_recycle.AttributeStrategy$KeyPool keyPool -> a
+    com.bumptech.glide.load.engine.bitmap_recycle.GroupedLinkedMap groupedMap -> b
+    void put(android.graphics.Bitmap) -> a
+    android.graphics.Bitmap get(int,int,android.graphics.Bitmap$Config) -> a
+    android.graphics.Bitmap removeLast() -> a
+    java.lang.String logBitmap(android.graphics.Bitmap) -> b
+    java.lang.String logBitmap(int,int,android.graphics.Bitmap$Config) -> b
+    int getSize(android.graphics.Bitmap) -> c
+    java.lang.String toString() -> toString
+    java.lang.String getBitmapString(android.graphics.Bitmap) -> d
+    java.lang.String getBitmapString(int,int,android.graphics.Bitmap$Config) -> d
+    java.lang.String access$000(int,int,android.graphics.Bitmap$Config) -> c
+com.bumptech.glide.load.engine.bitmap_recycle.AttributeStrategy$Key -> com.bumptech.glide.load.b.a.b:
+    com.bumptech.glide.load.engine.bitmap_recycle.AttributeStrategy$KeyPool pool -> a
+    int width -> b
+    int height -> c
+    android.graphics.Bitmap$Config config -> d
+    void init(int,int,android.graphics.Bitmap$Config) -> a
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    java.lang.String toString() -> toString
+    void offer() -> a
+com.bumptech.glide.load.engine.bitmap_recycle.AttributeStrategy$KeyPool -> com.bumptech.glide.load.b.a.c:
+    com.bumptech.glide.load.engine.bitmap_recycle.AttributeStrategy$Key get(int,int,android.graphics.Bitmap$Config) -> a
+    com.bumptech.glide.load.engine.bitmap_recycle.AttributeStrategy$Key create() -> a
+    com.bumptech.glide.load.engine.bitmap_recycle.Poolable create() -> b
+com.bumptech.glide.load.engine.bitmap_recycle.BaseKeyPool -> com.bumptech.glide.load.b.a.d:
+    java.util.Queue keyPool -> a
+    com.bumptech.glide.load.engine.bitmap_recycle.Poolable get() -> c
+    void offer(com.bumptech.glide.load.engine.bitmap_recycle.Poolable) -> a
+    com.bumptech.glide.load.engine.bitmap_recycle.Poolable create() -> b
+com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool -> com.bumptech.glide.load.b.a.e:
+    boolean put(android.graphics.Bitmap) -> a
+    android.graphics.Bitmap get(int,int,android.graphics.Bitmap$Config) -> a
+    android.graphics.Bitmap getDirty(int,int,android.graphics.Bitmap$Config) -> b
+    void clearMemory() -> a
+    void trimMemory(int) -> a
+com.bumptech.glide.load.engine.bitmap_recycle.BitmapPoolAdapter -> com.bumptech.glide.load.b.a.f:
+    boolean put(android.graphics.Bitmap) -> a
+    android.graphics.Bitmap get(int,int,android.graphics.Bitmap$Config) -> a
+    android.graphics.Bitmap getDirty(int,int,android.graphics.Bitmap$Config) -> b
+    void clearMemory() -> a
+    void trimMemory(int) -> a
+com.bumptech.glide.load.engine.bitmap_recycle.GroupedLinkedMap -> com.bumptech.glide.load.b.a.g:
+    com.bumptech.glide.load.engine.bitmap_recycle.GroupedLinkedMap$LinkedEntry head -> a
+    java.util.Map keyToEntry -> b
+    void put(com.bumptech.glide.load.engine.bitmap_recycle.Poolable,java.lang.Object) -> a
+    java.lang.Object get(com.bumptech.glide.load.engine.bitmap_recycle.Poolable) -> a
+    java.lang.Object removeLast() -> a
+    java.lang.String toString() -> toString
+    void makeHead(com.bumptech.glide.load.engine.bitmap_recycle.GroupedLinkedMap$LinkedEntry) -> a
+    void makeTail(com.bumptech.glide.load.engine.bitmap_recycle.GroupedLinkedMap$LinkedEntry) -> b
+    void updateEntry(com.bumptech.glide.load.engine.bitmap_recycle.GroupedLinkedMap$LinkedEntry) -> c
+    void removeEntry(com.bumptech.glide.load.engine.bitmap_recycle.GroupedLinkedMap$LinkedEntry) -> d
+com.bumptech.glide.load.engine.bitmap_recycle.GroupedLinkedMap$LinkedEntry -> com.bumptech.glide.load.b.a.h:
+    java.lang.Object key -> c
+    java.util.List values -> d
+    com.bumptech.glide.load.engine.bitmap_recycle.GroupedLinkedMap$LinkedEntry next -> a
+    com.bumptech.glide.load.engine.bitmap_recycle.GroupedLinkedMap$LinkedEntry prev -> b
+    java.lang.Object removeLast() -> a
+    int size() -> b
+    void add(java.lang.Object) -> a
+    java.lang.Object access$000(com.bumptech.glide.load.engine.bitmap_recycle.GroupedLinkedMap$LinkedEntry) -> a
+com.bumptech.glide.load.engine.bitmap_recycle.LruBitmapPool -> com.bumptech.glide.load.b.a.i:
+    android.graphics.Bitmap$Config DEFAULT_CONFIG -> a
+    com.bumptech.glide.load.engine.bitmap_recycle.LruPoolStrategy strategy -> b
+    java.util.Set allowedConfigs -> c
+    int initialMaxSize -> d
+    com.bumptech.glide.load.engine.bitmap_recycle.LruBitmapPool$BitmapTracker tracker -> e
+    int maxSize -> f
+    int currentSize -> g
+    int hits -> h
+    int misses -> i
+    int puts -> j
+    int evictions -> k
+    boolean put(android.graphics.Bitmap) -> a
+    void evict() -> b
+    android.graphics.Bitmap get(int,int,android.graphics.Bitmap$Config) -> a
+    android.graphics.Bitmap getDirty(int,int,android.graphics.Bitmap$Config) -> b
+    void clearMemory() -> a
+    void trimMemory(int) -> a
+    void trimToSize(int) -> b
+    void dump() -> c
+    void dumpUnchecked() -> d
+    com.bumptech.glide.load.engine.bitmap_recycle.LruPoolStrategy getDefaultStrategy() -> e
+    java.util.Set getDefaultAllowedConfigs() -> f
+com.bumptech.glide.load.engine.bitmap_recycle.LruBitmapPool$1 -> com.bumptech.glide.load.b.a.j:
+com.bumptech.glide.load.engine.bitmap_recycle.LruBitmapPool$BitmapTracker -> com.bumptech.glide.load.b.a.k:
+    void add(android.graphics.Bitmap) -> a
+    void remove(android.graphics.Bitmap) -> b
+com.bumptech.glide.load.engine.bitmap_recycle.LruBitmapPool$NullBitmapTracker -> com.bumptech.glide.load.b.a.l:
+    void add(android.graphics.Bitmap) -> a
+    void remove(android.graphics.Bitmap) -> b
+com.bumptech.glide.load.engine.bitmap_recycle.LruPoolStrategy -> com.bumptech.glide.load.b.a.m:
+    void put(android.graphics.Bitmap) -> a
+    android.graphics.Bitmap get(int,int,android.graphics.Bitmap$Config) -> a
+    android.graphics.Bitmap removeLast() -> a
+    java.lang.String logBitmap(android.graphics.Bitmap) -> b
+    java.lang.String logBitmap(int,int,android.graphics.Bitmap$Config) -> b
+    int getSize(android.graphics.Bitmap) -> c
+com.bumptech.glide.load.engine.bitmap_recycle.Poolable -> com.bumptech.glide.load.b.a.n:
+    void offer() -> a
+com.bumptech.glide.load.engine.bitmap_recycle.SizeConfigStrategy -> com.bumptech.glide.load.b.a.o:
+    android.graphics.Bitmap$Config[] ARGB_8888_IN_CONFIGS -> a
+    android.graphics.Bitmap$Config[] RGB_565_IN_CONFIGS -> b
+    android.graphics.Bitmap$Config[] ARGB_4444_IN_CONFIGS -> c
+    android.graphics.Bitmap$Config[] ALPHA_8_IN_CONFIGS -> d
+    com.bumptech.glide.load.engine.bitmap_recycle.SizeConfigStrategy$KeyPool keyPool -> e
+    com.bumptech.glide.load.engine.bitmap_recycle.GroupedLinkedMap groupedMap -> f
+    java.util.Map sortedSizes -> g
+    void put(android.graphics.Bitmap) -> a
+    android.graphics.Bitmap get(int,int,android.graphics.Bitmap$Config) -> a
+    com.bumptech.glide.load.engine.bitmap_recycle.SizeConfigStrategy$Key findBestKey(com.bumptech.glide.load.engine.bitmap_recycle.SizeConfigStrategy$Key,int,android.graphics.Bitmap$Config) -> a
+    android.graphics.Bitmap removeLast() -> a
+    void decrementBitmapOfSize(java.lang.Integer,android.graphics.Bitmap$Config) -> a
+    java.util.NavigableMap getSizesForConfig(android.graphics.Bitmap$Config) -> a
+    java.lang.String logBitmap(android.graphics.Bitmap) -> b
+    java.lang.String logBitmap(int,int,android.graphics.Bitmap$Config) -> b
+    int getSize(android.graphics.Bitmap) -> c
+    java.lang.String toString() -> toString
+    java.lang.String getBitmapString(int,android.graphics.Bitmap$Config) -> b
+    android.graphics.Bitmap$Config[] getInConfigs(android.graphics.Bitmap$Config) -> b
+    java.lang.String access$100(int,android.graphics.Bitmap$Config) -> a
+com.bumptech.glide.load.engine.bitmap_recycle.SizeConfigStrategy$1 -> com.bumptech.glide.load.b.a.p:
+    int[] $SwitchMap$android$graphics$Bitmap$Config -> a
+com.bumptech.glide.load.engine.bitmap_recycle.SizeConfigStrategy$Key -> com.bumptech.glide.load.b.a.q:
+    com.bumptech.glide.load.engine.bitmap_recycle.SizeConfigStrategy$KeyPool pool -> a
+    int size -> b
+    android.graphics.Bitmap$Config config -> c
+    void init(int,android.graphics.Bitmap$Config) -> a
+    void offer() -> a
+    java.lang.String toString() -> toString
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    int access$000(com.bumptech.glide.load.engine.bitmap_recycle.SizeConfigStrategy$Key) -> a
+com.bumptech.glide.load.engine.bitmap_recycle.SizeConfigStrategy$KeyPool -> com.bumptech.glide.load.b.a.r:
+    com.bumptech.glide.load.engine.bitmap_recycle.SizeConfigStrategy$Key get(int,android.graphics.Bitmap$Config) -> a
+    com.bumptech.glide.load.engine.bitmap_recycle.SizeConfigStrategy$Key create() -> a
+    com.bumptech.glide.load.engine.bitmap_recycle.Poolable create() -> b
+com.bumptech.glide.load.engine.cache.DiskCache -> com.bumptech.glide.load.b.b.a:
+    java.io.File get(com.bumptech.glide.load.Key) -> a
+    void put(com.bumptech.glide.load.Key,com.bumptech.glide.load.engine.cache.DiskCache$Writer) -> a
+    void delete(com.bumptech.glide.load.Key) -> b
+com.bumptech.glide.load.engine.cache.DiskCache$Factory -> com.bumptech.glide.load.b.b.b:
+    com.bumptech.glide.load.engine.cache.DiskCache build() -> a
+com.bumptech.glide.load.engine.cache.DiskCache$Writer -> com.bumptech.glide.load.b.b.c:
+    boolean write(java.io.File) -> a
+com.bumptech.glide.load.engine.cache.DiskCacheAdapter -> com.bumptech.glide.load.b.b.d:
+    java.io.File get(com.bumptech.glide.load.Key) -> a
+    void put(com.bumptech.glide.load.Key,com.bumptech.glide.load.engine.cache.DiskCache$Writer) -> a
+    void delete(com.bumptech.glide.load.Key) -> b
+com.bumptech.glide.load.engine.cache.DiskCacheWriteLocker -> com.bumptech.glide.load.b.b.e:
+    java.util.Map locks -> a
+    com.bumptech.glide.load.engine.cache.DiskCacheWriteLocker$WriteLockPool writeLockPool -> b
+    void acquire(com.bumptech.glide.load.Key) -> a
+    void release(com.bumptech.glide.load.Key) -> b
+com.bumptech.glide.load.engine.cache.DiskCacheWriteLocker$1 -> com.bumptech.glide.load.b.b.f:
+com.bumptech.glide.load.engine.cache.DiskCacheWriteLocker$WriteLock -> com.bumptech.glide.load.b.b.g:
+    java.util.concurrent.locks.Lock lock -> a
+    int interestedThreads -> b
+com.bumptech.glide.load.engine.cache.DiskCacheWriteLocker$WriteLockPool -> com.bumptech.glide.load.b.b.h:
+    java.util.Queue pool -> a
+    com.bumptech.glide.load.engine.cache.DiskCacheWriteLocker$WriteLock obtain() -> a
+    void offer(com.bumptech.glide.load.engine.cache.DiskCacheWriteLocker$WriteLock) -> a
+com.bumptech.glide.load.engine.cache.DiskLruCacheFactory -> com.bumptech.glide.load.b.b.i:
+    int diskCacheSize -> a
+    com.bumptech.glide.load.engine.cache.DiskLruCacheFactory$CacheDirectoryGetter cacheDirectoryGetter -> b
+    com.bumptech.glide.load.engine.cache.DiskCache build() -> a
+com.bumptech.glide.load.engine.cache.DiskLruCacheFactory$CacheDirectoryGetter -> com.bumptech.glide.load.b.b.j:
+    java.io.File getCacheDirectory() -> a
+com.bumptech.glide.load.engine.cache.DiskLruCacheWrapper -> com.bumptech.glide.load.b.b.k:
+    com.bumptech.glide.load.engine.cache.DiskLruCacheWrapper wrapper -> a
+    com.bumptech.glide.load.engine.cache.DiskCacheWriteLocker writeLocker -> b
+    com.bumptech.glide.load.engine.cache.SafeKeyGenerator safeKeyGenerator -> c
+    java.io.File directory -> d
+    int maxSize -> e
+    com.bumptech.glide.disklrucache.DiskLruCache diskLruCache -> f
+    com.bumptech.glide.load.engine.cache.DiskCache get(java.io.File,int) -> a
+    com.bumptech.glide.disklrucache.DiskLruCache getDiskCache() -> a
+    java.io.File get(com.bumptech.glide.load.Key) -> a
+    void put(com.bumptech.glide.load.Key,com.bumptech.glide.load.engine.cache.DiskCache$Writer) -> a
+    void delete(com.bumptech.glide.load.Key) -> b
+com.bumptech.glide.load.engine.cache.InternalCacheDiskCacheFactory -> com.bumptech.glide.load.b.b.l:
+com.bumptech.glide.load.engine.cache.InternalCacheDiskCacheFactory$1 -> com.bumptech.glide.load.b.b.m:
+    android.content.Context val$context -> a
+    java.lang.String val$diskCacheName -> b
+    java.io.File getCacheDirectory() -> a
+com.bumptech.glide.load.engine.cache.LruResourceCache -> com.bumptech.glide.load.b.b.n:
+    com.bumptech.glide.load.engine.cache.MemoryCache$ResourceRemovedListener listener -> a
+    void setResourceRemovedListener(com.bumptech.glide.load.engine.cache.MemoryCache$ResourceRemovedListener) -> a
+    void onItemEvicted(com.bumptech.glide.load.Key,com.bumptech.glide.load.engine.Resource) -> a
+    int getSize(com.bumptech.glide.load.engine.Resource) -> a
+    void trimMemory(int) -> a
+    void onItemEvicted(java.lang.Object,java.lang.Object) -> a
+    int getSize(java.lang.Object) -> a
+    com.bumptech.glide.load.engine.Resource put(com.bumptech.glide.load.Key,com.bumptech.glide.load.engine.Resource) -> b
+    com.bumptech.glide.load.engine.Resource remove(com.bumptech.glide.load.Key) -> a
+com.bumptech.glide.load.engine.cache.MemoryCache -> com.bumptech.glide.load.b.b.o:
+    com.bumptech.glide.load.engine.Resource remove(com.bumptech.glide.load.Key) -> a
+    com.bumptech.glide.load.engine.Resource put(com.bumptech.glide.load.Key,com.bumptech.glide.load.engine.Resource) -> b
+    void setResourceRemovedListener(com.bumptech.glide.load.engine.cache.MemoryCache$ResourceRemovedListener) -> a
+    void clearMemory() -> a
+    void trimMemory(int) -> a
+com.bumptech.glide.load.engine.cache.MemoryCache$ResourceRemovedListener -> com.bumptech.glide.load.b.b.p:
+    void onResourceRemoved(com.bumptech.glide.load.engine.Resource) -> b
+com.bumptech.glide.load.engine.cache.MemorySizeCalculator -> com.bumptech.glide.load.b.b.q:
+    int bitmapPoolSize -> a
+    int memoryCacheSize -> b
+    android.content.Context context -> c
+    int getMemoryCacheSize() -> a
+    int getBitmapPoolSize() -> b
+    int getMaxSize(android.app.ActivityManager) -> a
+    java.lang.String toMb(int) -> a
+    boolean isLowMemoryDevice(android.app.ActivityManager) -> b
+com.bumptech.glide.load.engine.cache.MemorySizeCalculator$DisplayMetricsScreenDimensions -> com.bumptech.glide.load.b.b.r:
+    android.util.DisplayMetrics displayMetrics -> a
+    int getWidthPixels() -> a
+    int getHeightPixels() -> b
+com.bumptech.glide.load.engine.cache.MemorySizeCalculator$ScreenDimensions -> com.bumptech.glide.load.b.b.s:
+    int getWidthPixels() -> a
+    int getHeightPixels() -> b
+com.bumptech.glide.load.engine.cache.SafeKeyGenerator -> com.bumptech.glide.load.b.b.t:
+    com.bumptech.glide.util.LruCache loadIdToSafeHash -> a
+    java.lang.String getSafeKey(com.bumptech.glide.load.Key) -> a
+com.bumptech.glide.load.engine.executor.FifoPriorityThreadPoolExecutor -> com.bumptech.glide.load.b.c.a:
+    java.util.concurrent.atomic.AtomicInteger ordering -> a
+    com.bumptech.glide.load.engine.executor.FifoPriorityThreadPoolExecutor$UncaughtThrowableStrategy uncaughtThrowableStrategy -> b
+    java.util.concurrent.RunnableFuture newTaskFor(java.lang.Runnable,java.lang.Object) -> newTaskFor
+    void afterExecute(java.lang.Runnable,java.lang.Throwable) -> afterExecute
+com.bumptech.glide.load.engine.executor.FifoPriorityThreadPoolExecutor$1 -> com.bumptech.glide.load.b.c.b:
+com.bumptech.glide.load.engine.executor.FifoPriorityThreadPoolExecutor$DefaultThreadFactory -> com.bumptech.glide.load.b.c.c:
+    int threadNum -> a
+    java.lang.Thread newThread(java.lang.Runnable) -> newThread
+com.bumptech.glide.load.engine.executor.FifoPriorityThreadPoolExecutor$DefaultThreadFactory$1 -> com.bumptech.glide.load.b.c.d:
+    com.bumptech.glide.load.engine.executor.FifoPriorityThreadPoolExecutor$DefaultThreadFactory this$0 -> a
+    void run() -> run
+com.bumptech.glide.load.engine.executor.FifoPriorityThreadPoolExecutor$LoadTask -> com.bumptech.glide.load.b.c.e:
+    int priority -> a
+    int order -> b
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    int compareTo(com.bumptech.glide.load.engine.executor.FifoPriorityThreadPoolExecutor$LoadTask) -> a
+    int compareTo(java.lang.Object) -> compareTo
+com.bumptech.glide.load.engine.executor.FifoPriorityThreadPoolExecutor$UncaughtThrowableStrategy -> com.bumptech.glide.load.b.c.f:
+    com.bumptech.glide.load.engine.executor.FifoPriorityThreadPoolExecutor$UncaughtThrowableStrategy IGNORE -> a
+    com.bumptech.glide.load.engine.executor.FifoPriorityThreadPoolExecutor$UncaughtThrowableStrategy LOG -> b
+    com.bumptech.glide.load.engine.executor.FifoPriorityThreadPoolExecutor$UncaughtThrowableStrategy THROW -> c
+    com.bumptech.glide.load.engine.executor.FifoPriorityThreadPoolExecutor$UncaughtThrowableStrategy[] $VALUES -> d
+    com.bumptech.glide.load.engine.executor.FifoPriorityThreadPoolExecutor$UncaughtThrowableStrategy[] values() -> values
+    com.bumptech.glide.load.engine.executor.FifoPriorityThreadPoolExecutor$UncaughtThrowableStrategy valueOf(java.lang.String) -> valueOf
+    void handle(java.lang.Throwable) -> a
+com.bumptech.glide.load.engine.executor.FifoPriorityThreadPoolExecutor$UncaughtThrowableStrategy$1 -> com.bumptech.glide.load.b.c.g:
+    void handle(java.lang.Throwable) -> a
+com.bumptech.glide.load.engine.executor.FifoPriorityThreadPoolExecutor$UncaughtThrowableStrategy$2 -> com.bumptech.glide.load.b.c.h:
+    void handle(java.lang.Throwable) -> a
+com.bumptech.glide.load.engine.executor.Prioritized -> com.bumptech.glide.load.b.c.i:
+    int getPriority() -> b
+com.bumptech.glide.load.engine.prefill.BitmapPreFiller -> com.bumptech.glide.load.b.d.a:
+    com.bumptech.glide.load.engine.cache.MemoryCache memoryCache -> a
+    com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool bitmapPool -> b
+    com.bumptech.glide.load.DecodeFormat defaultFormat -> c
+    android.os.Handler handler -> d
+com.bumptech.glide.load.model.AssetUriParser -> com.bumptech.glide.load.c.a:
+    int ASSET_PREFIX_LENGTH -> a
+    boolean isAssetUri(android.net.Uri) -> a
+    java.lang.String toAssetPath(android.net.Uri) -> b
+com.bumptech.glide.load.model.FileLoader -> com.bumptech.glide.load.c.b:
+    com.bumptech.glide.load.model.ModelLoader uriLoader -> a
+    com.bumptech.glide.load.data.DataFetcher getResourceFetcher(java.io.File,int,int) -> a
+    com.bumptech.glide.load.data.DataFetcher getResourceFetcher(java.lang.Object,int,int) -> a
+com.bumptech.glide.load.model.GenericLoaderFactory -> com.bumptech.glide.load.c.c:
+    java.util.Map modelClassToResourceFactories -> a
+    java.util.Map cachedModelLoaders -> b
+    com.bumptech.glide.load.model.ModelLoader NULL_MODEL_LOADER -> c
+    android.content.Context context -> d
+    com.bumptech.glide.load.model.ModelLoaderFactory register(java.lang.Class,java.lang.Class,com.bumptech.glide.load.model.ModelLoaderFactory) -> a
+    com.bumptech.glide.load.model.ModelLoader buildModelLoader(java.lang.Class,java.lang.Class) -> a
+    void cacheNullLoader(java.lang.Class,java.lang.Class) -> b
+    void cacheModelLoader(java.lang.Class,java.lang.Class,com.bumptech.glide.load.model.ModelLoader) -> a
+    com.bumptech.glide.load.model.ModelLoader getCachedLoader(java.lang.Class,java.lang.Class) -> c
+    com.bumptech.glide.load.model.ModelLoaderFactory getFactory(java.lang.Class,java.lang.Class) -> d
+com.bumptech.glide.load.model.GenericLoaderFactory$1 -> com.bumptech.glide.load.c.d:
+    com.bumptech.glide.load.data.DataFetcher getResourceFetcher(java.lang.Object,int,int) -> a
+    java.lang.String toString() -> toString
+com.bumptech.glide.load.model.GlideUrl -> com.bumptech.glide.load.c.e:
+    java.net.URL url -> a
+    com.bumptech.glide.load.model.Headers headers -> b
+    java.lang.String stringUrl -> c
+    java.lang.String safeStringUrl -> d
+    java.net.URL safeUrl -> e
+    java.net.URL toURL() -> a
+    java.net.URL getSafeUrl() -> d
+    java.lang.String getSafeStringUrl() -> e
+    java.util.Map getHeaders() -> b
+    java.lang.String getCacheKey() -> c
+    java.lang.String toString() -> toString
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+com.bumptech.glide.load.model.Headers -> com.bumptech.glide.load.c.f:
+    com.bumptech.glide.load.model.Headers NONE -> a
+    com.bumptech.glide.load.model.Headers DEFAULT -> b
+    java.util.Map getHeaders() -> a
+com.bumptech.glide.load.model.Headers$1 -> com.bumptech.glide.load.c.g:
+    java.util.Map getHeaders() -> a
+com.bumptech.glide.load.model.ImageVideoModelLoader -> com.bumptech.glide.load.c.h:
+    com.bumptech.glide.load.model.ModelLoader streamLoader -> a
+    com.bumptech.glide.load.model.ModelLoader fileDescriptorLoader -> b
+    com.bumptech.glide.load.data.DataFetcher getResourceFetcher(java.lang.Object,int,int) -> a
+com.bumptech.glide.load.model.ImageVideoModelLoader$ImageVideoFetcher -> com.bumptech.glide.load.c.i:
+    com.bumptech.glide.load.data.DataFetcher streamFetcher -> a
+    com.bumptech.glide.load.data.DataFetcher fileDescriptorFetcher -> b
+    com.bumptech.glide.load.model.ImageVideoWrapper loadData(com.bumptech.glide.Priority) -> b
+    void cleanup() -> a
+    java.lang.String getId() -> b
+    void cancel() -> c
+    java.lang.Object loadData(com.bumptech.glide.Priority) -> a
+com.bumptech.glide.load.model.ImageVideoWrapper -> com.bumptech.glide.load.c.j:
+    java.io.InputStream streamData -> a
+    android.os.ParcelFileDescriptor fileDescriptor -> b
+    java.io.InputStream getStream() -> a
+    android.os.ParcelFileDescriptor getFileDescriptor() -> b
+com.bumptech.glide.load.model.ImageVideoWrapperEncoder -> com.bumptech.glide.load.c.k:
+    com.bumptech.glide.load.Encoder streamEncoder -> a
+    com.bumptech.glide.load.Encoder fileDescriptorEncoder -> b
+    java.lang.String id -> c
+    boolean encode(com.bumptech.glide.load.model.ImageVideoWrapper,java.io.OutputStream) -> a
+    java.lang.String getId() -> a
+    boolean encode(java.lang.Object,java.io.OutputStream) -> a
+com.bumptech.glide.load.model.LazyHeaderFactory -> com.bumptech.glide.load.c.l:
+    java.lang.String buildHeader() -> a
+com.bumptech.glide.load.model.LazyHeaders -> com.bumptech.glide.load.c.m:
+    java.util.Map headers -> c
+    java.util.Map combinedHeaders -> d
+    java.util.Map getHeaders() -> a
+    java.util.Map generateHeaders() -> b
+    java.lang.String toString() -> toString
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+com.bumptech.glide.load.model.LazyHeaders$Builder -> com.bumptech.glide.load.c.n:
+    java.lang.String DEFAULT_USER_AGENT -> a
+    java.util.Map DEFAULT_HEADERS -> b
+    boolean copyOnModify -> c
+    boolean isEncodingDefault -> d
+    java.util.Map headers -> e
+    boolean isUserAgentDefault -> f
+    com.bumptech.glide.load.model.LazyHeaders build() -> a
+com.bumptech.glide.load.model.LazyHeaders$StringHeaderFactory -> com.bumptech.glide.load.c.o:
+    java.lang.String value -> a
+    java.lang.String buildHeader() -> a
+    java.lang.String toString() -> toString
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+com.bumptech.glide.load.model.ModelCache -> com.bumptech.glide.load.c.p:
+    com.bumptech.glide.util.LruCache cache -> a
+    java.lang.Object get(java.lang.Object,int,int) -> a
+    void put(java.lang.Object,int,int,java.lang.Object) -> a
+com.bumptech.glide.load.model.ModelCache$1 -> com.bumptech.glide.load.c.q:
+    com.bumptech.glide.load.model.ModelCache this$0 -> a
+    void onItemEvicted(com.bumptech.glide.load.model.ModelCache$ModelKey,java.lang.Object) -> a
+    void onItemEvicted(java.lang.Object,java.lang.Object) -> a
+com.bumptech.glide.load.model.ModelCache$ModelKey -> com.bumptech.glide.load.c.r:
+    java.util.Queue KEY_QUEUE -> a
+    int height -> b
+    int width -> c
+    java.lang.Object model -> d
+    com.bumptech.glide.load.model.ModelCache$ModelKey get(java.lang.Object,int,int) -> a
+    void init(java.lang.Object,int,int) -> b
+    void release() -> a
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+com.bumptech.glide.load.model.ModelLoader -> com.bumptech.glide.load.c.s:
+    com.bumptech.glide.load.data.DataFetcher getResourceFetcher(java.lang.Object,int,int) -> a
+com.bumptech.glide.load.model.ModelLoaderFactory -> com.bumptech.glide.load.c.t:
+    com.bumptech.glide.load.model.ModelLoader build(android.content.Context,com.bumptech.glide.load.model.GenericLoaderFactory) -> a
+    void teardown() -> a
+com.bumptech.glide.load.model.ResourceLoader -> com.bumptech.glide.load.c.u:
+    com.bumptech.glide.load.model.ModelLoader uriLoader -> a
+    android.content.res.Resources resources -> b
+    com.bumptech.glide.load.data.DataFetcher getResourceFetcher(java.lang.Integer,int,int) -> a
+    com.bumptech.glide.load.data.DataFetcher getResourceFetcher(java.lang.Object,int,int) -> a
+com.bumptech.glide.load.model.StreamEncoder -> com.bumptech.glide.load.c.v:
+    boolean encode(java.io.InputStream,java.io.OutputStream) -> a
+    java.lang.String getId() -> a
+    boolean encode(java.lang.Object,java.io.OutputStream) -> a
+com.bumptech.glide.load.model.StringLoader -> com.bumptech.glide.load.c.w:
+    com.bumptech.glide.load.model.ModelLoader uriLoader -> a
+    com.bumptech.glide.load.data.DataFetcher getResourceFetcher(java.lang.String,int,int) -> a
+    android.net.Uri toFileUri(java.lang.String) -> a
+    com.bumptech.glide.load.data.DataFetcher getResourceFetcher(java.lang.Object,int,int) -> a
+com.bumptech.glide.load.model.UriLoader -> com.bumptech.glide.load.c.x:
+    android.content.Context context -> a
+    com.bumptech.glide.load.model.ModelLoader urlLoader -> b
+    com.bumptech.glide.load.data.DataFetcher getResourceFetcher(android.net.Uri,int,int) -> a
+    com.bumptech.glide.load.data.DataFetcher getLocalUriFetcher(android.content.Context,android.net.Uri) -> a
+    com.bumptech.glide.load.data.DataFetcher getAssetPathFetcher(android.content.Context,java.lang.String) -> a
+    boolean isLocalUri(java.lang.String) -> a
+    com.bumptech.glide.load.data.DataFetcher getResourceFetcher(java.lang.Object,int,int) -> a
+com.bumptech.glide.load.model.UrlLoader -> com.bumptech.glide.load.c.y:
+    com.bumptech.glide.load.model.ModelLoader glideUrlLoader -> a
+    com.bumptech.glide.load.data.DataFetcher getResourceFetcher(java.net.URL,int,int) -> a
+    com.bumptech.glide.load.data.DataFetcher getResourceFetcher(java.lang.Object,int,int) -> a
+com.bumptech.glide.load.model.file_descriptor.FileDescriptorFileLoader -> com.bumptech.glide.load.c.a.a:
+com.bumptech.glide.load.model.file_descriptor.FileDescriptorFileLoader$Factory -> com.bumptech.glide.load.c.a.b:
+    com.bumptech.glide.load.model.ModelLoader build(android.content.Context,com.bumptech.glide.load.model.GenericLoaderFactory) -> a
+    void teardown() -> a
+com.bumptech.glide.load.model.file_descriptor.FileDescriptorModelLoader -> com.bumptech.glide.load.c.a.c:
+com.bumptech.glide.load.model.file_descriptor.FileDescriptorResourceLoader -> com.bumptech.glide.load.c.a.d:
+com.bumptech.glide.load.model.file_descriptor.FileDescriptorResourceLoader$Factory -> com.bumptech.glide.load.c.a.e:
+    com.bumptech.glide.load.model.ModelLoader build(android.content.Context,com.bumptech.glide.load.model.GenericLoaderFactory) -> a
+    void teardown() -> a
+com.bumptech.glide.load.model.file_descriptor.FileDescriptorStringLoader -> com.bumptech.glide.load.c.a.f:
+com.bumptech.glide.load.model.file_descriptor.FileDescriptorStringLoader$Factory -> com.bumptech.glide.load.c.a.g:
+    com.bumptech.glide.load.model.ModelLoader build(android.content.Context,com.bumptech.glide.load.model.GenericLoaderFactory) -> a
+    void teardown() -> a
+com.bumptech.glide.load.model.file_descriptor.FileDescriptorUriLoader -> com.bumptech.glide.load.c.a.h:
+    com.bumptech.glide.load.data.DataFetcher getLocalUriFetcher(android.content.Context,android.net.Uri) -> a
+    com.bumptech.glide.load.data.DataFetcher getAssetPathFetcher(android.content.Context,java.lang.String) -> a
+com.bumptech.glide.load.model.file_descriptor.FileDescriptorUriLoader$Factory -> com.bumptech.glide.load.c.a.i:
+    com.bumptech.glide.load.model.ModelLoader build(android.content.Context,com.bumptech.glide.load.model.GenericLoaderFactory) -> a
+    void teardown() -> a
+com.bumptech.glide.load.model.stream.HttpUrlGlideUrlLoader -> com.bumptech.glide.load.c.b.a:
+    com.bumptech.glide.load.model.ModelCache modelCache -> a
+    com.bumptech.glide.load.data.DataFetcher getResourceFetcher(com.bumptech.glide.load.model.GlideUrl,int,int) -> a
+    com.bumptech.glide.load.data.DataFetcher getResourceFetcher(java.lang.Object,int,int) -> a
+com.bumptech.glide.load.model.stream.HttpUrlGlideUrlLoader$Factory -> com.bumptech.glide.load.c.b.b:
+    com.bumptech.glide.load.model.ModelCache modelCache -> a
+    com.bumptech.glide.load.model.ModelLoader build(android.content.Context,com.bumptech.glide.load.model.GenericLoaderFactory) -> a
+    void teardown() -> a
+com.bumptech.glide.load.model.stream.StreamByteArrayLoader -> com.bumptech.glide.load.c.b.c:
+    java.lang.String id -> a
+    com.bumptech.glide.load.data.DataFetcher getResourceFetcher(byte[],int,int) -> a
+    com.bumptech.glide.load.data.DataFetcher getResourceFetcher(java.lang.Object,int,int) -> a
+com.bumptech.glide.load.model.stream.StreamByteArrayLoader$Factory -> com.bumptech.glide.load.c.b.d:
+    com.bumptech.glide.load.model.ModelLoader build(android.content.Context,com.bumptech.glide.load.model.GenericLoaderFactory) -> a
+    void teardown() -> a
+com.bumptech.glide.load.model.stream.StreamFileLoader -> com.bumptech.glide.load.c.b.e:
+com.bumptech.glide.load.model.stream.StreamFileLoader$Factory -> com.bumptech.glide.load.c.b.f:
+    com.bumptech.glide.load.model.ModelLoader build(android.content.Context,com.bumptech.glide.load.model.GenericLoaderFactory) -> a
+    void teardown() -> a
+com.bumptech.glide.load.model.stream.StreamModelLoader -> com.bumptech.glide.load.c.b.g:
+com.bumptech.glide.load.model.stream.StreamResourceLoader -> com.bumptech.glide.load.c.b.h:
+com.bumptech.glide.load.model.stream.StreamResourceLoader$Factory -> com.bumptech.glide.load.c.b.i:
+    com.bumptech.glide.load.model.ModelLoader build(android.content.Context,com.bumptech.glide.load.model.GenericLoaderFactory) -> a
+    void teardown() -> a
+com.bumptech.glide.load.model.stream.StreamStringLoader -> com.bumptech.glide.load.c.b.j:
+com.bumptech.glide.load.model.stream.StreamStringLoader$Factory -> com.bumptech.glide.load.c.b.k:
+    com.bumptech.glide.load.model.ModelLoader build(android.content.Context,com.bumptech.glide.load.model.GenericLoaderFactory) -> a
+    void teardown() -> a
+com.bumptech.glide.load.model.stream.StreamUriLoader -> com.bumptech.glide.load.c.b.l:
+    com.bumptech.glide.load.data.DataFetcher getLocalUriFetcher(android.content.Context,android.net.Uri) -> a
+    com.bumptech.glide.load.data.DataFetcher getAssetPathFetcher(android.content.Context,java.lang.String) -> a
+com.bumptech.glide.load.model.stream.StreamUriLoader$Factory -> com.bumptech.glide.load.c.b.m:
+    com.bumptech.glide.load.model.ModelLoader build(android.content.Context,com.bumptech.glide.load.model.GenericLoaderFactory) -> a
+    void teardown() -> a
+com.bumptech.glide.load.model.stream.StreamUrlLoader -> com.bumptech.glide.load.c.b.n:
+com.bumptech.glide.load.model.stream.StreamUrlLoader$Factory -> com.bumptech.glide.load.c.b.o:
+    com.bumptech.glide.load.model.ModelLoader build(android.content.Context,com.bumptech.glide.load.model.GenericLoaderFactory) -> a
+    void teardown() -> a
+com.bumptech.glide.load.resource.NullEncoder -> com.bumptech.glide.load.resource.a:
+    com.bumptech.glide.load.resource.NullEncoder NULL_ENCODER -> a
+    com.bumptech.glide.load.Encoder get() -> b
+    boolean encode(java.lang.Object,java.io.OutputStream) -> a
+    java.lang.String getId() -> a
+com.bumptech.glide.load.resource.NullResourceEncoder -> com.bumptech.glide.load.resource.b:
+    com.bumptech.glide.load.resource.NullResourceEncoder NULL_ENCODER -> a
+    com.bumptech.glide.load.resource.NullResourceEncoder get() -> b
+    boolean encode(com.bumptech.glide.load.engine.Resource,java.io.OutputStream) -> a
+    java.lang.String getId() -> a
+    boolean encode(java.lang.Object,java.io.OutputStream) -> a
+com.bumptech.glide.load.resource.SimpleResource -> com.bumptech.glide.load.resource.c:
+    java.lang.Object data -> a
+    java.lang.Object get() -> b
+    int getSize() -> c
+    void recycle() -> d
+com.bumptech.glide.load.resource.UnitTransformation -> com.bumptech.glide.load.resource.d:
+    com.bumptech.glide.load.Transformation TRANSFORMATION -> a
+    com.bumptech.glide.load.resource.UnitTransformation get() -> b
+    com.bumptech.glide.load.engine.Resource transform(com.bumptech.glide.load.engine.Resource,int,int) -> a
+    java.lang.String getId() -> a
+com.bumptech.glide.load.resource.bitmap.BitmapDecoder -> com.bumptech.glide.load.resource.bitmap.a:
+    java.lang.String getId() -> a
+com.bumptech.glide.load.resource.bitmap.BitmapEncoder -> com.bumptech.glide.load.resource.bitmap.b:
+    android.graphics.Bitmap$CompressFormat compressFormat -> a
+    int quality -> b
+    boolean encode(com.bumptech.glide.load.engine.Resource,java.io.OutputStream) -> a
+    java.lang.String getId() -> a
+    android.graphics.Bitmap$CompressFormat getFormat(android.graphics.Bitmap) -> a
+    boolean encode(java.lang.Object,java.io.OutputStream) -> a
+com.bumptech.glide.load.resource.bitmap.BitmapResource -> com.bumptech.glide.load.resource.bitmap.c:
+    android.graphics.Bitmap bitmap -> a
+    com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool bitmapPool -> b
+    com.bumptech.glide.load.resource.bitmap.BitmapResource obtain(android.graphics.Bitmap,com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool) -> a
+    android.graphics.Bitmap get() -> a
+    int getSize() -> c
+    void recycle() -> d
+    java.lang.Object get() -> b
+com.bumptech.glide.load.resource.bitmap.BitmapTransformation -> com.bumptech.glide.load.resource.bitmap.d:
+    com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool bitmapPool -> a
+    com.bumptech.glide.load.engine.Resource transform(com.bumptech.glide.load.engine.Resource,int,int) -> a
+    android.graphics.Bitmap transform(com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool,android.graphics.Bitmap,int,int) -> a
+com.bumptech.glide.load.resource.bitmap.CenterCrop -> com.bumptech.glide.load.resource.bitmap.e:
+    android.graphics.Bitmap transform(com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool,android.graphics.Bitmap,int,int) -> a
+    java.lang.String getId() -> a
+com.bumptech.glide.load.resource.bitmap.Downsampler -> com.bumptech.glide.load.resource.bitmap.f:
+    java.util.Set TYPES_THAT_USE_POOL -> d
+    java.util.Queue OPTIONS_QUEUE -> e
+    com.bumptech.glide.load.resource.bitmap.Downsampler AT_LEAST -> a
+    com.bumptech.glide.load.resource.bitmap.Downsampler AT_MOST -> b
+    com.bumptech.glide.load.resource.bitmap.Downsampler NONE -> c
+    android.graphics.Bitmap decode(java.io.InputStream,com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool,int,int,com.bumptech.glide.load.DecodeFormat) -> a
+    int getRoundedSampleSize(int,int,int,int,int) -> a
+    android.graphics.Bitmap downsampleWithSize(com.bumptech.glide.util.MarkEnforcingInputStream,com.bumptech.glide.load.resource.bitmap.RecyclableBufferedInputStream,android.graphics.BitmapFactory$Options,com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool,int,int,int,com.bumptech.glide.load.DecodeFormat) -> a
+    boolean shouldUsePool(java.io.InputStream) -> a
+    android.graphics.Bitmap$Config getConfig(java.io.InputStream,com.bumptech.glide.load.DecodeFormat) -> a
+    int getSampleSize(int,int,int,int) -> a
+    int[] getDimensions(com.bumptech.glide.util.MarkEnforcingInputStream,com.bumptech.glide.load.resource.bitmap.RecyclableBufferedInputStream,android.graphics.BitmapFactory$Options) -> a
+    android.graphics.Bitmap decodeStream(com.bumptech.glide.util.MarkEnforcingInputStream,com.bumptech.glide.load.resource.bitmap.RecyclableBufferedInputStream,android.graphics.BitmapFactory$Options) -> b
+    void setInBitmap(android.graphics.BitmapFactory$Options,android.graphics.Bitmap) -> a
+    android.graphics.BitmapFactory$Options getDefaultOptions() -> b
+    void releaseOptions(android.graphics.BitmapFactory$Options) -> a
+    void resetOptions(android.graphics.BitmapFactory$Options) -> b
+com.bumptech.glide.load.resource.bitmap.Downsampler$1 -> com.bumptech.glide.load.resource.bitmap.g:
+    int getSampleSize(int,int,int,int) -> a
+    java.lang.String getId() -> a
+com.bumptech.glide.load.resource.bitmap.Downsampler$2 -> com.bumptech.glide.load.resource.bitmap.h:
+    int getSampleSize(int,int,int,int) -> a
+    java.lang.String getId() -> a
+com.bumptech.glide.load.resource.bitmap.Downsampler$3 -> com.bumptech.glide.load.resource.bitmap.i:
+    int getSampleSize(int,int,int,int) -> a
+    java.lang.String getId() -> a
+com.bumptech.glide.load.resource.bitmap.FileDescriptorBitmapDataLoadProvider -> com.bumptech.glide.load.resource.bitmap.j:
+    com.bumptech.glide.load.ResourceDecoder cacheDecoder -> a
+    com.bumptech.glide.load.resource.bitmap.FileDescriptorBitmapDecoder sourceDecoder -> b
+    com.bumptech.glide.load.resource.bitmap.BitmapEncoder encoder -> c
+    com.bumptech.glide.load.Encoder sourceEncoder -> d
+    com.bumptech.glide.load.ResourceDecoder getCacheDecoder() -> a
+    com.bumptech.glide.load.ResourceDecoder getSourceDecoder() -> b
+    com.bumptech.glide.load.Encoder getSourceEncoder() -> c
+    com.bumptech.glide.load.ResourceEncoder getEncoder() -> d
+com.bumptech.glide.load.resource.bitmap.FileDescriptorBitmapDecoder -> com.bumptech.glide.load.resource.bitmap.k:
+    com.bumptech.glide.load.resource.bitmap.VideoBitmapDecoder bitmapDecoder -> a
+    com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool bitmapPool -> b
+    com.bumptech.glide.load.DecodeFormat decodeFormat -> c
+    com.bumptech.glide.load.engine.Resource decode(android.os.ParcelFileDescriptor,int,int) -> a
+    java.lang.String getId() -> a
+    com.bumptech.glide.load.engine.Resource decode(java.lang.Object,int,int) -> a
+com.bumptech.glide.load.resource.bitmap.FitCenter -> com.bumptech.glide.load.resource.bitmap.l:
+    android.graphics.Bitmap transform(com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool,android.graphics.Bitmap,int,int) -> a
+    java.lang.String getId() -> a
+com.bumptech.glide.load.resource.bitmap.GlideBitmapDrawable -> com.bumptech.glide.load.resource.bitmap.m:
+    android.graphics.Rect destRect -> a
+    int width -> b
+    int height -> c
+    boolean applyGravity -> d
+    boolean mutated -> e
+    com.bumptech.glide.load.resource.bitmap.GlideBitmapDrawable$BitmapState state -> f
+    int getIntrinsicWidth() -> getIntrinsicWidth
+    int getIntrinsicHeight() -> getIntrinsicHeight
+    boolean isAnimated() -> a
+    void setLoopCount(int) -> a
+    void start() -> start
+    void stop() -> stop
+    boolean isRunning() -> isRunning
+    void onBoundsChange(android.graphics.Rect) -> onBoundsChange
+    android.graphics.drawable.Drawable$ConstantState getConstantState() -> getConstantState
+    void draw(android.graphics.Canvas) -> draw
+    void setAlpha(int) -> setAlpha
+    void setColorFilter(android.graphics.ColorFilter) -> setColorFilter
+    int getOpacity() -> getOpacity
+    android.graphics.drawable.Drawable mutate() -> mutate
+    android.graphics.Bitmap getBitmap() -> b
+com.bumptech.glide.load.resource.bitmap.GlideBitmapDrawable$BitmapState -> com.bumptech.glide.load.resource.bitmap.n:
+    android.graphics.Paint DEFAULT_PAINT -> d
+    android.graphics.Bitmap bitmap -> a
+    int targetDensity -> b
+    android.graphics.Paint paint -> c
+    void setColorFilter(android.graphics.ColorFilter) -> a
+    void setAlpha(int) -> a
+    void mutatePaint() -> a
+    android.graphics.drawable.Drawable newDrawable() -> newDrawable
+    android.graphics.drawable.Drawable newDrawable(android.content.res.Resources) -> newDrawable
+    int getChangingConfigurations() -> getChangingConfigurations
+com.bumptech.glide.load.resource.bitmap.GlideBitmapDrawableResource -> com.bumptech.glide.load.resource.bitmap.o:
+    com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool bitmapPool -> b
+    int getSize() -> c
+    void recycle() -> d
+com.bumptech.glide.load.resource.bitmap.ImageHeaderParser -> com.bumptech.glide.load.resource.bitmap.ImageHeaderParser:
+    byte[] JPEG_EXIF_SEGMENT_PREAMBLE_BYTES -> a
+    int[] BYTES_PER_FORMAT -> b
+    com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$StreamReader streamReader -> c
+    boolean hasAlpha() -> a
+    com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$ImageType getType() -> b
+    int getOrientation() -> c
+    byte[] getExifSegment() -> d
+    int parseExifSegment(com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$RandomAccessReader) -> a
+    int calcTagOffset(int,int) -> a
+    boolean handles(int) -> a
+com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$ImageType -> com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$ImageType:
+    com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$ImageType GIF -> GIF
+    com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$ImageType JPEG -> JPEG
+    com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$ImageType PNG_A -> PNG_A
+    com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$ImageType PNG -> PNG
+    com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$ImageType UNKNOWN -> UNKNOWN
+    boolean hasAlpha -> a
+    com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$ImageType[] $VALUES -> $VALUES
+    com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$ImageType[] values() -> values
+    com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$ImageType valueOf(java.lang.String) -> valueOf
+    boolean hasAlpha() -> hasAlpha
+com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$RandomAccessReader -> com.bumptech.glide.load.resource.bitmap.p:
+    java.nio.ByteBuffer data -> a
+    void order(java.nio.ByteOrder) -> a
+    int length() -> a
+    int getInt32(int) -> a
+    short getInt16(int) -> b
+com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$StreamReader -> com.bumptech.glide.load.resource.bitmap.q:
+    java.io.InputStream is -> a
+    int getUInt16() -> a
+    short getUInt8() -> b
+    long skip(long) -> a
+    int read(byte[]) -> a
+    int getByte() -> c
+com.bumptech.glide.load.resource.bitmap.ImageVideoBitmapDecoder -> com.bumptech.glide.load.resource.bitmap.r:
+    com.bumptech.glide.load.ResourceDecoder streamDecoder -> a
+    com.bumptech.glide.load.ResourceDecoder fileDescriptorDecoder -> b
+    com.bumptech.glide.load.engine.Resource decode(com.bumptech.glide.load.model.ImageVideoWrapper,int,int) -> a
+    java.lang.String getId() -> a
+    com.bumptech.glide.load.engine.Resource decode(java.lang.Object,int,int) -> a
+com.bumptech.glide.load.resource.bitmap.ImageVideoDataLoadProvider -> com.bumptech.glide.load.resource.bitmap.s:
+    com.bumptech.glide.load.resource.bitmap.ImageVideoBitmapDecoder sourceDecoder -> a
+    com.bumptech.glide.load.ResourceDecoder cacheDecoder -> b
+    com.bumptech.glide.load.ResourceEncoder encoder -> c
+    com.bumptech.glide.load.model.ImageVideoWrapperEncoder sourceEncoder -> d
+    com.bumptech.glide.load.ResourceDecoder getCacheDecoder() -> a
+    com.bumptech.glide.load.ResourceDecoder getSourceDecoder() -> b
+    com.bumptech.glide.load.Encoder getSourceEncoder() -> c
+    com.bumptech.glide.load.ResourceEncoder getEncoder() -> d
+com.bumptech.glide.load.resource.bitmap.RecyclableBufferedInputStream -> com.bumptech.glide.load.resource.bitmap.t:
+    byte[] buf -> a
+    int count -> b
+    int marklimit -> c
+    int markpos -> d
+    int pos -> e
+    int available() -> available
+    java.io.IOException streamClosed() -> b
+    void fixMarkLimit() -> a
+    void close() -> close
+    int fillbuf(java.io.InputStream,byte[]) -> a
+    void mark(int) -> mark
+    boolean markSupported() -> markSupported
+    int read() -> read
+    int read(byte[],int,int) -> read
+    void reset() -> reset
+    long skip(long) -> skip
+com.bumptech.glide.load.resource.bitmap.RecyclableBufferedInputStream$InvalidMarkException -> com.bumptech.glide.load.resource.bitmap.u:
+com.bumptech.glide.load.resource.bitmap.StreamBitmapDataLoadProvider -> com.bumptech.glide.load.resource.bitmap.v:
+    com.bumptech.glide.load.resource.bitmap.StreamBitmapDecoder decoder -> a
+    com.bumptech.glide.load.resource.bitmap.BitmapEncoder encoder -> b
+    com.bumptech.glide.load.model.StreamEncoder sourceEncoder -> c
+    com.bumptech.glide.load.resource.file.FileToStreamDecoder cacheDecoder -> d
+    com.bumptech.glide.load.ResourceDecoder getCacheDecoder() -> a
+    com.bumptech.glide.load.ResourceDecoder getSourceDecoder() -> b
+    com.bumptech.glide.load.Encoder getSourceEncoder() -> c
+    com.bumptech.glide.load.ResourceEncoder getEncoder() -> d
+com.bumptech.glide.load.resource.bitmap.StreamBitmapDecoder -> com.bumptech.glide.load.resource.bitmap.w:
+    com.bumptech.glide.load.resource.bitmap.Downsampler downsampler -> a
+    com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool bitmapPool -> b
+    com.bumptech.glide.load.DecodeFormat decodeFormat -> c
+    java.lang.String id -> d
+    com.bumptech.glide.load.engine.Resource decode(java.io.InputStream,int,int) -> a
+    java.lang.String getId() -> a
+    com.bumptech.glide.load.engine.Resource decode(java.lang.Object,int,int) -> a
+com.bumptech.glide.load.resource.bitmap.TransformationUtils -> com.bumptech.glide.load.resource.bitmap.x:
+    android.graphics.Bitmap centerCrop(android.graphics.Bitmap,android.graphics.Bitmap,int,int) -> a
+    android.graphics.Bitmap fitCenter(android.graphics.Bitmap,com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool,int,int) -> a
+    void setAlpha(android.graphics.Bitmap,android.graphics.Bitmap) -> a
+    int getExifOrientationDegrees(int) -> a
+    android.graphics.Bitmap rotateImageExif(android.graphics.Bitmap,com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool,int) -> a
+    android.graphics.Bitmap$Config getSafeConfig(android.graphics.Bitmap) -> a
+    void initializeMatrixForRotation(int,android.graphics.Matrix) -> a
+com.bumptech.glide.load.resource.bitmap.VideoBitmapDecoder -> com.bumptech.glide.load.resource.bitmap.y:
+    com.bumptech.glide.load.resource.bitmap.VideoBitmapDecoder$MediaMetadataRetrieverFactory DEFAULT_FACTORY -> a
+    com.bumptech.glide.load.resource.bitmap.VideoBitmapDecoder$MediaMetadataRetrieverFactory factory -> b
+    int frame -> c
+    android.graphics.Bitmap decode(android.os.ParcelFileDescriptor,com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool,int,int,com.bumptech.glide.load.DecodeFormat) -> a
+    java.lang.String getId() -> a
+com.bumptech.glide.load.resource.bitmap.VideoBitmapDecoder$MediaMetadataRetrieverFactory -> com.bumptech.glide.load.resource.bitmap.z:
+    android.media.MediaMetadataRetriever build() -> a
+com.bumptech.glide.load.resource.drawable.DrawableResource -> com.bumptech.glide.load.resource.a.a:
+    android.graphics.drawable.Drawable drawable -> a
+    android.graphics.drawable.Drawable get() -> a
+    java.lang.Object get() -> b
+com.bumptech.glide.load.resource.drawable.GlideDrawable -> com.bumptech.glide.load.resource.a.b:
+    boolean isAnimated() -> a
+    void setLoopCount(int) -> a
+com.bumptech.glide.load.resource.file.FileDecoder -> com.bumptech.glide.load.resource.b.a:
+    com.bumptech.glide.load.engine.Resource decode(java.io.File,int,int) -> a
+    java.lang.String getId() -> a
+    com.bumptech.glide.load.engine.Resource decode(java.lang.Object,int,int) -> a
+com.bumptech.glide.load.resource.file.FileResource -> com.bumptech.glide.load.resource.b.b:
+com.bumptech.glide.load.resource.file.FileToStreamDecoder -> com.bumptech.glide.load.resource.b.c:
+    com.bumptech.glide.load.resource.file.FileToStreamDecoder$FileOpener DEFAULT_FILE_OPENER -> a
+    com.bumptech.glide.load.ResourceDecoder streamDecoder -> b
+    com.bumptech.glide.load.resource.file.FileToStreamDecoder$FileOpener fileOpener -> c
+    com.bumptech.glide.load.engine.Resource decode(java.io.File,int,int) -> a
+    java.lang.String getId() -> a
+    com.bumptech.glide.load.engine.Resource decode(java.lang.Object,int,int) -> a
+com.bumptech.glide.load.resource.file.FileToStreamDecoder$FileOpener -> com.bumptech.glide.load.resource.b.d:
+    java.io.InputStream open(java.io.File) -> a
+com.bumptech.glide.load.resource.file.StreamFileDataLoadProvider -> com.bumptech.glide.load.resource.b.e:
+    com.bumptech.glide.load.resource.file.StreamFileDataLoadProvider$ErrorSourceDecoder ERROR_DECODER -> a
+    com.bumptech.glide.load.ResourceDecoder cacheDecoder -> b
+    com.bumptech.glide.load.Encoder encoder -> c
+    com.bumptech.glide.load.ResourceDecoder getCacheDecoder() -> a
+    com.bumptech.glide.load.ResourceDecoder getSourceDecoder() -> b
+    com.bumptech.glide.load.Encoder getSourceEncoder() -> c
+    com.bumptech.glide.load.ResourceEncoder getEncoder() -> d
+com.bumptech.glide.load.resource.file.StreamFileDataLoadProvider$1 -> com.bumptech.glide.load.resource.b.f:
+com.bumptech.glide.load.resource.file.StreamFileDataLoadProvider$ErrorSourceDecoder -> com.bumptech.glide.load.resource.b.g:
+    com.bumptech.glide.load.engine.Resource decode(java.io.InputStream,int,int) -> a
+    java.lang.String getId() -> a
+    com.bumptech.glide.load.engine.Resource decode(java.lang.Object,int,int) -> a
+com.bumptech.glide.load.resource.gif.GifBitmapProvider -> com.bumptech.glide.load.resource.c.a:
+    com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool bitmapPool -> a
+    android.graphics.Bitmap obtain(int,int,android.graphics.Bitmap$Config) -> a
+    void release(android.graphics.Bitmap) -> a
+com.bumptech.glide.load.resource.gif.GifDrawable -> com.bumptech.glide.load.resource.c.b:
+    android.graphics.Paint paint -> a
+    android.graphics.Rect destRect -> b
+    com.bumptech.glide.load.resource.gif.GifDrawable$GifState state -> c
+    com.bumptech.glide.gifdecoder.GifDecoder decoder -> d
+    com.bumptech.glide.load.resource.gif.GifFrameLoader frameLoader -> e
+    boolean isRunning -> f
+    boolean isStarted -> g
+    boolean isRecycled -> h
+    boolean isVisible -> i
+    int loopCount -> j
+    int maxLoopCount -> k
+    boolean applyGravity -> l
+    android.graphics.Bitmap getFirstFrame() -> b
+    com.bumptech.glide.load.Transformation getFrameTransformation() -> c
+    byte[] getData() -> d
+    int getFrameCount() -> e
+    void resetLoopCount() -> g
+    void start() -> start
+    void stop() -> stop
+    void reset() -> h
+    void startRunning() -> i
+    void stopRunning() -> j
+    boolean setVisible(boolean,boolean) -> setVisible
+    int getIntrinsicWidth() -> getIntrinsicWidth
+    int getIntrinsicHeight() -> getIntrinsicHeight
+    boolean isRunning() -> isRunning
+    void onBoundsChange(android.graphics.Rect) -> onBoundsChange
+    void draw(android.graphics.Canvas) -> draw
+    void setAlpha(int) -> setAlpha
+    void setColorFilter(android.graphics.ColorFilter) -> setColorFilter
+    int getOpacity() -> getOpacity
+    void onFrameReady(int) -> b
+    android.graphics.drawable.Drawable$ConstantState getConstantState() -> getConstantState
+    void recycle() -> f
+    boolean isAnimated() -> a
+    void setLoopCount(int) -> a
+com.bumptech.glide.load.resource.gif.GifDrawable$GifState -> com.bumptech.glide.load.resource.c.c:
+    com.bumptech.glide.gifdecoder.GifHeader gifHeader -> a
+    byte[] data -> b
+    android.content.Context context -> c
+    com.bumptech.glide.load.Transformation frameTransformation -> d
+    int targetWidth -> e
+    int targetHeight -> f
+    com.bumptech.glide.gifdecoder.GifDecoder$BitmapProvider bitmapProvider -> g
+    com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool bitmapPool -> h
+    android.graphics.Bitmap firstFrame -> i
+    android.graphics.drawable.Drawable newDrawable(android.content.res.Resources) -> newDrawable
+    android.graphics.drawable.Drawable newDrawable() -> newDrawable
+    int getChangingConfigurations() -> getChangingConfigurations
+com.bumptech.glide.load.resource.gif.GifDrawableLoadProvider -> com.bumptech.glide.load.resource.c.d:
+    com.bumptech.glide.load.resource.gif.GifResourceDecoder decoder -> a
+    com.bumptech.glide.load.resource.gif.GifResourceEncoder encoder -> b
+    com.bumptech.glide.load.model.StreamEncoder sourceEncoder -> c
+    com.bumptech.glide.load.resource.file.FileToStreamDecoder cacheDecoder -> d
+    com.bumptech.glide.load.ResourceDecoder getCacheDecoder() -> a
+    com.bumptech.glide.load.ResourceDecoder getSourceDecoder() -> b
+    com.bumptech.glide.load.Encoder getSourceEncoder() -> c
+    com.bumptech.glide.load.ResourceEncoder getEncoder() -> d
+com.bumptech.glide.load.resource.gif.GifDrawableResource -> com.bumptech.glide.load.resource.c.e:
+    int getSize() -> c
+    void recycle() -> d
+com.bumptech.glide.load.resource.gif.GifDrawableTransformation -> com.bumptech.glide.load.resource.c.f:
+    com.bumptech.glide.load.Transformation wrapped -> a
+    com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool bitmapPool -> b
+    com.bumptech.glide.load.engine.Resource transform(com.bumptech.glide.load.engine.Resource,int,int) -> a
+    java.lang.String getId() -> a
+com.bumptech.glide.load.resource.gif.GifFrameLoader -> com.bumptech.glide.load.resource.c.g:
+    com.bumptech.glide.load.resource.gif.GifFrameLoader$FrameCallback callback -> a
+    com.bumptech.glide.gifdecoder.GifDecoder gifDecoder -> b
+    android.os.Handler handler -> c
+    boolean isRunning -> d
+    boolean isLoadPending -> e
+    com.bumptech.glide.GenericRequestBuilder requestBuilder -> f
+    com.bumptech.glide.load.resource.gif.GifFrameLoader$DelayTarget current -> g
+    boolean isCleared -> h
+    void setFrameTransformation(com.bumptech.glide.load.Transformation) -> a
+    void start() -> a
+    void stop() -> b
+    void clear() -> c
+    android.graphics.Bitmap getCurrentFrame() -> d
+    void loadNextFrame() -> e
+    void onFrameReady(com.bumptech.glide.load.resource.gif.GifFrameLoader$DelayTarget) -> a
+    com.bumptech.glide.GenericRequestBuilder getRequestBuilder(android.content.Context,com.bumptech.glide.gifdecoder.GifDecoder,int,int,com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool) -> a
+com.bumptech.glide.load.resource.gif.GifFrameLoader$1 -> com.bumptech.glide.load.resource.c.h:
+com.bumptech.glide.load.resource.gif.GifFrameLoader$DelayTarget -> com.bumptech.glide.load.resource.c.i:
+    android.os.Handler handler -> a
+    int index -> b
+    long targetTime -> c
+    android.graphics.Bitmap resource -> d
+    android.graphics.Bitmap getResource() -> a
+    void onResourceReady(android.graphics.Bitmap,com.bumptech.glide.request.animation.GlideAnimation) -> a
+    void onResourceReady(java.lang.Object,com.bumptech.glide.request.animation.GlideAnimation) -> a
+    int access$100(com.bumptech.glide.load.resource.gif.GifFrameLoader$DelayTarget) -> a
+com.bumptech.glide.load.resource.gif.GifFrameLoader$FrameCallback -> com.bumptech.glide.load.resource.c.j:
+    void onFrameReady(int) -> b
+com.bumptech.glide.load.resource.gif.GifFrameLoader$FrameLoaderCallback -> com.bumptech.glide.load.resource.c.k:
+    com.bumptech.glide.load.resource.gif.GifFrameLoader this$0 -> a
+    boolean handleMessage(android.os.Message) -> handleMessage
+com.bumptech.glide.load.resource.gif.GifFrameLoader$FrameSignature -> com.bumptech.glide.load.resource.c.l:
+    java.util.UUID uuid -> a
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    void updateDiskCacheKey(java.security.MessageDigest) -> a
+com.bumptech.glide.load.resource.gif.GifFrameModelLoader -> com.bumptech.glide.load.resource.c.m:
+    com.bumptech.glide.load.data.DataFetcher getResourceFetcher(com.bumptech.glide.gifdecoder.GifDecoder,int,int) -> a
+    com.bumptech.glide.load.data.DataFetcher getResourceFetcher(java.lang.Object,int,int) -> a
+com.bumptech.glide.load.resource.gif.GifFrameModelLoader$GifFrameDataFetcher -> com.bumptech.glide.load.resource.c.n:
+    com.bumptech.glide.gifdecoder.GifDecoder decoder -> a
+    com.bumptech.glide.gifdecoder.GifDecoder loadData(com.bumptech.glide.Priority) -> b
+    void cleanup() -> a
+    java.lang.String getId() -> b
+    void cancel() -> c
+    java.lang.Object loadData(com.bumptech.glide.Priority) -> a
+com.bumptech.glide.load.resource.gif.GifFrameResourceDecoder -> com.bumptech.glide.load.resource.c.o:
+    com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool bitmapPool -> a
+    com.bumptech.glide.load.engine.Resource decode(com.bumptech.glide.gifdecoder.GifDecoder,int,int) -> a
+    java.lang.String getId() -> a
+    com.bumptech.glide.load.engine.Resource decode(java.lang.Object,int,int) -> a
+com.bumptech.glide.load.resource.gif.GifResourceDecoder -> com.bumptech.glide.load.resource.c.p:
+    com.bumptech.glide.load.resource.gif.GifResourceDecoder$GifHeaderParserPool PARSER_POOL -> a
+    com.bumptech.glide.load.resource.gif.GifResourceDecoder$GifDecoderPool DECODER_POOL -> b
+    android.content.Context context -> c
+    com.bumptech.glide.load.resource.gif.GifResourceDecoder$GifHeaderParserPool parserPool -> d
+    com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool bitmapPool -> e
+    com.bumptech.glide.load.resource.gif.GifResourceDecoder$GifDecoderPool decoderPool -> f
+    com.bumptech.glide.load.resource.gif.GifBitmapProvider provider -> g
+    com.bumptech.glide.load.resource.gif.GifDrawableResource decode(java.io.InputStream,int,int) -> a
+    com.bumptech.glide.load.resource.gif.GifDrawableResource decode(byte[],int,int,com.bumptech.glide.gifdecoder.GifHeaderParser,com.bumptech.glide.gifdecoder.GifDecoder) -> a
+    android.graphics.Bitmap decodeFirstFrame(com.bumptech.glide.gifdecoder.GifDecoder,com.bumptech.glide.gifdecoder.GifHeader,byte[]) -> a
+    java.lang.String getId() -> a
+    byte[] inputStreamToBytes(java.io.InputStream) -> a
+    com.bumptech.glide.load.engine.Resource decode(java.lang.Object,int,int) -> a
+com.bumptech.glide.load.resource.gif.GifResourceDecoder$GifDecoderPool -> com.bumptech.glide.load.resource.c.q:
+    java.util.Queue pool -> a
+    com.bumptech.glide.gifdecoder.GifDecoder obtain(com.bumptech.glide.gifdecoder.GifDecoder$BitmapProvider) -> a
+    void release(com.bumptech.glide.gifdecoder.GifDecoder) -> a
+com.bumptech.glide.load.resource.gif.GifResourceDecoder$GifHeaderParserPool -> com.bumptech.glide.load.resource.c.r:
+    java.util.Queue pool -> a
+    com.bumptech.glide.gifdecoder.GifHeaderParser obtain(byte[]) -> a
+    void release(com.bumptech.glide.gifdecoder.GifHeaderParser) -> a
+com.bumptech.glide.load.resource.gif.GifResourceEncoder -> com.bumptech.glide.load.resource.c.s:
+    com.bumptech.glide.load.resource.gif.GifResourceEncoder$Factory FACTORY -> a
+    com.bumptech.glide.gifdecoder.GifDecoder$BitmapProvider provider -> b
+    com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool bitmapPool -> c
+    com.bumptech.glide.load.resource.gif.GifResourceEncoder$Factory factory -> d
+    boolean encode(com.bumptech.glide.load.engine.Resource,java.io.OutputStream) -> a
+    boolean writeDataDirect(byte[],java.io.OutputStream) -> a
+    com.bumptech.glide.gifdecoder.GifDecoder decodeHeaders(byte[]) -> a
+    com.bumptech.glide.load.engine.Resource getTransformedFrame(android.graphics.Bitmap,com.bumptech.glide.load.Transformation,com.bumptech.glide.load.resource.gif.GifDrawable) -> a
+    java.lang.String getId() -> a
+    boolean encode(java.lang.Object,java.io.OutputStream) -> a
+com.bumptech.glide.load.resource.gif.GifResourceEncoder$Factory -> com.bumptech.glide.load.resource.c.t:
+    com.bumptech.glide.gifdecoder.GifDecoder buildDecoder(com.bumptech.glide.gifdecoder.GifDecoder$BitmapProvider) -> a
+    com.bumptech.glide.gifdecoder.GifHeaderParser buildParser() -> a
+    com.bumptech.glide.gifencoder.AnimatedGifEncoder buildEncoder() -> b
+    com.bumptech.glide.load.engine.Resource buildFrameResource(android.graphics.Bitmap,com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool) -> a
+com.bumptech.glide.load.resource.gifbitmap.GifBitmapWrapper -> com.bumptech.glide.load.resource.d.a:
+    com.bumptech.glide.load.engine.Resource gifResource -> a
+    com.bumptech.glide.load.engine.Resource bitmapResource -> b
+    int getSize() -> a
+    com.bumptech.glide.load.engine.Resource getBitmapResource() -> b
+    com.bumptech.glide.load.engine.Resource getGifResource() -> c
+com.bumptech.glide.load.resource.gifbitmap.GifBitmapWrapperResource -> com.bumptech.glide.load.resource.d.b:
+    com.bumptech.glide.load.resource.gifbitmap.GifBitmapWrapper data -> a
+    com.bumptech.glide.load.resource.gifbitmap.GifBitmapWrapper get() -> a
+    int getSize() -> c
+    void recycle() -> d
+    java.lang.Object get() -> b
+com.bumptech.glide.load.resource.gifbitmap.GifBitmapWrapperResourceDecoder -> com.bumptech.glide.load.resource.d.c:
+    com.bumptech.glide.load.resource.gifbitmap.GifBitmapWrapperResourceDecoder$ImageTypeParser DEFAULT_PARSER -> a
+    com.bumptech.glide.load.resource.gifbitmap.GifBitmapWrapperResourceDecoder$BufferedStreamFactory DEFAULT_STREAM_FACTORY -> b
+    com.bumptech.glide.load.ResourceDecoder bitmapDecoder -> c
+    com.bumptech.glide.load.ResourceDecoder gifDecoder -> d
+    com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool bitmapPool -> e
+    com.bumptech.glide.load.resource.gifbitmap.GifBitmapWrapperResourceDecoder$ImageTypeParser parser -> f
+    com.bumptech.glide.load.resource.gifbitmap.GifBitmapWrapperResourceDecoder$BufferedStreamFactory streamFactory -> g
+    java.lang.String id -> h
+    com.bumptech.glide.load.engine.Resource decode(com.bumptech.glide.load.model.ImageVideoWrapper,int,int) -> a
+    com.bumptech.glide.load.resource.gifbitmap.GifBitmapWrapper decode(com.bumptech.glide.load.model.ImageVideoWrapper,int,int,byte[]) -> a
+    com.bumptech.glide.load.resource.gifbitmap.GifBitmapWrapper decodeStream(com.bumptech.glide.load.model.ImageVideoWrapper,int,int,byte[]) -> b
+    com.bumptech.glide.load.resource.gifbitmap.GifBitmapWrapper decodeGifWrapper(java.io.InputStream,int,int) -> a
+    com.bumptech.glide.load.resource.gifbitmap.GifBitmapWrapper decodeBitmapWrapper(com.bumptech.glide.load.model.ImageVideoWrapper,int,int) -> b
+    java.lang.String getId() -> a
+    com.bumptech.glide.load.engine.Resource decode(java.lang.Object,int,int) -> a
+com.bumptech.glide.load.resource.gifbitmap.GifBitmapWrapperResourceDecoder$BufferedStreamFactory -> com.bumptech.glide.load.resource.d.d:
+    java.io.InputStream build(java.io.InputStream,byte[]) -> a
+com.bumptech.glide.load.resource.gifbitmap.GifBitmapWrapperResourceDecoder$ImageTypeParser -> com.bumptech.glide.load.resource.d.e:
+    com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$ImageType parse(java.io.InputStream) -> a
+com.bumptech.glide.load.resource.gifbitmap.GifBitmapWrapperResourceEncoder -> com.bumptech.glide.load.resource.d.f:
+    com.bumptech.glide.load.ResourceEncoder bitmapEncoder -> a
+    com.bumptech.glide.load.ResourceEncoder gifEncoder -> b
+    java.lang.String id -> c
+    boolean encode(com.bumptech.glide.load.engine.Resource,java.io.OutputStream) -> a
+    java.lang.String getId() -> a
+    boolean encode(java.lang.Object,java.io.OutputStream) -> a
+com.bumptech.glide.load.resource.gifbitmap.GifBitmapWrapperStreamResourceDecoder -> com.bumptech.glide.load.resource.d.g:
+    com.bumptech.glide.load.ResourceDecoder gifBitmapDecoder -> a
+    com.bumptech.glide.load.engine.Resource decode(java.io.InputStream,int,int) -> a
+    java.lang.String getId() -> a
+    com.bumptech.glide.load.engine.Resource decode(java.lang.Object,int,int) -> a
+com.bumptech.glide.load.resource.gifbitmap.GifBitmapWrapperTransformation -> com.bumptech.glide.load.resource.d.h:
+    com.bumptech.glide.load.Transformation bitmapTransformation -> a
+    com.bumptech.glide.load.Transformation gifDataTransformation -> b
+    com.bumptech.glide.load.engine.Resource transform(com.bumptech.glide.load.engine.Resource,int,int) -> a
+    java.lang.String getId() -> a
+com.bumptech.glide.load.resource.gifbitmap.ImageVideoGifDrawableLoadProvider -> com.bumptech.glide.load.resource.d.i:
+    com.bumptech.glide.load.ResourceDecoder cacheDecoder -> a
+    com.bumptech.glide.load.ResourceDecoder sourceDecoder -> b
+    com.bumptech.glide.load.ResourceEncoder encoder -> c
+    com.bumptech.glide.load.Encoder sourceEncoder -> d
+    com.bumptech.glide.load.ResourceDecoder getCacheDecoder() -> a
+    com.bumptech.glide.load.ResourceDecoder getSourceDecoder() -> b
+    com.bumptech.glide.load.Encoder getSourceEncoder() -> c
+    com.bumptech.glide.load.ResourceEncoder getEncoder() -> d
+com.bumptech.glide.load.resource.transcode.GifBitmapWrapperDrawableTranscoder -> com.bumptech.glide.load.resource.e.a:
+    com.bumptech.glide.load.resource.transcode.ResourceTranscoder bitmapDrawableResourceTranscoder -> a
+    com.bumptech.glide.load.engine.Resource transcode(com.bumptech.glide.load.engine.Resource) -> a
+    java.lang.String getId() -> a
+com.bumptech.glide.load.resource.transcode.GlideBitmapDrawableTranscoder -> com.bumptech.glide.load.resource.e.b:
+    android.content.res.Resources resources -> a
+    com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool bitmapPool -> b
+    com.bumptech.glide.load.engine.Resource transcode(com.bumptech.glide.load.engine.Resource) -> a
+    java.lang.String getId() -> a
+com.bumptech.glide.load.resource.transcode.ResourceTranscoder -> com.bumptech.glide.load.resource.e.c:
+    com.bumptech.glide.load.engine.Resource transcode(com.bumptech.glide.load.engine.Resource) -> a
+    java.lang.String getId() -> a
+com.bumptech.glide.load.resource.transcode.TranscoderRegistry -> com.bumptech.glide.load.resource.e.d:
+    com.bumptech.glide.util.MultiClassKey GET_KEY -> a
+    java.util.Map factories -> b
+    void register(java.lang.Class,java.lang.Class,com.bumptech.glide.load.resource.transcode.ResourceTranscoder) -> a
+    com.bumptech.glide.load.resource.transcode.ResourceTranscoder get(java.lang.Class,java.lang.Class) -> a
+com.bumptech.glide.load.resource.transcode.UnitTranscoder -> com.bumptech.glide.load.resource.e.e:
+    com.bumptech.glide.load.resource.transcode.UnitTranscoder UNIT_TRANSCODER -> a
+    com.bumptech.glide.load.resource.transcode.ResourceTranscoder get() -> b
+    com.bumptech.glide.load.engine.Resource transcode(com.bumptech.glide.load.engine.Resource) -> a
+    java.lang.String getId() -> a
+com.bumptech.glide.manager.ActivityFragmentLifecycle -> com.bumptech.glide.d.a:
+    java.util.Set lifecycleListeners -> a
+    boolean isStarted -> b
+    boolean isDestroyed -> c
+    void addListener(com.bumptech.glide.manager.LifecycleListener) -> a
+    void onStart() -> a
+    void onStop() -> b
+    void onDestroy() -> c
+com.bumptech.glide.manager.ApplicationLifecycle -> com.bumptech.glide.d.b:
+    void addListener(com.bumptech.glide.manager.LifecycleListener) -> a
+com.bumptech.glide.manager.ConnectivityMonitor -> com.bumptech.glide.d.c:
+com.bumptech.glide.manager.ConnectivityMonitor$ConnectivityListener -> com.bumptech.glide.d.d:
+    void onConnectivityChanged(boolean) -> a
+com.bumptech.glide.manager.ConnectivityMonitorFactory -> com.bumptech.glide.d.e:
+    com.bumptech.glide.manager.ConnectivityMonitor build(android.content.Context,com.bumptech.glide.manager.ConnectivityMonitor$ConnectivityListener) -> a
+com.bumptech.glide.manager.DefaultConnectivityMonitor -> com.bumptech.glide.d.f:
+    android.content.Context context -> a
+    com.bumptech.glide.manager.ConnectivityMonitor$ConnectivityListener listener -> b
+    boolean isConnected -> c
+    boolean isRegistered -> d
+    android.content.BroadcastReceiver connectivityReceiver -> e
+    void register() -> a
+    void unregister() -> b
+    boolean isConnected(android.content.Context) -> a
+    void onStart() -> d
+    void onStop() -> e
+    void onDestroy() -> f
+    boolean access$000(com.bumptech.glide.manager.DefaultConnectivityMonitor) -> a
+    boolean access$002(com.bumptech.glide.manager.DefaultConnectivityMonitor,boolean) -> a
+    boolean access$100(com.bumptech.glide.manager.DefaultConnectivityMonitor,android.content.Context) -> a
+    com.bumptech.glide.manager.ConnectivityMonitor$ConnectivityListener access$200(com.bumptech.glide.manager.DefaultConnectivityMonitor) -> b
+com.bumptech.glide.manager.DefaultConnectivityMonitor$1 -> com.bumptech.glide.d.g:
+    com.bumptech.glide.manager.DefaultConnectivityMonitor this$0 -> a
+    void onReceive(android.content.Context,android.content.Intent) -> onReceive
+com.bumptech.glide.manager.EmptyRequestManagerTreeNode -> com.bumptech.glide.d.h:
+com.bumptech.glide.manager.Lifecycle -> com.bumptech.glide.d.i:
+    void addListener(com.bumptech.glide.manager.LifecycleListener) -> a
+com.bumptech.glide.manager.LifecycleListener -> com.bumptech.glide.d.j:
+    void onStart() -> d
+    void onStop() -> e
+    void onDestroy() -> f
+com.bumptech.glide.manager.NullConnectivityMonitor -> com.bumptech.glide.d.k:
+    void onStart() -> d
+    void onStop() -> e
+    void onDestroy() -> f
+com.bumptech.glide.manager.RequestManagerFragment -> com.bumptech.glide.d.l:
+    com.bumptech.glide.manager.ActivityFragmentLifecycle lifecycle -> a
+    com.bumptech.glide.manager.RequestManagerTreeNode requestManagerTreeNode -> b
+    com.bumptech.glide.RequestManager requestManager -> c
+    java.util.HashSet childRequestManagerFragments -> d
+    com.bumptech.glide.manager.RequestManagerFragment rootRequestManagerFragment -> e
+    void setRequestManager(com.bumptech.glide.RequestManager) -> a
+    com.bumptech.glide.manager.ActivityFragmentLifecycle getLifecycle() -> a
+    com.bumptech.glide.RequestManager getRequestManager() -> b
+    com.bumptech.glide.manager.RequestManagerTreeNode getRequestManagerTreeNode() -> c
+    void addChildRequestManagerFragment(com.bumptech.glide.manager.RequestManagerFragment) -> a
+    void removeChildRequestManagerFragment(com.bumptech.glide.manager.RequestManagerFragment) -> b
+    void onAttach(android.app.Activity) -> onAttach
+    void onDetach() -> onDetach
+    void onStart() -> onStart
+    void onStop() -> onStop
+    void onDestroy() -> onDestroy
+    void onTrimMemory(int) -> onTrimMemory
+    void onLowMemory() -> onLowMemory
+com.bumptech.glide.manager.RequestManagerFragment$1 -> com.bumptech.glide.d.m:
+com.bumptech.glide.manager.RequestManagerFragment$FragmentRequestManagerTreeNode -> com.bumptech.glide.d.n:
+    com.bumptech.glide.manager.RequestManagerFragment this$0 -> a
+com.bumptech.glide.manager.RequestManagerRetriever -> com.bumptech.glide.d.o:
+    com.bumptech.glide.manager.RequestManagerRetriever INSTANCE -> c
+    com.bumptech.glide.RequestManager applicationManager -> d
+    java.util.Map pendingRequestManagerFragments -> a
+    java.util.Map pendingSupportRequestManagerFragments -> b
+    android.os.Handler handler -> e
+    com.bumptech.glide.manager.RequestManagerRetriever get() -> a
+    com.bumptech.glide.RequestManager getApplicationManager(android.content.Context) -> b
+    com.bumptech.glide.RequestManager get(android.content.Context) -> a
+    com.bumptech.glide.RequestManager get(android.support.v4.app.FragmentActivity) -> a
+    com.bumptech.glide.RequestManager get(android.app.Activity) -> a
+    void assertNotDestroyed(android.app.Activity) -> b
+    com.bumptech.glide.manager.RequestManagerFragment getRequestManagerFragment(android.app.FragmentManager) -> a
+    com.bumptech.glide.RequestManager fragmentGet(android.content.Context,android.app.FragmentManager) -> a
+    com.bumptech.glide.manager.SupportRequestManagerFragment getSupportRequestManagerFragment(android.support.v4.app.FragmentManager) -> a
+    com.bumptech.glide.RequestManager supportFragmentGet(android.content.Context,android.support.v4.app.FragmentManager) -> a
+    boolean handleMessage(android.os.Message) -> handleMessage
+com.bumptech.glide.manager.RequestManagerTreeNode -> com.bumptech.glide.d.p:
+com.bumptech.glide.manager.RequestTracker -> com.bumptech.glide.d.q:
+    java.util.Set requests -> a
+    java.util.List pendingRequests -> b
+    boolean isPaused -> c
+    void runRequest(com.bumptech.glide.request.Request) -> a
+    void removeRequest(com.bumptech.glide.request.Request) -> b
+    void pauseRequests() -> a
+    void resumeRequests() -> b
+    void clearRequests() -> c
+    void restartRequests() -> d
+com.bumptech.glide.manager.SupportRequestManagerFragment -> com.bumptech.glide.d.r:
+    com.bumptech.glide.RequestManager requestManager -> aa
+    com.bumptech.glide.manager.ActivityFragmentLifecycle lifecycle -> ab
+    com.bumptech.glide.manager.RequestManagerTreeNode requestManagerTreeNode -> ac
+    java.util.HashSet childRequestManagerFragments -> ad
+    com.bumptech.glide.manager.SupportRequestManagerFragment rootRequestManagerFragment -> ae
+    void setRequestManager(com.bumptech.glide.RequestManager) -> a
+    com.bumptech.glide.manager.ActivityFragmentLifecycle getLifecycle() -> I
+    com.bumptech.glide.RequestManager getRequestManager() -> J
+    com.bumptech.glide.manager.RequestManagerTreeNode getRequestManagerTreeNode() -> K
+    void addChildRequestManagerFragment(com.bumptech.glide.manager.SupportRequestManagerFragment) -> a
+    void removeChildRequestManagerFragment(com.bumptech.glide.manager.SupportRequestManagerFragment) -> b
+    void onAttach(android.app.Activity) -> a
+    void onDetach() -> p
+    void onStart() -> i
+    void onStop() -> l
+    void onDestroy() -> n
+    void onLowMemory() -> onLowMemory
+com.bumptech.glide.manager.SupportRequestManagerFragment$1 -> com.bumptech.glide.d.s:
+com.bumptech.glide.manager.SupportRequestManagerFragment$SupportFragmentRequestManagerTreeNode -> com.bumptech.glide.d.t:
+    com.bumptech.glide.manager.SupportRequestManagerFragment this$0 -> a
+com.bumptech.glide.module.GlideModule -> com.bumptech.glide.e.a:
+    void applyOptions(android.content.Context,com.bumptech.glide.GlideBuilder) -> a
+    void registerComponents(android.content.Context,com.bumptech.glide.Glide) -> a
+com.bumptech.glide.module.ManifestParser -> com.bumptech.glide.e.b:
+    android.content.Context context -> a
+    java.util.List parse() -> a
+    com.bumptech.glide.module.GlideModule parseModule(java.lang.String) -> a
+com.bumptech.glide.provider.ChildLoadProvider -> com.bumptech.glide.f.a:
+    com.bumptech.glide.provider.LoadProvider parent -> a
+    com.bumptech.glide.load.ResourceDecoder cacheDecoder -> b
+    com.bumptech.glide.load.ResourceDecoder sourceDecoder -> c
+    com.bumptech.glide.load.ResourceEncoder encoder -> d
+    com.bumptech.glide.load.resource.transcode.ResourceTranscoder transcoder -> e
+    com.bumptech.glide.load.Encoder sourceEncoder -> f
+    com.bumptech.glide.load.model.ModelLoader getModelLoader() -> e
+    void setSourceDecoder(com.bumptech.glide.load.ResourceDecoder) -> a
+    void setSourceEncoder(com.bumptech.glide.load.Encoder) -> a
+    com.bumptech.glide.load.ResourceDecoder getCacheDecoder() -> a
+    com.bumptech.glide.load.ResourceDecoder getSourceDecoder() -> b
+    com.bumptech.glide.load.Encoder getSourceEncoder() -> c
+    com.bumptech.glide.load.ResourceEncoder getEncoder() -> d
+    com.bumptech.glide.load.resource.transcode.ResourceTranscoder getTranscoder() -> f
+    com.bumptech.glide.provider.ChildLoadProvider clone() -> g
+    java.lang.Object clone() -> clone
+com.bumptech.glide.provider.DataLoadProvider -> com.bumptech.glide.f.b:
+    com.bumptech.glide.load.ResourceDecoder getCacheDecoder() -> a
+    com.bumptech.glide.load.ResourceDecoder getSourceDecoder() -> b
+    com.bumptech.glide.load.Encoder getSourceEncoder() -> c
+    com.bumptech.glide.load.ResourceEncoder getEncoder() -> d
+com.bumptech.glide.provider.DataLoadProviderRegistry -> com.bumptech.glide.f.c:
+    com.bumptech.glide.util.MultiClassKey GET_KEY -> a
+    java.util.Map providers -> b
+    void register(java.lang.Class,java.lang.Class,com.bumptech.glide.provider.DataLoadProvider) -> a
+    com.bumptech.glide.provider.DataLoadProvider get(java.lang.Class,java.lang.Class) -> a
+com.bumptech.glide.provider.EmptyDataLoadProvider -> com.bumptech.glide.f.d:
+    com.bumptech.glide.provider.DataLoadProvider EMPTY_DATA_LOAD_PROVIDER -> a
+    com.bumptech.glide.provider.DataLoadProvider get() -> e
+    com.bumptech.glide.load.ResourceDecoder getCacheDecoder() -> a
+    com.bumptech.glide.load.ResourceDecoder getSourceDecoder() -> b
+    com.bumptech.glide.load.Encoder getSourceEncoder() -> c
+    com.bumptech.glide.load.ResourceEncoder getEncoder() -> d
+com.bumptech.glide.provider.FixedLoadProvider -> com.bumptech.glide.f.e:
+    com.bumptech.glide.load.model.ModelLoader modelLoader -> a
+    com.bumptech.glide.load.resource.transcode.ResourceTranscoder transcoder -> b
+    com.bumptech.glide.provider.DataLoadProvider dataLoadProvider -> c
+    com.bumptech.glide.load.model.ModelLoader getModelLoader() -> e
+    com.bumptech.glide.load.resource.transcode.ResourceTranscoder getTranscoder() -> f
+    com.bumptech.glide.load.ResourceDecoder getCacheDecoder() -> a
+    com.bumptech.glide.load.ResourceDecoder getSourceDecoder() -> b
+    com.bumptech.glide.load.Encoder getSourceEncoder() -> c
+    com.bumptech.glide.load.ResourceEncoder getEncoder() -> d
+com.bumptech.glide.provider.LoadProvider -> com.bumptech.glide.f.f:
+    com.bumptech.glide.load.model.ModelLoader getModelLoader() -> e
+    com.bumptech.glide.load.resource.transcode.ResourceTranscoder getTranscoder() -> f
+com.bumptech.glide.request.GenericRequest -> com.bumptech.glide.g.a:
+    java.util.Queue REQUEST_POOL -> a
+    java.lang.String tag -> b
+    com.bumptech.glide.load.Key signature -> c
+    android.graphics.drawable.Drawable fallbackDrawable -> d
+    int fallbackResourceId -> e
+    int placeholderResourceId -> f
+    int errorResourceId -> g
+    android.content.Context context -> h
+    com.bumptech.glide.load.Transformation transformation -> i
+    com.bumptech.glide.provider.LoadProvider loadProvider -> j
+    com.bumptech.glide.request.RequestCoordinator requestCoordinator -> k
+    java.lang.Object model -> l
+    java.lang.Class transcodeClass -> m
+    boolean isMemoryCacheable -> n
+    com.bumptech.glide.Priority priority -> o
+    com.bumptech.glide.request.target.Target target -> p
+    com.bumptech.glide.request.RequestListener requestListener -> q
+    float sizeMultiplier -> r
+    com.bumptech.glide.load.engine.Engine engine -> s
+    com.bumptech.glide.request.animation.GlideAnimationFactory animationFactory -> t
+    int overrideWidth -> u
+    int overrideHeight -> v
+    com.bumptech.glide.load.engine.DiskCacheStrategy diskCacheStrategy -> w
+    android.graphics.drawable.Drawable placeholderDrawable -> x
+    android.graphics.drawable.Drawable errorDrawable -> y
+    boolean loadedFromMemoryCache -> z
+    com.bumptech.glide.load.engine.Resource resource -> A
+    com.bumptech.glide.load.engine.Engine$LoadStatus loadStatus -> B
+    long startTime -> C
+    com.bumptech.glide.request.GenericRequest$Status status -> D
+    com.bumptech.glide.request.GenericRequest obtain(com.bumptech.glide.provider.LoadProvider,java.lang.Object,com.bumptech.glide.load.Key,android.content.Context,com.bumptech.glide.Priority,com.bumptech.glide.request.target.Target,float,android.graphics.drawable.Drawable,int,android.graphics.drawable.Drawable,int,android.graphics.drawable.Drawable,int,com.bumptech.glide.request.RequestListener,com.bumptech.glide.request.RequestCoordinator,com.bumptech.glide.load.engine.Engine,com.bumptech.glide.load.Transformation,java.lang.Class,boolean,com.bumptech.glide.request.animation.GlideAnimationFactory,int,int,com.bumptech.glide.load.engine.DiskCacheStrategy) -> a
+    void recycle() -> a
+    void init(com.bumptech.glide.provider.LoadProvider,java.lang.Object,com.bumptech.glide.load.Key,android.content.Context,com.bumptech.glide.Priority,com.bumptech.glide.request.target.Target,float,android.graphics.drawable.Drawable,int,android.graphics.drawable.Drawable,int,android.graphics.drawable.Drawable,int,com.bumptech.glide.request.RequestListener,com.bumptech.glide.request.RequestCoordinator,com.bumptech.glide.load.engine.Engine,com.bumptech.glide.load.Transformation,java.lang.Class,boolean,com.bumptech.glide.request.animation.GlideAnimationFactory,int,int,com.bumptech.glide.load.engine.DiskCacheStrategy) -> b
+    void check(java.lang.String,java.lang.Object,java.lang.String) -> a
+    void begin() -> b
+    void cancel() -> c
+    void clear() -> d
+    void pause() -> e
+    void releaseResource(com.bumptech.glide.load.engine.Resource) -> b
+    boolean isRunning() -> f
+    boolean isComplete() -> g
+    boolean isResourceSet() -> h
+    boolean isCancelled() -> i
+    boolean isFailed() -> j
+    android.graphics.drawable.Drawable getFallbackDrawable() -> k
+    void setErrorPlaceholder(java.lang.Exception) -> b
+    android.graphics.drawable.Drawable getErrorDrawable() -> l
+    android.graphics.drawable.Drawable getPlaceholderDrawable() -> m
+    void onSizeReady(int,int) -> a
+    boolean canSetResource() -> n
+    boolean canNotifyStatusChanged() -> o
+    boolean isFirstReadyResource() -> p
+    void notifyLoadSuccess() -> q
+    void onResourceReady(com.bumptech.glide.load.engine.Resource) -> a
+    void onResourceReady(com.bumptech.glide.load.engine.Resource,java.lang.Object) -> a
+    void onException(java.lang.Exception) -> a
+    void logV(java.lang.String) -> a
+com.bumptech.glide.request.GenericRequest$Status -> com.bumptech.glide.g.b:
+    com.bumptech.glide.request.GenericRequest$Status PENDING -> a
+    com.bumptech.glide.request.GenericRequest$Status RUNNING -> b
+    com.bumptech.glide.request.GenericRequest$Status WAITING_FOR_SIZE -> c
+    com.bumptech.glide.request.GenericRequest$Status COMPLETE -> d
+    com.bumptech.glide.request.GenericRequest$Status FAILED -> e
+    com.bumptech.glide.request.GenericRequest$Status CANCELLED -> f
+    com.bumptech.glide.request.GenericRequest$Status CLEARED -> g
+    com.bumptech.glide.request.GenericRequest$Status PAUSED -> h
+    com.bumptech.glide.request.GenericRequest$Status[] $VALUES -> i
+    com.bumptech.glide.request.GenericRequest$Status[] values() -> values
+    com.bumptech.glide.request.GenericRequest$Status valueOf(java.lang.String) -> valueOf
+com.bumptech.glide.request.Request -> com.bumptech.glide.g.c:
+    void begin() -> b
+    void pause() -> e
+    void clear() -> d
+    boolean isRunning() -> f
+    boolean isComplete() -> g
+    boolean isResourceSet() -> h
+    boolean isCancelled() -> i
+    void recycle() -> a
+com.bumptech.glide.request.RequestCoordinator -> com.bumptech.glide.g.d:
+    boolean canSetImage(com.bumptech.glide.request.Request) -> a
+    boolean canNotifyStatusChanged(com.bumptech.glide.request.Request) -> b
+    boolean isAnyResourceSet() -> c
+    void onRequestSuccess(com.bumptech.glide.request.Request) -> c
+com.bumptech.glide.request.RequestListener -> com.bumptech.glide.g.e:
+    boolean onException(java.lang.Exception,java.lang.Object,com.bumptech.glide.request.target.Target,boolean) -> a
+    boolean onResourceReady(java.lang.Object,java.lang.Object,com.bumptech.glide.request.target.Target,boolean,boolean) -> a
+com.bumptech.glide.request.ResourceCallback -> com.bumptech.glide.g.f:
+    void onResourceReady(com.bumptech.glide.load.engine.Resource) -> a
+    void onException(java.lang.Exception) -> a
+com.bumptech.glide.request.ThumbnailRequestCoordinator -> com.bumptech.glide.g.g:
+    com.bumptech.glide.request.Request full -> a
+    com.bumptech.glide.request.Request thumb -> b
+    com.bumptech.glide.request.RequestCoordinator coordinator -> c
+    void setRequests(com.bumptech.glide.request.Request,com.bumptech.glide.request.Request) -> a
+    boolean canSetImage(com.bumptech.glide.request.Request) -> a
+    boolean parentCanSetImage() -> j
+    boolean canNotifyStatusChanged(com.bumptech.glide.request.Request) -> b
+    boolean parentCanNotifyStatusChanged() -> k
+    boolean isAnyResourceSet() -> c
+    void onRequestSuccess(com.bumptech.glide.request.Request) -> c
+    boolean parentIsAnyResourceSet() -> l
+    void begin() -> b
+    void pause() -> e
+    void clear() -> d
+    boolean isRunning() -> f
+    boolean isComplete() -> g
+    boolean isResourceSet() -> h
+    boolean isCancelled() -> i
+    void recycle() -> a
+com.bumptech.glide.request.animation.DrawableCrossFadeFactory -> com.bumptech.glide.g.a.a:
+    com.bumptech.glide.request.animation.ViewAnimationFactory animationFactory -> a
+    int duration -> b
+    com.bumptech.glide.request.animation.DrawableCrossFadeViewAnimation firstResourceAnimation -> c
+    com.bumptech.glide.request.animation.DrawableCrossFadeViewAnimation secondResourceAnimation -> d
+    com.bumptech.glide.request.animation.GlideAnimation build(boolean,boolean) -> a
+    com.bumptech.glide.request.animation.GlideAnimation getFirstResourceAnimation() -> a
+    com.bumptech.glide.request.animation.GlideAnimation getSecondResourceAnimation() -> b
+com.bumptech.glide.request.animation.DrawableCrossFadeFactory$DefaultAnimationFactory -> com.bumptech.glide.g.a.b:
+    int duration -> a
+    android.view.animation.Animation build() -> a
+com.bumptech.glide.request.animation.DrawableCrossFadeViewAnimation -> com.bumptech.glide.g.a.c:
+    com.bumptech.glide.request.animation.GlideAnimation defaultAnimation -> a
+    int duration -> b
+    boolean animate(android.graphics.drawable.Drawable,com.bumptech.glide.request.animation.GlideAnimation$ViewAdapter) -> a
+    boolean animate(java.lang.Object,com.bumptech.glide.request.animation.GlideAnimation$ViewAdapter) -> a
+com.bumptech.glide.request.animation.GlideAnimation -> com.bumptech.glide.g.a.d:
+    boolean animate(java.lang.Object,com.bumptech.glide.request.animation.GlideAnimation$ViewAdapter) -> a
+com.bumptech.glide.request.animation.GlideAnimation$ViewAdapter -> com.bumptech.glide.g.a.e:
+    android.view.View getView() -> a
+    android.graphics.drawable.Drawable getCurrentDrawable() -> b
+    void setDrawable(android.graphics.drawable.Drawable) -> a
+com.bumptech.glide.request.animation.GlideAnimationFactory -> com.bumptech.glide.g.a.f:
+    com.bumptech.glide.request.animation.GlideAnimation build(boolean,boolean) -> a
+com.bumptech.glide.request.animation.NoAnimation -> com.bumptech.glide.g.a.g:
+    com.bumptech.glide.request.animation.NoAnimation NO_ANIMATION -> a
+    com.bumptech.glide.request.animation.GlideAnimationFactory NO_ANIMATION_FACTORY -> b
+    com.bumptech.glide.request.animation.GlideAnimationFactory getFactory() -> a
+    com.bumptech.glide.request.animation.GlideAnimation get() -> b
+    boolean animate(java.lang.Object,com.bumptech.glide.request.animation.GlideAnimation$ViewAdapter) -> a
+    com.bumptech.glide.request.animation.NoAnimation access$000() -> c
+com.bumptech.glide.request.animation.NoAnimation$NoAnimationFactory -> com.bumptech.glide.g.a.h:
+    com.bumptech.glide.request.animation.GlideAnimation build(boolean,boolean) -> a
+com.bumptech.glide.request.animation.ViewAnimation -> com.bumptech.glide.g.a.i:
+    com.bumptech.glide.request.animation.ViewAnimation$AnimationFactory animationFactory -> a
+    boolean animate(java.lang.Object,com.bumptech.glide.request.animation.GlideAnimation$ViewAdapter) -> a
+com.bumptech.glide.request.animation.ViewAnimation$AnimationFactory -> com.bumptech.glide.g.a.j:
+    android.view.animation.Animation build() -> a
+com.bumptech.glide.request.animation.ViewAnimationFactory -> com.bumptech.glide.g.a.k:
+    com.bumptech.glide.request.animation.ViewAnimation$AnimationFactory animationFactory -> a
+    com.bumptech.glide.request.animation.GlideAnimation glideAnimation -> b
+    com.bumptech.glide.request.animation.GlideAnimation build(boolean,boolean) -> a
+com.bumptech.glide.request.target.BaseTarget -> com.bumptech.glide.g.b.a:
+    com.bumptech.glide.request.Request request -> a
+    void setRequest(com.bumptech.glide.request.Request) -> a
+    com.bumptech.glide.request.Request getRequest() -> c
+    void onLoadCleared(android.graphics.drawable.Drawable) -> b
+    void onLoadStarted(android.graphics.drawable.Drawable) -> c
+    void onLoadFailed(java.lang.Exception,android.graphics.drawable.Drawable) -> a
+    void onStart() -> d
+    void onStop() -> e
+    void onDestroy() -> f
+com.bumptech.glide.request.target.BitmapImageViewTarget -> com.bumptech.glide.g.b.b:
+    void setResource(android.graphics.Bitmap) -> a
+    void setResource(java.lang.Object) -> a
+com.bumptech.glide.request.target.DrawableImageViewTarget -> com.bumptech.glide.g.b.c:
+    void setResource(android.graphics.drawable.Drawable) -> d
+    void setResource(java.lang.Object) -> a
+com.bumptech.glide.request.target.GlideDrawableImageViewTarget -> com.bumptech.glide.g.b.d:
+    int maxLoopCount -> b
+    com.bumptech.glide.load.resource.drawable.GlideDrawable resource -> c
+    void onResourceReady(com.bumptech.glide.load.resource.drawable.GlideDrawable,com.bumptech.glide.request.animation.GlideAnimation) -> a
+    void setResource(com.bumptech.glide.load.resource.drawable.GlideDrawable) -> a
+    void onStart() -> d
+    void onStop() -> e
+    void setResource(java.lang.Object) -> a
+    void onResourceReady(java.lang.Object,com.bumptech.glide.request.animation.GlideAnimation) -> a
+com.bumptech.glide.request.target.ImageViewTarget -> com.bumptech.glide.g.b.e:
+    android.graphics.drawable.Drawable getCurrentDrawable() -> b
+    void setDrawable(android.graphics.drawable.Drawable) -> a
+    void onLoadStarted(android.graphics.drawable.Drawable) -> c
+    void onLoadFailed(java.lang.Exception,android.graphics.drawable.Drawable) -> a
+    void onLoadCleared(android.graphics.drawable.Drawable) -> b
+    void onResourceReady(java.lang.Object,com.bumptech.glide.request.animation.GlideAnimation) -> a
+    void setResource(java.lang.Object) -> a
+com.bumptech.glide.request.target.ImageViewTargetFactory -> com.bumptech.glide.g.b.f:
+    com.bumptech.glide.request.target.Target buildTarget(android.widget.ImageView,java.lang.Class) -> a
+com.bumptech.glide.request.target.SimpleTarget -> com.bumptech.glide.g.b.g:
+    int width -> a
+    int height -> b
+    void getSize(com.bumptech.glide.request.target.SizeReadyCallback) -> a
+com.bumptech.glide.request.target.SizeReadyCallback -> com.bumptech.glide.g.b.h:
+    void onSizeReady(int,int) -> a
+com.bumptech.glide.request.target.SquaringDrawable -> com.bumptech.glide.g.b.i:
+    com.bumptech.glide.load.resource.drawable.GlideDrawable wrapped -> a
+    com.bumptech.glide.request.target.SquaringDrawable$State state -> b
+    boolean mutated -> c
+    void setBounds(int,int,int,int) -> setBounds
+    void setBounds(android.graphics.Rect) -> setBounds
+    void setChangingConfigurations(int) -> setChangingConfigurations
+    int getChangingConfigurations() -> getChangingConfigurations
+    void setDither(boolean) -> setDither
+    void setFilterBitmap(boolean) -> setFilterBitmap
+    android.graphics.drawable.Drawable$Callback getCallback() -> getCallback
+    int getAlpha() -> getAlpha
+    void setColorFilter(int,android.graphics.PorterDuff$Mode) -> setColorFilter
+    void clearColorFilter() -> clearColorFilter
+    android.graphics.drawable.Drawable getCurrent() -> getCurrent
+    boolean setVisible(boolean,boolean) -> setVisible
+    int getIntrinsicWidth() -> getIntrinsicWidth
+    int getIntrinsicHeight() -> getIntrinsicHeight
+    int getMinimumWidth() -> getMinimumWidth
+    int getMinimumHeight() -> getMinimumHeight
+    boolean getPadding(android.graphics.Rect) -> getPadding
+    void invalidateSelf() -> invalidateSelf
+    void unscheduleSelf(java.lang.Runnable) -> unscheduleSelf
+    void scheduleSelf(java.lang.Runnable,long) -> scheduleSelf
+    void draw(android.graphics.Canvas) -> draw
+    void setAlpha(int) -> setAlpha
+    void setColorFilter(android.graphics.ColorFilter) -> setColorFilter
+    int getOpacity() -> getOpacity
+    boolean isAnimated() -> a
+    void setLoopCount(int) -> a
+    void start() -> start
+    void stop() -> stop
+    boolean isRunning() -> isRunning
+    android.graphics.drawable.Drawable mutate() -> mutate
+    android.graphics.drawable.Drawable$ConstantState getConstantState() -> getConstantState
+com.bumptech.glide.request.target.SquaringDrawable$State -> com.bumptech.glide.g.b.j:
+    android.graphics.drawable.Drawable$ConstantState wrapped -> a
+    int side -> b
+    android.graphics.drawable.Drawable newDrawable() -> newDrawable
+    android.graphics.drawable.Drawable newDrawable(android.content.res.Resources) -> newDrawable
+    int getChangingConfigurations() -> getChangingConfigurations
+    android.graphics.drawable.Drawable$ConstantState access$000(com.bumptech.glide.request.target.SquaringDrawable$State) -> a
+    int access$100(com.bumptech.glide.request.target.SquaringDrawable$State) -> b
+com.bumptech.glide.request.target.Target -> com.bumptech.glide.g.b.k:
+    void onLoadStarted(android.graphics.drawable.Drawable) -> c
+    void onLoadFailed(java.lang.Exception,android.graphics.drawable.Drawable) -> a
+    void onResourceReady(java.lang.Object,com.bumptech.glide.request.animation.GlideAnimation) -> a
+    void onLoadCleared(android.graphics.drawable.Drawable) -> b
+    void getSize(com.bumptech.glide.request.target.SizeReadyCallback) -> a
+    void setRequest(com.bumptech.glide.request.Request) -> a
+    com.bumptech.glide.request.Request getRequest() -> c
+com.bumptech.glide.request.target.ViewTarget -> com.bumptech.glide.g.b.l:
+    boolean isTagUsedAtLeastOnce -> b
+    java.lang.Integer tagId -> c
+    android.view.View view -> a
+    com.bumptech.glide.request.target.ViewTarget$SizeDeterminer sizeDeterminer -> d
+    android.view.View getView() -> a
+    void getSize(com.bumptech.glide.request.target.SizeReadyCallback) -> a
+    void setRequest(com.bumptech.glide.request.Request) -> a
+    com.bumptech.glide.request.Request getRequest() -> c
+    void setTag(java.lang.Object) -> a
+    java.lang.Object getTag() -> b
+    java.lang.String toString() -> toString
+com.bumptech.glide.request.target.ViewTarget$SizeDeterminer -> com.bumptech.glide.g.b.m:
+    android.view.View view -> a
+    java.util.List cbs -> b
+    com.bumptech.glide.request.target.ViewTarget$SizeDeterminer$SizeDeterminerLayoutListener layoutListener -> c
+    android.graphics.Point displayDimens -> d
+    void notifyCbs(int,int) -> a
+    void checkCurrentDimens() -> a
+    void getSize(com.bumptech.glide.request.target.SizeReadyCallback) -> a
+    int getViewHeightOrParam() -> b
+    int getViewWidthOrParam() -> c
+    int getSizeForParam(int,boolean) -> a
+    android.graphics.Point getDisplayDimens() -> d
+    boolean isSizeValid(int) -> a
+    void access$000(com.bumptech.glide.request.target.ViewTarget$SizeDeterminer) -> a
+com.bumptech.glide.request.target.ViewTarget$SizeDeterminer$SizeDeterminerLayoutListener -> com.bumptech.glide.g.b.n:
+    java.lang.ref.WeakReference sizeDeterminerRef -> a
+    boolean onPreDraw() -> onPreDraw
+com.bumptech.glide.signature.EmptySignature -> com.bumptech.glide.h.a:
+    com.bumptech.glide.signature.EmptySignature EMPTY_KEY -> a
+    com.bumptech.glide.signature.EmptySignature obtain() -> a
+    void updateDiskCacheKey(java.security.MessageDigest) -> a
+com.bumptech.glide.util.ByteArrayPool -> com.bumptech.glide.i.a:
+    java.util.Queue tempQueue -> a
+    com.bumptech.glide.util.ByteArrayPool BYTE_ARRAY_POOL -> b
+    com.bumptech.glide.util.ByteArrayPool get() -> a
+    byte[] getBytes() -> b
+    boolean releaseBytes(byte[]) -> a
+com.bumptech.glide.util.ContentLengthInputStream -> com.bumptech.glide.i.b:
+    long contentLength -> a
+    int readSoFar -> b
+    java.io.InputStream obtain(java.io.InputStream,long) -> a
+    int available() -> available
+    int read() -> read
+    int read(byte[]) -> read
+    int read(byte[],int,int) -> read
+    int checkReadSoFarOrThrow(int) -> a
+com.bumptech.glide.util.ExceptionCatchingInputStream -> com.bumptech.glide.i.c:
+    java.util.Queue QUEUE -> a
+    java.io.InputStream wrapped -> b
+    java.io.IOException exception -> c
+    com.bumptech.glide.util.ExceptionCatchingInputStream obtain(java.io.InputStream) -> a
+    void setInputStream(java.io.InputStream) -> b
+    int available() -> available
+    void close() -> close
+    void mark(int) -> mark
+    boolean markSupported() -> markSupported
+    int read(byte[]) -> read
+    int read(byte[],int,int) -> read
+    void reset() -> reset
+    long skip(long) -> skip
+    int read() -> read
+    java.io.IOException getException() -> a
+    void release() -> b
+com.bumptech.glide.util.LogTime -> com.bumptech.glide.i.d:
+    double MILLIS_MULTIPLIER -> a
+    long getLogTime() -> a
+    double getElapsedMillis(long) -> a
+com.bumptech.glide.util.LruCache -> com.bumptech.glide.i.e:
+    java.util.LinkedHashMap cache -> a
+    int maxSize -> b
+    int initialMaxSize -> c
+    int currentSize -> d
+    int getSize(java.lang.Object) -> a
+    void onItemEvicted(java.lang.Object,java.lang.Object) -> a
+    int getCurrentSize() -> b
+    java.lang.Object get(java.lang.Object) -> b
+    java.lang.Object put(java.lang.Object,java.lang.Object) -> b
+    java.lang.Object remove(java.lang.Object) -> c
+    void clearMemory() -> a
+    void trimToSize(int) -> b
+    void evict() -> c
+com.bumptech.glide.util.MarkEnforcingInputStream -> com.bumptech.glide.i.f:
+    int availableBytes -> a
+    void mark(int) -> mark
+    int read() -> read
+    int read(byte[],int,int) -> read
+    void reset() -> reset
+    long skip(long) -> skip
+    int available() -> available
+    long getBytesToRead(long) -> a
+    void updateAvailableBytesAfterRead(long) -> b
+com.bumptech.glide.util.MultiClassKey -> com.bumptech.glide.i.g:
+    java.lang.Class first -> a
+    java.lang.Class second -> b
+    void set(java.lang.Class,java.lang.Class) -> a
+    java.lang.String toString() -> toString
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+com.bumptech.glide.util.Util -> com.bumptech.glide.i.h:
+    char[] HEX_CHAR_ARRAY -> a
+    char[] SHA_256_CHARS -> b
+    char[] SHA_1_CHARS -> c
+    java.lang.String sha256BytesToHex(byte[]) -> a
+    java.lang.String bytesToHex(byte[],char[]) -> a
+    int getBitmapByteSize(android.graphics.Bitmap) -> a
+    int getBitmapByteSize(int,int,android.graphics.Bitmap$Config) -> a
+    int getBytesPerPixel(android.graphics.Bitmap$Config) -> a
+    boolean isValidDimensions(int,int) -> a
+    boolean isValidDimension(int) -> b
+    void assertMainThread() -> a
+    boolean isOnMainThread() -> b
+    boolean isOnBackgroundThread() -> c
+    java.util.Queue createQueue(int) -> a
+    java.util.List getSnapshot(java.util.Collection) -> a
+com.bumptech.glide.util.Util$1 -> com.bumptech.glide.i.i:
+    int[] $SwitchMap$android$graphics$Bitmap$Config -> a
 com.google.gson.DefaultDateTypeAdapter -> com.google.gson.DefaultDateTypeAdapter:
     java.text.DateFormat enUsFormat -> enUsFormat
     java.text.DateFormat localFormat -> localFormat
@@ -12692,6 +14970,8 @@ com.ihongqiqu.Identify.R$drawable -> com.ihongqiqu.Identify.R$drawable:
     int material_card_nos_pressed -> material_card_nos_pressed
     int notification_template_icon_bg -> notification_template_icon_bg
     int progressbar_webview -> progressbar_webview
+    int sign_bg_bottom -> sign_bg_bottom
+    int sign_bg_top -> sign_bg_top
     int tb_munion_icon -> tb_munion_icon
     int tb_munion_item_selector -> tb_munion_item_selector
     int umeng_common_gradient_green -> umeng_common_gradient_green
@@ -12718,6 +14998,7 @@ com.ihongqiqu.Identify.R$drawable -> com.ihongqiqu.Identify.R$drawable:
     int umeng_update_dialog_bg -> umeng_update_dialog_bg
     int umeng_update_title_bg -> umeng_update_title_bg
     int umeng_update_wifi_disable -> umeng_update_wifi_disable
+    int v_border_bg -> v_border_bg
 com.ihongqiqu.Identify.R$id -> com.ihongqiqu.Identify.R$id:
     int action0 -> action0
     int action_bar -> action_bar
@@ -12772,9 +15053,12 @@ com.ihongqiqu.Identify.R$id -> com.ihongqiqu.Identify.R$id:
     int image -> image
     int info -> info
     int item_touch_helper_previous_elevation -> item_touch_helper_previous_elevation
+    int iv_bg_bottom -> iv_bg_bottom
+    int iv_bg_top -> iv_bg_top
     int iv_id_clear -> iv_id_clear
     int iv_ip_clear -> iv_ip_clear
     int iv_phone_clear -> iv_phone_clear
+    int iv_picture -> iv_picture
     int layout_root -> layout_root
     int line1 -> line1
     int line3 -> line3
@@ -12834,6 +15118,8 @@ com.ihongqiqu.Identify.R$id -> com.ihongqiqu.Identify.R$id:
     int tv_birthday -> tv_birthday
     int tv_carrier -> tv_carrier
     int tv_contact -> tv_contact
+    int tv_content -> tv_content
+    int tv_day -> tv_day
     int tv_developer -> tv_developer
     int tv_homepage -> tv_homepage
     int tv_id -> tv_id
@@ -12845,14 +15131,17 @@ com.ihongqiqu.Identify.R$id -> com.ihongqiqu.Identify.R$id:
     int tv_lottery_result -> tv_lottery_result
     int tv_lottery_time -> tv_lottery_time
     int tv_lottery_type -> tv_lottery_type
+    int tv_note -> tv_note
     int tv_phone -> tv_phone
     int tv_phone_invalid -> tv_phone_invalid
     int tv_postcode -> tv_postcode
     int tv_province -> tv_province
     int tv_sex -> tv_sex
     int tv_share -> tv_share
+    int tv_sign -> tv_sign
     int tv_translation -> tv_translation
     int tv_update -> tv_update
+    int tv_year -> tv_year
     int umeng_common_icon_view -> umeng_common_icon_view
     int umeng_common_notification -> umeng_common_notification
     int umeng_common_notification_controller -> umeng_common_notification_controller
@@ -12871,6 +15160,7 @@ com.ihongqiqu.Identify.R$id -> com.ihongqiqu.Identify.R$id:
     int umeng_update_wifi_indicator -> umeng_update_wifi_indicator
     int up -> up
     int useLogo -> useLogo
+    int v_border -> v_border
     int webView -> webView
     int withText -> withText
     int wrap_content -> wrap_content
@@ -12916,6 +15206,7 @@ com.ihongqiqu.Identify.R$layout -> com.ihongqiqu.Identify.R$layout:
     int activity_main -> activity_main
     int activity_phone -> activity_phone
     int activity_setting -> activity_setting
+    int activity_sign -> activity_sign
     int item_lottery -> item_lottery
     int item_lottery_detail -> item_lottery_detail
     int notification_media_action -> notification_media_action
@@ -13609,10 +15900,10 @@ com.ihongqiqu.Identify.activity.BaseActivity -> com.ihongqiqu.Identify.activity.
     void setContentView(android.view.View,android.view.ViewGroup$LayoutParams) -> setContentView
     void startActivity(android.content.Intent,android.os.Bundle) -> startActivity
     void startActivityForResult(android.content.Intent,int,android.os.Bundle) -> startActivityForResult
-    boolean isWindowTranslucentNavigation() -> j
-    void showProgressDialog() -> k
-    void hideProgressDialog() -> l
-    void hideKeyboard() -> m
+    boolean isWindowTranslucentNavigation() -> k
+    void showProgressDialog() -> l
+    void hideProgressDialog() -> m
+    void hideKeyboard() -> n
     void onResume() -> onResume
     void onPause() -> onPause
     void onDestroy() -> onDestroy
@@ -13659,7 +15950,7 @@ com.ihongqiqu.Identify.activity.HtmlActivity -> com.ihongqiqu.Identify.activity.
     android.webkit.WebChromeClient webChromeClient -> t
     void launch(android.app.Activity,java.lang.String) -> a
     void onCreate(android.os.Bundle) -> onCreate
-    void init() -> n
+    void init() -> o
     void onBackPressed() -> onBackPressed
 com.ihongqiqu.Identify.activity.HtmlActivity$$ViewBinder -> com.ihongqiqu.Identify.activity.HtmlActivity$$ViewBinder:
     void bind(butterknife.ButterKnife$Finder,com.ihongqiqu.Identify.activity.HtmlActivity,java.lang.Object) -> bind
@@ -13748,12 +16039,13 @@ com.ihongqiqu.Identify.activity.IpActivity$4 -> com.ihongqiqu.Identify.activity.
     com.ihongqiqu.Identify.activity.IpActivity this$0 -> a
     void onErrorResponse(com.android.volley.VolleyError) -> onErrorResponse
 com.ihongqiqu.Identify.activity.LotteryActivity -> com.ihongqiqu.Identify.activity.LotteryActivity:
-    java.lang.String URL_LOTTERY_LIST -> r
+    java.lang.String URL_LOTTERY_LIST -> s
     android.support.v7.widget.RecyclerView rvLottery -> rvLottery
     android.support.v4.widget.SwipeRefreshLayout swipeRefreshLayout -> swipeRefreshLayout
+    boolean isFirst -> r
     void launch(android.app.Activity) -> a
     void onCreate(android.os.Bundle) -> onCreate
-    void requestLotteryList() -> n
+    void requestLotteryList() -> o
     void onRefresh() -> b_
 com.ihongqiqu.Identify.activity.LotteryActivity$$ViewBinder -> com.ihongqiqu.Identify.activity.LotteryActivity$$ViewBinder:
     void bind(butterknife.ButterKnife$Finder,com.ihongqiqu.Identify.activity.LotteryActivity,java.lang.Object) -> bind
@@ -13793,11 +16085,12 @@ com.ihongqiqu.Identify.activity.LotteryActivity$LotteryAdapter$LotteryViewHolder
     void unbind(java.lang.Object) -> unbind
     void bind(butterknife.ButterKnife$Finder,java.lang.Object,java.lang.Object) -> bind
 com.ihongqiqu.Identify.activity.LotteryDetailActivity -> com.ihongqiqu.Identify.activity.LotteryDetailActivity:
-    java.lang.String URL_LOTTERY_DETAIL -> t
+    java.lang.String URL_LOTTERY_DETAIL -> u
     android.support.v4.widget.SwipeRefreshLayout swipeRefreshLayout -> swipeRefreshLayout
     android.support.v7.widget.RecyclerView rvLottery -> rvLottery
     java.lang.String code -> r
     java.lang.String lotteryName -> s
+    boolean isFirst -> t
     void launch(android.app.Activity,java.lang.String,java.lang.String) -> a
     void onCreate(android.os.Bundle) -> onCreate
     void requestLotterDetail(java.lang.String) -> b
@@ -13841,7 +16134,7 @@ com.ihongqiqu.Identify.activity.LotteryDetailActivity$LotteryDetailAdapter$Lotte
     void bind(butterknife.ButterKnife$Finder,java.lang.Object,java.lang.Object) -> bind
 com.ihongqiqu.Identify.activity.MainActivity -> com.ihongqiqu.Identify.activity.MainActivity:
     void onCreate(android.os.Bundle) -> onCreate
-    void checkVersion() -> n
+    void checkVersion() -> o
     void showUpdateDialog(com.umeng.update.UpdateResponse) -> a
     void onClick(android.view.View) -> onClick
     boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
@@ -13902,10 +16195,10 @@ com.ihongqiqu.Identify.activity.SettingActivity -> com.ihongqiqu.Identify.activi
     void launch(android.app.Activity) -> a
     void onCreate(android.os.Bundle) -> onCreate
     void onClick(android.view.View) -> onClick
-    void checkVersion() -> n
+    void checkVersion() -> o
     void showUpdateDialog(com.umeng.update.UpdateResponse) -> a
-    void share() -> o
-    void sendMail() -> p
+    void share() -> p
+    void sendMail() -> q
     void access$000(com.ihongqiqu.Identify.activity.SettingActivity,com.umeng.update.UpdateResponse) -> a
 com.ihongqiqu.Identify.activity.SettingActivity$1 -> com.ihongqiqu.Identify.activity.aj:
     com.ihongqiqu.Identify.activity.SettingActivity this$0 -> a
@@ -13922,6 +16215,31 @@ com.ihongqiqu.Identify.activity.SettingActivity$3$1 -> com.ihongqiqu.Identify.ac
     void OnDownloadStart() -> a
     void OnDownloadUpdate(int) -> a
     void OnDownloadEnd(int,java.lang.String) -> a
+com.ihongqiqu.Identify.activity.SignActivity -> com.ihongqiqu.Identify.activity.SignActivity:
+    java.lang.String URL_SIGN -> r
+    android.widget.ImageView ivPicture -> ivPicture
+    android.widget.ImageView ivBgBottom -> ivBgBottom
+    android.widget.ImageView ivBgTop -> ivBgTop
+    android.widget.TextView tvDay -> tvDay
+    android.widget.TextView tvYear -> tvYear
+    android.widget.TextView tvContent -> tvContent
+    android.widget.TextView tvNote -> tvNote
+    android.widget.TextView tvTranslation -> tvTranslation
+    void launch(android.app.Activity) -> a
+    void onCreate(android.os.Bundle) -> onCreate
+    void requestSignInfo() -> o
+com.ihongqiqu.Identify.activity.SignActivity$$ViewBinder -> com.ihongqiqu.Identify.activity.SignActivity$$ViewBinder:
+    void bind(butterknife.ButterKnife$Finder,com.ihongqiqu.Identify.activity.SignActivity,java.lang.Object) -> bind
+    void unbind(com.ihongqiqu.Identify.activity.SignActivity) -> unbind
+    void unbind(java.lang.Object) -> unbind
+    void bind(butterknife.ButterKnife$Finder,java.lang.Object,java.lang.Object) -> bind
+com.ihongqiqu.Identify.activity.SignActivity$1 -> com.ihongqiqu.Identify.activity.an:
+    com.ihongqiqu.Identify.activity.SignActivity this$0 -> a
+    void onResponse(java.lang.String) -> a
+    void onResponse(java.lang.Object) -> onResponse
+com.ihongqiqu.Identify.activity.SignActivity$2 -> com.ihongqiqu.Identify.activity.ao:
+    com.ihongqiqu.Identify.activity.SignActivity this$0 -> a
+    void onErrorResponse(com.android.volley.VolleyError) -> onErrorResponse
 com.ihongqiqu.Identify.base.IdentifyApplication -> com.ihongqiqu.Identify.base.IdentifyApplication:
     void onCreate() -> onCreate
 com.ihongqiqu.Identify.entity.BaseEntity -> com.ihongqiqu.Identify.entity.a:
@@ -13993,6 +16311,56 @@ com.ihongqiqu.Identify.entity.PhoneInfo -> com.ihongqiqu.Identify.entity.PhoneIn
     java.lang.String getTelString() -> getTelString
     java.lang.String getProvince() -> getProvince
     java.lang.String getCarrier() -> getCarrier
+com.ihongqiqu.Identify.entity.SignInfo -> com.ihongqiqu.Identify.entity.SignInfo:
+    java.lang.String sid -> sid
+    java.lang.String tts -> tts
+    java.lang.String content -> content
+    java.lang.String note -> note
+    java.lang.String love -> love
+    java.lang.String translation -> translation
+    java.lang.String picture -> picture
+    java.lang.String picture2 -> picture2
+    java.lang.String caption -> caption
+    java.lang.String dateline -> dateline
+    java.lang.String s_pv -> s_pv
+    java.lang.String sp_pv -> sp_pv
+    java.lang.String fenxiang_img -> fenxiang_img
+    java.util.List tags -> tags
+    void setSid(java.lang.String) -> setSid
+    void setTts(java.lang.String) -> setTts
+    void setContent(java.lang.String) -> setContent
+    void setNote(java.lang.String) -> setNote
+    void setLove(java.lang.String) -> setLove
+    void setTranslation(java.lang.String) -> setTranslation
+    void setPicture(java.lang.String) -> setPicture
+    void setPicture2(java.lang.String) -> setPicture2
+    void setCaption(java.lang.String) -> setCaption
+    void setDateline(java.lang.String) -> setDateline
+    void setS_pv(java.lang.String) -> setS_pv
+    void setSp_pv(java.lang.String) -> setSp_pv
+    void setFenxiang_img(java.lang.String) -> setFenxiang_img
+    void setTags(java.util.List) -> setTags
+    java.lang.String getSid() -> getSid
+    java.lang.String getTts() -> getTts
+    java.lang.String getContent() -> getContent
+    java.lang.String getNote() -> getNote
+    java.lang.String getLove() -> getLove
+    java.lang.String getTranslation() -> getTranslation
+    java.lang.String getPicture() -> getPicture
+    java.lang.String getPicture2() -> getPicture2
+    java.lang.String getCaption() -> getCaption
+    java.lang.String getDateline() -> getDateline
+    java.lang.String getS_pv() -> getS_pv
+    java.lang.String getSp_pv() -> getSp_pv
+    java.lang.String getFenxiang_img() -> getFenxiang_img
+    java.util.List getTags() -> getTags
+com.ihongqiqu.Identify.entity.SignInfo$TagsEntity -> com.ihongqiqu.Identify.entity.SignInfo$TagsEntity:
+    java.lang.String id -> id
+    java.lang.String name -> name
+    void setId(java.lang.String) -> setId
+    void setName(java.lang.String) -> setName
+    java.lang.String getId() -> getId
+    java.lang.String getName() -> getName
 com.ihongqiqu.Identify.entity.TranslationInfo -> com.ihongqiqu.Identify.entity.TranslationInfo:
     com.ihongqiqu.Identify.entity.TranslationInfo$BasicEntity basic -> basic
     java.lang.String query -> query

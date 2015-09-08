@@ -73,4 +73,12 @@
    public <init>(org.json.JSONObject);
 }
 
+######## Umeng ########
+-keep public class * implements com.bumptech.glide.module.GlideModule
+-keep public enum com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$** {
+    **[] $VALUES;
+    public *;
+}
+
+
 -keep public class * extends com.ihongqiqu.Identify.entity.BaseEntity { *; }

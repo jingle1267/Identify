@@ -116,6 +116,9 @@ public class MainActivity extends BaseActivity {
             case R.id.tv_translation:
                 DictionaryActivity.launch(MainActivity.this);
                 break;
+            case R.id.tv_sign:
+                SignActivity.launch(MainActivity.this);
+                break;
         }
     }
 

@@ -56,6 +56,8 @@ public class LotteryDetailActivity extends BaseActivity implements SwipeRefreshL
     String code;
     String lotteryName;
 
+    boolean isFirst = true;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -85,13 +87,16 @@ public class LotteryDetailActivity extends BaseActivity implements SwipeRefreshL
         rvLottery.setLayoutManager(new LinearLayoutManager(LotteryDetailActivity.this));
         rvLottery.addItemDecoration(new DividerItemDecoration(LotteryDetailActivity.this, DividerItemDecoration.VERTICAL_LIST));
 
-        swipeRefreshLayout.setRefreshing(true);
+        // swipeRefreshLayout.setRefreshing(true);
         requestLotterDetail(code);
     }
     
     private void requestLotterDetail(String code) {
-        // showProgressDialog();
-        
+        if (isFirst) {
+            showProgressDialog();
+            isFirst = false;
+        }
+
         RequestQueue mQueue = Volley.newRequestQueue(this);
         
         StringRequest stringRequest = new StringRequest(Request.Method.GET,
@@ -139,14 +144,14 @@ public class LotteryDetailActivity extends BaseActivity implements SwipeRefreshL
                 }
 
                 swipeRefreshLayout.setRefreshing(false);
-                // hideProgressDialog();
+                hideProgressDialog();
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
                 Log.e("LotteryDetailActivity", "Volley : " + error.getMessage(), error);
                 swipeRefreshLayout.setRefreshing(false);
-                // hideProgressDialog();
+                hideProgressDialog();
             }
             
         }) {
