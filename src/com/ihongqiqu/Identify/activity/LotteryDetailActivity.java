@@ -37,7 +37,7 @@ import java.util.Map;
  * <p/>
  * Created by zhenguo on 9/4/15.
  */
-public class LotteryDetailActivity extends BaseActivity implements SwipeRefreshLayout.OnRefreshListener{
+public class LotteryDetailActivity extends BaseActivity implements SwipeRefreshLayout.OnRefreshListener {
 
     public static void launch(@NonNull Activity from, @NonNull String code, @NonNull String lotteryName) {
         Intent intent = new Intent(from, LotteryDetailActivity.class);
@@ -79,7 +79,8 @@ public class LotteryDetailActivity extends BaseActivity implements SwipeRefreshL
         }
 
         swipeRefreshLayout.setOnRefreshListener(LotteryDetailActivity.this);
-        swipeRefreshLayout.setColorSchemeResources(android.R.color.holo_blue_bright, android.R.color.holo_green_light, android.R.color.holo_orange_light, android.R.color.holo_red_light, R.color.app_color);
+        swipeRefreshLayout.setColorSchemeResources(R.color.holo_blue_bright, R.color.app_color, R.color.holo_orange_light, R.color.holo_red_light);
+        swipeRefreshLayout.setProgressBackgroundColorSchemeResource(R.color.divider_color);
 
         rvLottery.setLayoutManager(new LinearLayoutManager(LotteryDetailActivity.this));
         rvLottery.addItemDecoration(new DividerItemDecoration(LotteryDetailActivity.this, DividerItemDecoration.VERTICAL_LIST));

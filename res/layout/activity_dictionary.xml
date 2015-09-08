@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:weightSum="10"
-              android:padding="15dp"
+              android:padding="10dp"
               android:background="@color/bg_color"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
@@ -24,8 +24,8 @@
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginBottom="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
             android:background="@drawable/btn_query"
             >
 

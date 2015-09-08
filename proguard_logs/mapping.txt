@@ -12497,6 +12497,18 @@ com.ihongqiqu.Identify.R$color -> com.ihongqiqu.Identify.R$color:
     int highlighted_text_material_light -> highlighted_text_material_light
     int hint_foreground_material_dark -> hint_foreground_material_dark
     int hint_foreground_material_light -> hint_foreground_material_light
+    int holo_blue_bright -> holo_blue_bright
+    int holo_blue_dark -> holo_blue_dark
+    int holo_blue_light -> holo_blue_light
+    int holo_gray_bright -> holo_gray_bright
+    int holo_gray_light -> holo_gray_light
+    int holo_green_dark -> holo_green_dark
+    int holo_green_light -> holo_green_light
+    int holo_orange_dark -> holo_orange_dark
+    int holo_orange_light -> holo_orange_light
+    int holo_purple -> holo_purple
+    int holo_red_dark -> holo_red_dark
+    int holo_red_light -> holo_red_light
     int link_text_material_dark -> link_text_material_dark
     int link_text_material_light -> link_text_material_light
     int lite_blue -> lite_blue
@@ -13597,9 +13609,10 @@ com.ihongqiqu.Identify.activity.BaseActivity -> com.ihongqiqu.Identify.activity.
     void setContentView(android.view.View,android.view.ViewGroup$LayoutParams) -> setContentView
     void startActivity(android.content.Intent,android.os.Bundle) -> startActivity
     void startActivityForResult(android.content.Intent,int,android.os.Bundle) -> startActivityForResult
-    void showProgressDialog() -> j
-    void hideProgressDialog() -> k
-    void hideKeyboard() -> l
+    boolean isWindowTranslucentNavigation() -> j
+    void showProgressDialog() -> k
+    void hideProgressDialog() -> l
+    void hideKeyboard() -> m
     void onResume() -> onResume
     void onPause() -> onPause
     void onDestroy() -> onDestroy
@@ -13646,7 +13659,7 @@ com.ihongqiqu.Identify.activity.HtmlActivity -> com.ihongqiqu.Identify.activity.
     android.webkit.WebChromeClient webChromeClient -> t
     void launch(android.app.Activity,java.lang.String) -> a
     void onCreate(android.os.Bundle) -> onCreate
-    void init() -> m
+    void init() -> n
     void onBackPressed() -> onBackPressed
 com.ihongqiqu.Identify.activity.HtmlActivity$$ViewBinder -> com.ihongqiqu.Identify.activity.HtmlActivity$$ViewBinder:
     void bind(butterknife.ButterKnife$Finder,com.ihongqiqu.Identify.activity.HtmlActivity,java.lang.Object) -> bind
@@ -13740,7 +13753,7 @@ com.ihongqiqu.Identify.activity.LotteryActivity -> com.ihongqiqu.Identify.activi
     android.support.v4.widget.SwipeRefreshLayout swipeRefreshLayout -> swipeRefreshLayout
     void launch(android.app.Activity) -> a
     void onCreate(android.os.Bundle) -> onCreate
-    void requestLotteryList() -> m
+    void requestLotteryList() -> n
     void onRefresh() -> b_
 com.ihongqiqu.Identify.activity.LotteryActivity$$ViewBinder -> com.ihongqiqu.Identify.activity.LotteryActivity$$ViewBinder:
     void bind(butterknife.ButterKnife$Finder,com.ihongqiqu.Identify.activity.LotteryActivity,java.lang.Object) -> bind
@@ -13828,7 +13841,7 @@ com.ihongqiqu.Identify.activity.LotteryDetailActivity$LotteryDetailAdapter$Lotte
     void bind(butterknife.ButterKnife$Finder,java.lang.Object,java.lang.Object) -> bind
 com.ihongqiqu.Identify.activity.MainActivity -> com.ihongqiqu.Identify.activity.MainActivity:
     void onCreate(android.os.Bundle) -> onCreate
-    void checkVersion() -> m
+    void checkVersion() -> n
     void showUpdateDialog(com.umeng.update.UpdateResponse) -> a
     void onClick(android.view.View) -> onClick
     boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
@@ -13889,10 +13902,10 @@ com.ihongqiqu.Identify.activity.SettingActivity -> com.ihongqiqu.Identify.activi
     void launch(android.app.Activity) -> a
     void onCreate(android.os.Bundle) -> onCreate
     void onClick(android.view.View) -> onClick
-    void checkVersion() -> m
+    void checkVersion() -> n
     void showUpdateDialog(com.umeng.update.UpdateResponse) -> a
-    void share() -> n
-    void sendMail() -> o
+    void share() -> o
+    void sendMail() -> p
     void access$000(com.ihongqiqu.Identify.activity.SettingActivity,com.umeng.update.UpdateResponse) -> a
 com.ihongqiqu.Identify.activity.SettingActivity$1 -> com.ihongqiqu.Identify.activity.aj:
     com.ihongqiqu.Identify.activity.SettingActivity this$0 -> a
@@ -14018,6 +14031,9 @@ com.ihongqiqu.Identify.utils.ChannelUtil -> com.ihongqiqu.Identify.a.a:
     void saveChannelBySharedPreferences(android.content.Context,java.lang.String) -> c
     java.lang.String getChannelBySharedPreferences(android.content.Context) -> b
     int getVersionCode(android.content.Context) -> c
+com.ihongqiqu.Identify.utils.NavigationUtils -> com.ihongqiqu.Identify.a.b:
+    int getNavigationBarHeight(android.app.Activity) -> a
+    boolean checkDeviceHasNavigationBar(android.content.Context) -> a
 com.ihongqiqu.Identify.widget.DividerItemDecoration -> com.ihongqiqu.Identify.b.a:
     int[] ATTRS -> a
     android.graphics.drawable.Drawable mDivider -> b

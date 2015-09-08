@@ -4200,15 +4200,17 @@ com.alimama.mobile.csdk.umupdate.models.c:
     private static final java.lang.String j
 com.ihongqiqu.Identify.BuildConfig
 com.ihongqiqu.Identify.R:
-    10:2813:public R()
+    10:2852:public R()
 com.ihongqiqu.Identify.activity.IpActivity:
     197:211:public static boolean isTopURL(java.lang.String)
 com.ihongqiqu.Identify.activity.SettingActivity:
-    160:163:private void browserHomePage()
+    161:164:private void browserHomePage()
 com.ihongqiqu.Identify.utils.ChannelUtil:
     private static final java.lang.String CHANNEL_KEY
     private static final java.lang.String CHANNEL_VERSION_KEY
     16:16:public ChannelUtil()
+com.ihongqiqu.Identify.utils.NavigationUtils:
+    17:17:public NavigationUtils()
 com.ihongqiqu.Identify.widget.DividerItemDecoration:
     public static final int HORIZONTAL_LIST
     public static final int VERTICAL_LIST

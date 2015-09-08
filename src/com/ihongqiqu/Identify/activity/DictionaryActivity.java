@@ -58,7 +58,7 @@ public class DictionaryActivity extends BaseActivity {
         ButterKnife.bind(this);
 
         if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle("翻译");
+            getSupportActionBar().setTitle("快速翻译");
         }
         toolbar.setNavigationIcon(R.drawable.ic_back);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {

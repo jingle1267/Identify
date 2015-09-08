@@ -69,7 +69,9 @@ public class LotteryActivity extends BaseActivity implements SwipeRefreshLayout.
         }
 
         swipeRefreshLayout.setOnRefreshListener(LotteryActivity.this);
-        swipeRefreshLayout.setColorScheme(android.R.color.holo_blue_bright, android.R.color.holo_green_light, android.R.color.holo_orange_light, android.R.color.holo_red_light, R.color.app_color);
+        swipeRefreshLayout.setColorSchemeResources(R.color.holo_blue_bright, R.color.app_color, R.color.holo_orange_light, R.color.holo_red_light);
+        swipeRefreshLayout.setProgressBackgroundColorSchemeResource(R.color.divider_color);
+        // swipeRefreshLayout.setSize(1);
 
         rvLottery.setLayoutManager(new LinearLayoutManager(LotteryActivity.this));
         rvLottery.addItemDecoration(new DividerItemDecoration(LotteryActivity.this, DividerItemDecoration.VERTICAL_LIST));
