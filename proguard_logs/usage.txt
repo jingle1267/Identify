@@ -4825,9 +4825,36 @@ com.ihongqiqu.Identify.utils.ChannelUtil:
     16:16:public ChannelUtil()
 com.ihongqiqu.Identify.utils.NavigationUtils:
     17:17:public NavigationUtils()
+com.ihongqiqu.Identify.utils.ShareUtil:
+    public static final java.lang.String WX_APP_ID
+    private static final int TIMELINE_SUPPORTED_VERSION
+    private static final int THUMB_SIZE
+    24:24:public ShareUtil()
+    31:61:public static boolean shareTxt2WeiXin(android.content.Context,boolean,java.lang.String)
 com.ihongqiqu.Identify.widget.DividerItemDecoration:
     public static final int HORIZONTAL_LIST
     public static final int VERTICAL_LIST
+com.tencent.wxop.stat.EasyActivity
+com.tencent.wxop.stat.EasyListActivity
+com.tencent.wxop.stat.a.h
+com.tencent.wxop.stat.ao
+com.tencent.wxop.stat.as
+com.tencent.wxop.stat.b.l:
+    public static java.lang.String B(android.content.Context)
+com.tencent.wxop.stat.c:
+    public static int v()
+com.tencent.wxop.stat.e:
+    public static void a(android.content.Context,java.lang.String,com.tencent.wxop.stat.f)
+    public static void b(android.content.Context,java.lang.String,com.tencent.wxop.stat.f)
+    public static void l(android.content.Context)
+    public static void m(android.content.Context)
+    static synthetic java.util.Map M()
+    static synthetic java.lang.String q(java.lang.String)
+    static synthetic java.lang.String N()
+    static synthetic java.lang.String O()
+    static synthetic java.lang.String r(java.lang.String)
+com.tencent.wxop.stat.k
+com.tencent.wxop.stat.l
 com.umeng.analytics.AnalyticsConfig:
     7:7:public AnalyticsConfig()
     22:23:public static void enableEncrypt(boolean)

@@ -3,10 +3,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#ffffff"
+                android:clickable="true"
+                android:onClick="onClick"
         >
 
     <ImageView
             android:id="@+id/iv_picture"
+            android:clickable="false"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@+id/v_border"
@@ -19,8 +22,9 @@
 
     <ImageView
             android:id="@+id/iv_bg_bottom"
+            android:clickable="false"
             android:layout_width="match_parent"
-            android:layout_height="210dp"
+            android:layout_height="190dp"
             android:layout_alignParentBottom="true"
             android:background="@drawable/sign_bg_bottom"
             />
@@ -28,6 +32,7 @@
 
     <ImageView
             android:id="@+id/iv_bg_top"
+            android:clickable="false"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/sign_bg_top"
@@ -36,6 +41,7 @@
 
     <TextView
             android:id="@+id/tv_day"
+            android:clickable="false"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
@@ -48,6 +54,7 @@
             android:layout_alignParentLeft="true"/>
     <TextView
             android:id="@+id/tv_year"
+            android:clickable="false"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Sep.2015"
@@ -59,49 +66,57 @@
             android:layout_toRightOf="@id/tv_day"/>
     <TextView
             android:id="@+id/tv_content"
+            android:clickable="false"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="15dp"
             android:paddingRight="15dp"
             android:paddingTop="10dp"
-            android:paddingBottom="10dp"
+            android:paddingBottom="15dp"
             android:textSize="16sp"
             android:textColor="#c8c8c8"
+            android:background="#ffffff"
             android:text="Regret for the things we did can be tempered by time. It is regret for the things we did not do that is inconsolable."
             android:layout_below="@id/tv_day"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"/>
     <TextView
             android:id="@+id/tv_note"
+            android:clickable="false"
             android:layout_below="@id/tv_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="15dp"
             android:paddingRight="15dp"
+            android:paddingBottom="15dp"
             android:textSize="15sp"
             android:textColor="#8a8b8c"
+            android:background="#ffffff"
             android:text="为做过的事而产生的悔恨会因时间而被慢慢平抚；为没做过的事而后悔却是无法被平抚的。（西德尼·哈里斯）"
             android:layout_centerHorizontal="true"/>
 
-        <View
-                android:id="@+id/v_border"
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_below="@id/tv_note"
-                android:background="@drawable/v_border_bg"
-                />
+    <View
+            android:id="@+id/v_border"
+            android:clickable="false"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@id/tv_note"
+            android:background="@drawable/v_border_bg"
+            />
 
     <TextView
             android:id="@+id/tv_translation"
+            android:clickable="false"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
-            android:textSize="14sp"
+            android:textSize="13sp"
+            android:lineSpacingMultiplier="1.1"
             android:textColor="#fefef0"
             android:text="词霸小编：如果你把思考交给了电视剧；把联系和人际圈交给了手机；把双腿和出行都交给了汽车；把健康都交给了补品和药片负责；那么你的生活也许是时尚的，但一定是错误的；也许是习惯的，但一定会为此买单的。 请让书，聚会，步行，锻炼更多的出现在生活里。【9月16日，词霸大事件！在左侧菜单栏“悦读”活动中附上你认为的“大事件”，猜对有奖呦~】"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="30dp"/>
+            android:layout_marginBottom="25dp"/>
 
 
 </RelativeLayout>

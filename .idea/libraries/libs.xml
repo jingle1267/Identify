@@ -10,6 +10,7 @@
       <root url="jar://$PROJECT_DIR$/libs/android-support-v7-appcompat.jar!/" />
       <root url="jar://$PROJECT_DIR$/libs/android-support-v7-recyclerview.jar!/" />
       <root url="jar://$PROJECT_DIR$/libs/glide-3.6.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/libammsdk.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

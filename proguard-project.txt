@@ -80,5 +80,11 @@
     public *;
 }
 
+####### WeiXin #######
+-keep class com.tencent.mm.sdk.modelmsg.WXMediaMessage { *;}
+-keep class com.tencent.mm.sdk.modelmsg.** implements com.tencent.mm.sdk.modelmsg.WXMediaMessage$IMediaObject {*;}
+-dontwarn com.tencent.mm.**
+-keep class com.tencent.mm.**{*;}
+
 
 -keep public class * extends com.ihongqiqu.Identify.entity.BaseEntity { *; }

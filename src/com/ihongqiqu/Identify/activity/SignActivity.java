@@ -4,6 +4,8 @@ import android.animation.ObjectAnimator;
 import android.animation.PropertyValuesHolder;
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.text.TextUtils;
@@ -25,6 +27,7 @@ import com.google.gson.Gson;
 import com.ihongqiqu.Identify.BuildConfig;
 import com.ihongqiqu.Identify.R;
 import com.ihongqiqu.Identify.entity.SignInfo;
+import com.ihongqiqu.Identify.utils.ShareUtil;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -71,6 +74,18 @@ public class SignActivity extends BaseActivity {
 
         toolbar.setVisibility(View.GONE);
         requestSignInfo();
+    }
+
+    public void onClick(View view) {
+        Toast.makeText(this, "onClick", Toast.LENGTH_SHORT).show();
+        boolean isShareSuccess  =
+            ShareUtil.shareImg2WeiXin(getApplicationContext(), true, getBitmapFromView(view));
+        // isShareSuccess = ShareUtil.shareTxt2WeiXin(SignActivity.this, true, "test1");
+        if (BuildConfig.DEBUG)
+            Log.d("SignActivity", "isShareSuccess : " + isShareSuccess);
+        if (!isShareSuccess) {
+            Toast.makeText(this, "本机为安装微信或微信版本不支持", Toast.LENGTH_SHORT).show();
+        }
     }
 
     private void requestSignInfo() {
@@ -147,5 +162,24 @@ public class SignActivity extends BaseActivity {
 
         requestQueue.add(stringRequest);
     }
+
+    private Bitmap getBitmapFromView(View view) {
+        Bitmap bitmap = null;
+        try {
+            int width = view.getWidth();
+            int height = view.getHeight();
+            if(width != 0 && height != 0){
+                bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.RGB_565);
+                Canvas canvas = new Canvas(bitmap);
+                view.layout(0, 0, width, height);
+                view.draw(canvas);
+            }
+        } catch (Exception e) {
+            bitmap = null;
+            e.getStackTrace();
+        }
+        return bitmap;
+    }
+
 
 }
