@@ -16406,7 +16406,6 @@ com.ihongqiqu.Identify.utils.NavigationUtils -> com.ihongqiqu.Identify.a.b:
     boolean checkDeviceHasNavigationBar(android.content.Context) -> a
 com.ihongqiqu.Identify.utils.ShareUtil -> com.ihongqiqu.Identify.a.c:
     boolean shareImg2WeiXin(android.content.Context,boolean,android.graphics.Bitmap) -> a
-    android.graphics.Bitmap compressImage(android.graphics.Bitmap) -> a
     byte[] bmpToByteArray(android.graphics.Bitmap,boolean) -> a
     java.lang.String buildTransaction(java.lang.String) -> a
 com.ihongqiqu.Identify.widget.DividerItemDecoration -> com.ihongqiqu.Identify.b.a:
@@ -16421,7 +16420,7 @@ com.ihongqiqu.Identify.widget.DividerItemDecoration -> com.ihongqiqu.Identify.b.
 com.ihongqiqu.Identify.wxapi.WXEntryActivity -> com.ihongqiqu.Identify.wxapi.WXEntryActivity:
     void onCreate(android.os.Bundle) -> onCreate
     void onNewIntent(android.content.Intent) -> onNewIntent
-    void handleIntent(android.content.Intent) -> a
+    void handleIntent(android.content.Intent) -> c
 com.tencent.a.a.a.a.a -> com.tencent.a.a.a.a.a:
     java.util.List a(java.io.File) -> a
     java.io.File a(java.lang.String) -> a

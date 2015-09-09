@@ -74,6 +74,22 @@ public class SignActivity extends BaseActivity {
 
         toolbar.setVisibility(View.GONE);
         requestSignInfo();
+
+        Date date = new Date();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        dateFormat = new SimpleDateFormat("MMM.yyyy", Locale.US);
+        String yearAndMonth = dateFormat.format(date);
+        dateFormat = new SimpleDateFormat("dd");
+        String day = dateFormat.format(date);
+        if (BuildConfig.DEBUG) {
+            Log.d("SignActivity", "dat : " + day);
+            Log.d("SignActivity", "yearAndMonth : " + yearAndMonth);
+            Log.d("SignActivity",
+                "date : " + date.getYear() + "-" + date.getMonth() + "-"
+                    + date.getDay());
+        }
+        tvDay.setText(day);
+        tvYear.setText(yearAndMonth);
     }
 
     public void onClick(View view) {
@@ -169,7 +185,7 @@ public class SignActivity extends BaseActivity {
             int width = view.getWidth();
             int height = view.getHeight();
             if(width != 0 && height != 0){
-                bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.RGB_565);
+                bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_4444);
                 Canvas canvas = new Canvas(bitmap);
                 view.layout(0, 0, width, height);
                 view.draw(canvas);

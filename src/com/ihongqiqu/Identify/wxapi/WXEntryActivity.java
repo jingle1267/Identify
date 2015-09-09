@@ -1,21 +1,24 @@
 package com.ihongqiqu.Identify.wxapi;
 
 
+import android.view.View;
 import android.widget.Toast;
+import com.ihongqiqu.Identify.activity.BaseActivity;
 import com.tencent.mm.sdk.modelbase.BaseResp;
 import com.tencent.mm.sdk.modelmsg.SendAuth;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
-public class WXEntryActivity extends Activity {
+public class WXEntryActivity extends BaseActivity {
 
 		@Override
-		protected void onCreate(Bundle savedInstanceState) {
+		public void onCreate(Bundle savedInstanceState) {
 				super.onCreate(savedInstanceState);
 
 				handleIntent(getIntent());
+				// setContentView(new View(WXEntryActivity.this));
+				// toolbar.setVisibility(View.GONE);
 		}
 
 		@Override

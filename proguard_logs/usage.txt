@@ -4831,6 +4831,7 @@ com.ihongqiqu.Identify.utils.ShareUtil:
     private static final int THUMB_SIZE
     24:24:public ShareUtil()
     31:61:public static boolean shareTxt2WeiXin(android.content.Context,boolean,java.lang.String)
+    115:125:public static android.graphics.Bitmap compressImage(android.graphics.Bitmap)
 com.ihongqiqu.Identify.widget.DividerItemDecoration:
     public static final int HORIZONTAL_LIST
     public static final int VERTICAL_LIST

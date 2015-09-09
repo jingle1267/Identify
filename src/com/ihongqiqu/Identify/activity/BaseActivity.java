@@ -31,7 +31,7 @@ public class BaseActivity extends AppCompatActivity {
 
     SlidingPaneLayout slidingPaneLayout;
     LinearLayout layoutRoot;
-    Toolbar toolbar;
+    public Toolbar toolbar;
 
     ProgressDialog progressDialog;
 

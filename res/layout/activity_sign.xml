@@ -17,6 +17,7 @@
             android:layout_marginTop="-30dp"
             android:layout_marginBottom="-60dp"
             android:scaleType="centerCrop"
+            android:src="@drawable/sign_default_picture"
             android:background="#ffffff"
             />
 
@@ -76,7 +77,7 @@
             android:textSize="16sp"
             android:textColor="#c8c8c8"
             android:background="#ffffff"
-            android:text="Regret for the things we did can be tempered by time. It is regret for the things we did not do that is inconsolable."
+            android:text="We all have our time machines. Some take us back, they're called memories. Some take us forward, they're called dreams. "
             android:layout_below="@id/tv_day"
             android:layout_centerHorizontal="true"/>
     <TextView
@@ -91,7 +92,7 @@
             android:textSize="15sp"
             android:textColor="#8a8b8c"
             android:background="#ffffff"
-            android:text="为做过的事而产生的悔恨会因时间而被慢慢平抚；为没做过的事而后悔却是无法被平抚的。（西德尼·哈里斯）"
+            android:text="我们都有自己的时光机。带我们回到过去的，叫回忆；带我们前往未来的，叫梦想。（杰瑞米·艾恩斯）"
             android:layout_centerHorizontal="true"/>
 
     <View
@@ -113,7 +114,7 @@
             android:textSize="13sp"
             android:lineSpacingMultiplier="1.1"
             android:textColor="#fefef0"
-            android:text="词霸小编：如果你把思考交给了电视剧；把联系和人际圈交给了手机；把双腿和出行都交给了汽车；把健康都交给了补品和药片负责；那么你的生活也许是时尚的，但一定是错误的；也许是习惯的，但一定会为此买单的。 请让书，聚会，步行，锻炼更多的出现在生活里。【9月16日，词霸大事件！在左侧菜单栏“悦读”活动中附上你认为的“大事件”，猜对有奖呦~】"
+            android:text="词霸小编：我们这一辈子，总是要看到很多比自己优秀得多的人。如果你看到的总是比你差劲的人，那你就要反思一下自己的生活状态是不是不断地沉沦？如果你在前进的过程中，经常遭遇到让你望其项背的人，那么，恭喜你啊，你是在不断的进步中。你会自卑，不过这种自卑是可以化成动力的。--毕淑敏《接纳自卑，感悟幸福》"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="25dp"/>

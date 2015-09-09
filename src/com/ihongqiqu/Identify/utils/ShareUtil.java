@@ -80,13 +80,13 @@ public class ShareUtil {
             return false;
         }
         if (wxSdkVersion >= TIMELINE_SUPPORTED_VERSION) {
-            Bitmap bmp = compressImage(bitmap);
+            Bitmap bmp = bitmap; // compressImage(bitmap);
             WXImageObject imgObj = new WXImageObject(bmp);
 
             WXMediaMessage msg = new WXMediaMessage();
             msg.mediaObject = imgObj;
 
-            Bitmap thumbBmp = Bitmap.createScaledBitmap(bmp, THUMB_SIZE, THUMB_SIZE, true);
+            Bitmap thumbBmp = Bitmap.createScaledBitmap(bmp, THUMB_SIZE, THUMB_SIZE, false);
             // Bitmap thumbBmp = compressImage(bmp);
             bmp.recycle();
             msg.thumbData = bmpToByteArray(thumbBmp, true);
