@@ -7,6 +7,8 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.text.TextUtils;
+import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
@@ -15,6 +17,7 @@ import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import com.ihongqiqu.Identify.BuildConfig;
 import com.ihongqiqu.Identify.R;
 
 /**
@@ -65,6 +68,44 @@ public class HtmlActivity extends BaseActivity {
         // webSettings.setBuiltInZoomControls(true);
         webSettings.setSupportZoom(true);
         webView.loadUrl(url);
+
+        webView.setScrollbarFadingEnabled(true);
+        /*webView.setOnTouchListener(new View.OnTouchListener() {
+
+            float startY;
+            float dY;
+            boolean isShow = true;
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        startY = event.getY();
+                        break;
+                    case MotionEvent.ACTION_MOVE:
+                        dY = event.getY() - startY;
+                        if (dY < -10) {
+                            if (isShow) {
+                                hideToolbar();
+                                isShow = false;
+                            }
+                        } else if (dY > 10) {
+                            if (!isShow) {
+                                showToolbar();
+                                isShow = true;
+                            }
+                        }
+                        break;
+                    case MotionEvent.ACTION_UP:
+
+                        break;
+                    default:
+
+                        break;
+                }
+                return false;
+            }
+        });*/
     }
 
     @Override

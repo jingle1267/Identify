@@ -67,6 +67,9 @@ public class SettingActivity extends BaseActivity {
             case R.id.tv_update:
                 checkVersion();
                 break;
+            case R.id.tv_license:
+                LicenseActivity.launch(SettingActivity.this);
+                break;
         }
     }
 

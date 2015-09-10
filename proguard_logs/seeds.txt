@@ -4696,6 +4696,7 @@ com.ihongqiqu.Identify.R$drawable: int notification_template_icon_bg
 com.ihongqiqu.Identify.R$drawable: int progressbar_webview
 com.ihongqiqu.Identify.R$drawable: int sign_bg_bottom
 com.ihongqiqu.Identify.R$drawable: int sign_bg_top
+com.ihongqiqu.Identify.R$drawable: int sign_default_picture
 com.ihongqiqu.Identify.R$drawable: int tb_munion_icon
 com.ihongqiqu.Identify.R$drawable: int tb_munion_item_selector
 com.ihongqiqu.Identify.R$drawable: int umeng_common_gradient_green
@@ -4788,6 +4789,12 @@ com.ihongqiqu.Identify.R$id: int line1
 com.ihongqiqu.Identify.R$id: int line3
 com.ihongqiqu.Identify.R$id: int listMode
 com.ihongqiqu.Identify.R$id: int list_item
+com.ihongqiqu.Identify.R$id: int ll_id
+com.ihongqiqu.Identify.R$id: int ll_ip
+com.ihongqiqu.Identify.R$id: int ll_lottery
+com.ihongqiqu.Identify.R$id: int ll_phone
+com.ihongqiqu.Identify.R$id: int ll_sign
+com.ihongqiqu.Identify.R$id: int ll_translation
 com.ihongqiqu.Identify.R$id: int loading
 com.ihongqiqu.Identify.R$id: int media_actions
 com.ihongqiqu.Identify.R$id: int middle
@@ -5716,10 +5723,22 @@ com.ihongqiqu.Identify.activity.LotteryDetailActivity$LotteryDetailAdapter$Lotte
 com.ihongqiqu.Identify.activity.LotteryDetailActivity$LotteryDetailAdapter$LotteryDetailViewHolder$$ViewBinder: void unbind(java.lang.Object)
 com.ihongqiqu.Identify.activity.LotteryDetailActivity$LotteryDetailAdapter$LotteryDetailViewHolder$$ViewBinder: void bind(butterknife.ButterKnife$Finder,java.lang.Object,java.lang.Object)
 com.ihongqiqu.Identify.activity.MainActivity
+com.ihongqiqu.Identify.activity.MainActivity: android.widget.LinearLayout llSign
+com.ihongqiqu.Identify.activity.MainActivity: android.widget.LinearLayout llTranslation
+com.ihongqiqu.Identify.activity.MainActivity: android.widget.LinearLayout llLottery
+com.ihongqiqu.Identify.activity.MainActivity: android.widget.LinearLayout llPhone
+com.ihongqiqu.Identify.activity.MainActivity: android.widget.LinearLayout llId
+com.ihongqiqu.Identify.activity.MainActivity: android.widget.LinearLayout llIp
 com.ihongqiqu.Identify.activity.MainActivity: MainActivity()
 com.ihongqiqu.Identify.activity.MainActivity: void onClick(android.view.View)
-com.ihongqiqu.Identify.activity.MainActivity$2: void onClick(android.content.DialogInterface,int)
-com.ihongqiqu.Identify.activity.MainActivity$3: void onClick(android.content.DialogInterface,int)
+com.ihongqiqu.Identify.activity.MainActivity$$ViewBinder
+com.ihongqiqu.Identify.activity.MainActivity$$ViewBinder: MainActivity$$ViewBinder()
+com.ihongqiqu.Identify.activity.MainActivity$$ViewBinder: void bind(butterknife.ButterKnife$Finder,com.ihongqiqu.Identify.activity.MainActivity,java.lang.Object)
+com.ihongqiqu.Identify.activity.MainActivity$$ViewBinder: void unbind(com.ihongqiqu.Identify.activity.MainActivity)
+com.ihongqiqu.Identify.activity.MainActivity$$ViewBinder: void unbind(java.lang.Object)
+com.ihongqiqu.Identify.activity.MainActivity$$ViewBinder: void bind(butterknife.ButterKnife$Finder,java.lang.Object,java.lang.Object)
+com.ihongqiqu.Identify.activity.MainActivity$4: void onClick(android.content.DialogInterface,int)
+com.ihongqiqu.Identify.activity.MainActivity$5: void onClick(android.content.DialogInterface,int)
 com.ihongqiqu.Identify.activity.PhoneActivity
 com.ihongqiqu.Identify.activity.PhoneActivity: android.widget.EditText etPhone
 com.ihongqiqu.Identify.activity.PhoneActivity: android.widget.TextView tvPhoneInvalid
@@ -5886,6 +5905,26 @@ com.ihongqiqu.Identify.entity.SignInfo$TagsEntity: void setId(java.lang.String)
 com.ihongqiqu.Identify.entity.SignInfo$TagsEntity: void setName(java.lang.String)
 com.ihongqiqu.Identify.entity.SignInfo$TagsEntity: java.lang.String getId()
 com.ihongqiqu.Identify.entity.SignInfo$TagsEntity: java.lang.String getName()
+com.ihongqiqu.Identify.entity.SwitchInfo
+com.ihongqiqu.Identify.entity.SwitchInfo: boolean isShowSign
+com.ihongqiqu.Identify.entity.SwitchInfo: boolean isShowTranslate
+com.ihongqiqu.Identify.entity.SwitchInfo: boolean isShowLottery
+com.ihongqiqu.Identify.entity.SwitchInfo: boolean isShowPhone
+com.ihongqiqu.Identify.entity.SwitchInfo: boolean isShowID
+com.ihongqiqu.Identify.entity.SwitchInfo: boolean isShowIP
+com.ihongqiqu.Identify.entity.SwitchInfo: SwitchInfo()
+com.ihongqiqu.Identify.entity.SwitchInfo: void setIsShowSign(boolean)
+com.ihongqiqu.Identify.entity.SwitchInfo: void setIsShowTranslate(boolean)
+com.ihongqiqu.Identify.entity.SwitchInfo: void setIsShowLottery(boolean)
+com.ihongqiqu.Identify.entity.SwitchInfo: void setIsShowPhone(boolean)
+com.ihongqiqu.Identify.entity.SwitchInfo: void setIsShowID(boolean)
+com.ihongqiqu.Identify.entity.SwitchInfo: void setIsShowIP(boolean)
+com.ihongqiqu.Identify.entity.SwitchInfo: boolean getIsShowSign()
+com.ihongqiqu.Identify.entity.SwitchInfo: boolean getIsShowTranslate()
+com.ihongqiqu.Identify.entity.SwitchInfo: boolean getIsShowLottery()
+com.ihongqiqu.Identify.entity.SwitchInfo: boolean getIsShowPhone()
+com.ihongqiqu.Identify.entity.SwitchInfo: boolean getIsShowID()
+com.ihongqiqu.Identify.entity.SwitchInfo: boolean getIsShowIP()
 com.ihongqiqu.Identify.entity.TranslationInfo
 com.ihongqiqu.Identify.entity.TranslationInfo: com.ihongqiqu.Identify.entity.TranslationInfo$BasicEntity basic
 com.ihongqiqu.Identify.entity.TranslationInfo: java.lang.String query

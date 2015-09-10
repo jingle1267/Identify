@@ -33,6 +33,8 @@ import java.io.File;
  */
 public class MainActivity extends BaseActivity {
 
+    private final String URL_SWITCHES = "https://raw.githubusercontent.com/jingle1267/Identify/master/api/switch.json";
+
     @Bind(R.id.ll_sign)
     LinearLayout llSign;
     @Bind(R.id.ll_translation)
@@ -67,28 +69,41 @@ public class MainActivity extends BaseActivity {
         showProgressDialog();
         RequestQueue requestQueue = Volley.newRequestQueue(MainActivity.this);
 
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, "", new Response.Listener<String>() {
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, URL_SWITCHES, new Response.Listener<String>() {
             @Override
             public void onResponse(String s) {
                 SwitchInfo switchInfo = new Gson().fromJson(s, SwitchInfo.class);
                 if (switchInfo != null) {
                     if (!switchInfo.getIsShowSign()) {
                         llSign.setVisibility(View.GONE);
+                    } else {
+                        llSign.setVisibility(View.VISIBLE);
                     }
+
                     if (!switchInfo.getIsShowTranslate()) {
                         llTranslation.setVisibility(View.GONE);
+                    } else {
+                        llTranslation.setVisibility(View.VISIBLE);
                     }
                     if (!switchInfo.getIsShowLottery()) {
                         llLottery.setVisibility(View.GONE);
+                    } else {
+
                     }
                     if (!switchInfo.getIsShowPhone()) {
                         llPhone.setVisibility(View.GONE);
+                    } else {
+                        llPhone.setVisibility(View.VISIBLE);
                     }
                     if (!switchInfo.getIsShowID()) {
                         llId.setVisibility(View.GONE);
+                    } else {
+                        llId.setVisibility(View.VISIBLE);
                     }
                     if (!switchInfo.getIsShowIP()) {
                         llIp.setVisibility(View.GONE);
+                    } else {
+                        llIp.setVisibility(View.VISIBLE);
                     }
                 } else {
                     Toast.makeText(MainActivity.this, "接口返回出错", Toast.LENGTH_SHORT).show();

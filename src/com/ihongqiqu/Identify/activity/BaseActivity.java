@@ -1,5 +1,8 @@
 package com.ihongqiqu.Identify.activity;
 
+import android.animation.Animator;
+import android.animation.ObjectAnimator;
+import android.annotation.TargetApi;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -13,6 +16,8 @@ import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.view.animation.AccelerateInterpolator;
+import android.view.animation.DecelerateInterpolator;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.LinearLayout;
 import com.ihongqiqu.Identify.BuildConfig;
@@ -69,7 +74,7 @@ public class BaseActivity extends AppCompatActivity {
 
         // 通过反射来改变SlidingPanelayout的值
         try {
-            //属性
+            // 属性
             Field f_overHang = SlidingPaneLayout.class.getDeclaredField("mOverhangSize");
             f_overHang.setAccessible(true);
             f_overHang.set(slidingPaneLayout, 0);
@@ -150,6 +155,23 @@ public class BaseActivity extends AppCompatActivity {
 
     public boolean isWindowTranslucentNavigation() {
         return true;
+    }
+
+    public void hideToolbar() {
+        ObjectAnimator animator = ObjectAnimator
+            .ofFloat(toolbar, "translationY", 0, -toolbar.getHeight())
+            .setDuration(500);
+
+        animator.start();
+    }
+
+    public void showToolbar() {
+        ObjectAnimator animator = ObjectAnimator
+            .ofFloat(toolbar, "translationY", -toolbar.getHeight(), 0)
+            .setDuration(500);
+
+        animator.start();
+
     }
 
     public void showProgressDialog() {

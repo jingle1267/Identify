@@ -8,7 +8,7 @@ import com.umeng.analytics.AnalyticsConfig;
 
 /**
  * 全局内容
- *
+ * <p/>
  * Created by zhenguo on 8/25/15.
  */
 public class IdentifyApplication extends Application {
