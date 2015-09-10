@@ -24,8 +24,10 @@
                     android:background="@color/divider_color"/>
 
             <LinearLayout
+                    android:id="@+id/ll_sign"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:orientation="vertical"
                     android:background="#ffffff"
                     >
                 <TextView
@@ -43,15 +45,17 @@
                         android:onClick="onClick"
                         android:textColor="#666666"
                         android:text="每日一签"/>
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/divider_color"/>
             </LinearLayout>
 
-            <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1px"
-                    android:background="@color/divider_color"/>
             <LinearLayout
+                    android:id="@+id/ll_translation"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:orientation="vertical"
                     android:background="#ffffff"
                     >
                 <TextView
@@ -69,15 +73,17 @@
                         android:onClick="onClick"
                         android:textColor="#666666"
                         android:text="快速翻译"/>
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/divider_color"/>
             </LinearLayout>
-            <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1px"
-                    android:background="@color/divider_color"/>
 
             <LinearLayout
+                    android:id="@+id/ll_lottery"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:orientation="vertical"
                     android:background="#ffffff"
                     >
                 <TextView
@@ -95,15 +101,17 @@
                         android:onClick="onClick"
                         android:textColor="#666666"
                         android:text="查询彩票信息"/>
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/divider_color"/>
             </LinearLayout>
-            <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1px"
-                    android:background="@color/divider_color"/>
 
             <LinearLayout
+                    android:id="@+id/ll_phone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:orientation="vertical"
                     android:background="#ffffff"
                     >
 
@@ -122,15 +130,17 @@
                         android:onClick="onClick"
                         android:textColor="#666666"
                         android:text="查询手机号归属地"/>
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/divider_color"/>
             </LinearLayout>
-            <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1px"
-                    android:background="@color/divider_color"/>
 
             <LinearLayout
+                    android:id="@+id/ll_id"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:orientation="vertical"
                     android:background="#ffffff"
                     >
                 <TextView
@@ -149,15 +159,17 @@
                         android:textColor="#666666"
                         android:text="查询身份证信息"/>
 
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/divider_color"/>
             </LinearLayout>
-            <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1px"
-                    android:background="@color/divider_color"/>
 
             <LinearLayout
+                    android:id="@+id/ll_ip"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:orientation="vertical"
                     android:background="#ffffff"
                     >
                 <TextView
@@ -175,11 +187,11 @@
                         android:onClick="onClick"
                         android:textColor="#666666"
                         android:text="查询IP信息"/>
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/divider_color"/>
             </LinearLayout>
-            <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1px"
-                    android:background="@color/divider_color"/>
 
 
         </LinearLayout>

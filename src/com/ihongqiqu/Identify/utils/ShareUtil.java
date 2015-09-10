@@ -18,7 +18,7 @@ import java.io.ByteArrayOutputStream;
 
 /**
  * 微信分享
- *
+ * <p/>
  * Created by zhenguo on 9/9/15.
  */
 public class ShareUtil {
@@ -52,7 +52,9 @@ public class ShareUtil {
             SendMessageToWX.Req req = new SendMessageToWX.Req();
             req.transaction = buildTransaction("text"); // transaction×Ö¶ÎÓÃÓÚÎ¨Ò»±êÊ¶Ò»¸öÇëÇó
             req.message = msg;
-            req.scene = isTimeline  ? SendMessageToWX.Req.WXSceneTimeline : SendMessageToWX.Req.WXSceneSession;
+            req.scene = isTimeline ?
+                SendMessageToWX.Req.WXSceneTimeline :
+                SendMessageToWX.Req.WXSceneSession;
 
             // µ÷ÓÃapi½Ó¿Ú·¢ËÍÊý¾Ýµ½Î¢ÐÅ
             iwxapi.sendReq(req);
@@ -94,9 +96,11 @@ public class ShareUtil {
             SendMessageToWX.Req req = new SendMessageToWX.Req();
             req.transaction = buildTransaction("img");
             req.message = msg;
-            req.scene = isTimeline ? SendMessageToWX.Req.WXSceneTimeline : SendMessageToWX.Req.WXSceneSession;
+            req.scene = isTimeline ?
+                SendMessageToWX.Req.WXSceneTimeline :
+                SendMessageToWX.Req.WXSceneSession;
             boolean isSendSuccess = iwxapi.sendReq(req);
-            // if (BuildConfig.DEBUG)
+            if (BuildConfig.DEBUG)
                 Log.d("ShareUtil", "isSendSuccess : " + isSendSuccess);
             return true;
         } else {
@@ -108,6 +112,7 @@ public class ShareUtil {
      * 压缩图片大小
      *
      * @param image 源Bitmap
+     *
      * @return 压缩后的Bitmap
      */
     public static Bitmap compressImage(Bitmap image) {
@@ -120,7 +125,8 @@ public class ShareUtil {
             image.compress(Bitmap.CompressFormat.JPEG, options, baos);// 这里压缩options%，把压缩后的数据存放到baos中
             options -= 10;// 每次都减少10
         }
-        ByteArrayInputStream isBm = new ByteArrayInputStream(baos.toByteArray());// 把压缩后的数据baos存放到ByteArrayInputStream中
+        ByteArrayInputStream isBm =
+            new ByteArrayInputStream(baos.toByteArray());// 把压缩后的数据baos存放到ByteArrayInputStream中
         Bitmap bitmap = BitmapFactory.decodeStream(isBm, null, null);// 把ByteArrayInputStream数据生成图片
         return bitmap;
     }
@@ -143,7 +149,9 @@ public class ShareUtil {
     }
 
     private static String buildTransaction(final String type) {
-        return (type == null) ? String.valueOf(System.currentTimeMillis()) : type + System.currentTimeMillis();
+        return (type == null) ?
+            String.valueOf(System.currentTimeMillis()) :
+            type + System.currentTimeMillis();
     }
 
 }

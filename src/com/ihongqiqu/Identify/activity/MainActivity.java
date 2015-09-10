@@ -7,8 +7,20 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.Toast;
+import butterknife.Bind;
+import butterknife.ButterKnife;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+import com.google.gson.Gson;
 import com.ihongqiqu.Identify.BuildConfig;
 import com.ihongqiqu.Identify.R;
+import com.ihongqiqu.Identify.entity.SwitchInfo;
 import com.umeng.update.UmengDownloadListener;
 import com.umeng.update.UmengUpdateAgent;
 import com.umeng.update.UmengUpdateListener;
@@ -21,10 +33,24 @@ import java.io.File;
  */
 public class MainActivity extends BaseActivity {
 
+    @Bind(R.id.ll_sign)
+    LinearLayout llSign;
+    @Bind(R.id.ll_translation)
+    LinearLayout llTranslation;
+    @Bind(R.id.ll_lottery)
+    LinearLayout llLottery;
+    @Bind(R.id.ll_phone)
+    LinearLayout llPhone;
+    @Bind(R.id.ll_id)
+    LinearLayout llId;
+    @Bind(R.id.ll_ip)
+    LinearLayout llIp;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setTitle("查询工具列表");
         }
@@ -32,7 +58,51 @@ public class MainActivity extends BaseActivity {
 
         slidingPaneLayout.removeViewAt(0);
 
+        requestSwitch();
+
         checkVersion();
+    }
+
+    private void requestSwitch() {
+        showProgressDialog();
+        RequestQueue requestQueue = Volley.newRequestQueue(MainActivity.this);
+
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, "", new Response.Listener<String>() {
+            @Override
+            public void onResponse(String s) {
+                SwitchInfo switchInfo = new Gson().fromJson(s, SwitchInfo.class);
+                if (switchInfo != null) {
+                    if (!switchInfo.getIsShowSign()) {
+                        llSign.setVisibility(View.GONE);
+                    }
+                    if (!switchInfo.getIsShowTranslate()) {
+                        llTranslation.setVisibility(View.GONE);
+                    }
+                    if (!switchInfo.getIsShowLottery()) {
+                        llLottery.setVisibility(View.GONE);
+                    }
+                    if (!switchInfo.getIsShowPhone()) {
+                        llPhone.setVisibility(View.GONE);
+                    }
+                    if (!switchInfo.getIsShowID()) {
+                        llId.setVisibility(View.GONE);
+                    }
+                    if (!switchInfo.getIsShowIP()) {
+                        llIp.setVisibility(View.GONE);
+                    }
+                } else {
+                    Toast.makeText(MainActivity.this, "接口返回出错", Toast.LENGTH_SHORT).show();
+                }
+                hideProgressDialog();
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError volleyError) {
+                hideProgressDialog();
+            }
+        });
+
+        requestQueue.add(stringRequest);
     }
 
     private void checkVersion() {

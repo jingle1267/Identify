@@ -171,7 +171,8 @@ public class SignActivity extends BaseActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError volleyError) {
-                Toast.makeText(SignActivity.this, "接口返回出错", Toast.LENGTH_SHORT).show();
+                int statusCode = volleyError.networkResponse != null ? volleyError.networkResponse.statusCode : -1;
+                Toast.makeText(SignActivity.this, "接口返回出错 statusCode : " + statusCode, Toast.LENGTH_SHORT).show();
                 hideProgressDialog();
             }
         });
