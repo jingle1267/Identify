@@ -16,12 +16,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import com.android.volley.*;
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
 import com.ihongqiqu.Identify.BuildConfig;
 import com.ihongqiqu.Identify.R;
+import com.ihongqiqu.Identify.base.BaseActivity;
 import com.ihongqiqu.Identify.entity.LotteryDetailInfo;
 import com.ihongqiqu.Identify.widget.DividerItemDecoration;
 import org.json.JSONArray;
@@ -65,20 +68,12 @@ public class LotteryDetailActivity extends BaseActivity implements SwipeRefreshL
         ButterKnife.bind(this);
 
         toolbar.setNavigationIcon(R.drawable.ic_back);
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
 
 
         code = getIntent().getStringExtra("code");
         lotteryName = getIntent().getStringExtra("lotteryName");
 
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle(lotteryName + "中奖信息");
-        }
+        setTitle(lotteryName + "中奖信息");
 
         swipeRefreshLayout.setOnRefreshListener(LotteryDetailActivity.this);
         swipeRefreshLayout.setColorSchemeResources(R.color.holo_blue_bright, R.color.app_color, R.color.holo_orange_light, R.color.holo_red_light);
@@ -97,8 +92,6 @@ public class LotteryDetailActivity extends BaseActivity implements SwipeRefreshL
             isFirst = false;
         }
 
-        RequestQueue mQueue = Volley.newRequestQueue(this);
-        
         StringRequest stringRequest = new StringRequest(Request.Method.GET,
             URL_LOTTERY_DETAIL + "?recordcnt=20&lotterycode="
                 + code, new Response.Listener<String>() {
@@ -167,7 +160,7 @@ public class LotteryDetailActivity extends BaseActivity implements SwipeRefreshL
             
         };
         
-        mQueue.add(stringRequest);
+        addRequest(stringRequest);
     }
 
     @Override

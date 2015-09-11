@@ -7,8 +7,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.text.TextUtils;
-import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
@@ -17,8 +15,8 @@ import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import com.ihongqiqu.Identify.BuildConfig;
 import com.ihongqiqu.Identify.R;
+import com.ihongqiqu.Identify.base.BaseActivity;
 
 /**
  * 通用网页展示页面
@@ -47,12 +45,7 @@ public class HtmlActivity extends BaseActivity {
         ButterKnife.bind(this);
         url = getIntent().getStringExtra("url");
         toolbar.setNavigationIcon(R.drawable.ic_back);
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        setTitle("加载中...");
 
         init();
     }

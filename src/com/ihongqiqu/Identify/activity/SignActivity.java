@@ -1,7 +1,5 @@
 package com.ihongqiqu.Identify.activity;
 
-import android.animation.ObjectAnimator;
-import android.animation.PropertyValuesHolder;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -17,22 +15,19 @@ import android.widget.Toast;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import com.android.volley.Request;
-import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
 import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
 import com.ihongqiqu.Identify.BuildConfig;
 import com.ihongqiqu.Identify.R;
+import com.ihongqiqu.Identify.base.BaseActivity;
 import com.ihongqiqu.Identify.entity.SignInfo;
-import com.ihongqiqu.Identify.utils.ShareUtil;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.IllegalFormatCodePointException;
 import java.util.Locale;
 
 /**
@@ -92,7 +87,7 @@ public class SignActivity extends BaseActivity {
         tvYear.setText(yearAndMonth);
     }
 
-    public void onClick(View view) {
+    /*public void onClick(View view) {
         Toast.makeText(this, "onClick", Toast.LENGTH_SHORT).show();
         boolean isShareSuccess  =
             ShareUtil.shareImg2WeiXin(getApplicationContext(), true, getBitmapFromView(view));
@@ -102,12 +97,10 @@ public class SignActivity extends BaseActivity {
         if (!isShareSuccess) {
             Toast.makeText(this, "本机为安装微信或微信版本不支持", Toast.LENGTH_SHORT).show();
         }
-    }
+    }*/
 
     private void requestSignInfo() {
         showProgressDialog();
-
-        RequestQueue requestQueue = Volley.newRequestQueue(SignActivity.this);
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET, URL_SIGN, new Response.Listener<String>() {
             @Override
@@ -177,7 +170,7 @@ public class SignActivity extends BaseActivity {
             }
         });
 
-        requestQueue.add(stringRequest);
+        addRequest(stringRequest);
     }
 
     private Bitmap getBitmapFromView(View view) {

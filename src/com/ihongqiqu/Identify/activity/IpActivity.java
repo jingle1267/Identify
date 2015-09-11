@@ -15,16 +15,16 @@ import android.widget.TextView;
 import android.widget.Toast;
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import com.android.volley.*;
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
 import com.ihongqiqu.Identify.BuildConfig;
 import com.ihongqiqu.Identify.R;
+import com.ihongqiqu.Identify.base.BaseActivity;
 import com.ihongqiqu.Identify.entity.IpInfo;
 
-import java.net.InetAddress;
-import java.net.UnknownHostException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -61,16 +61,8 @@ public class IpActivity extends BaseActivity {
         setContentView(R.layout.activity_ip);
         ButterKnife.bind(this);
 
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle("查询IP地址信息");
-        }
+        setTitle("查询IP地址信息");
         toolbar.setNavigationIcon(R.drawable.ic_back);
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
 
         etIp.addTextChangedListener(new TextWatcher() {
             @Override
@@ -129,8 +121,6 @@ public class IpActivity extends BaseActivity {
         if (BuildConfig.DEBUG)
             Log.d("IpActivity", "url : " + url);
 
-        RequestQueue mQueue = Volley.newRequestQueue(this);
-
         StringRequest stringRequest = new StringRequest(Request.Method.GET,
             url, new Response.Listener<String>() {
             @Override
@@ -168,8 +158,7 @@ public class IpActivity extends BaseActivity {
 
         });
 
-        // System.setProperty("http.keepAlive", "false");
-        mQueue.add(stringRequest);
+        addRequest(stringRequest);
     }
 
     private boolean isIp(String ip) {

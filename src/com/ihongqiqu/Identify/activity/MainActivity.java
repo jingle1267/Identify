@@ -12,14 +12,13 @@ import android.widget.Toast;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import com.android.volley.Request;
-import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
 import com.ihongqiqu.Identify.BuildConfig;
 import com.ihongqiqu.Identify.R;
+import com.ihongqiqu.Identify.base.BaseActivity;
 import com.ihongqiqu.Identify.entity.SwitchInfo;
 import com.umeng.update.UmengDownloadListener;
 import com.umeng.update.UmengUpdateAgent;
@@ -53,9 +52,7 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle("查询工具列表");
-        }
+        setTitle("查询工具列表");
         // toolbar.setNavigationIcon(R.drawable.ic_launcher);
 
         slidingPaneLayout.removeViewAt(0);
@@ -67,7 +64,6 @@ public class MainActivity extends BaseActivity {
 
     private void requestSwitch() {
         showProgressDialog();
-        RequestQueue requestQueue = Volley.newRequestQueue(MainActivity.this);
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET, URL_SWITCHES, new Response.Listener<String>() {
             @Override
@@ -79,7 +75,6 @@ public class MainActivity extends BaseActivity {
                     } else {
                         llSign.setVisibility(View.VISIBLE);
                     }
-
                     if (!switchInfo.getIsShowTranslate()) {
                         llTranslation.setVisibility(View.GONE);
                     } else {
@@ -88,7 +83,7 @@ public class MainActivity extends BaseActivity {
                     if (!switchInfo.getIsShowLottery()) {
                         llLottery.setVisibility(View.GONE);
                     } else {
-
+                        llLottery.setVisibility(View.VISIBLE);
                     }
                     if (!switchInfo.getIsShowPhone()) {
                         llPhone.setVisibility(View.GONE);
@@ -117,7 +112,7 @@ public class MainActivity extends BaseActivity {
             }
         });
 
-        requestQueue.add(stringRequest);
+        addRequest(stringRequest);
     }
 
     private void checkVersion() {

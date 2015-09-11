@@ -15,10 +15,10 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import com.android.volley.*;
 import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
 import com.ihongqiqu.Identify.BuildConfig;
 import com.ihongqiqu.Identify.R;
+import com.ihongqiqu.Identify.base.BaseActivity;
 import com.ihongqiqu.Identify.entity.PhoneInfo;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -60,16 +60,8 @@ public class PhoneActivity extends BaseActivity {
         setContentView(R.layout.activity_phone);
         ButterKnife.bind(this);
 
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle("查询手机号码归属地");
-        }
+        setTitle("查询手机号码归属地");
         toolbar.setNavigationIcon(R.drawable.ic_back);
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
 
         if (etPhone == null) {
             Log.e("PhoneActivity", "etPhone is null");
@@ -121,8 +113,6 @@ public class PhoneActivity extends BaseActivity {
 
         hideKeyboard();
         showProgressDialog();
-
-        RequestQueue mQueue = Volley.newRequestQueue(this);
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET,
             URL_PHONE_INFO + "?tel=" + tel, new Response.Listener<String>() {
@@ -177,7 +167,7 @@ public class PhoneActivity extends BaseActivity {
 
         };
 
-        mQueue.add(stringRequest);
+        addRequest(stringRequest);
 
     }
 

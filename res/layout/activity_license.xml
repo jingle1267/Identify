@@ -14,6 +14,7 @@
             android:paddingBottom="20dp"
             android:textColor="@color/txt_color"
             android:textSize="16sp"
+            android:autoLink="email"
             android:lineSpacingMultiplier="1.3"
             android:text="本协议是您(个人或单一实体)与软件作者之间关于《小工具箱》产品的法律协议，其中包含软件开发商软件作者对用户的承诺、技术支持以及软件升级的说明，请认真阅读。\n
 《小工具箱》软件包括计算机软件，以及联机的电子文档(下称“软件产品”或“软件”)。一旦安装、复制或以其他方式使用本软件产品，即表示同意接受协议各项条件的约束。如果您不同意协议的条件，则不能获得使用本软件产品的权力。\n\n

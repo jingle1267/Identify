@@ -22,6 +22,7 @@ import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
 import com.ihongqiqu.Identify.BuildConfig;
 import com.ihongqiqu.Identify.R;
+import com.ihongqiqu.Identify.base.BaseActivity;
 import com.ihongqiqu.Identify.entity.LotteryInfo;
 import com.ihongqiqu.Identify.widget.DividerItemDecoration;
 import org.json.JSONArray;
@@ -60,15 +61,7 @@ public class LotteryActivity extends BaseActivity implements SwipeRefreshLayout.
         ButterKnife.bind(this);
 
         toolbar.setNavigationIcon(R.drawable.ic_back);
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle("查询彩票信息");
-        }
+        setTitle("查询彩票信息");
 
         swipeRefreshLayout.setOnRefreshListener(LotteryActivity.this);
         swipeRefreshLayout.setColorSchemeResources(R.color.holo_blue_bright, R.color.app_color, R.color.holo_orange_light, R.color.holo_red_light);
@@ -87,8 +80,6 @@ public class LotteryActivity extends BaseActivity implements SwipeRefreshLayout.
             showProgressDialog();
             isFirst = false;
         }
-
-        RequestQueue mQueue = Volley.newRequestQueue(this);
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET,
             URL_LOTTERY_LIST + "?lotterytype=1", new Response.Listener<String>() {
@@ -153,7 +144,7 @@ public class LotteryActivity extends BaseActivity implements SwipeRefreshLayout.
 
         };
 
-        mQueue.add(stringRequest);
+        addRequest(stringRequest);
     }
 
     @Override

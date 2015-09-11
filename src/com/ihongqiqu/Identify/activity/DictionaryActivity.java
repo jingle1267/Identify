@@ -16,14 +16,13 @@ import android.widget.Toast;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import com.android.volley.Request;
-import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
 import com.ihongqiqu.Identify.BuildConfig;
 import com.ihongqiqu.Identify.R;
+import com.ihongqiqu.Identify.base.BaseActivity;
 import com.ihongqiqu.Identify.entity.TranslationInfo;
 
 import java.io.UnsupportedEncodingException;
@@ -57,16 +56,8 @@ public class DictionaryActivity extends BaseActivity {
         setContentView(R.layout.activity_dictionary);
         ButterKnife.bind(this);
 
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle("快速翻译");
-        }
+        setTitle("快速翻译");
         toolbar.setNavigationIcon(R.drawable.ic_back);
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
 
         /**
          * 只有调用了该方法，TextView才能不依赖于ScrollView而实现滚动的效果。
@@ -108,7 +99,8 @@ public class DictionaryActivity extends BaseActivity {
     }
 
     private void requestTranslation(String key) {
-        RequestQueue requestQueue = Volley.newRequestQueue(DictionaryActivity.this);
+        showProgressDialog();
+
         StringRequest stringRequest = null;
         try {
             stringRequest = new StringRequest(Request.Method.GET,
@@ -158,18 +150,20 @@ public class DictionaryActivity extends BaseActivity {
                             Toast.makeText(DictionaryActivity.this, errMsg, Toast.LENGTH_SHORT).show();
                         }
                     }
+                    hideProgressDialog();
                 }
             }, new Response.ErrorListener() {
                 @Override
                 public void onErrorResponse(VolleyError volleyError) {
                     Toast.makeText(DictionaryActivity.this, volleyError.getMessage(), Toast.LENGTH_SHORT).show();
+                    hideProgressDialog();
                 }
             });
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
 
-        requestQueue.add(stringRequest);
+        addRequest(stringRequest);
     }
 
 }

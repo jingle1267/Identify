@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="app_color">#42c58c</color>
+    <color name="app_color">#4caf50</color>
     <color name="bg_color">#f1f1f1</color>
     <color name="txt_color">#666666</color>
     <color name="divider_color">#dddddd</color>

@@ -4,7 +4,9 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.view.View;
 import com.ihongqiqu.Identify.R;
+import com.ihongqiqu.Identify.base.BaseActivity;
 
 /**
  * 用户协议
@@ -23,8 +25,7 @@ public class LicenseActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_license);
 
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle("用户协议");
-        }
+        setTitle("用户协议");
+        toolbar.setNavigationIcon(R.drawable.ic_back);
     }
 }

@@ -14,10 +14,10 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import com.android.volley.*;
 import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
 import com.ihongqiqu.Identify.BuildConfig;
 import com.ihongqiqu.Identify.R;
+import com.ihongqiqu.Identify.base.BaseActivity;
 import com.ihongqiqu.Identify.entity.IdInfo;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -60,16 +60,8 @@ public class IdActivity extends BaseActivity {
         setContentView(R.layout.activity_id);
         ButterKnife.bind(this);
 
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle("查询身份证信息");
-        }
+        setTitle("查询身份证信息");
         toolbar.setNavigationIcon(R.drawable.ic_back);
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
 
         etId.addTextChangedListener(new TextWatcher() {
             @Override
@@ -114,8 +106,6 @@ public class IdActivity extends BaseActivity {
         }
         hideKeyboard();
         showProgressDialog();
-
-        RequestQueue requestQueue = Volley.newRequestQueue(IdActivity.this);
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET,
             URL_QUERY_ID + "?id=" + id, new Response.Listener<String>() {
@@ -165,7 +155,7 @@ public class IdActivity extends BaseActivity {
             }
         };
 
-        requestQueue.add(stringRequest);
+        addRequest(stringRequest);
     }
 
 }

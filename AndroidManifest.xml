@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.ihongqiqu.Identify"
-          android:versionCode="122"
-          android:versionName="1.2.2">
+          android:versionCode="120"
+          android:versionName="1.2.0">
     <uses-sdk android:minSdkVersion="11"/>
 
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -28,7 +28,7 @@
 
         <activity android:name=".activity.PhoneActivity"/>
         <activity android:name=".activity.IdActivity"/>
-        <activity android:name=".activity.BaseActivity"/>
+        <activity android:name=".base.BaseActivity"/>
         <activity android:name=".activity.SettingActivity"/>
         <activity android:name=".activity.IpActivity"/>
         <activity android:name=".activity.HtmlActivity"/>
